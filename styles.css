@@ -1,6 +1,6 @@
-@root {
-    --primary-color: ;
-    --secondary-color: ;
+:root {
+    --primary-color: yellow;
+    --secondary-color: red;
 }
 
 
