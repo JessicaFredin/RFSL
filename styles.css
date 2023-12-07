@@ -13,3 +13,32 @@
     font: inherit;
     scroll-behavior: smooth;
 }
+
+body {
+    font-size: 16px;
+    font-family: brandon-grotesque, arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: .03em;
+}
+
+header {
+    display: flex;
+border: 2px solid green;
+
+}
+
+header ul.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    border: 2px solid red;
+}
+
+ul.top-nav li {
+    margin: .6em;
+}
+
+ul.top-nav li a {
+    text-decoration: none;
+}
