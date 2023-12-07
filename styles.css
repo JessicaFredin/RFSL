@@ -26,19 +26,16 @@ header {
     padding: .8em 1.5em;
 }
 
-header.logo-wrapper {
-    display: flex;
-    justify-content: center;
+header.logo-wrapper {  
+    /* display: flex; */
+    /* justify-content: center; */ 
 }
 
 header ul.top-nav {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    list-style: none;
-    width: 100vw;
-    margin: 0 1.5em;
-    font-size: 0.8em;
+    margin-left: auto;
+    list-style: none; 
+    font-size: 0.8em; 
 }
 
 ul.top-nav li {
