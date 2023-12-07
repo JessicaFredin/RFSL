@@ -23,29 +23,30 @@ body {
 
 header {
     display: flex;
+    /* This will push nav to the right */
+    justify-content: space-between;
+    align-items: center;
     padding: .8em 1.5em;
 }
 
-header.logo-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-header ul.top-nav {
+nav.top-nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     list-style: none;
-    width: 100vw;
     margin: 0 1.5em;
     font-size: 0.8em;
 }
 
-ul.top-nav li {
+nav.top-nav ul {
+    display: flex;
+}
+
+nav.top-nav li {
     margin: 0 2em;
 }
 
-ul.top-nav li a {
+nav.top-nav li a {
     text-decoration: none;
     color: var(--primary-color);
 }
