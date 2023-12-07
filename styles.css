@@ -1,5 +1,5 @@
 :root {
-    --primary-color: yellow;
+    --primary-color: #707070;
     --secondary-color: red;
 }
 
@@ -23,8 +23,12 @@ body {
 
 header {
     display: flex;
-border: 2px solid green;
+    padding: .8em 1.5em;
+}
 
+header.logo-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 header ul.top-nav {
@@ -32,13 +36,16 @@ header ul.top-nav {
     align-items: center;
     justify-content: flex-end;
     list-style: none;
-    border: 2px solid red;
+    width: 100vw;
+    margin: 0 1.5em;
+    font-size: 0.8em;
 }
 
 ul.top-nav li {
-    margin: .6em;
+    margin: 0 2em;
 }
 
 ul.top-nav li a {
     text-decoration: none;
+    color: var(--primary-color);
 }
