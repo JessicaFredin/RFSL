@@ -29,7 +29,7 @@ header {
     padding: .8em 1.5em;
 }
 
-nav.top-nav {
+nav.top-desktop-nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -37,22 +37,24 @@ nav.top-nav {
     font-size: 0.8em;
 }
 
-nav.top-nav ul {
+nav.top-desktop-nav ul {
     display: flex;
     list-style-type: none;
 }
 
-nav.top-nav li {
+nav.top-desktop-nav li {
     margin: 0 2em;
 }
 
-nav.top-nav li a {
+nav.top-desktop-nav li a {
     text-decoration: none;
     color: var(--primary-color);
 }
 
-@media (min-width: 768px) {
 
+
+
+@media (min-width: 768px) {
     .nav-btn,
     .open-btn {
         display: none;
