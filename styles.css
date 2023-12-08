@@ -29,10 +29,16 @@ header {
     padding: .8em 1.5em;
 }
 
-.logo {
+.logo-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+    
+.logo {
+    height: auto;
+    max-width: 100%;
+    display: block;
 }
 
     
