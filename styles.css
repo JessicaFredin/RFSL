@@ -25,11 +25,11 @@ header {
     display: flex;
     /* This will push nav to the right */
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
     padding: .8em 1.5em;
 }
 
-.logo-wrapper {
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@ nav.language ul {
 }
 
 nav.language li {
-    margin: 0 2em;
+    margin: 0 1em;
 }
 
 nav.language li a {
