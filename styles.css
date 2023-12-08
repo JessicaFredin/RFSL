@@ -30,6 +30,7 @@ header {
 }
 
 nav.top-desktop-nav {
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -39,7 +40,8 @@ nav.top-desktop-nav {
 
 nav.top-desktop-nav ul {
     display: flex;
-    list-style-type: none;
+    list-style-type: none; 
+
 }
 
 nav.top-desktop-nav li {
