@@ -29,6 +29,13 @@ header {
     padding: .8em 1.5em;
 }
 
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    
 nav.top-desktop-nav {
     text-align: center;
     display: flex;
@@ -53,7 +60,24 @@ nav.top-desktop-nav li a {
     color: var(--primary-color);
 }
 
+nav.language {
+    text-align: right;
 
+}
+
+nav.language ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav.language li {
+    margin: 0 2em;
+}
+
+nav.language li a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
 
 
 @media (min-width: 768px) {
