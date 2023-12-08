@@ -50,3 +50,11 @@ nav.top-nav li a {
     text-decoration: none;
     color: var(--primary-color);
 }
+
+@media (min-width: 768px) {
+
+    .nav-btn,
+    .open-btn {
+        display: none;
+    }
+}
