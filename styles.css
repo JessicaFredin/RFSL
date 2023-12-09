@@ -1,6 +1,6 @@
 :root {
     --primary-color: #707070;
-    --secondary-color: red;
+    --secondary-color: #000;
 }
 
 
@@ -14,11 +14,18 @@
     scroll-behavior: smooth;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-size: 16px;
     font-family: brandon-grotesque, arial, sans-serif;
     font-weight: 300;
     letter-spacing: .03em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 header {
@@ -34,14 +41,14 @@ header {
     justify-content: center;
     align-items: center;
 }
-    
+
 .logo {
     height: auto;
     min-width: 100%;
     display: block;
 }
 
-    
+
 nav.top-desktop-nav {
     text-align: center;
     display: flex;
@@ -53,7 +60,7 @@ nav.top-desktop-nav {
 
 nav.top-desktop-nav ul {
     display: flex;
-    list-style-type: none; 
+    list-style-type: none;
 
 }
 
@@ -66,27 +73,76 @@ nav.top-desktop-nav li a {
     color: var(--primary-color);
 }
 
-nav.language {
+div.language {
     text-align: right;
 
 }
 
-nav.language ul {
+div.language ul {
     display: flex;
     list-style-type: none;
 }
 
-nav.language li {
+div.language li {
     margin: 0 1em;
 }
 
-nav.language li a {
+div.language li a {
     text-decoration: none;
     color: var(--primary-color);
 }
 
+footer {
+    margin-top: auto;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2em 0 0 0;
+    font-size: .9em;
+}
+
+footer .footer-nav {
+    display: grid;
+    place-items: center;
+ 
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5em;
+    justify-content: center;
+ 
+}
+
+footer ul li {
+    break-inside: avoid;
+    margin: 0 2em;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+footer ul li i {
+    margin: 0 .2em;
+}
+
+footer .copyright {
+    display: block;
+    text-align: center;
+    padding: 0.5em 0 0 0;
+    width: 100%;
+    margin: 3em 0 .5em 0;
+    color: var(--secondary-color);
+}
 
 @media (min-width: 768px) {
+
     .nav-btn,
     .open-btn {
         display: none;
