@@ -427,7 +427,7 @@ Chat Gpt: https://chat.openai.com/  */
   /* Slidern SLUT */
 
 
-  .flex-container {
+.flex-container {
     position: relative;
     margin-left: 4rem;
     margin-top: 4rem;
@@ -449,7 +449,7 @@ Chat Gpt: https://chat.openai.com/  */
     margin-bottom: 1rem;
 }
 
-img {
+.cover {
     max-width: 25rem;
 }
 
