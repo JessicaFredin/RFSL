@@ -425,6 +425,50 @@ Chat Gpt: https://chat.openai.com/  */
     background-color: #717171;
   }
   /* Slidern SLUT */
+
+
+  .flex-container {
+    position: relative;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.card {
+    display: flex;
+    height: 9 rem;
+    width: 16 rem;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 0;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 25rem;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
     
     
     
