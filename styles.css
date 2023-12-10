@@ -1,8 +1,7 @@
 :root {
     --primary-color: rgb(218, 218, 218);
-    --secondary-color: #888;
+    --secondary-color: #000;
 }
-
 
 * {
     box-sizing: border-box;
@@ -162,7 +161,7 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
 */
 
 /* Stilen för menyn som visas när hamburgerikonen klickas på */
-.hamburgerMenu {
+.hamburger-menu {
     display: flex; 
     justify-content: center;
     flex-direction: row; 
@@ -173,12 +172,12 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     }
     
     /* Ta bort punktlistor från länkarna i menyn */
-    .hamburgerMenu li {
+    .hamburger-menu li {
     list-style-type: none;
     }
     
     /* Stilar för länkarna i menyn */
-    .hamburgerMenu li a {
+    .hamburger-menu li a {
         color: white;
         text-decoration: none;
         display: block;
@@ -190,14 +189,14 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     
     /* Animeringseffekt när musen hover över länkarna */
     /* Skugga och bakgrundseffekt */
-    .hamburgerMenu li a:hover {
+    .hamburger-menu li a:hover {
         box-shadow: 0 -5px 0px white inset,
         500px 0 0 rgba(255, 255, 255, 0.03) inset;
         padding: 35px 25px 45px 25px;
     }
     
     /* Stil för hamburgerikonen */
-    .hamburgerIcon {
+    .hamburger-icon {
        position: relative;
        width: 50px; 
        height: 6px;
@@ -209,8 +208,8 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     }
     
     /* Stilar för de streck som skapar hamburgerikonen */
-    .hamburgerIcon:before, 
-    .hamburgerIcon:after {
+    .hamburger-icon:before, 
+    .hamburger-icon:after {
         content: "";
         position: absolute; 
         height: 6px;
@@ -221,19 +220,19 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     }
     
     /* Stil för det övre strecket */
-    .hamburgerIcon:before {
+    .hamburger-icon:before {
         top: -12px;
         width: 50px;
     }
     
     /* Stil för det nedre strecket */
-    .hamburgerIcon:after {
+    .hamburger-icon:after {
         top: 12px;
         width: 50px;
     }
     
     /* Stil för den gömda checkboxen som används för att visa och gömma menyn */
-    .toggleHamburgerMenu {
+    .toggle-hamburger-menu {
         position: absolute;
         width: 60px;
         height: 60px;
@@ -245,12 +244,12 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     }
     
     /* När checkboxen är markerad, ändra färgen på ikonen */
-    .hamburgerNavigation input:checked ~ .hamburgerIcon {
+    .hamburger-navigation input:checked ~ .hamburger-icon {
     background: transparent;
     }
     
     /* När checkboxen är markerad, ändra position och form på strecken för att skapa ett "X" */
-    .hamburgerNavigation input:checked ~ .hamburgerIcon:before {
+    .hamburger-navigation input:checked ~ .hamburger-icon:before {
     top: 0;
     transform: rotate(-45deg); 
     width: 30px;
@@ -259,7 +258,7 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     }
     
     /* När checkboxen är markerad, ändra position och form på strecken för att skapa ett "X" */
-    .hamburgerNavigation input:checked ~ .hamburgerIcon:after {
+    .hamburger-navigation input:checked ~ .hamburger-icon:after {
         top: 0; 
         transform: rotate(45deg); 
         width: 30px;  
@@ -268,7 +267,7 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     }
     
     /* När checkboxen är markerad, visa menyn genom att ändra positionen till vänster */
-    .hamburgerNavigation input:checked ~ .hamburgerMenu {
+    .hamburger-navigation input:checked ~ .hamburger-menu {
     left: 0;
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
     }
@@ -276,11 +275,11 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     /* Justera layouten för hamburgermenyn för mindre skärmar (Mobil) */
     @media screen and (max-width: 992px) 
     {
-    .hamburgerIcon,
-    .toggleHamburgerMenu {
+    .hamburger-icon,
+    .toggle-hamburger-menu {
         display: block;
     }
-    .hamburgerMenu {
+    .hamburger-menu {
         justify-content: start;
         flex-direction: column; 
         align-items: center;
@@ -296,11 +295,11 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     /* Justera layouten för hamburgermenyn för större skärmar (Dator) */
     @media screen and (max-width: 1920px) 
     {
-    .hamburgerIcon,
-    .toggleHamburgerMenu {
+    .hamburger-icon,
+    .toggle-hamburger-menu {
         display: block;
     }
-    .hamburgerMenu {
+    .hamburger-menu {
         justify-content: start;
         flex-direction: column; 
         align-items: center;
@@ -316,21 +315,20 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     }
     
     /* Stil för länkarna i hamburgermenyn */
-    .hamburgerMenu li {
+    .hamburger-menu li {
         width: 100%; 
     }
     
     /* Stilar för länkarna i hamburgermenyn */
-    .hamburgerMenu li a {
+    .hamburger-menu li a {
         padding: 20px;
         font-size:24px;
         box-shadow: 0 1px 0 rgba (255, 255, 255, 0.1)
         inset;
-    
     }
     
     /* Ytterligare stil för navigationsmenyn överst */
-    .hamburgerNavigation {
+    .hamburger-navigation {
         padding-top: 18px;
     }
     
