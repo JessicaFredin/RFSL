@@ -94,7 +94,7 @@ div.language li a {
 
 footer {
     margin-top: auto;
-    background-color: var(--primary-color);
+    background-color: #707070;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -105,15 +105,35 @@ footer {
 footer .footer-nav {
     display: grid;
     place-items: center;
+    color: #fff;
+}
 
+
+footer .footer-nav h1 {
+    font-size: 3em;
+    text-shadow: 0 1px 10px #000;
+}
+
+footer .footer-nav p {
+    font-size: 1em;
+    width: 60%;
+    text-align: center;
+    margin: 1em 0 0 1em;
+    line-height: 1.2em;
+}
+
+.footer-nav .social-media-links a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 2.5em 1.5em;
 }
 
 footer ul {
     list-style-type: none;
     margin: 0 2em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: .5em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.5em;
     justify-content: center;
 
 }
@@ -121,11 +141,12 @@ footer ul {
 footer ul li {
     break-inside: avoid;
     margin: 0 2em;
+
 }
 
 footer ul li a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: #fff;
     transition: 2s ease-out;
 }
 
@@ -138,11 +159,17 @@ footer ul li i {
     margin: 0 .2em;
 }
 
-footer ul li i.fa-facebook:hover {
+i.fa-facebook,
+i.fa-instagram {
+    font-size: 2em;
+    color: #fff;
+}
+
+i.fa-facebook:hover {
     color: #4267B2;
 }
 
-footer ul li i.fa-instagram:hover {
+i.fa-instagram:hover {
     color: #C13584;
 }
 
@@ -152,7 +179,7 @@ footer .copyright {
     padding: 0.5em 0 0 0;
     width: 100%;
     margin: 3em 0 .5em 0;
-    color: var(--secondary-color);
+    color: #fff;
 }
 
 /*hamburger START*/
