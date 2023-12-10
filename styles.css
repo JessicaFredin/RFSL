@@ -478,29 +478,28 @@ Chat Gpt: https://chat.openai.com/  */
 
 
 .flex-container {
-    position: relative;
-    margin-left: 10%;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .card {
-    display: flex;
-    height: 9 rem;
-    width: 16 rem;
     position: relative;
     text-align: center;
-    color: white;
-    margin: 0;
+    color: white;   
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
     margin-right: 1rem;
-    margin-bottom: 1rem;
 }
 
 .cover {
-    max-width: 24rem;
+    max-width: 22rem;
 }
 
 .centered {
