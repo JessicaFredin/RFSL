@@ -442,12 +442,10 @@ Chat Gpt: https://chat.openai.com/  */
     background-color: #717171;
   }
   
-  /* Lägg till en separat stil för punkterna när de är inaktiva */
   .dot {
     background-color: #bbb;
   }
   
-  /* Lägg till en separat stil för punkterna när de är inaktiva */
   .dot:hover {
     background-color: #717171;
   }
