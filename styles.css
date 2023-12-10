@@ -93,7 +93,7 @@ div.language li a {
 
 footer {
     margin-top: auto;
-    background-color: var(--primary-color);
+    background-color: #707070;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -104,11 +104,13 @@ footer {
 footer .footer-nav {
     display: grid;
     place-items: center;
+    color: #fff;
 }
 
 
 footer .footer-nav h1 {
     font-size: 3em;
+    text-shadow: 0 1px 10px #000;
 }
 
 footer .footer-nav p {
@@ -116,6 +118,7 @@ footer .footer-nav p {
     width: 60%;
     text-align: center;
     margin: 1em 0 0 1em;
+    line-height: 1.2em;
 }
 
 .footer-nav .social-media-links a {
@@ -129,19 +132,20 @@ footer ul {
     margin: 0 2em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: .5em;
+    gap: 4.5em;
     justify-content: center;
-
+    
 }
 
 footer ul li {
     break-inside: avoid;
     margin: 0 2em;
+    
 }
 
 footer ul li a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: #fff;
     transition: 2s ease-out;
 }
 
@@ -157,7 +161,7 @@ footer ul li i {
 i.fa-facebook,
 i.fa-instagram {
     font-size: 2em;
-    color: var(--secondary-color);
+    color: #fff;
 }
 
 i.fa-facebook:hover {
@@ -174,7 +178,7 @@ footer .copyright {
     padding: 0.5em 0 0 0;
     width: 100%;
     margin: 3em 0 .5em 0;
-    color: var(--secondary-color);
+    color: #fff;
 }
 
 /*hamburger START*/
