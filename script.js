@@ -1,4 +1,6 @@
-/* Slidern START */
+/* Slidern START Jag har använt mig avW3 Schools och Chat Gpt för att finjustera
+W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
+Chat Gpt: https://chat.openai.com/  */ 
 let slideIndex = 1;
 showSlides(slideIndex);
 
