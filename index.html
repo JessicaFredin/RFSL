@@ -69,7 +69,62 @@
     <div class="container">
 
         <main>
-
+   <!-- Slidern START -->
+            <!DOCTYPE html>
+            <html lang="en">
+            
+            <head>
+             
+            
+                <!-- Inkludera länk till jQuery från CDN (om det används) -->
+                <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+                        integrity="sha256-oP6HI/t1qEz3KOXYj99ML0g6PJ4gTKPSuUJn6UEFqm0="
+                        crossorigin="anonymous"></script>
+                
+                <!-- Länk till din egen CSS-fil -->
+                <link rel="stylesheet" href="styles.css">
+            
+                <title>Slider without Hamburger Menu</title>
+            </head>
+            
+            <body>
+            
+                <!-- Slider container -->
+                <div class="slideshow-container">
+            
+                    <!-- Bilder med nummer och bildtext -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 2</div>
+                        <img src="img1.jpg" style="width:100%">
+                      
+                    </div>
+            
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="img2.jpg" style="width:100%">
+                     
+                    </div>
+            
+                    <!-- Nästa/Föregående knappar -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                </div>
+                <br>
+            
+                <!-- Punkter/cirklar -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            
+                <!-- Länk till din egen JavaScript-fil -->
+                <script src="script.js"></script>
+            
+            </body>
+            
+            </html>
+            <!-- Slidern SLUT -->
         </main>
     </div>
 
