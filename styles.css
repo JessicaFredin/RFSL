@@ -73,7 +73,7 @@ nav.top-desktop-nav li {
 nav.top-desktop-nav li a {
     text-decoration: none;
     color: var(--secondary-color);
-    
+    letter-spacing: 0.1em;
 }
 /*länkar ändrar storlek och färg när man hovrar*/
 nav.top-desktop-nav a:hover {
@@ -94,7 +94,7 @@ div.language ul {
 }
 
 div.language li {
-    margin: 0 1em;
+    margin: 0 0.5em;
 }
 
 div.language li a {
@@ -546,6 +546,11 @@ a {
 }
 
 @media (max-width: 1025px) {
+    
+    nav.top-desktop-nav {
+        display: none;
+    }
+    
     .flex-container {
       flex-direction: column;
     }
