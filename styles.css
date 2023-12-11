@@ -98,11 +98,15 @@ div.language li {
     margin: 0 0.2em;
 }
 
-div.language li a .button {
-    border-radius: 50%;
+div.language li a {
     text-decoration: none;
-    color: var(--primary-color);
     
+}
+
+div.language li a button {
+    border-radius: 50%;
+    background-color:#1f3643;
+    color: #fffdfc;
 }
 
 
@@ -601,6 +605,7 @@ a {
     div.language {
         float: right;
     }
+    
     footer ul {
         grid-template-columns: 1fr;
     }
