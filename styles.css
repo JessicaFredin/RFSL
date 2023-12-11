@@ -84,8 +84,9 @@ font-size: 120%;
 
 /* */
 div.language {
+    display: flex;
     text-align: right;
-
+    float: right;
 }
 
 div.language ul {
@@ -97,10 +98,14 @@ div.language li {
     margin: 0 0.2em;
 }
 
-div.language li a {
+div.language li a .button {
+    border-radius: 50%;
     text-decoration: none;
     color: var(--primary-color);
+    
 }
+
+
 
 
 
@@ -551,6 +556,10 @@ a {
         display: none;
     }
     
+    div.language {
+        display: flex;
+    }
+
     .flex-container {
       flex-direction: column;
     }
@@ -589,6 +598,9 @@ a {
         display: none;
     }
     
+    div.language {
+        float: right;
+    }
     footer ul {
         grid-template-columns: 1fr;
     }
