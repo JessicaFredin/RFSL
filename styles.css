@@ -77,7 +77,7 @@ nav.top-desktop-nav li a {
     
 }
 
-nav a:hover, nav a:active {
+nav.top-desktop-nav a:hover {
 color: #C13584;
 font-size: 120%;
 
