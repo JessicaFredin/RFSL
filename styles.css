@@ -37,7 +37,7 @@ header {
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
 /*Utseende för logotyp*/
@@ -72,10 +72,11 @@ nav.top-desktop-nav li a {
     color: var(--secondary-color);
     letter-spacing: 0.05em;
 }
+
 /*länkar ändrar storlek och färg när man hovrar*/
 nav.top-desktop-nav a:hover {
-color: #C13584;
-font-size: 120%;
+    color: #C13584;
+    font-size: 120%;
 
 }
 
@@ -97,14 +98,14 @@ div.language li {
 
 div.language li a {
     text-decoration: none;
-    
+
 }
 
 div.language li a button {
     border-radius: 50%;
-    background-color:#1f3643;
+    background-color: #1f3643;
     color: #fffdfc;
-    padding: 0.5em ;
+    padding: 0.5em;
 }
 
 footer {
@@ -219,7 +220,7 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
 .hamburger-menu {
     display: flex;
     justify-content: center;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
     z-index: 1;
     transition: 0.5s;
@@ -305,7 +306,7 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
 /* När checkboxen är markerad, ändra position och form på strecken för att skapa ett "X" */
 .hamburger-navigation input:checked~.hamburger-icon:before {
     top: 0;
-    transform: rotate(-45deg); 
+    transform: rotate(-45deg);
     width: 30px;
     background: white;
     left: -4px;
@@ -336,7 +337,7 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
 
     .hamburger-menu {
         justify-content: start;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         position: absolute;
         top: 0;
@@ -358,37 +359,36 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
 
     .hamburger-menu {
         justify-content: start;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         position: absolute;
         top: 0;
         right: 1700px;
         background: grey;
-        width: 15%; 
+        width: 15%;
         height: 63%;
-        padding-top: 65px; 
+        padding-top: 65px;
     }
-    
-    }
-    
-    /* Stil för länkarna i hamburgermenyn */
-    .hamburger-menu li {
-        width: 100%; 
-    }
-    
-    /* Stilar för länkarna i hamburgermenyn */
-    .hamburger-menu li a {
-        padding: 20px;
-        font-size:14px;
-        box-shadow: 0 1px 0 rgba (255, 255, 255, 0.1)
-        inset;
-    
-    }
-    
-    /* Ytterligare stil för navigationsmenyn. Gör lite padding. */
-    .hamburger-navigation {
-        padding-top: 18px;
-    }
+
+}
+
+/* Stil för länkarna i hamburgermenyn */
+.hamburger-menu li {
+    width: 100%;
+}
+
+/* Stilar för länkarna i hamburgermenyn */
+.hamburger-menu li a {
+    padding: 20px;
+    font-size: 14px;
+    box-shadow: 0 1px 0 rgba (255, 255, 255, 0.1) inset;
+
+}
+
+/* Ytterligare stil för navigationsmenyn. Gör lite padding. */
+.hamburger-navigation {
+    padding-top: 18px;
+}
 
 /* Stil för länkarna i hamburgermenyn */
 .hamburger-menu li {
@@ -483,7 +483,8 @@ Chat Gpt: https://chat.openai.com/  */
 }
 
 /* Aktiv punkt/cirkel */
-.dot.active, .dot:hover {
+.dot.active,
+.dot:hover {
     background-color: #717171;
 }
 
@@ -513,7 +514,7 @@ Chat Gpt: https://chat.openai.com/  */
 
 .card {
     color: white;
-    margin-top: 2vh;   
+    margin-top: 2vh;
     margin-bottom: 2vh;
 }
 
@@ -541,21 +542,23 @@ a {
 
 
 @media (max-width: 1025px) {
-    
+
     nav.top-desktop-nav {
         display: none;
     }
-    
+
     div.language {
         display: flex;
     }
 
     .flex-container {
-      flex-direction: column;
+        flex-direction: column;
     }
+
     .cover {
         max-width: 80vw;
     }
+
     h2 {
         width: 80vw;
     }
@@ -563,11 +566,11 @@ a {
 
 
 @media (max-width: 768px) {
-    
+
     nav.top-desktop-nav {
         display: none;
     }
-    
+
     footer .footer-nav h1 {
         font-size: 2em;
     }
@@ -583,15 +586,15 @@ a {
 }
 
 @media (max-width: 480px) {
-    
+
     nav.top-desktop-nav {
         display: none;
     }
-    
+
     div.language {
         float: right;
     }
-    
+
     footer ul {
         grid-template-columns: 1fr;
     }
@@ -603,47 +606,54 @@ a {
 
 /*Here<!--SearchboxSTARTS-->*/
 
-#Search-Form{
+#Search-Form {
 
     background-color: rgb(255, 255, 255);
-    
+
     width: 500px;
-    
+
     height: 45px;
-    
+
     border-radius: 30px;
-    
+
     display: flex;
-    
+
     align-items: center;
-    
+
     padding: 10px;
-    
+
     border-color: rgb(11, 115, 206);
-    
-    }
-    
-    #Search-Form i{
-    color :rgb(158, 158, 156);
-    padding:0;
+
+}
+
+#Search-Form i {
+    color: rgb(158, 158, 156);
+    padding: 0;
     background-color: rgba(149, 147, 150, 0.281);
     border-radius: 30px;
     font-size: 25px;
-    }
-    
-    #Search-Bar {
+}
+
+#Search-Bar {
     border-radius: 30px;
     outline: none;
-    
-    }
-    
-    #Search-Button{
-    width:100%;
+
+}
+
+#Search-Button {
+    width: 100%;
     height: 100%;
     outline: none;
     border-radius: 30px;
-    background:none;
+    background: none;
     border: none;
+<<<<<<< Updated upstream
     font-size: 12px;}
     
     /*Here <!--SearchboxENDS-->*/
+=======
+    font-size: 12px;
+}
+
+/*Here <!--SearchboxENDS-->*/
+>>>>>>> Stashed changes
