@@ -38,12 +38,16 @@ header {
 
 .logo-wrapper {
     display: flex;
+    text-align: center;
+    
 }
 
 .logo {
+    max-width: 100%;
     height: auto;
-    min-width: 100%;
+    /*min-width: 100%; */
     display: block;
+    margin: 0 auto;
 }
 
 
