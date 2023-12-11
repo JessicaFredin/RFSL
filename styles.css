@@ -37,16 +37,14 @@ header {
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    border: 2px solid green;
-    
+    justify-content: center;    
 }
+
 /*Utseende för logotyp*/
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid red;
 }
 
 /* */
@@ -57,7 +55,6 @@ nav.top-desktop-nav {
     justify-content: space-between;
     margin: 0 auto;
     font-size: 0.8em;
-    border: 2px solid pink;
 }
 
 nav.top-desktop-nav ul {
