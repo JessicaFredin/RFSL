@@ -478,8 +478,8 @@ Chat Gpt: https://chat.openai.com/  */
 
 
 .flex-container {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     margin-left: 1rem;
     margin-right: 1rem;
     display: flex;
@@ -489,27 +489,27 @@ Chat Gpt: https://chat.openai.com/  */
 }
 
 .card {
-    position: relative;
-    text-align: center;
     color: white;
     margin-top: 2vh;   
     margin-bottom: 2vh;
 }
 
 .cover {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
     max-width: 22vw;
 }
 
 .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-    background-color: rgba(0, 0, 0, 0.5);
     width: 22vw;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 a {
