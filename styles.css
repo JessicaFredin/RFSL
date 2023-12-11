@@ -36,12 +36,13 @@ header {
     padding: .8em 1.5em;
 }
 
+/*placering av logotyp*/
 .logo-wrapper {
     display: flex;
     text-align: center;
     
 }
-
+/*Utseende för logotyp*/
 .logo {
     max-width: 100%;
     height: auto;
@@ -50,7 +51,7 @@ header {
     margin: 0 auto;
 }
 
-
+/* */
 nav.top-desktop-nav {
     text-align: center;
     display: flex;
@@ -73,8 +74,16 @@ nav.top-desktop-nav li {
 nav.top-desktop-nav li a {
     text-decoration: none;
     color: var(--secondary-color);
+    
 }
 
+nav a:hover {
+color: #C13584;
+font-size: 120%;
+
+}
+
+/* */
 div.language {
     text-align: right;
 
