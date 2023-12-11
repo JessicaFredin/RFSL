@@ -491,15 +491,13 @@ Chat Gpt: https://chat.openai.com/  */
 .card {
     position: relative;
     text-align: center;
-    color: white;   
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    color: white;
+    margin-top: 2vh;   
+    margin-bottom: 2vh;
 }
 
 .cover {
-    max-width: 22rem;
+    max-width: 22vw;
 }
 
 .centered {
@@ -511,14 +509,24 @@ Chat Gpt: https://chat.openai.com/  */
 
 h2 {
     background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
+    width: 22vw;
 }
 
 a {
     cursor: pointer;
 }
 
-
+@media (max-width: 1025px) {
+    .flex-container {
+      flex-direction: column;
+    }
+    .cover {
+        max-width: 80vw;
+    }
+    h2 {
+        width: 80vw;
+    }
+}
 
 
 @media (max-width: 768px) {
