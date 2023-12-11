@@ -23,42 +23,41 @@ body {
     font-family: "Basic sans", sans-serif;
     font-weight: 300;
     letter-spacing: .03em;
-    display: flex;
-    flex-direction: column;
     min-height: 100%;
 }
 
 header {
     display: flex;
-    /* This will push nav to the right */
-    justify-content: space-between;
-    align-items: right;
     padding: .8em 1.5em;
+    border: 2px solid green;
 }
 
 /*placering av logotyp*/
 .logo-wrapper {
     display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid green;
     
 }
 /*Utseende för logotyp*/
 .logo {
-    max-width: 100%;
-    height: auto;
-    /*min-width: 100%; */
-    display: block;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid red;
 }
 
 /* */
 nav.top-desktop-nav {
     text-align: center;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: flex-end;
-    margin: 0 1.5em;
+    justify-content: space-between;
+    margin: 0 auto;
     font-size: 0.8em;
+    border: 2px solid pink;
 }
 
 nav.top-desktop-nav ul {
@@ -560,6 +559,11 @@ a {
 
 
 @media (max-width: 768px) {
+    
+    nav.top-desktop-nav {
+        display: none;
+    }
+    
     footer .footer-nav h1 {
         font-size: 2em;
     }
@@ -575,6 +579,11 @@ a {
 }
 
 @media (max-width: 480px) {
+    
+    nav.top-desktop-nav {
+        display: none;
+    }
+    
     footer ul {
         grid-template-columns: 1fr;
     }
