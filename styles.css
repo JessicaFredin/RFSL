@@ -639,9 +639,9 @@ a {
 
     background-color: rgb(255, 255, 255);
 
-    width: 500px;
+    max-width: 400px;
 
-    height: 45px;
+    max-height: 45px;
 
     border-radius: 30px;
 
