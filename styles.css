@@ -558,6 +558,7 @@ a {
 
     div.language {
         display: flex;
+        justify-content: flex-end;
     }
 
     #svButton {
