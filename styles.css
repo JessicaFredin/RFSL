@@ -217,199 +217,169 @@ footer .copyright {
 
 /*hamburger START*/
 
-/*En Youtube video användes som guide när hamburger funktionen skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till RFSL.  
+/*En Youtube video användes som guide när hamburger funktionen skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till RFSL. 
+Fick också ändra så att hamburgaren blir responsiv genom att konvertera från px till rem. Har också adderat %. Guidens hamburgare är inte alls responsiv. Har 
+också tagit bort position "absolute"och position "relative" som inte heller är responsiva, och ändrat till "flex". 
 Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
+Px to rem calculator: https://nekocalc.com/px-to-rem-converter
 */
 
-/* Stilen för menyn som visas när hamburgerikonen klickas på */
-.hamburger-menu {
+/* Stilar för  hamburgermenyn. Förflyttningar osv...*/
+.hamburgerNavigation {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items:center;
+    }
+
+/* Stilar för hamburgermenyn. Förflyttningar osv.. */    
+.hamburgerMenu {
+    display: flex;
+    justify-content:center;
     flex-direction: row;
-    align-items: center;
-    z-index: 1;
+    align-items:center;
     transition: 0.5s;
-
 }
-
-/* Ta bort punktlistor från länkarna i menyn */
-.hamburger-menu li {
+    
+    /* Ta bort punktlistor från länkarna i menyn */
+    .hamburgerMenu li {
     list-style-type: none;
-}
+    }
+    
+    /* Stilar för länkarna i menyn */
+    .hamburgerMenu li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 2.5rem 1.5625rem; 
+        line-height: 1;
+        transition: 0.3s;
+        align-items: center; 
+    }
 
-/* Stilar för länkarna i menyn */
-.hamburger-menu li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 40px 25px;
-    font-size: 18px;
-    line-height: 1;
-    transition: 0.3s;
-}
-
-/* Animeringseffekt när musen hover över länkarna */
-/* Skugga och bakgrundseffekt */
-.hamburger-menu li a:hover {
-    box-shadow: 0 -5px 0px white inset,
+    /* Animeringseffekt när musen "hover"" över länkarna */
+    /* Skugga och bakgrundseffekt */
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px white inset,
         500px 0 0 rgba(255, 255, 255, 0.03) inset;
-    padding: 35px 25px 45px 25px;
-}
-
-/* Stil för hamburgerikonen */
-.hamburger-icon {
-    position: relative;
-    width: 50px;
-    height: 6px;
-    background: black;
-    border-radius: 10px;
-    cursor: pointer;
-    z-index: 2;
-    transition: 0.3s;
-}
-
-/* Stilar för de streck som skapar hamburgerikonen */
-.hamburger-icon:before,
-.hamburger-icon:after {
-    content: "";
-    position: absolute;
-    height: 6px;
-    right: 0;
-    background: black;
-    border-radius: 10px;
-    transition: 0.3;
-}
-
-/* Stil för det övre strecket */
-.hamburger-icon:before {
-    top: -12px;
-    width: 50px;
-}
-
-/* Stil för det nedre strecket */
-.hamburger-icon:after {
-    top: 12px;
-    width: 50px;
-}
-
-/* Stil för den gömda checkboxen som används för att visa och gömma menyn */
-.toggle-hamburger-menu {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    z-index: 3;
-    cursor: pointer;
-    opacity: 0;
-    top: -10px;
-}
-
-/* När checkboxen är markerad, ändra färgen på ikonen */
-.hamburger-navigation input:checked~.hamburger-icon {
+        padding: 35px 25px 45px 25px;
+    }
+    
+    /* Stil för hamburgerikonen */
+    .hamburgerIcon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    /* Stil för den gömda checkboxen som används för att visa och gömma menyn */
+    .toggleHamburgerCheckbox {
+        display: none; 
+        opacity: 0;
+    }
+    
+    /* Ändrar bakgrundsfärgen på hamburgerikonen när checkboxen är markerad */
+    .hamburgerNavigation input:checked ~ .hamburgerIcon {
     background: transparent;
-}
-
-/* När checkboxen är markerad, ändra position och form på strecken för att skapa ett "X" */
-.hamburger-navigation input:checked~.hamburger-icon:before {
+    }
+    
+    /* När checkboxen är markerad, ändra position och form på strecken för att skapa ett "X" */
+    .hamburgerNavigation input:checked ~ .hamburgerIcon:before {
     top: 0;
-    transform: rotate(-45deg);
-    width: 30px;
-    background: white;
-    left: -4px;
+    transform: rotate(-45deg); 
+    width: 1.875rem; 
+    background: black;
+    left: -0.25rem; 
 }
-
-/* När checkboxen är markerad, ändra position och form på strecken för att skapa ett "X" */
-.hamburger-navigation input:checked~.hamburger-icon:after {
-    top: 0;
-    transform: rotate(45deg);
-    width: 30px;
-    background: white;
-    left: -4px;
-}
-
-/* När checkboxen är markerad, visa menyn genom att ändra positionen till vänster */
-.hamburger-navigation input:checked~.hamburger-menu {
-    left: 0;
-    box-shadow: -20px 0 40px rgba(0, 0, 0, 0.3);
-}
-
-/* Justera layouten för hamburgermenyn för mindre skärmar (Mobil) */
-@media screen and (max-width: 992px) {
-
-    .hamburger-icon,
-    .toggle-hamburger-menu {
+    
+    /* När checkboxen är markerad, ändra position och form på strecken för att skapa ett "X" */
+    .hamburgerNavigation input:checked ~ .hamburgerIcon:after {
+        top: 0; 
+        transform: rotate(45deg); 
+        width: 1.875rem; 
+        background: black;
+        left: -0.25rem; 
+    }
+    
+    /* När checkboxen är markerad, visa menyn genom att ändra positionen till vänster */
+    .hamburgerNavigation input:checked ~ .hamburgerMenu {
+        left: 0;
+        box-shadow: -1.25rem 0 2.5rem rgba(0, 0, 0, 0.3); 
+    }
+    
+    /* Justera layouten för hamburgermenyn för olika skämar */
+    /*Mobil*/
+    /*Layouten fixas för hamburgermenyn för mindre skärmar, maximalt 768px, 48 rem*/
+     @media screen and (max-width: 48rem) {
+    .hamburgerIcon,
+    .toggleHamburgerCheckbox {
         display: block;
     }
-
-    .hamburger-menu {
+    .hamburgerMenu {
         justify-content: start;
         flex-direction: column;
         align-items: center;
-        position: absolute;
-        top: 0;
-        right: 483px;
+        display: flex;
+        margin-top: 0;
         background: grey;
-        width: 300px;
-        height: 100%;
-        padding-top: 65px;
+        width: 100%; 
+        height: auto;
+        padding-top: 4.0625rem;
     }
 }
 
-/* Justera layouten för hamburgermenyn för större skärmar (Dator) */
-@media screen and (max-width: 1920px) {
-
-    .hamburger-icon,
-    .toggle-hamburger-menu {
+       /*Dator*/
+       /*Skärmar som är större än eller lika med 784px, 49 rem*/
+  @media screen and (min-width: 49rem) {
+    .hamburgerIcon,
+    .toggleHamburgerCheckbox {
         display: block;
     }
-
-    .hamburger-menu {
+    .hamburgerMenu {
         justify-content: start;
         flex-direction: column;
         align-items: center;
-        position: absolute;
-        top: 0;
-        right: 1700px;
+        display: flex;
+        margin-top: 0;
         background: grey;
-        width: 15%;
-        height: 63%;
-        padding-top: 65px;
+        width: 100%; 
+        height: auto;
+        padding-top: 4.0625rem;
+    }
+}
+
+    /* Stil för länkarna i hamburgermenyn,bredd. */
+    .hamburgerMenu li {
+        width: 100%; 
+    }
+    
+    /* Stilar för länkarna i hamburgermenyn, hur det ser ut. */
+    .hamburgerMenu li a {
+        padding: 1.25rem; 
+        font-size: 0.875rem; 
+        box-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.1) inset; 
     }
 
-}
+    
+    /* Ytterligare stil för navigationsmenyn. Gör lite padding. */
 
-/* Stil för länkarna i hamburgermenyn */
-.hamburger-menu li {
-    width: 100%;
-}
+    .hamburgerNavigation {
+        padding-top: 1.125rem; 
+    }
 
-/* Stilar för länkarna i hamburgermenyn */
-.hamburger-menu li a {
-    padding: 20px;
-    font-size: 14px;
-    box-shadow: 0 1px 0 rgba (255, 255, 255, 0.1) inset;
-}
 
-/* Ytterligare stil för navigationsmenyn. Gör lite padding. */
-.hamburger-navigation {
-    padding-top: 18px;
-}
-
-/* Stil för länkarna i hamburgermenyn */
-.hamburger-menu li {
-    width: 100%;
-}
-
-/* Stilar för länkarna i hamburgermenyn */
-.hamburger-menu li a {
-    padding: 20px;
-    font-size: 24px;
-    box-shadow: 0 1px 0 rgba (255, 255, 255, 0.1) inset;
-}
-
-/* Ytterligare stil för navigationsmenyn överst */
-.hamburger-navigation {
-    padding-top: 18px;
-}
+    /*Visar hamburgermenyn när man trycker på checkboxen som sitter på hamburger ikonen*/
+    .toggleHamburgerCheckbox:checked ~ .hamburgerIcon ~ .hamburgerMenu {
+        display: block;
+    
+    }
+    
+    /*Gömmer hamburgermenyn när checkboxen som sitter på hamburger ikonen inte är markerad*/
+    .toggleHamburgerCheckbox:not(:checked) ~ .hamburgerIcon ~ .hamburgerMenu {
+        display: none;
+       
+    }
 
 /* hamburger SLUT*/
 

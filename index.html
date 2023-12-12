@@ -20,14 +20,12 @@
 
     <header>
 
-   
-        <aside class="hamburger-navigation">
-
-            <input type="checkbox" class="toggle-hamburger-menu">
-
-            <div class="hamburger-icon"></div>
-
-            <ul class="hamburger-menu">
+        <aside class="hamburgerNavigation">
+            <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+            <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                <img src="hamburgerIcon.png" alt="hamburger" width="130" height="100">
+            </label>
+            <ul class="hamburgerMenu">
                 <li><a href="index.html">Hem</a></li>
                 <li><a href="#">Medlem och community</a></li>
                 <li><a href="#">Ge en gåva</a></li>
@@ -39,6 +37,7 @@
                 <li><a href="#">Press</a></li>
             </ul>
         </aside>
+        
         <form id="Search-Form"> <!--Searchbox-STARTS-->
             <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......"/>
             <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
