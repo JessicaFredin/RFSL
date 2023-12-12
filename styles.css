@@ -483,6 +483,11 @@ Chat Gpt: https://chat.openai.com/  */
     display: block;
 }
 
+/*Här börjar Dianas CSS kod.
+Jag har satt margin för att få mellanrum mellan elementen.
+Jag har skapat en flexbox så att "containers" blir responsivt.
+Sedan har jag använt space between för mellanrum
+*/
 .flex-container {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -493,30 +498,44 @@ Chat Gpt: https://chat.openai.com/  */
     justify-content: space-between;
 }
 
+/*Här har jag satt färg på text och ävem mellanrum uppe
+och nere.
+*/
 .card {
     color: white;
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
 
+/*Här har jag skapat en flexbox igen för att stappla bild
+och h2 i en kolumn, samt satt ett maxvärde på bredden. 
+*/
 .cover {
     display: flex;
     text-align: center;
     flex-direction: column;
     max-width: 22vw;
-}
+}  
 
+/*För att centrera innehåll och satt en bakgrundsfärg.
+*/
 .centered {
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/*Satt en bredd för att matcha "containern" och även 
+mellanrum uppe och nere.
+*/
 h2 {
     width: 22vw;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
+/*Ändrat muspekaren till en hand för att användare ska
+veta när de är över en länk.  
+*/
 a {
     cursor: pointer;
 }
@@ -529,7 +548,6 @@ a {
         display: flex;
     }
 
-    
 
     nav.top-desktop-nav {
         display: none;
