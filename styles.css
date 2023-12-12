@@ -222,7 +222,8 @@ footer .copyright {
     color: #fff;
 }
 
-/*hamburger START*/
+
+/*hamburger START:*/
 
 /*En Youtube video användes som guide när hamburger funktionen skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till RFSL. 
 Fick också ändra så att hamburgaren blir responsiv genom att konvertera från px till rem. Har också adderat %. Guidens hamburgare är inte alls responsiv. Har 
@@ -230,6 +231,11 @@ också tagit bort position "absolute"och position "relative" som inte heller är
 Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
 Px to rem calculator: https://nekocalc.com/px-to-rem-converter
 */
+
+/*Ge hamburgaren luftig plats på "header"*/
+.hamburgerIconSpace {
+    padding-right: 5rem; 
+}
 
 /* Stilar för  hamburgermenyn. Förflyttningar osv...*/
 .hamburgerNavigation {
@@ -315,7 +321,8 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         box-shadow: -1.25rem 0 2.5rem rgba(0, 0, 0, 0.3); 
     }
     
-    /* Justera layouten för hamburgermenyn för olika skämar */
+    /* Justerar layouten för hamburgermenyn för olika skämar */
+    
     /*Mobil*/
     /*Layouten fixas för hamburgermenyn för mindre skärmar, maximalt 768px, 48 rem*/
      @media screen and (max-width: 48rem) {
@@ -368,14 +375,6 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         box-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.1) inset; 
     }
 
-    
-    /* Ytterligare stil för navigationsmenyn. Gör lite padding. */
-
-    .hamburgerNavigation {
-        padding-top: 1.125rem; 
-    }
-
-
     /*Visar hamburgermenyn när man trycker på checkboxen som sitter på hamburger ikonen*/
     .toggleHamburgerCheckbox:checked ~ .hamburgerIcon ~ .hamburgerMenu {
         display: block;
@@ -389,6 +388,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     }
 
 /* hamburger SLUT*/
+
 
 /* Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
 W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
