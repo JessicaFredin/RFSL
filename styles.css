@@ -29,7 +29,7 @@ body {
 header {
     display: flex;
     padding: .8em 1.5em;
-    border: 2px solid green;
+    background-color: #ff7448;
 }
 
 /*placering av logotyp*/
