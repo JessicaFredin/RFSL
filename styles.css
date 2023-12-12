@@ -548,6 +548,10 @@ a {
 
 @media (max-width: 1025px) {
 
+    header {
+        width: 100%;
+    }
+
     nav.top-desktop-nav {
         display: none;
     }
@@ -572,6 +576,10 @@ a {
 
 @media (max-width: 768px) {
 
+    header {
+        width: 100%;
+    }
+
     nav.top-desktop-nav {
         display: none;
     }
@@ -592,6 +600,10 @@ a {
 
 @media (max-width: 480px) {
 
+    header {
+        width: 100%;
+    }
+    
     nav.top-desktop-nav {
         display: none;
     }
