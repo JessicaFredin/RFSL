@@ -69,15 +69,22 @@ nav.top-desktop-nav li {
 
 nav.top-desktop-nav li a {
     text-decoration: none;
-    color: white;
+    /*color: white;
     letter-spacing: 0.05em;
-    font-size: 100%;
+    font-size: 100%;*/
 }
 
-/*länkar ändrar storlek och färg när man hovrar*/
-nav.top-desktop-nav a:hover {
-    color: #C13584;
-    font-size: 120%;
+nav.top-desktop-nav a button {
+    background-color: #ff7448;
+    color: white;
+    letter-spacing: 0.05em;
+}
+
+/*länkar ändrar bakgrundsfärg när man hovrar*/
+nav.top-desktop-nav a button:hover {
+    background-color:#ce654b;
+    padding: 0.5em;
+    font-size: 100%;
 
 }
 
