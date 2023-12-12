@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Internal CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 16px;
+            font-family: "Basic sans", sans-serif;
+            font-weight: 300;
+            letter-spacing: .03em;
+            min-height: 100%;
+        }
+
+        /* Base styles for the header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2em;
+            background: #fff;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+            height: 5em;
+        }
+
+        /* Reset list style and text decoration for all lists and anchor tags */
+        ul,
+        a {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        /* Styles for the logo wrapper */
+        .logo-wrapper {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-wrapper img {
+            max-height: 40px;
+            width: auto;
+            padding: 5px;
+        }
+
+        /* Styles for the hamburger menu and icon */
+        .hamburger-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            height: 100%;
+            width: 100%;
+            background: grey;
+            transition: left 0.3s;
+            z-index: 1000;
+            display: none;
+            padding: 2em 0;
+            /* Ge plats för stäng-knappen */
+        }
+
+        .hamburger-menu.active {
+            display: block;
+            left: 0;
+        }
+
+        .hamburger-menu ul {
+            margin: 2em 0;
+        }
+
+        .hamburger-menu li a {
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            padding: 1em 1em;
+            color: #fff;
+            transition: 0.3s ease-out;
+        }
+
+        .hamburger-menu li a:hover {
+            box-shadow: 0 -2px 0px white inset,
+                600px 0 0 rgba(255, 255, 255, 0.05) inset;
+            transition: 0.3s ease-in;
+        }
+
+
+        .menu-close {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1em;
+            cursor: pointer;
+            z-index: 1001;
+            font-size: 2.5em;
+            color: #fff;
+        }
+
+        .hamburger-menu.active .menu-close {
+            display: block;
+        }
+
+        .hamburger-navigation {
+            display: flex;
+            align-items: center;
+            padding-right: 1em;
+        }
+
+        .hamburger-icon {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-right: 1em;
+        }
+
+        /* Styles for the mobile-top-nav */
+        .mobile-top-nav {
+            display: flex;
+            background-color: #f2f2f2;
+            font-size: 0.5em;
+            position: absolute;
+            width: 100%;
+            top: 10em;
+            left: 0;
+            z-index: 999;
+        }
+
+        .mobile-top-nav a {
+            padding: 0.5em 1em;
+            text-align: center;
+            color: #333;
+            margin: 0;
+            /* Ta bort margin för att passa bättre på små skärmar */
+            white-space: nowrap;
+            /* Förhindrar omslag av text */
+        }
+
+        .mobile-language-selector {
+            display: flex;
+            align-items: center;
+            padding-right: 1em;
+            /* Lägg till lite utrymme till höger */
+            margin-left: auto;
+            /* Skjuter language-selector till höger */
+        }
+
+        .language {
+            display: none;
+            /* Göm detta på mobila skärmar */
+        }
+
+        .language ul li a {
+            border-radius: 50%;
+            background-color: #1f3643;
+            color: #fffdfc;
+            padding: 0.5em;
+        }
+
+        /* Styles for the top-desktop-nav */
+        .top-desktop-nav,
+        .search-box {
+            display: none;
+        }
+
+        .top-desktop-nav ul,
+        .language ul {
+            display: flex;
+        }
+
+        .top-desktop-nav ul li,
+        .language ul li {
+            margin: 0 1em;
+        }
+
+        /* Responsive styles */
+        @media (min-width: 768px) and (min-width: 992px) {
+            .search-box {
+                display: flex;
+                align-items: center;
+            }
+
+            .hamburger-navigation {
+                order: -2;
+            }
+
+            .mobile-top-nav {
+                display: none;
+            }
+
+            .mobile-language-selector {
+                display: none;
+            }
+
+            .language {
+                display: flex;
+                /* Visa detta på större skärmar */
+            }
+
+            .top-desktop-nav {
+                display: flex;
+            }
+
+            .hamburger-menu {
+                width: 300px;
+            }
+
+            .logo-wrapper img {
+                max-height: 60px;
+            }
+
+            .hamburger-menu li a {
+                font-size: 1.2em;
+            }
+
+            .menu-close {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (min-width: 992px) {
+            header {
+                flex-wrap: nowrap;
+            }
+
+            .logo-wrapper {
+                order: 0;
+            }
+
+            .search-box {
+                order: -1;
+            }
+
+            .language {
+                order: 2;
+            }
+
+            .top-desktop-nav {
+                order: 1;
+            }
+        }
+    </style>
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <!-- Hamburger navigation menu -->
+        <aside class="hamburger-navigation">
+            <!-- Hamburger icon -->
+            <div class="hamburger-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+
+
+            <!-- Mobile navigation menu -->
+            <div class="hamburger-menu">
+                <div class="menu-close">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="#">Medlem och community</a></li>
+                    <li><a href="#">Ge en gåva</a></li>
+                    <li><a href="#">Verksamhet</a></li>
+                    <li><a href="#">Aktuellt</a></li>
+                    <li><a href="#">Certifiering och utbildning</a></li>
+                    <li><a href="#">Hbtqi-fakta & tips</a></li>
+                    <li><a href="#">Om oss</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </aside>
+        <!-- Desktop navigation links for mobile view -->
+        <div class="mobile-top-nav">
+            <a href="#">Bli medlem</a>
+            <a href="#">Ge en gåva</a>
+            <a href="#">Begreppsordlista</a>
+            <div class="mobile-language-selector">
+                <a href="#">EN</a>
+                <a href="#">SV</a>
+            </div>
+        </div>
+
+
+        <!-- Search box -->
+        <div class="search-box">
+            <input type="search" placeholder="Sök...">
+            <button type="submit">Sök</button>
+        </div>
+
+        <!-- Logo wrapper -->
+        <div class="logo-wrapper">
+            <a href="index.html">
+                <img src="https://www.rfsl.se/wp-content/themes/rfsl/img/logo.png" alt="RFSL Logo" class="logo">
+            </a>
+        </div>
+
+        <!-- Top desktop navigation -->
+        <nav class="top-desktop-nav">
+            <ul>
+                <li><a href="#">Bli medlem</a></li>
+                <li><a href="#">Ge en gåva</a></li>
+                <li><a href="#">Begreppsordlista</a></li>
+            </ul>
+        </nav>
+
+        <!-- Language selector -->
+        <div class="language">
+            <ul>
+                <li><a href="#">EN</a></li>
+                <li><a href="#">SV</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- JavaScript file -->
+    <script>
+        var hamburgerIcon = document.querySelector('.hamburger-icon');
+        var hamburgerMenu = document.querySelector('.hamburger-menu');
+
+        hamburgerIcon.addEventListener('click', function () {
+            hamburgerMenu.classList.toggle('active');
+        });
+
+        // Close the hamburger menu by clicking the 'X' icon
+        var closeIcon = document.querySelector('.menu-close');
+        closeIcon.addEventListener('click', function () {
+            hamburgerMenu.classList.remove('active');
+        });
+
+    </script>
+</body>
+
+</html>
