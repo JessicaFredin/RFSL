@@ -245,7 +245,7 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
 
 /* Animeringseffekt när musen hover över länkarna */
 /* Skugga och bakgrundseffekt */
-.hamburger.menu li a:hover {
+.hamburger-menu li a:hover {
     box-shadow: 0 -5px 0px white inset,
         500px 0 0 rgba(255, 255, 255, 0.03) inset;
     padding: 35px 25px 45px 25px;
@@ -382,7 +382,6 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
     padding: 20px;
     font-size: 14px;
     box-shadow: 0 1px 0 rgba (255, 255, 255, 0.1) inset;
-
 }
 
 /* Ytterligare stil för navigationsmenyn. Gör lite padding. */
