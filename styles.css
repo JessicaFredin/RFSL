@@ -421,7 +421,7 @@ Chat Gpt: https://chat.openai.com/  */
 .slideshow-container {
     max-width: 62.5em; /* 62.5em = 1000px (1em = 16px) */
     margin: auto;
-    position: relative;
+    position: relative; 
 }
 
 /* Nästa/Föregående knappar */
@@ -560,6 +560,10 @@ a {
         display: flex;
     }
 
+    #svButton {
+        display: none;
+    }
+
     .flex-container {
         flex-direction: column;
     }
@@ -581,6 +585,10 @@ a {
     }
 
     nav.top-desktop-nav {
+        display: none;
+    }
+
+    #svButton {
         display: none;
     }
 
@@ -610,6 +618,10 @@ a {
 
     div.language {
         float: right;
+    }
+
+    #svButton {
+        display: none;
     }
 
     footer ul {
