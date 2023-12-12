@@ -29,7 +29,7 @@ body {
 header {
     display: flex;
     padding: .8em 1.5em;
-    border: 2px solid green;
+    background-color: #ff7448;
 }
 
 /*placering av logotyp*/
@@ -69,8 +69,9 @@ nav.top-desktop-nav li {
 
 nav.top-desktop-nav li a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: white;
     letter-spacing: 0.05em;
+    font-size: 100%;
 }
 
 /*länkar ändrar storlek och färg när man hovrar*/
@@ -106,6 +107,10 @@ div.language li a button {
     background-color: #1f3643;
     color: #fffdfc;
     padding: 0.5em;
+}
+
+div.language li a button:hover {
+    padding: 0.8em;
 }
 
 footer {
@@ -415,7 +420,7 @@ Chat Gpt: https://chat.openai.com/  */
 .slideshow-container {
     max-width: 62.5em; /* 62.5em = 1000px (1em = 16px) */
     margin: auto;
-    position: relative;
+    position: relative; 
 }
 
 /* Nästa/Föregående knappar */
@@ -542,12 +547,21 @@ a {
 
 @media (max-width: 1025px) {
 
+    header {
+        width: 100%;
+    }
+
     nav.top-desktop-nav {
         display: none;
     }
 
     div.language {
         display: flex;
+        justify-content: flex-end;
+    }
+
+    #svButton {
+        display: none;
     }
 
     .flex-container {
@@ -566,7 +580,15 @@ a {
 
 @media (max-width: 768px) {
 
+    header {
+        width: 100%;
+    }
+
     nav.top-desktop-nav {
+        display: none;
+    }
+
+    #svButton {
         display: none;
     }
 
@@ -586,12 +608,20 @@ a {
 
 @media (max-width: 480px) {
 
+    header {
+        width: 100%;
+    }
+    
     nav.top-desktop-nav {
         display: none;
     }
 
     div.language {
         float: right;
+    }
+
+    #svButton {
+        display: none;
     }
 
     footer ul {
