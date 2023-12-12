@@ -71,8 +71,7 @@ nav.top-desktop-nav li a {
     text-decoration: none;
     color: white;
     letter-spacing: 0.05em;
-    font-weight: bold;
-    font-size: 110%;
+    font-size: 100%;
 }
 
 /*länkar ändrar storlek och färg när man hovrar*/
