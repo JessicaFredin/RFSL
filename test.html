@@ -22,12 +22,25 @@
             box-sizing: border-box;
         }
 
+        html {
+            height: 100%;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+
         body {
             font-size: 16px;
             font-family: "Basic sans", sans-serif;
             font-weight: 300;
             letter-spacing: .03em;
             min-height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Base styles for the header */
@@ -66,20 +79,26 @@
         .hamburger-menu {
             position: fixed;
             top: 0;
-            left: -100%;
+            left: 0;
             height: 100%;
-            width: 100%;
+            width: 100vw;
+            /* Använd 100vw för att täcka hela skärmens bredd */
             background: grey;
-            transition: left 0.3s;
+            transition: transform 0.3s ease-out;
             z-index: 1000;
-            display: none;
+            transform: translateX(-100%);
+            /* Dölj menyn från början */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 2em 0;
-            /* Ge plats för stäng-knappen */
         }
 
         .hamburger-menu.active {
-            display: block;
-            left: 0;
+            transform: translateX(0);
+            /* Visa menyn när den är aktiv */
+            transition: transform 0.3s ease-in;
         }
 
         .hamburger-menu ul {
@@ -190,6 +209,123 @@
             margin: 0 1em;
         }
 
+        .search-box {
+            display: none;
+        }
+
+
+
+
+
+
+
+
+
+        footer {
+            margin-top: auto;
+            background-color: #707070;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 2em 1em;
+            font-size: .9em;
+            color: #fff;
+            width: 100%;
+        }
+
+        footer .footer-nav {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+
+        footer .footer-nav h1 {
+            font-size: 2em;
+            text-shadow: 0 1px 10px #000;
+        }
+
+        footer .footer-nav p {
+            font-size: .8em;
+            width: 80%;
+            text-align: center;
+            line-height: 1.2em;
+            margin: 1em auto;
+            padding: 0 1em;
+
+        }
+
+        footer .footer-nav .social-media-links a {
+            text-decoration: none;
+            display: inline-block;
+            margin: 1em 0.75em;
+        }
+
+
+        footer ul {
+            list-style-type: none;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        footer ul li {
+            flex: 1 1 200px;
+            margin: 0.5em;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease-out;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+            transition: color 0.3s ease-in;
+            color: red;
+        }
+
+        i.fa-facebook,
+        i.fa-instagram {
+            font-size: 1.5em;
+            margin: 0 .1em;
+            color: #fff;
+            transition: color 0.3s ease-out;
+        }
+
+        i.fa-facebook:hover,
+        i.fa-instagram:hover {
+            transition: color 0.3s ease-in;
+        }
+
+        i.fa-facebook:hover {
+            color: #4267B2;
+        }
+
+        i.fa-instagram:hover {
+            color: #C13584;
+        }
+
+        footer .copyright {
+            display: block;
+            text-align: center;
+            padding: 0.5em 0 0 0;
+            width: 100%;
+            margin: 3em 0 .5em 0;
+            color: #fff;
+        }
+
+
+
+
+
+
+
         /* Responsive styles */
         @media (min-width: 768px) and (min-width: 992px) {
             .search-box {
@@ -234,6 +370,93 @@
                 font-size: 1.5em;
             }
         }
+
+
+
+        /* Responsiva justeringar */
+        @media (min-width: 768px) {
+            .search-box {
+                margin: 0;
+                /* Ta bort ytterligare marginal på större skärmar */
+            }
+
+            .search-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* Centrera sökrutan och knappen */
+                padding: 0.5em;
+                background-color: #F5F5F5;
+                /* Lätt bakgrundsfärg */
+                border-radius: 4px;
+                margin: 1em 0;
+                /* Ge lite utrymme ovanför och under */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                /* Lägg till en lätt skugga */
+            }
+
+            .search-box input[type="search"] {
+                border: none;
+                padding: 0.5em;
+                margin-right: 0.5em;
+                /* Lite utrymme mellan input och knapp */
+                border-radius: 4px;
+                flex-grow: 1;
+                /* Gör så att sökfältet tar upp tillgängligt utrymme */
+            }
+
+            .search-box button {
+                background-color: #1F3643;
+                /* Matchande bakgrundsfärg */
+                color: white;
+                border: none;
+                padding: 0.5em 1em;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            .search-box button:hover {
+                background-color: #16303A;
+                /* Mörkare färg på hover */
+            }
+
+            footer {
+                padding: 1em 1em;
+            }
+
+            footer .footer-nav h1 {
+                font-size: 2.5em;
+            }
+
+            footer .footer-nav p {
+                font-size: 0.9em;
+                width: 70%;
+            }
+
+            footer .footer-nav .social-media-links a {
+                margin: 1em 1em;
+            }
+
+            footer ul {
+                flex-direction: row;
+                /* Horisontell layout på desktop */
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            footer ul li {
+                flex: 1 1 200px;
+                margin: 0 1em;
+            }
+
+            i.fa-facebook,
+            i.fa-instagram {
+                font-size: 1.8em;
+
+            }
+        }
+
+
 
         @media (min-width: 992px) {
             header {
@@ -304,7 +527,7 @@
         <!-- Search box -->
         <div class="search-box">
             <input type="search" placeholder="Sök...">
-            <button type="submit">Sök</button>
+            <button type="submit"><i class="fas fa-search"></i></button>
         </div>
 
         <!-- Logo wrapper -->
@@ -332,17 +555,53 @@
         </div>
     </header>
 
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer-nav">
+            <h1>RFSL</h1>
+            <p>Sveriges könstillhörighetslag är föråldrad och den spär även på kötiderna inom den könsbekräftande
+                vården.
+                Lagens
+                utformning är från 1972, då Sverige var först i världen…</p>
+            <div class="social-media-links">
+                <a target="_blank" href="https://www.facebook.com/rfsl.forbundet/?fref=ts">
+                    <i class="social-media-icon fa-brands fa-facebook"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com">
+                    <i class="social-media-icon fab fa-instagram"></i>
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">Hem</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Kontakta</a></li>
+                <li><a href="#">Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 RFSL. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
     <!-- JavaScript file -->
     <script>
-        var hamburgerIcon = document.querySelector('.hamburger-icon');
-        var hamburgerMenu = document.querySelector('.hamburger-menu');
+        let hamburgerIcon = document.querySelector('.hamburger-icon');
+        let hamburgerMenu = document.querySelector('.hamburger-menu');
 
         hamburgerIcon.addEventListener('click', function () {
             hamburgerMenu.classList.toggle('active');
         });
 
         // Close the hamburger menu by clicking the 'X' icon
-        var closeIcon = document.querySelector('.menu-close');
+        let closeIcon = document.querySelector('.menu-close');
         closeIcon.addEventListener('click', function () {
             hamburgerMenu.classList.remove('active');
         });
