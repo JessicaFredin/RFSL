@@ -526,6 +526,7 @@ a {
 
     header {
         width: 100%;
+        display: flex;
     }
 
     nav.top-desktop-nav {
@@ -559,6 +560,7 @@ a {
 
     header {
         width: 100%;
+        display: flex;
     }
 
     nav.top-desktop-nav {
@@ -587,6 +589,7 @@ a {
 
     header {
         width: 100%;
+        display: flex;
     }
     
     nav.top-desktop-nav {
