@@ -109,6 +109,10 @@ div.language li a button {
     padding: 0.5em;
 }
 
+div.language li a button:hover {
+    padding: 0.8em;
+}
+
 footer {
     margin-top: auto;
     background-color: #707070;
