@@ -100,24 +100,24 @@ div.language {
     margin-left: auto;
 }
 
-/* */
+
 div.language ul {
     display: flex;
     list-style-type: none;
 }
 
-/* */
+
 div.language li {
     margin: 0 0.2em;
 }
 
-/* */
+
 div.language li a {
     text-decoration: none;
 
 }
 
-/* stil för knappar i "language" lsistelement*/
+/* stil för knappar i "language" listelement*/
 div.language li a button {
     border-radius: 50%;
     background-color: #1f3643;
