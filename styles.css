@@ -34,8 +34,8 @@ header {
 
 /*placering av logotyp*/
 .logo-wrapper {
+    flex-grow: 1;
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
 }
