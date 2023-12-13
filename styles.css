@@ -27,6 +27,7 @@ body {
 }
 
 header {
+    width: 100%;
     display: flex;
     padding: .8em 1.5em;
     background-color: #ff7448;
@@ -57,16 +58,19 @@ nav.top-desktop-nav {
     font-size: 0.8em;
 }
 
+/* */
 nav.top-desktop-nav ul {
     display: flex;
     list-style-type: none;
 
 }
 
+/* */
 nav.top-desktop-nav li {
     margin: 0 1.5em;
 }
 
+/* */
 nav.top-desktop-nav li a {
     text-decoration: none;
     /*color: white;
@@ -74,6 +78,7 @@ nav.top-desktop-nav li a {
     font-size: 100%;*/
 }
 
+/* */
 nav.top-desktop-nav a button {
     background-color: #ff7448;
     color: white;
@@ -95,20 +100,24 @@ div.language {
     margin-left: auto;
 }
 
+/* */
 div.language ul {
     display: flex;
     list-style-type: none;
 }
 
+/* */
 div.language li {
     margin: 0 0.2em;
 }
 
+/* */
 div.language li a {
     text-decoration: none;
 
 }
 
+/* */
 div.language li a button {
     border-radius: 50%;
     background-color: #1f3643;
@@ -116,9 +125,12 @@ div.language li a button {
     padding: 0.5em;
 }
 
+/* */
 div.language li a button:hover {
     padding: 0.8em;
 }
+
+/* slut top-nav  - my, josephine, louise*/
 
 footer {
     margin-top: auto;
@@ -395,7 +407,7 @@ W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
 Chat Gpt: https://chat.openai.com/  */
 
 .slideshow-container {
-    max-width: 62.5em; /* 62.5em = 1000px (1em = 16px) */
+    max-width: 70%; /* 62.5em = 1000px (1em = 16px) */
     margin: auto;
     position: relative; 
 }
@@ -482,6 +494,8 @@ Chat Gpt: https://chat.openai.com/  */
     height: auto;
     display: block;
 }
+/* Slut slideshow - Lorik */
+
 
 /*Här börjar Dianas CSS kod.
 Jag har satt margin för att få mellanrum mellan elementen.
@@ -507,7 +521,7 @@ och nere.
     margin-bottom: 2vh;
 }
 
-/*Här har jag skapat en flexbox igen för att stappla bild
+/*Här har jag skapat en flexbox igen för att stapla bild
 och h2 i en kolumn, samt satt ett maxvärde på bredden. 
 */
 .cover {
@@ -539,7 +553,7 @@ veta när de är över en länk.
 a {
     cursor: pointer;
 }
-
+/* Slut - Diana*/
 
 @media (max-width: 1025px) {
 
@@ -574,6 +588,7 @@ a {
         width: 80vw;
     }
 }
+
 
 
 @media (max-width: 768px) {
@@ -633,7 +648,7 @@ a {
     }
 }
 
-/*Here<!--SearchboxSTARTS-->*/
+/*Here<!--SearchboxSTARTS-->    - William */
 
 #Search-Form {
 
