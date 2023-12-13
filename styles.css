@@ -92,7 +92,7 @@ nav.top-desktop-nav a button:hover {
 div.language {
     display: flex;
     text-align: right;
-    float: right;
+    margin-left: auto;
 }
 
 div.language ul {
