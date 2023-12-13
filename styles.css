@@ -48,7 +48,7 @@ header {
     justify-content: center;
 }
 
-/* */
+/*styling av den övre navigatiosmenyn */
 nav.top-desktop-nav {
     text-align: center;
     display: inline-flex;
@@ -58,31 +58,30 @@ nav.top-desktop-nav {
     font-size: 0.8em;
 }
 
-/* */
+/*stilar för listan i den övre navigationsmenyn*/
 nav.top-desktop-nav ul {
     display: flex;
     list-style-type: none;
 
 }
 
-/* */
+/* styling för listelement*/
 nav.top-desktop-nav li {
-    margin: 0 1.5em;
+    margin: 0 2em;
 }
 
-/* */
+/* styling för länkarna inom listelement*/
 nav.top-desktop-nav li a {
     text-decoration: none;
-    /*color: white;
-    letter-spacing: 0.05em;
-    font-size: 100%;*/
 }
 
-/* */
+/*styling av knappar på den övre navigationsmenyn*/
 nav.top-desktop-nav a button {
     background-color: #ff7448;
     color: white;
     letter-spacing: 0.05em;
+    padding: 0.5em;
+    
 }
 
 /*länkar ändrar bakgrundsfärg när man hovrar*/
@@ -90,10 +89,11 @@ nav.top-desktop-nav a button:hover {
     background-color:#ce654b;
     padding: 0.5em;
     font-size: 100%;
+    transition: background-color 0.3s ease;
 
 }
 
-/* */
+/*styling av language-elementen*/
 div.language {
     display: flex;
     text-align: right;
@@ -117,7 +117,7 @@ div.language li a {
 
 }
 
-/* */
+/* stil för knappar i "language" lsistelement*/
 div.language li a button {
     border-radius: 50%;
     background-color: #1f3643;
@@ -125,7 +125,7 @@ div.language li a button {
     padding: 0.5em;
 }
 
-/* */
+/* knapparna för språk blir större när man hovrar */
 div.language li a button:hover {
     padding: 0.8em;
 }
@@ -562,18 +562,12 @@ a {
         display: flex;
     }
 
-
     nav.top-desktop-nav {
-        display: none;
-    }
-
-    div.language {
-        display: flex;
-        justify-content: flex-end;
+        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
     }
 
     #svButton {
-        display: none;
+        display: none; /*gömmer svenska språkvalsknappen på mindre skärm*/
     }
 
     .flex-container {
@@ -599,11 +593,11 @@ a {
     }
 
     nav.top-desktop-nav {
-        display: none;
+        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
     }
 
     #svButton {
-        display: none;
+        display: none; /*gömmer svenska språkvalsknappen på mindre skärm*/
     }
 
     footer .footer-nav h1 {
@@ -628,15 +622,11 @@ a {
     }
     
     nav.top-desktop-nav {
-        display: none;
-    }
-
-    div.language {
-        float: right;
+        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
     }
 
     #svButton {
-        display: none;
+        display: none; /*gömmer svenska språkvalsknappen på mindre skärm*/
     }
 
     footer ul {
