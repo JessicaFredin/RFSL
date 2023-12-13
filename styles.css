@@ -236,11 +236,12 @@ footer .copyright {
 /*slut footer - jessica */
 
 
-/*hamburger START:*/
+/*hamburger START: Madelene*/
 
 /*En Youtube video användes som guide när hamburger funktionen skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till RFSL. 
 Fick också ändra så att hamburgaren blir responsiv genom att konvertera från px till rem. Har också adderat %. Guidens hamburgare är inte alls responsiv. Har 
-också tagit bort position "absolute"och position "relative" som inte heller är responsiva, och ändrat till "flex". 
+också tagit bort position "absolute"och position "relative" som inte heller är responsiva, och ändrat till "flex". Istället för att skapa "hamburgar ikonen" och
+"X-ikonen" manuellt med kod som guiden använde jag istället färdiga bilder.
 Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
 Px to rem calculator: https://nekocalc.com/px-to-rem-converter
 */
@@ -310,23 +311,6 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     background: transparent;
     }
     
-    /* När checkboxen är markerad, ändra position och form på strecken för att skapa ett "X" */
-    .hamburgerNavigation input:checked ~ .hamburgerIcon:before {
-    top: 0;
-    transform: rotate(-45deg); 
-    width: 1.875rem; 
-    background: black;
-    left: -0.25rem; 
-}
-    
-    /* När checkboxen är markerad, ändra position och form på strecken för att skapa ett "X" */
-    .hamburgerNavigation input:checked ~ .hamburgerIcon:after {
-        top: 0; 
-        transform: rotate(45deg); 
-        width: 1.875rem; 
-        background: black;
-        left: -0.25rem; 
-    }
     
     /* När checkboxen är markerad, visa menyn genom att ändra positionen till vänster */
     .hamburgerNavigation input:checked ~ .hamburgerMenu {
@@ -353,6 +337,8 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         width: 100%; 
         height: auto;
         padding-top: 4.0625rem;
+        padding: 3rem 1rem; 
+        font-size: 1rem!important; 
     }
 }
 
@@ -373,6 +359,9 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         width: 100%; 
         height: auto;
         padding-top: 4.0625rem;
+        padding: 6rem 2rem; 
+        font-size: 1.5rem!important; 
+        
     }
 }
 
@@ -384,7 +373,6 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     /* Stilar för länkarna i hamburgermenyn, hur det ser ut. */
     .hamburgerMenu li a {
         padding: 1.25rem; 
-        font-size: 0.875rem; 
         box-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.1) inset; 
     }
 
@@ -393,14 +381,32 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         display: block;
     
     }
-    
+
     /*Gömmer hamburgermenyn när checkboxen som sitter på hamburger ikonen inte är markerad*/
     .toggleHamburgerCheckbox:not(:checked) ~ .hamburgerIcon ~ .hamburgerMenu {
         display: none;
        
     }
 
-/* hamburger SLUT*/
+     /* Gör så att hamburgaren ignorerar headern. Annars triggas heasdern och blir större när hamburgar menyn öppnas */
+    .hamburger-wrapper {
+        position: fixed;
+        margin-top: 0;
+        margin-left: 0;
+        z-index: 999;
+      }
+
+      /* X ikonen, för att stänga hamburger menyn */
+.hamburgerImage {
+    content: url("hamburgerIcon.png");
+}
+
+/* Byter bild från hamburgaren till ett X. X kommer fram när man öppnar hamburgar menyn. Hamburgaren kommer fram, när man stänger menyn*/
+.hamburgerNavigation input:checked ~ .hamburgerIcon .hamburgerImage {
+    content: url("closeHamburgerIcon.png");
+}
+
+/* hamburger SLUT: Madelene*/
 
 
 /* Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
