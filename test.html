@@ -13,525 +13,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Internal CSS -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            height: 100%;
-        }
-
-        html,
-        body {
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-
-
-        body {
-            font-size: 16px;
-            font-family: "Basic sans", sans-serif;
-            font-weight: 300;
-            letter-spacing: .03em;
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Base styles for the header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2em;
-            background-color: #ff7448;
-            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-            height: 5em;
-        }
-
-        /* Reset list style and text decoration for all lists and anchor tags */
-        ul,
-        a {
-            list-style: none;
-            text-decoration: none;
-        }
-
-        /* Styles for the logo wrapper */
-        .logo-wrapper {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo-wrapper img {
-            max-height: 40px;
-            width: auto;
-            padding: 5px;
-        }
-
-        /* Styles for the hamburger menu and icon */
-        .hamburger-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100vw;
-            /* Använd 100vw för att täcka hela skärmens bredd */
-            background: grey;
-            transition: transform 0.3s ease-out;
-            z-index: 1000;
-            transform: translateX(-100%);
-            /* Dölj menyn från början */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2em 0;
-        }
-
-        .hamburger-menu.active {
-            transform: translateX(0);
-            /* Visa menyn när den är aktiv */
-            transition: transform 0.3s ease-in;
-        }
-
-        .hamburger-menu ul {
-            margin: 2em 0;
-        }
-
-        .hamburger-menu li a {
-            font-size: 2em;
-            display: flex;
-            align-items: center;
-            padding: 1em 1em;
-            color: #fff;
-            transition: 0.3s ease-out;
-        }
-
-        .hamburger-menu li a:hover {
-            box-shadow: 0 -2px 0px white inset,
-                600px 0 0 rgba(255, 255, 255, 0.05) inset;
-            transition: 0.3s ease-in;
-        }
-
-
-        .menu-close {
-            display: none;
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 1em;
-            cursor: pointer;
-            z-index: 1001;
-            font-size: 2.5em;
-            color: #fff;
-        }
-
-        .hamburger-menu.active .menu-close {
-            display: block;
-        }
-
-        .hamburger-navigation {
-            display: flex;
-            align-items: center;
-            padding-right: 1em;
-        }
-
-        .hamburger-icon {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            margin-right: 1em;
-        }
-
-        /* Styles for the mobile-top-nav */
-        .mobile-top-nav {
-            display: flex;
-            background-color: #f2f2f2;
-            font-size: 0.5em;
-            position: absolute;
-            width: 100%;
-            top: 10em;
-            left: 0;
-            z-index: 999;
-        }
-
-        .mobile-top-nav a {
-            padding: 0.5em 1em;
-            text-align: center;
-            color: #333;
-            margin: 0;
-            /* Ta bort margin för att passa bättre på små skärmar */
-            white-space: nowrap;
-            /* Förhindrar omslag av text */
-        }
-
-        .mobile-language-selector {
-            display: flex;
-            align-items: center;
-            padding-right: 1em;
-            /* Lägg till lite utrymme till höger */
-            margin-left: auto;
-            /* Skjuter language-selector till höger */
-        }
-
-        .language {
-            display: none;
-            /* Göm detta på mobila skärmar */
-        }
-
-        .language ul li a {
-            border-radius: 50%;
-            background-color: #1f3643;
-            color: #fffdfc;
-            padding: 0.5em;
-        }
-
-        /* Styles for the top-desktop-nav */
-        .top-desktop-nav,
-        .search-box {
-            display: none;
-        }
-
-        .top-desktop-nav ul,
-        .language ul {
-            display: flex;
-        }
-
-        .top-desktop-nav ul li,
-        .language ul li {
-            margin: 0 1em;
-        }
-
-        .top-desktop-nav a {
-            color: #fff;
-        }
-
-        .search-box {
-            display: none;
-        }
-
-        footer {
-            margin-top: auto;
-            background-color: #ff7448;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 2em 1em;
-            font-size: .9em;
-            color: #fff;
-            width: 100%;
-        }
-
-        footer .footer-nav {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-
-        footer .footer-nav h1 {
-            font-size: 2em;
-            text-shadow: 0 1px 10px #000;
-        }
-
-        footer .footer-nav p {
-            font-size: .8em;
-            width: 80%;
-            text-align: center;
-            line-height: 1.2em;
-            margin: 1em auto;
-            padding: 0 1em;
-
-        }
-
-        footer .footer-nav .social-media-links a {
-            text-decoration: none;
-            display: inline-block;
-            margin: 1em 0.75em;
-        }
-
-        footer ul {
-            list-style-type: none;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0;
-        }
-
-        footer ul li {
-            flex: 1 1 200px;
-            margin: 0.5em;
-        }
-
-        footer ul li a {
-            text-decoration: none;
-            color: #fff;
-            transition: color 0.3s ease-out;
-        }
-
-        footer ul li a:hover {
-            text-decoration: underline;
-            transition: color 0.3s ease-in;
-            color: red;
-        }
-
-        i.fa-facebook,
-        i.fa-instagram {
-            font-size: 1.5em;
-            margin: 0 .1em;
-            color: #fff;
-            transition: color 0.3s ease-out;
-        }
-
-        i.fa-facebook:hover,
-        i.fa-instagram:hover {
-            transition: color 0.3s ease-in;
-        }
-
-        i.fa-facebook:hover {
-            color: #4267B2;
-        }
-
-        i.fa-instagram:hover {
-            color: #C13584;
-        }
-
-        footer .copyright {
-            display: block;
-            text-align: center;
-            padding: 0.5em 0 0 0;
-            width: 100%;
-            margin: 3em 0 .5em 0;
-            color: #fff;
-        }
-
-
-
-
-
-
-
-        /* Responsive styles */
-        @media (min-width: 768px) and (min-width: 992px) {
-            .search-box {
-                display: flex;
-                align-items: center;
-            }
-
-            .hamburger-navigation {
-                order: -2;
-            }
-
-            .mobile-top-nav {
-                display: none;
-            }
-
-            .mobile-language-selector {
-                display: none;
-            }
-
-            .language {
-                display: flex;
-                /* Visa detta på större skärmar */
-            }
-
-            .top-desktop-nav {
-                display: flex;
-            }
-
-            .hamburger-menu {
-                width: 300px;
-            }
-
-            .logo-wrapper img {
-                max-height: 60px;
-            }
-
-            .hamburger-menu li a {
-                font-size: 1.2em;
-            }
-
-            .menu-close {
-                font-size: 1.5em;
-            }
-        }
-
-
-
-        /* Responsiva justeringar */
-        @media (min-width: 768px) {
-            .search-box {
-                margin: 0;
-                /* Ta bort ytterligare marginal på större skärmar */
-            }
-
-            .search-box {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                /* Centrera sökrutan och knappen */
-                padding: 0.5em;
-                background-color: #F5F5F5;
-                /* Lätt bakgrundsfärg */
-                border-radius: 4px;
-                margin: 1em 0;
-                /* Ge lite utrymme ovanför och under */
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                /* Lägg till en lätt skugga */
-            }
-
-            .search-box input[type="search"] {
-                border: none;
-                padding: 0.5em;
-                margin-right: 0.5em;
-                /* Lite utrymme mellan input och knapp */
-                border-radius: 4px;
-                flex-grow: 1;
-                /* Gör så att sökfältet tar upp tillgängligt utrymme */
-            }
-
-            .search-box button {
-                background-color: #1F3643;
-                /* Matchande bakgrundsfärg */
-                color: white;
-                border: none;
-                padding: 0.5em 1em;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-
-            .search-box button:hover {
-                background-color: #16303A;
-                /* Mörkare färg på hover */
-            }
-
-            footer {
-                padding: 1em 1em;
-            }
-
-            footer .footer-nav h1 {
-                font-size: 2.5em;
-            }
-
-            footer .footer-nav p {
-                font-size: 0.9em;
-                width: 70%;
-            }
-
-            footer .footer-nav .social-media-links a {
-                margin: 1em 1em;
-            }
-
-            footer ul {
-                flex-direction: row;
-                /* Horisontell layout på desktop */
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            footer ul li {
-                flex: 1 1 200px;
-                margin: 0 1em;
-            }
-
-            i.fa-facebook,
-            i.fa-instagram {
-                font-size: 1.8em;
-
-            }
-        }
-
-
-
-        @media (min-width: 992px) {
-            header {
-                flex-wrap: nowrap;
-            }
-
-            .logo-wrapper {
-                order: 0;
-            }
-
-            .search-box {
-                order: -1;
-            }
-
-            .language {
-                order: 2;
-            }
-
-            .top-desktop-nav {
-                order: 1;
-            }
-        }
-
-
-
-        .slideshow-container {
-            width: 100%;
-            position: relative;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .slides {
-            display: none;
-            text-align: center;
-        }
-
-        .slides img {
-            width: 100%;
-            height: auto;
-            /* Ensures the image is responsive and maintains aspect ratio */
-            object-fit: cover;
-            /* Covers the slide area, may crop the image */
-        }
-
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 10px;
-            /* Smaller padding for mobile */
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            /* Smaller arrows for mobile */
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 0 3px 3px 0;
-            z-index: 1;
-        }
-
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        /* Progressive enhancements for larger screens */
-        @media screen and (min-width: 768px) {
-
-            .prev,
-            .next {
-                padding: 16px;
-                font-size: 24px;
-                /* Larger arrows for larger screens */
-            }
-        }
-    </style>
-    </style>
+    <link rel="stylesheet" href="test.css">
     <title>Home</title>
 </head>
 
@@ -600,7 +82,7 @@
         </nav>
 
 
-        <!-- Language selector -->
+        <!-- Top desktop Language selector -->
         <div class="language">
             <ul>
                 <li><a href="#">EN</a></li>
@@ -638,13 +120,157 @@ Chat Gpt: https://chat.openai.com/  */  -->
             </div>
 
             </div>
+        </main>
+    </section>
 
 
-            <!-- Punkter/cirklar -->
-            <div class="circle">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+    <section>
+        <div class="flex-container">
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/f3/f34b25746d0224555798ad2ee98ff593.jpg"
+                        alt="En samling av folk">
+                    <div class="background">
+                        <div class="centered"><a>
+                                <h2>Så arbetar RFSL internationellt</h2>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover">
+                    <img src="https://www.rfsl.se/wp-content/uploads/imagecache/60/60a7cae241943fa34d554f84e227ab26.jpg"
+                        alt="Bebisar">
+                    <div class="centered"><a>
+                            <h2>Att bli och vara förälder</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"> <img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/4c/4c7cd1cdedc991c1a13c20db79f1161a.jpg"
+                        alt="Hammare">
+                    <div class="centered"><a>
+                            <h2>Hbtqi-asylsökande nekas asyl med otillåtna avslag</h2>
+                        </a> </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/0c/0c8d5d2a6d2c8ed35ea7a52230de6fd7.png"
+                        alt="Loggar">
+                    <div class="centered"><a>
+                            <h2>De Globala målen och Agenda 2030</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/42/4251e9a7f644887b897d0f1323565256.png"
+                        alt="Ammande mammor">
+                    <div class="centered"><a>
+                            <h2>Stöd till hbtqi-personer som ammar</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/8d/8dfde7ed7205fc1c91a3a5f4270cff10.jpg"
+                        alt="Flagga">
+                    <div class="centered"><a>
+                            <h2>Varför behövs en ny lag om könstillhörighet?</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/eb/eb5068e10c49747defe1ebaf00746b45.jpg"
+                        alt="Ung man">
+                    <div class="centered"><a>
+                            <h2>Omvändelseterapi inom frikyrkan</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/1c/1c6045662deb5851294c6c1a5934bd2b.png"
+                        alt="Plankor">
+                    <div class="centered"><a>
+                            <h2>Strategi för den internationella verksamheten</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/26/260322cc6944994c0a5a7db92051a459.png"
+                        alt="Skyskrapa">
+                    <div class="centered"><a>
+                            <h2>Hbtqi i Agenda 2030</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/68/68e0bd97ae523f6e969447b88a31faf0.jpg"
+                        alt="Kvinnor">
+                    <div class="centered"><a>
+                            <h2>Rainbow Academy</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/24/24ff6c5ed8d695eaeac04fd06239bf1b.jpg"
+                        alt="Sport">
+                    <div class="centered"><a>
+                            <h2>Idrott skapar engagemang</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/fc/fc44571194777791a6236a7146c30868.jpg"
+                        alt="Fingeravtryck">
+                    <div class="centered"><a>
+                            <h2>Snabb fakta: lagen och asylprocessen</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/b8/b80fe1cf376898d3ce68ca4a1219e685.jpg"
+                        alt="Marathon">
+                    <div class="centered"><a>
+                            <h2>Idrott för alla kroppar</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/f7/f7bcda4c6b6a7476805fb97a1adc9f2f.png"
+                        alt="Kvinna med laptop">
+                    <div class="centered"><a>
+                            <h2>Stöd via RFSL och RFSL Ungdom</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/06/062052cf25956b99f0f882f8508431b0.jpg"
+                        alt="Skog">
+                    <div class="centered"><a>
+                            <h2>Sexuella övergrepp mot hbtqi-personer</h2>
+                        </a></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="cover"><img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/cc/cc4a077a9d04093b097bc3c6ec6454ef.png"
+                        alt="Handtag">
+                    <div class="centered"><a>
+                            <h2>RFSL Stödmottagning</h2>
+                        </a></div>
+                </div>
             </div>
     </section>
 
@@ -681,65 +307,7 @@ Chat Gpt: https://chat.openai.com/  */  -->
     </footer>
 
     <!-- JavaScript file -->
-    <script>
-        let hamburgerIcon = document.querySelector('.hamburger-icon');
-        let hamburgerMenu = document.querySelector('.hamburger-menu');
-
-        hamburgerIcon.addEventListener('click', function () {
-            hamburgerMenu.classList.toggle('active');
-        });
-
-        // Close the hamburger menu by clicking the 'X' icon
-        let closeIcon = document.querySelector('.menu-close');
-        closeIcon.addEventListener('click', function () {
-            hamburgerMenu.classList.remove('active');
-        });
-
-
-        /* Slidern START Jag har använt mig avW3 Schools och Chat Gpt för att finjustera
-W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
-Chat Gpt: https://chat.openai.com/  */
-        let slideIndex = 0; // Startar med 0 eftersom vi kommer att öka indexet omedelbart i showSlides-funktionen
-
-        // Initierar bildspelet automatiskt när sidan laddas
-        showSlides();
-
-        // Nästa/Föregående kontroller
-        function plusSlides(n) {
-            // Rensar och återställer intervallet vid manuell kontroll
-            clearInterval(slideInterval);
-            slideIndex += n;
-            showSlides(slideIndex);
-            // Startar intervallet igen
-            slideInterval = setInterval(function () {
-                slideIndex++;
-                showSlides(slideIndex);
-            }, 10000); // 10 sekunder
-        }
-
-        // Funktionen som visar bilderna
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slides");
-            if (n === undefined) { n = ++slideIndex; }
-            if (n > slides.length) { slideIndex = 1; }
-            if (n < 1) { slideIndex = slides.length; }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-
-        // Sätter intervallet för automatiskt bildbyte var tionde sekund
-        let slideInterval = setInterval(function () {
-            slideIndex++;
-            showSlides(slideIndex);
-        }, 10000); // 10000 ms = 10 sekunder
-
-        /* Slidern slutar här */
-
-
-    </script>
+    <script src="test.js"></script>
 </body>
 
 </html>
