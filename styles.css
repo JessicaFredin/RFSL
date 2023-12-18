@@ -585,7 +585,7 @@ a {
     background-color: rgba(31, 54, 67, 0.8);
     padding-top: 3%;
     padding-bottom: 3%;
-    font-size: 4rem;
+    font-size: 2.7rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -596,7 +596,7 @@ a {
 }
 
 .colored1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -609,7 +609,7 @@ a {
 .overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(31, 54, 67, 0.6);
+    background-color: rgba(31, 54, 67, 0.7);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -685,6 +685,10 @@ mellanrum uppe och nere.
         font-size: 2em;
     }
 
+    .colored {
+        font-size: 2.5rem;
+    }
+
     footer .footer-nav p {
         font-size: .9em;
         width: auto;
@@ -713,6 +717,15 @@ mellanrum uppe och nere.
     footer ul {
         grid-template-columns: 1fr;
     }
+
+    .colored {
+        font-size: 1.5rem;
+    }
+
+    .colored1 {
+        font-size: 1.3rem;
+    }
+
 
     footer ul li {
         margin: 0.5em 0;
