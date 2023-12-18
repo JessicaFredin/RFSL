@@ -5,133 +5,297 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="description" content="RFSL - supportar mänskliga rättigheter.">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-
-
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="path/to/favicon.ico">
+
     <title>RFSL</title>
 </head>
 
 <body>
+
     <header>
-        <div class="logo-wrapper">
-            <a href="index.html"><img src="https://www.rfsl.se/wp-content/themes/rfsl/img/logo.png" alt="RFSL" class="logo"></a>
+
+        <!--HAMBURGER "START": Madelene-->
+        <div class="hamburger-wrapper">
+            <aside class="hamburgerNavigation">
+                <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+                <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                    <div class="hamburgerIconSpace">
+                        <img src="hamburgerIcon.png" alt="hamburger" width="70" height="60" class="hamburgerImage">
+                    </div>
+                </label>
+                <ul class="hamburgerMenu">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="#">Medlem och community</a></li>
+                    <li><a href="#">Ge en gåva</a></li>
+                    <li><a href="#">Verksamhet</a></li>
+                    <li><a href="#">Aktuellt</a></li>
+                    <li><a href="#">Certifiering och utbildning</a></li>
+                    <li><a href="#">Hbtqi-fakta & tips</a></li>
+                    <li><a href="#">Om oss</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </aside>
         </div>
 
-        <ul class="top-nav">
-            <li><a href="#">Bli medlem</a></li>
-            <li><a href="#">Ge en gåva</a></li>
-            <li><a href="#">Begreppsordlista</a></li>
-            <li><a href="#">Följ oss</a></li> 
-            <li><a href="facebook.com"><i class="social-media-icon fa-brands fa-facebook"></i></a></li>
-            <li><a href="instagram.com"><i class="social-media-icon fab fa-instagram"></i></a></li> 
-        </ul>
+        <!--HAMBURGER "END": Madelene-->
+
+
+        <!--Searchbox-STARTS-->
+        <form id="Search-Form">
+            <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......" />
+            <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+        <!--Searchbox-ENDS-->
+
+        <div class="logo-wrapper">
+
+            <div class="logo"><a href="index.html"><img src="https://www.rfsl.se/wp-content/themes/rfsl/img/logo.png"
+                        alt="RFSL Logo"></a></div>
+        </div>
+
+        <nav class="top-desktop-nav">
+            <ul>
+                <li><a href="#"><button type="button">BLI MEDLEM</button></a></li>
+                <li><a href="#"><button type="button">GE EN GÅVA</button></a></li>
+                <li><a href="#"><button type="button">BEGREPPSORDLISTA</button></a></li>
+            </ul>
+        </nav>
+
+        <div class="language">
+            <ul>
+                <li><a href="#"><button type="button">EN</button></a></li>
+                <li><a href="#"><button type="button" id="svButton">SV</button></a></li>
+            </ul>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="#">Medlem och community</a></li>
-            <li><a href="#">Ge en gåva</a></li>
-            <li><a href="#">Verksamhet</a></li>
-            <li><a href="#">Aktuellt</a></li>
-            <li><a href="#">Certifiering och utbildning</a></li>
-            <li><a href="#">Hbtqi-fakta & tips</a></li>
-            <li><a href="#">Om oss</a></li>
-            <li><a href="#">Press</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <main>
+            <!-- Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
+W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
+Chat Gpt: https://chat.openai.com/  */  -->
 
-    <main>
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/f3/f34b25746d0224555798ad2ee98ff593.jpg" alt="En samling av folk">
-            <h2>Så arbetar RFSL internationellt</h2>
+            <!-- Slider container -->
+            <div class="slideshow-container">
+
+                <!-- Bilder med nummer och bildtext -->
+                <div class="slides fade">
+                    <div class="number-text">1 / 3</div>
+                    <img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/42/4251e9a7f644887b897d0f1323565256.png">
+                </div>
+
+                <div class="slides fade">
+                    <div class="number-text">2 / 3</div>
+                    <img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/f3/f34b25746d0224555798ad2ee98ff593.jpg">
+                </div>
+
+                <div class="slides fade">
+                    <div class="number-text">3 / 3</div>
+                    <img
+                        src="https://www.rfsl.se/wp-content/uploads/imagecache/8d/8dfde7ed7205fc1c91a3a5f4270cff10.jpg">
+                </div>
+
+
+                <!-- Nästa/Föregående knappar -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+
+
+            <!-- Punkter/cirklar -->
+            <div class="circle">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <div class="flex-container">
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/f3/f34b25746d0224555798ad2ee98ff593.jpg"
+                            alt="En samling av folk">
+                        <div class="background">
+                            <div class="centered"><a>
+                                    <h2>Så arbetar RFSL internationellt</h2>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover">
+                        <img src="https://www.rfsl.se/wp-content/uploads/imagecache/60/60a7cae241943fa34d554f84e227ab26.jpg"
+                            alt="Bebisar">
+                        <div class="centered"><a>
+                                <h2>Att bli och vara förälder</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"> <img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/4c/4c7cd1cdedc991c1a13c20db79f1161a.jpg"
+                            alt="Hammare">
+                        <div class="centered"><a>
+                                <h2>Hbtqi-asylsökande nekas asyl med otillåtna avslag</h2>
+                            </a> </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/0c/0c8d5d2a6d2c8ed35ea7a52230de6fd7.png"
+                            alt="Loggar">
+                        <div class="centered"><a>
+                                <h2>De Globala målen och Agenda 2030</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/42/4251e9a7f644887b897d0f1323565256.png"
+                            alt="Ammande mammor">
+                        <div class="centered"><a>
+                                <h2>Stöd till hbtqi-personer som ammar</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/8d/8dfde7ed7205fc1c91a3a5f4270cff10.jpg"
+                            alt="Flagga">
+                        <div class="centered"><a>
+                                <h2>Varför behövs en ny lag om könstillhörighet?</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/eb/eb5068e10c49747defe1ebaf00746b45.jpg"
+                            alt="Ung man">
+                        <div class="centered"><a>
+                                <h2>Omvändelseterapi inom frikyrkan</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/1c/1c6045662deb5851294c6c1a5934bd2b.png"
+                            alt="Plankor">
+                        <div class="centered"><a>
+                                <h2>Strategi för den internationella verksamheten</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/26/260322cc6944994c0a5a7db92051a459.png"
+                            alt="Skyskrapa">
+                        <div class="centered"><a>
+                                <h2>Hbtqi i Agenda 2030</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/68/68e0bd97ae523f6e969447b88a31faf0.jpg"
+                            alt="Kvinnor">
+                        <div class="centered"><a>
+                                <h2>Rainbow Academy</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/24/24ff6c5ed8d695eaeac04fd06239bf1b.jpg"
+                            alt="Sport">
+                        <div class="centered"><a>
+                                <h2>Idrott skapar engagemang</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/fc/fc44571194777791a6236a7146c30868.jpg"
+                            alt="Fingeravtryck">
+                        <div class="centered"><a>
+                                <h2>Snabb fakta: lagen och asylprocessen</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/b8/b80fe1cf376898d3ce68ca4a1219e685.jpg"
+                            alt="Marathon">
+                        <div class="centered"><a>
+                                <h2>Idrott för alla kroppar</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/f7/f7bcda4c6b6a7476805fb97a1adc9f2f.png"
+                            alt="Kvinna med laptop">
+                        <div class="centered"><a>
+                                <h2>Stöd via RFSL och RFSL Ungdom</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/06/062052cf25956b99f0f882f8508431b0.jpg"
+                            alt="Skog">
+                        <div class="centered"><a>
+                                <h2>Sexuella övergrepp mot hbtqi-personer</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cover"><img
+                            src="https://www.rfsl.se/wp-content/uploads/imagecache/cc/cc4a077a9d04093b097bc3c6ec6454ef.png"
+                            alt="Handtag">
+                        <div class="centered"><a>
+                                <h2>RFSL Stödmottagning</h2>
+                            </a></div>
+                    </div>
+                </div>
+                <!-- Slidern SLUT -->
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <h1>RFSL</h1>
+            <p>Sveriges könstillhörighetslag är föråldrad och den spär även på kötiderna inom den könsbekräftande
+                vården.
+                Lagens
+                utformning är från 1972, då Sverige var först i världen…</p>
+            <div class="social-media-links">
+                <a target="_blank" href="https://www.facebook.com/rfsl.forbundet/?fref=ts">
+                    <i class="social-media-icon fa-brands fa-facebook"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com">
+                    <i class="social-media-icon fab fa-instagram"></i>
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">Hem</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Kontakta</a></li>
+                <li><a href="#">Policy</a></li>
+            </ul>
         </div>
 
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/60/60a7cae241943fa34d554f84e227ab26.jpg" alt="Bebisar">
-            <h2>Att bli och vara förälder</h2>
-        </div>
-
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/4c/4c7cd1cdedc991c1a13c20db79f1161a.jpg" alt="Hammare">
-            <h2>Hbtqi-asylsökande nekas asyl med otillåtna avslag</h2>
-        </div>
-
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/0c/0c8d5d2a6d2c8ed35ea7a52230de6fd7.png" alt="Loggar">
-            <h2></h2>
-        </div>
-
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/42/4251e9a7f644887b897d0f1323565256.png" alt="Ammande mammor">
-            <h2>Stöd till hbtqi-personer som ammar</h2>
-        </div>
-
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/8d/8dfde7ed7205fc1c91a3a5f4270cff10.jpg" alt="Flagga">
-            <h2>Varför behövs en ny lag om könstillhörighet?</h2>
-        </div>
-
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/2020/12/transhand-1024x683.jpg" alt="Transhand">
-            <h2>Trans och jämställdhet</h2>
-        </div>
-
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/1c/1c6045662deb5851294c6c1a5934bd2b.png" alt="Plankor">
-            <h2>Strategi för den internationella verksamheten</h2>
-        </div>
-
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/26/260322cc6944994c0a5a7db92051a459.png" alt="Skyskrapa">
-            <h2>Hbtqi i Agenda 2030</h2>
-        </div>
-
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/68/68e0bd97ae523f6e969447b88a31faf0.jpg" alt="Women">
-            <h2></h2>
-        </div>
-
-        <div class="card">
-            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/24/24ff6c5ed8d695eaeac04fd06239bf1b.jpg" alt="Sports">
-            <h2>Idrott skapar engagemang</h2>
-        </div>
-
-        <div class="card">
-            <img src="" alt="">
-            <h2></h2>
-        </div>
-
-        <div class="card">
-            <img src="" alt="">
-            <h2></h2>
-        </div>
-
-        <div class="card">
-            <img src="" alt="">
-            <h2></h2>
-        </div>
-
-        <div class="card">
-            <img src="" alt="">
-            <h2></h2>
-        </div>
-
-        <div class="card">
-            <img src="" alt="">
-            <h2></h2>
-        </div>
-    </main>
-
-
-        <footer>
+        <div class="copyright">
             <p>&copy; 2023 RFSL. Alla rättigheter förbehållna.</p>
-        </footer>
-
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 
