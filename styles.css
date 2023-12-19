@@ -24,28 +24,255 @@ body {
     font-weight: 300;
     letter-spacing: .03em;
     min-height: 100%;
+    background-color: rgba(31, 54, 67, 0.2);
 }
+
+
+/*HEADER START*/
+
+/*Stil för header*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: center;
+    background-color: #feffcd; 
+    padding: 1rem; 
+} 
+
+/*En transparent box så att inget ska vara ivägen för hamburger
+menyn när den sitter på toppen av "header"*/
+
+/* .transparentBox {
+    flex: 0 0 auto; 
+    width: 0rem; 
+    height: 2.5rem; 
+    background-color: #feffcd;
+     
+} */
+
+/*Centrerar allting tillsammans"*/
+.hamburger-wrapper,
+.logo-wrapper,
+#Search-Form,
+.top-desktop-nav,
+.language {
+    flex: 1;
+    text-align: center; 
+}
+
+/*placering av logotyp*/
+.logo-wrapper {
+    display: flex;
+    margin-left: 15%;
+    text-align: left;
+    align-items: left;
+    justify-content: left;
+}
+
+.rfsllogo {
+    max-width: 25%;
+}
+
+/* En bit av codepens kod användes som inspiration för att göra menyn till "Bli medlem", 
+"Ge en gåva" "Begreppsordlista". Koden anpassades och justerades för att passa webbplatsens
+mål med utseende. Webbplatsen  https://codepen.io/isaccobosio/details/PoPOVRB användes.
+Hamburgarmenyn och checkboxen har ignorerats eftersom vår hamburgare har byggds med en annan metod. */
+
+/*codePen meny inspiration Start. För menyn: "Bli medlem" "Ge en gåva" "Begreppsordlista"*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/*Ändra utseende på navigationen */
+.navbar {
+    display: inline;
+    float: right;
+    font-size: 0.9rem;
+    background-color: #feffcd;
+    padding-bottom: 1rem;
+    width: 30%;
+}
+
+/*Ta bort punklista */
+.main-nav {
+    list-style-type: none;
+    
+}
+
+/*Ändra utseende texten */
+.main-nav li {
+    text-align: center;
+    
+}
+
+/*Ändra utseende på länkarna */
+.nav-links
+ {
+    text-decoration: none;
+    color: #1f3643;
+    font-weight: 800; 
+}
+
+/*Placering för språk EN SV*/
+.language {
+    display: flex;
+    text-align: right;
+    float: right;
+}
+
+/*Placering för språk*/
+.language {
+    margin: 0 0.2rem;
+}
+
+/*Tar bort text dekorationen*/
+.language a {
+    text-decoration: none;
+
+}
+
+/*Utseende för knapparna*/
+.language a button {
+    border-radius: 50%;
+    background-color: #1f3643;
+    color: #fffdfc;
+    padding: 0.5rem;
+}
+
+/*När man hovrar på knapparna ändras storleken på EN SV*/
+.language a button:hover {
+    padding: 0.8rem;
+}
+
+/*Here<!--SearchboxSTARTS-->    - William */
+
+#Search-Form {
+
+    background-color: #1f3643;
+
+    max-width: 16em;
+
+    max-height: 3em;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 1em;
+
+    border-color: #fffdfc;
+
+    border: 2px solid #fffdfc;
+
+}
+
+#Search-Form i {
+    color: #fffdfc;
+    padding: 0;
+    background-color: #1f3643;
+    border-radius: 30px;
+    font-size: 25px;
+}
+
+#Search-Bar {
+    border-radius: 30px;
+    outline: none;
+    background-color: #1f3643;
+}
+
+#Search-Button {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 30px;
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: #fffdfc;
+}
+    
+/*Here <!--SearchboxENDS-->*/
+
+
+/* Hover för mobil vy i menyn */
+@media screen and (max-width: 767px) {
+    .nav-links:hover {
+        box-shadow: 0 -5px 0px  #1f3643 inset,
+        500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 5px 5px 5px 5px; 
+    }
+}
+
+/*codePen meny inspiration Slut*/*/
+
+
+/*Utseende på navigations menyn*/
+nav.top-desktop-nav {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    font-size: 0.8rem; 
+}
+
+/*Utseende för listan navigations meny*/
+nav.top-desktop-nav ul {
+    display: flex;
+    list-style-type: none;
+
+}
+
+/*Utseende för logotyp*/
+nav.top-desktop-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+/*Tar bort understrykning från länkarna i menyn*/
+nav.top-desktop-nav li a {
+    text-decoration: none;
+  
+}
+
+/*Hur meny knapparna ser ut*/
+nav.top-desktop-nav a button {
+    background-color: #feffcd;
+    color: white;
+    letter-spacing: 0.5rem;
+}
+
+/*länkar ändrar bakgrundsfärg när man hovrar*/
+nav.top-desktop-nav a button:hover {
+    background-color:#feffcd;
+    padding: 0.5rem;
+    font-size: 100%;
+
+}
+
+/*Gör menyn sticky så att den följer med när man scrollar. W3Schools guide: https://www.w3schools.com/howto/howto_css_sticky_element.asp*/
+.navbar-sticky {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    z-index: 6000; /
+}
+
+/*HEADER END*/
+
 
 header {
     width: 100%;
     display: flex;
     padding: .8em 1.5em;
-    background-color: #ff7448;
-}
-
-/*placering av logotyp*/
-.logo-wrapper {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*Utseende för logotyp*/
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #feffcd;
 }
 
 /*styling av den övre navigatiosmenyn */
@@ -135,14 +362,14 @@ div.language li a button:hover {
 /* start footer - jessica */
 footer {
     margin-top: auto;
-    background-color: #707070;
+    background-color: #feffcd;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     padding: 2em 1em;
     font-size: .9em;
-    color: #fff;
+    color: #1f3643;
     width: 100%;
 }
 
@@ -158,7 +385,7 @@ footer .footer-nav {
 
 footer .footer-nav h1 {
     font-size: 3em;
-    text-shadow: 0 1px 10px #000;
+    text-shadow: 0 1px 3px #000;
 }
 
 footer .footer-nav p {
@@ -180,10 +407,10 @@ footer .footer-nav .social-media-links a {
 
 footer ul {
     list-style-type: none;
-    /* margin: 0 2em;
+    margin: 0 2em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 4.5em; */
+    gap: 4.5em; 
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -198,7 +425,7 @@ footer ul li {
 
 footer ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #1f3643;
     transition: color 0.3s ease-out;
 }
 
@@ -212,7 +439,7 @@ i.fa-facebook,
 i.fa-instagram {
     font-size: 2em;
     margin: 0 .2em;
-    color: #fff;
+    color: #1f3643;
     transition: color 0.3s ease-out;
 }
 
@@ -232,7 +459,7 @@ footer .copyright {
     padding: 0.5em 0 0 0;
     width: 100%;
     margin: 3em 0 .5em 0;
-    color: #fff;
+    color: #1f3643;
 } 
 /*slut footer - jessica */
 
@@ -246,11 +473,6 @@ också tagit bort position "absolute"och position "relative" som inte heller är
 Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
 Px to rem calculator: https://nekocalc.com/px-to-rem-converter
 */
-
-#hambugerarelogga {
-    color: #1f3643;
-    font-size: 4rem;
-}
 
 /*Ge hamburgaren luftig plats på "header"*/
 .hamburgerIconSpace {
@@ -271,6 +493,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     flex-direction: row;
     align-items:center;
     transition: 0.5s;
+     
 }
     
     /* Ta bort punktlistor från länkarna i menyn */
@@ -280,7 +503,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     
     /* Stilar för länkarna i menyn */
     .hamburgerMenu li a {
-        color: white;
+        color: #1f3643;
         text-decoration: none;
         display: block;
         padding: 2.5rem 1.5625rem; 
@@ -292,7 +515,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     /* Animeringseffekt när musen "hover"" över länkarna */
     /* Skugga och bakgrundseffekt */
     .hamburgerMenu li a:hover {
-        box-shadow: 0 -5px 0px white inset,
+        box-shadow: 0 -5px 0px  #1f3643 inset,
         500px 0 0 rgba(255, 255, 255, 0.03) inset;
         padding: 35px 25px 45px 25px;
     }
@@ -328,47 +551,65 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     
     /*Mobil*/
     /*Layouten fixas för hamburgermenyn för mindre skärmar, maximalt 768px, 48 rem*/
-     @media screen and (max-width: 48rem) {
-    .hamburgerIcon,
-    .toggleHamburgerCheckbox {
-        display: block;
+    @media screen and (max-width: 48rem) {
+        .hamburgerIcon,
+        .toggleHamburgerCheckbox {
+            display: block;
+        }
+    
+        /*Full width and height for hamburgerMenu */
+        .hamburgerMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #DDDDDD;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem !important;
+            font-weight: 800;
+        }
+    
+        /*Luft i listan med alla komponeneter i meny listan*/
+        .hamburgerMenu li {
+            margin-top: 3rem; 
+        }
+    
     }
-    .hamburgerMenu {
-        justify-content: start;
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-        margin-top: 0;
-        background: grey;
-        width: 100%; 
-        height: auto;
-        padding-top: 4.0625rem;
-        padding: 3rem 1rem; 
-        font-size: 1rem!important; 
-    }
-}
 
        /*Dator*/
        /*Skärmar som är större än eller lika med 784px, 49 rem*/
-  @media screen and (min-width: 49rem) {
-    .hamburgerIcon,
-    .toggleHamburgerCheckbox {
-        display: block;
-    }
-    .hamburgerMenu {
-        justify-content: start;
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-        margin-top: 0;
-        background: grey;
-        width: 100%; 
-        height: auto;
-        padding-top: 4.0625rem;
-        padding: 6rem 2rem; 
-        font-size: 1.5rem!important; 
+       @media screen and (min-width: 49rem) {
+        .hamburgerIcon,
+        .toggleHamburgerCheckbox {
+            display: block;
+        }
+    
+        .hamburgerMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #DDDDDD;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem !important;
+            font-weight: 800;
+            z-index: 6000; 
+        }
+        
+          /*Luft i listan med alla komponeneter i meny listan*/
+        .hamburgerMenu li {
+            margin-top: 2rem; 
         
     }
+
 }
 
     /* Stil för länkarna i hamburgermenyn,bredd. */
@@ -399,7 +640,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         position: fixed;
         margin-top: 0;
         margin-left: 0;
-        z-index: 999;
+        z-index: 6000;
       }
 
       /* X ikonen, för att stänga hamburger menyn */
@@ -412,102 +653,138 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     content: url("closeHamburgerIcon.png");
 }
 
+
 /* hamburger SLUT: Madelene*/
 
+.slide-img {
+    max-width: 60%;
+  }
+  
+  .trigger {
+    display: none;
+  }
+  
+  .slider, .slider-wrapper {
+    position: relative;
+    height: 250px;
+  }
+  
+  .slide {
+    
 
-/* Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
-W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
-Chat Gpt: https://chat.openai.com/  */
-
-.slideshow-container {
-    max-width: 70%; /* 62.5em = 1000px (1em = 16px) */
-    margin: auto;
-    position: relative; 
-}
-
-/* Nästa/Föregående knappar */
-.prev,
-.next {
-    cursor: pointer;
-    width: auto;
-    margin-top: -1.375rem; 
-    padding: 1rem;
-    color: white;
-    font-weight: bold;
-    font-size: 1.125rem; 
-    transition: 0.6s ease;
-    border-radius: 0 0.1875rem 0.1875rem 0;
-    user-select: none;
+        --s: 100px; /* control the size */
+        --c1: #E1F5C4;
+        --c2: #b2b2b2;
+        
+        --_g:#0000, #0004 5%,
+           var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
+           var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,
+           var(--c2) 86% 94%,#0004 95%,#0000;
+        background:
+          radial-gradient(100% 50% at 100% 0   ,var(--_g)),
+          radial-gradient(100% 50% at 0    50% ,var(--_g)),
+          radial-gradient(100% 50% at 100% 100%,var(--_g));
+        background-size: var(--s) calc(2*var(--s));
+          
+    
+      
+    width: 100%;
+    overflow: hidden;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Position "Nästa knapp" till höger */
-.next {
-    right: 0;
-    border-radius: 0.1875rem 0 0 0.1875rem; 
-}
-
-/* Svart bakgrund med lite genomskinlighet vid hover */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Bildtext */
-.text {
-    color: #f2f2f2;
-    font-size: 0.9375rem; 
-    padding: 0.5rem 0.75rem; 
-    width: 100%;
-    text-align: center;
-}
-
-/* Nummer text (1/3 etc) */
-.number-text {
-    color: #f2f2f2;
-    font-size: 0.75rem;
-    padding: 0.5rem 0.75rem; 
+    height: 100%;
+    left: 0;
     top: 0;
-}
-
-/* Punkter/cirklar */
-.dot {
-    cursor: pointer;
-    height: 0.9375rem;
-    width: 0.9375rem;
-    margin: 0 0.125rem; 
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.circle {
-    text-align: center;
-}
-
-/* Aktiv punkt/cirkel */
-.dot.active,
-.dot:hover {
-    background-color: #717171;
-}
-
-.dot {
-    background-color: #bbb;
-}
-
-.dot:hover {
-    background-color: #717171;
-}
-
-.slides img {
-    width: 100%;
-    height: auto;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+  }
+  
+.slide-img {
+    height: 100%;
+    object-fit: fill;
     display: block;
-}
-/* Slut slideshow - Lorik */
+    margin: 0;
+} 
+  
+  .slide-figure {
+    height: 100%;
+    position: relative;
+    margin: 0;
+  }
+  
+  .slide-caption {
+    position: absolute;
+    bottom: 30%;
+    width: calc(100% - 1rem); 
+    color: white;
+    text-align: center;
+    left: 50%;
+  }
+  
+  .trigger:checked + .slide {
+    z-index: 1000;
+    opacity: 1;
+  }
+  
+  .slider-nav {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .slider-nav__item {
+    display: inline-block;
+  }
+  
+  .slider-nav__label {
+    font-size: 13px;
+    background-color: #1f3643;
+    display: block;
+    height: 2em;
+    line-height: 2em;
+    width: 2em;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: background-color .25s, color .25s ease-in-out;
+  }
+  
+  .slider-nav__label:hover,
+  .slider-nav__label:active,
+  .slider-nav__label:focus {
+    background-color: gray; 
+    color: black;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .slider, .slider-wrapper {
+      height: 480px;
+    }
+  
+    .slide-caption {
+      width: 65%;
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 1023px) and (min-width: 768px) {
+    .slider, .slider-wrapper {
+      height: 360px;
+    }
+  
+    .slide-caption {
+      width: 75%;
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .slide-img {
+      width: 100%;
+      height: auto;
+    }
+  }
 
 
 /*Här börjar Dianas CSS kod.
@@ -520,7 +797,7 @@ Sedan har jag använt space between för mellanrum
     flex-wrap: wrap;
     gap: 40px 10px;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 6%;
     margin-bottom: 3%;
 }
 
@@ -696,49 +973,3 @@ Sedan har jag använt space between för mellanrum
     }
 }
 
-/*Here<!--SearchboxSTARTS-->    - William */
-
-#Search-Form {
-
-    background-color: rgb(255, 255, 255);
-
-    max-width: 400em;
-
-    max-height: 3em;
-
-    border-radius: 30px;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 1em;
-
-    border-color: rgb(11, 115, 206);
-
-}
-
-#Search-Form i {
-    color: rgb(158, 158, 156);
-    padding: 0;
-    background-color: rgba(149, 147, 150, 0.281);
-    border-radius: 30px;
-    font-size: 25px;
-}
-
-#Search-Bar {
-    border-radius: 30px;
-    outline: none;
-
-}
-
-#Search-Button {
-    width: 100%;
-    height: 100%;
-    outline: none;
-    border-radius: 30px;
-    background: none;
-    border: none;
-    font-size: 12px;}
-    
-    /*Here <!--SearchboxENDS-->*/

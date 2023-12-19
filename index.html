@@ -18,106 +18,142 @@
 
 <body>
 
-    <header>
+    <div class="navbar-sticky"> 
 
-        <!--HAMBURGER "START": Madelene-->
-        <div class="hamburger-wrapper">
-            <aside class="hamburgerNavigation">
-                <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
-                <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
-                    <div class="hamburgerIconSpace">
-                        <i class="fa-solid fa-bars" id="hambugerarelogga"></i>
-                    </div>
-                </label>
-                <ul class="hamburgerMenu">
-                    <li><a href="index.html">Hem</a></li>
-                    <li><a href="#">Medlem och community</a></li>
-                    <li><a href="#">Ge en gåva</a></li>
-                    <li><a href="#">Verksamhet</a></li>
-                    <li><a href="#">Aktuellt</a></li>
-                    <li><a href="#">Certifiering och utbildning</a></li>
-                    <li><a href="#">Hbtqi-fakta & tips</a></li>
-                    <li><a href="#">Om oss</a></li>
-                    <li><a href="#">Press</a></li>
+
+    
+
+        <header> <!--Header start-->
+    
+    <!--Lägger in en osynlig box-->
+         <div class = transparentBox>
+    
+            
+         </div>
+    
+              <!--HAMBURGER "START": Madelene-->
+            <div class="hamburger-wrapper">
+                <aside class="hamburgerNavigation">
+                    <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+                    
+                    
+                    <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                        <div class="hamburgerIconSpace">
+                            <img src="hamburgerIcon.png" alt="hamburger" width="50" height="40" class="hamburgerImage">
+                        </div>
+                    </label>
+    
+                    
+                    <ul class="hamburgerMenu">
+                        <li>
+                            <div class="hamburger-wrapper">
+                                <aside class="hamburgerNavigation">
+                                    <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+                                    
+                                    <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                                        <div class="hamburgerIconSpace">
+                                            <img src="closeHamburgerIcon.png" alt="hamburger" width="50" height="40">
+                                       </div>
+                                    </label>
+                                </aside>
+                            </div>
+                        </li>
+    
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="#">Medlem och community</a></li>
+                        <li><a href="#">Ge en gåva</a></li>
+                        <li><a href="#">Verksamhet</a></li>
+                        <li><a href="#">Aktuellt</a></li>
+                        <li><a href="#">Certifiering och utbildning</a></li>
+                        <li><a href="#">Hbtqi-fakta & tips</a></li>
+                        <li><a href="#">Om oss</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </aside>
+            </div>
+    
+             <!--HAMBURGER "END": Madelene-->
+    
+    
+            <div class="logo-wrapper">
+                
+                <a href="index.html"><img class="rfsllogo" src="rfsl.logo.png" alt="RFSL Logo"
+                        ></a>
+            </div>
+
+            <nav class="navbar">
+            
+    
+                <ul class="main-nav" id="js-menu">
+                  <li>
+                    <a href="#" class="nav-links">Bli Medlem</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-links">Ge en gåva</a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-links">Begreppsordlista</a>
+                  </li>
+                  <li>
+                    <form id="Search-Form">
+                        <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......" style="color:white;">
+                        <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                  </li>
+                  <li class="language">
+                    <a href="#"><button type="button">EN</button></a>
+                  </li>
+                  <li class="language">
+                    <a href="#"><button type="button">SV</button>
+                  </li>
+
                 </ul>
-            </aside>
-        </div>
-
-        <!--HAMBURGER "END": Madelene-->
-
-
-        <!--Searchbox-STARTS-->
-        <form id="Search-Form">
-            <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......" />
-            <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
-        </form>
-        <!--Searchbox-ENDS-->
-
-        <div class="logo-wrapper">
-
-            <div class="logo"><a href="index.html"><img src="https://www.rfsl.se/wp-content/themes/rfsl/img/logo.png"
-                        alt="RFSL Logo"></a></div>
-        </div>
-
-        <nav class="top-desktop-nav">
-            <ul>
-                <li><a href="#"><button type="button">BLI MEDLEM</button></a></li>
-                <li><a href="#"><button type="button">GE EN GÅVA</button></a></li>
-                <li><a href="#"><button type="button">BEGREPPSORDLISTA</button></a></li>
-            </ul>
+    
+          
+        </header> 
+    
+    
         </nav>
-
-        <div class="language">
-            <ul>
-                <li><a href="#"><button type="button">EN</button></a></li>
-                <li><a href="#"><button type="button" id="svButton">SV</button></a></li>
-            </ul>
-        </div>
-    </header>
-
-    <div class="container">
+    
+    </div>
+    
+    <!--Header SLUT-->
         <main>
             <!-- Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
 W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
 Chat Gpt: https://chat.openai.com/  */  -->
 
-            <!-- Slider container -->
-            <div class="slideshow-container">
-
-                <!-- Bilder med nummer och bildtext -->
-                <div class="slides fade">
-                    <div class="number-text">1 / 3</div>
-                    <img
-                        src="https://www.rfsl.se/wp-content/uploads/imagecache/42/4251e9a7f644887b897d0f1323565256.png">
-                </div>
-
-                <div class="slides fade">
-                    <div class="number-text">2 / 3</div>
-                    <img
-                        src="https://www.rfsl.se/wp-content/uploads/imagecache/f3/f34b25746d0224555798ad2ee98ff593.jpg">
-                </div>
-
-                <div class="slides fade">
-                    <div class="number-text">3 / 3</div>
-                    <img
-                        src="https://www.rfsl.se/wp-content/uploads/imagecache/8d/8dfde7ed7205fc1c91a3a5f4270cff10.jpg">
-                </div>
-
-
-                <!-- Nästa/Föregående knappar -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            </div>
-
-
-            <!-- Punkter/cirklar -->
-            <div class="circle">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-            <!-- Slidern SLUT -->
+<div class="slider-wrapper">
+    <div class="slider">
+      <input type="radio" name="slider" class="trigger" id="one" checked="checked" />
+      <div class="slide">
+        <figure class="slide-figure">
+          <img class="slide-img" src="https://www.rfsl.se/wp-content/uploads/imagecache/e7/e7c5aa7f81ae4470c962d8c69a0f185c.jpg" />
+          <figcaption class="slide-caption"><p>...</p></figcaption>
+          <div class="slide1"></div>
+        </figure><!-- .slide-figure -->
+      </div><!-- .slide -->
+      <input type="radio" name="slider" class="trigger" id="two" />
+      <div class="slide">
+        <figure class="slide-figure">
+          <img class="slide-img" src="path/to/image-2.jpg" />
+          <figcaption class="slide-caption"><p>...</p></figcaption>
+        </figure><!-- .slide-figure -->
+      </div><!-- .slide -->
+      <input type="radio" name="slider" class="trigger" id="three" />
+      <div class="slide">
+        <figure class="slide-figure">
+          <img class="slide-img" src="path/to/image-3.jpg" />
+          <figcaption class="slide-caption"><p>...</p></figcaption>
+        </figure><!-- .slide-figure -->
+      </div><!-- .slide -->
+    </div><!-- .slider -->
+    <ul class="slider-nav">
+      <li class="slider-nav__item"><label class="slider-nav__label" for="one">1</label></li>
+      <li class="slider-nav__item"><label class="slider-nav__label" for="two">2</label></li>
+      <li class="slider-nav__item"><label class="slider-nav__label" for="three">3</label></li>
+    </ul><!-- .slider-nav -->
+  </div><!-- .slider-wrapper -->
 
             <div class="kort">
 
