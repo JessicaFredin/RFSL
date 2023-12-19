@@ -510,49 +510,13 @@ Jag har satt margin för att få mellanrum mellan elementen.
 Jag har skapat en flexbox så att "containers" blir responsivt.
 Sedan har jag använt space between för mellanrum
 */
-.flex-container {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-/*Här har jag satt färg på text och även mellanrum uppe
-och nere.
-*/
-.card {
-    color: white;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-}
-
-/*Här har jag skapat en flexbox igen för att stapla bild
-och h2 i en kolumn, samt satt ett maxvärde på bredden. 
-*/
-.cover {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    max-width: 22vw;
-}  
-
-/*Ändrat muspekaren till en hand för att användare ska
-veta när de är över en länk.  
-*/
-a {
-    cursor: pointer;
-}
-/* Slut - Diana*/
-
 .container {
     display: flex;
     flex-wrap: wrap;
     gap: 40px 10px;
     justify-content: center;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 3%;
 }
 
 .single {
@@ -616,12 +580,7 @@ a {
     transform: translate(-50%, -50%);
 }
 
-/*För att centrera innehåll och satt en bakgrundsfärg.
-*/
-
-/*Satt en bredd för att matcha "containern" och även 
-mellanrum uppe och nere.
-*/
+/* Slut - Diana*/
 
 @media (max-width: 1025px) {
 
