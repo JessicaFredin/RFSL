@@ -247,6 +247,11 @@ Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
 Px to rem calculator: https://nekocalc.com/px-to-rem-converter
 */
 
+#hambugerarelogga {
+    color: #1f3643;
+    font-size: 4rem;
+}
+
 /*Ge hamburgaren luftig plats på "header"*/
 .hamburgerIconSpace {
     padding-right: 5rem; 
