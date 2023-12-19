@@ -568,8 +568,8 @@ a {
 .double {
     display: flex;
     flex-direction: column;
-    max-width: 24%;
-    gap: 5px 0px;
+    max-width: 23.7%;
+    gap: 0.3rem 0rem;
 }
 
 .double img {
