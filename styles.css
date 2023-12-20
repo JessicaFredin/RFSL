@@ -865,19 +865,15 @@ Sedan har jag använt space between för mellanrum
     max-width: 48%;
     align-content: center;
     position: relative;
-    background-color: #ededed;
 }
 
 .single img {
     width: 100%;
 }
 
-.greysection {
+#stylingtext {
     background-color: #ededed;
-} 
-
-.greysection {
-    font-weight: bold;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .double {
@@ -893,12 +889,15 @@ Sedan har jag använt space between för mellanrum
 }
 
 .articlehead {
-    margin-top: 2%;
-    margin-left: 3%;
+    text-align: center;
+    margin-top: 3%; 
     padding-bottom: 3%;
+    padding-top: 3%;
     font-size: 2em;
     font-weight: bold;
-    color: #1f3643;
+    color: #fffdfc;
+    background-color: rgba(31, 54, 67, 0.8);
+    width: 100%;
 }
 
 .articlebody {
