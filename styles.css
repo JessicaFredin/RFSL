@@ -755,20 +755,22 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
   }
   
   .slide-caption {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(31, 54, 67, 0.9); 
     position: absolute;
-    top: 0%;
+    top: 12%;
     width: calc(100% - 1rem); 
     left: 60%;
   }
 
   .slide-caption p {
-    padding-top: 6%;
-    padding-bottom: 6%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     text-align: left;
     margin-left: 1%;
     max-width: 60%;
     color: white;
+    font-weight: bold;
+    font-size: 90%;
   }
 
   p span {
@@ -860,10 +862,19 @@ Sedan har jag använt space between för mellanrum
     max-width: 48%;
     align-content: center;
     position: relative;
+    background-color: #ededed;
 }
 
 .single img {
     width: 100%;
+}
+
+.greysection {
+    background-color: #ededed;
+} 
+
+.greysection {
+    font-weight: bold;
 }
 
 .double {
