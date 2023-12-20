@@ -14,13 +14,23 @@
     scroll-behavior: smooth;
 }
 
+/*RFSL colors: 
+orange: #ff7448
+ljuslila: #F1E0FF
+mörkblå: #1F3643
+mörkgrön: #29380B
+mörklila: #41284A
+ljusgul: #feffcd
+svart: #1d1d1d
+vit: #fffdfc   */
+
 html {
     height: 100%;
 }
 
 body {
     font-size: 16px;
-    font-family: "Basic sans", sans-serif;
+    font-family: "Basic sans", "work sans", sans-serif;
     font-weight: 300;
     letter-spacing: .03em;
     min-height: 100%;
@@ -30,7 +40,7 @@ header {
     width: 100%;
     display: flex;
     padding: .8em 1.5em;
-    background-color: #ff7448;
+    background-color: #1F3643;
 }
 
 /*placering av logotyp*/
@@ -46,9 +56,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 25em;
+    height: auto;
 }
 
-/*styling av den övre navigatiosmenyn */
+/*styling av den övre navigationsmenyn */
 nav.top-desktop-nav {
     text-align: center;
     display: inline-flex;
@@ -77,8 +90,8 @@ nav.top-desktop-nav li a {
 
 /*styling av knappar på den övre navigationsmenyn*/
 nav.top-desktop-nav a button {
-    background-color: #ff7448;
-    color: white;
+    background-color: #1F3643;
+    color: #F1E0FF;
     letter-spacing: 0.05em;
     padding: 0.5em;
     
@@ -86,7 +99,7 @@ nav.top-desktop-nav a button {
 
 /*länkar ändrar bakgrundsfärg när man hovrar*/
 nav.top-desktop-nav a button:hover {
-    background-color:#ce654b;
+    background-color:#15242d;
     padding: 0.5em;
     font-size: 100%;
     transition: background-color 0.3s ease;
@@ -589,6 +602,12 @@ Sedan har jag använt space between för mellanrum
         display: flex;
     }
 
+    .logo {
+        width: 80%;
+        min-width: 15em;
+        height: auto;
+    }
+
     nav.top-desktop-nav {
         display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
     }
@@ -632,6 +651,13 @@ Sedan har jag använt space between för mellanrum
         display: flex;
     }
 
+    .logo {
+        width: 70%;
+        max-width: 15em;
+        min-width: 10em;
+        height: auto;
+    }
+
     nav.top-desktop-nav {
         display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
     }
@@ -665,6 +691,13 @@ Sedan har jag använt space between för mellanrum
         display:flex;
     }
     
+    .logo {
+        width: 50%;
+        max-width: 10em;
+        min-width: 8em;
+        height: auto;
+    }
+
     nav.top-desktop-nav {
         display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
     }
