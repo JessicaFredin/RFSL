@@ -294,6 +294,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     flex-direction: row;
     align-items:center;
     transition: 0.5s;
+     
 }
     
     /* Ta bort punktlistor från länkarna i menyn */
@@ -303,7 +304,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     
     /* Stilar för länkarna i menyn */
     .hamburgerMenu li a {
-        color: white;
+        color: #1f3643;
         text-decoration: none;
         display: block;
         padding: 2.5rem 1.5625rem; 
@@ -315,7 +316,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     /* Animeringseffekt när musen "hover"" över länkarna */
     /* Skugga och bakgrundseffekt */
     .hamburgerMenu li a:hover {
-        box-shadow: 0 -5px 0px white inset,
+        box-shadow: 0 -5px 0px  #1f3643 inset,
         500px 0 0 rgba(255, 255, 255, 0.03) inset;
         padding: 35px 25px 45px 25px;
     }
@@ -351,47 +352,65 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     
     /*Mobil*/
     /*Layouten fixas för hamburgermenyn för mindre skärmar, maximalt 768px, 48 rem*/
-     @media screen and (max-width: 48rem) {
-    .hamburgerIcon,
-    .toggleHamburgerCheckbox {
-        display: block;
+    @media screen and (max-width: 48rem) {
+        .hamburgerIcon,
+        .toggleHamburgerCheckbox {
+            display: block;
+        }
+    
+        /*Full width and height for hamburgerMenu */
+        .hamburgerMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #F1E0FF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem !important;
+            font-weight: 800;
+        }
+    
+        /*Luft i listan med alla komponeneter i meny listan*/
+        .hamburgerMenu li {
+            margin-top: 3rem; 
+        }
+    
     }
-    .hamburgerMenu {
-        justify-content: start;
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-        margin-top: 0;
-        background: grey;
-        width: 100%; 
-        height: auto;
-        padding-top: 4.0625rem;
-        padding: 3rem 1rem; 
-        font-size: 1rem!important; 
-    }
-}
 
        /*Dator*/
        /*Skärmar som är större än eller lika med 784px, 49 rem*/
-  @media screen and (min-width: 49rem) {
-    .hamburgerIcon,
-    .toggleHamburgerCheckbox {
-        display: block;
-    }
-    .hamburgerMenu {
-        justify-content: start;
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-        margin-top: 0;
-        background: grey;
-        width: 100%; 
-        height: auto;
-        padding-top: 4.0625rem;
-        padding: 6rem 2rem; 
-        font-size: 1.5rem!important; 
+       @media screen and (min-width: 49rem) {
+        .hamburgerIcon,
+        .toggleHamburgerCheckbox {
+            display: block;
+        }
+    
+        .hamburgerMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #F1E0FF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem !important;
+            font-weight: 800;
+            z-index: 6000; 
+        }
+        
+          /*Luft i listan med alla komponeneter i meny listan*/
+        .hamburgerMenu li {
+            margin-top: 2rem; 
         
     }
+
 }
 
     /* Stil för länkarna i hamburgermenyn,bredd. */
@@ -422,7 +441,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         position: fixed;
         margin-top: 0;
         margin-left: 0;
-        z-index: 999;
+        z-index: 6000;
       }
 
       /* X ikonen, för att stänga hamburger menyn */
@@ -436,6 +455,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
 }
 
 /* hamburger SLUT: Madelene*/
+
 
 
 /* Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
