@@ -20,7 +20,7 @@ html {
 
 body {
     font-size: 16px;
-    font-family: "Basic sans", sans-serif;
+    font-family: "Basic Sans", sans-serif;
     font-weight: 300;
     letter-spacing: .03em;
     min-height: 100%;
@@ -61,7 +61,6 @@ nav.top-desktop-nav {
     flex-direction: row-reverse;
     flex: 1 1 0;
     margin: 0;
-    font-size: 0.8em;
 }
 
 /*stilar för listan i den övre navigationsmenyn*/
@@ -73,6 +72,8 @@ nav.top-desktop-nav ul {
 /* styling för länkarna inom listelement*/
 nav.top-desktop-nav li a {
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 /*styling av knappar på den övre navigationsmenyn*/
@@ -389,9 +390,11 @@ div.language li a {
 /* stil för knappar i "language" listelement*/
 div.language li a button {
     border-radius: 50%;
-    background-color: #1f3643;
-    color: #fffdfc;
+    background-color: #f1e0ff;
+    color: #1f3643;
     padding: 0.5em;
+    border: 2px solid #1f3643;
+    font-weight: bold;
 }
 
 /* knapparna för språk blir större när man hovrar */
@@ -887,6 +890,29 @@ Sedan har jag använt space between för mellanrum
 .double img {
     vertical-align: middle;
     width: 100%;
+}
+
+.boxbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 5%;
+    padding-left: 6%;
+    gap: 6%;
+}
+
+.readmore {
+    border-bottom: 2px solid #1f3643;
+    padding-bottom: 4px;
+    font-weight: bold;
+    color: #1f3643;
+}
+
+.share {
+    border-bottom: 2px solid #1f3643;
+    padding-bottom: 4px;
+    font-weight: bold;
+    color: #1f3643;
 }
 
 .cardheader {
