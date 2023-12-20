@@ -39,8 +39,16 @@ body {
 header {
     width: 100%;
     display: flex;
-    padding: .8em 1.5em;
+    padding: .6em 1.5em;
     background-color: #1F3643;
+    max-height: 8em;
+}
+
+.sticky-header{
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
 }
 
 /*placering av logotyp*/
@@ -64,35 +72,41 @@ header {
 /*styling av den övre navigationsmenyn */
 nav.top-desktop-nav {
     text-align: center;
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    font-size: 0.8em;
+    font-size: 1em;
+    background-color: #1F3643;
 }
 
 /*stilar för listan i den övre navigationsmenyn*/
 nav.top-desktop-nav ul {
     display: flex;
     list-style-type: none;
+    
 
 }
 
 /* styling för listelement*/
 nav.top-desktop-nav li {
     margin: 0 2em;
+    
+    
 }
 
 /* styling för länkarna inom listelement*/
 nav.top-desktop-nav li a {
     text-decoration: none;
+    
 }
 
 /*styling av knappar på den övre navigationsmenyn*/
 nav.top-desktop-nav a button {
     background-color: #1F3643;
     color: #F1E0FF;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     padding: 0.5em;
     
 }
@@ -133,14 +147,15 @@ div.language li a {
 /* stil för knappar i "language" listelement*/
 div.language li a button {
     border-radius: 50%;
-    background-color: #1f3643;
-    color: #fffdfc;
+    background-color: #F1E0FF;
+    color: #29380B;
     padding: 0.5em;
 }
 
 /* knapparna för språk blir större när man hovrar */
 div.language li a button:hover {
-    padding: 0.8em;
+    padding: 0.5em;
+    background-color: #feffcd;
 }
 
 /* slut top-nav  - my, josephine, louise*/
@@ -608,9 +623,9 @@ Sedan har jag använt space between för mellanrum
         height: auto;
     }
 
-    nav.top-desktop-nav {
-        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
-    }
+    /*nav.top-desktop-nav {
+        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*
+    }*/
 
     #svButton {
         display: none; /*gömmer svenska språkvalsknappen på mindre skärm*/
@@ -659,7 +674,7 @@ Sedan har jag använt space between för mellanrum
     }
 
     nav.top-desktop-nav {
-        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
+        font-size: 0.8em;
     }
 
     #svButton {
@@ -699,7 +714,7 @@ Sedan har jag använt space between för mellanrum
     }
 
     nav.top-desktop-nav {
-        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
+        font-size: 0.6em; /*gömmer navigeringslänkar i headern på mindre skärm*/
     }
 
     #svButton {
