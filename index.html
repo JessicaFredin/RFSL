@@ -30,6 +30,7 @@
     
             
          </div>
+         <header>
     
               <!--HAMBURGER "START": Madelene-->
             <div class="hamburger-wrapper">
@@ -81,33 +82,28 @@
                         ></a>
             </div>
 
-            <nav class="navbar">
-            
     
-                <ul class="main-nav" id="js-menu">
-                  <li>
-                    <a href="#" class="nav-links">Bli Medlem</a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-links">Ge en gåva</a>
-                  </li>
-                  <li>
-                    <a href="#" class="nav-links">Begreppsordlista</a>
-                  </li>
-                  <li>
-                    <form id="Search-Form">
-                        <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......" style="color:white;">
-                        <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                  </li>
-                  <li class="language">
-                    <a href="#"><button type="button">EN</button></a>
-                  </li>
-                  <li class="language">
-                    <a href="#"><button type="button">SV</button>
-                  </li>
-
+            <nav class="top-desktop-nav">
+                <ul>
+                    <li><a href="#"><button type="button">BLI MEDLEM</button></a></li>
+                    <li><a href="#"><button type="button">GE EN GÅVA</button></a></li>
+                    <li><a href="#"><button type="button">BEGREPPSORDLISTA</button></a></li>
                 </ul>
+            </nav>
+
+                    <!--Searchbox-STARTS-->
+        <form id="Search-Form">
+            <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......" />
+            <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+        <!--Searchbox-ENDS-->
+    
+            <div class="language">
+                <ul>
+                    <li><a href="#"><button type="button">EN</button></a></li>
+                    <li><a href="#"><button type="button" id="svButton">SV</button></a></li>
+                </ul>
+            </div>
     
           
         </header> 

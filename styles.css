@@ -27,6 +27,63 @@ body {
     background-color: rgba(31, 54, 67, 0.2);
 }
 
+header {
+    width: 100%;
+    display: flex;
+    padding: .8em 1.5em;
+}
+
+/*placering av logotyp*/
+.logo-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Utseende för logotyp*/
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*styling av den övre navigatiosmenyn */
+nav.top-desktop-nav {
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    font-size: 0.8em;
+}
+
+/*stilar för listan i den övre navigationsmenyn*/
+nav.top-desktop-nav ul {
+    display: flex;
+    list-style-type: none;
+
+}
+
+/* styling för listelement*/
+nav.top-desktop-nav li {
+    margin: 0 2em;
+}
+
+/* styling för länkarna inom listelement*/
+nav.top-desktop-nav li a {
+    text-decoration: none;
+}
+
+/*styling av knappar på den övre navigationsmenyn*/
+nav.top-desktop-nav a button {
+    background-color: #feffcd;
+    color: white;
+    letter-spacing: 0.05em;
+    padding: 0.5em;
+    
+}
+
 
 /*HEADER START*/
 
@@ -110,43 +167,37 @@ Hamburgarmenyn och checkboxen har ignorerats eftersom vår hamburgare har byggds
     
 }
 
-/*Ändra utseende på länkarna */
-.nav-links
- {
-    text-decoration: none;
-    color: #1f3643;
-    font-weight: 800; 
+/*länkar ändrar bakgrundsfärg när man hovrar*/
+nav.top-desktop-nav a button:hover {
+    background-color: #feffcd;
+    padding: 0.5em;
+    font-size: 100%;
+    transition: background-color 0.3s ease;
+
 }
 
-/*Placering för språk EN SV*/
-.language {
+/*styling av language-elementen*/
+div.language {
     display: flex;
     text-align: right;
-    float: right;
+    margin-left: auto;
 }
 
-/*Placering för språk*/
-.language {
-    margin: 0 0.2rem;
+
+div.language ul {
+    display: flex;
+    list-style-type: none;
 }
 
-/*Tar bort text dekorationen*/
-.language a {
+
+div.language li {
+    margin: 0 0.2em;
+}
+
+
+div.language li a {
     text-decoration: none;
 
-}
-
-/*Utseende för knapparna*/
-.language a button {
-    border-radius: 50%;
-    background-color: #1f3643;
-    color: #fffdfc;
-    padding: 0.5rem;
-}
-
-/*När man hovrar på knapparna ändras storleken på EN SV*/
-.language a button:hover {
-    padding: 0.8rem;
 }
 
 /*Here<!--SearchboxSTARTS-->    - William */
@@ -304,8 +355,8 @@ nav.top-desktop-nav li a {
 
 /*styling av knappar på den övre navigationsmenyn*/
 nav.top-desktop-nav a button {
-    background-color: #ff7448;
-    color: white;
+    background-color: #feffcd;;
+    color: #1f3643;
     letter-spacing: 0.05em;
     padding: 0.5em;
     
@@ -313,7 +364,6 @@ nav.top-desktop-nav a button {
 
 /*länkar ändrar bakgrundsfärg när man hovrar*/
 nav.top-desktop-nav a button:hover {
-    background-color:#ce654b;
     padding: 0.5em;
     font-size: 100%;
     transition: background-color 0.3s ease;
