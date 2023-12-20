@@ -39,6 +39,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 10em;
+    margin-left: 15%;
+    text-align: left;
 }
 
 /*Utseende för logotyp*/
@@ -48,13 +51,16 @@ header {
     justify-content: center;
 }
 
+.rfsllogo {
+    max-width: 8em;
+}
+
 /*styling av den övre navigatiosmenyn */
 nav.top-desktop-nav {
-    text-align: center;
     display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
+    flex-direction: row-reverse;
+    flex: 1 1 0;
+    margin: 0;
     font-size: 0.8em;
 }
 
@@ -62,12 +68,6 @@ nav.top-desktop-nav {
 nav.top-desktop-nav ul {
     display: flex;
     list-style-type: none;
-
-}
-
-/* styling för listelement*/
-nav.top-desktop-nav li {
-    margin: 0 2em;
 }
 
 /* styling för länkarna inom listelement*/
@@ -80,17 +80,14 @@ nav.top-desktop-nav a button {
     background-color: #feffcd;
     color: white;
     letter-spacing: 0.05em;
-    padding: 0.5em;
     
 }
 
 /*länkar ändrar bakgrundsfärg när man hovrar*/
 nav.top-desktop-nav a button:hover {
     background-color:#ce654b;
-    padding: 0.5em;
     font-size: 100%;
     transition: background-color 0.3s ease;
-
 }
 
 /*HEADER START*/
@@ -126,18 +123,31 @@ menyn när den sitter på toppen av "header"*/
     text-align: center; 
 }
 
-/*placering av logotyp*/
-.logo-wrapper {
+/*styling av language-elementen*/
+div.language {
     display: flex;
-    margin-left: 15%;
-    text-align: left;
-    align-items: left;
-    justify-content: left;
+    justify-content: flex-end;
+    margin-left: auto;
+    max-width: fit-content;
 }
 
-.rfsllogo {
-    max-width: 25%;
+
+div.language ul {
+    display: flex;
+    list-style-type: none;
 }
+
+
+div.language li {
+    margin: 0 0.2em;
+}
+
+
+div.language li a {
+    text-decoration: none;
+    padding-right: 1em;
+}
+
 
 /* En bit av codepens kod användes som inspiration för att göra menyn till "Bli medlem", 
 "Ge en gåva" "Begreppsordlista". Koden anpassades och justerades för att passa webbplatsens
@@ -184,29 +194,6 @@ nav.top-desktop-nav a button:hover {
 
 }
 
-/*styling av language-elementen*/
-div.language {
-    display: flex;
-    text-align: right;
-    margin-left: auto;
-}
-
-
-div.language ul {
-    display: flex;
-    list-style-type: none;
-}
-
-
-div.language li {
-    margin: 0 0.2em;
-}
-
-
-div.language li a {
-    text-decoration: none;
-
-}
 
 /*Here<!--SearchboxSTARTS-->    - William */
 
@@ -214,7 +201,7 @@ div.language li a {
 
     background-color: #1f3643;
 
-    max-width: 16em;
+    max-width: fit-content;
 
     max-height: 3em;
 
@@ -229,6 +216,8 @@ div.language li a {
     border-color: #fffdfc;
 
     border: 2px solid #fffdfc;
+
+    margin-right: 0%;
 
 }
 
@@ -282,12 +271,6 @@ nav.top-desktop-nav {
     font-size: 0.8rem; 
 }
 
-/*Utseende för listan navigations meny*/
-nav.top-desktop-nav ul {
-    display: flex;
-    list-style-type: none;
-
-}
 
 /*Utseende för logotyp*/
 nav.top-desktop-nav li {
@@ -344,12 +327,6 @@ nav.top-desktop-nav {
     font-size: 0.8em;
 }
 
-/*stilar för listan i den övre navigationsmenyn*/
-nav.top-desktop-nav ul {
-    display: flex;
-    list-style-type: none;
-
-}
 
 /* styling för listelement*/
 nav.top-desktop-nav li {
@@ -382,7 +359,8 @@ nav.top-desktop-nav a button:hover {
 div.language {
     display: flex;
     text-align: right;
-    margin-left: auto;
+    margin-left: 0;
+    padding-left: 3%;
 }
 
 
