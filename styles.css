@@ -78,7 +78,6 @@ nav.top-desktop-nav li a {
 
 /*styling av knappar på den övre navigationsmenyn*/
 nav.top-desktop-nav a button {
-    background-color: #feffcd;
     color: white;
     letter-spacing: 0.05em;
     
@@ -99,7 +98,7 @@ header {
     flex-direction: row;
     justify-content: flex-start; 
     align-items: center;
-    background-color: #feffcd; 
+    /* background-color:  rgba(255, 116, 72, 0.4);  */
     padding: 1rem; 
 } 
 
@@ -169,7 +168,6 @@ Hamburgarmenyn och checkboxen har ignorerats eftersom vår hamburgare har byggds
     display: inline;
     float: right;
     font-size: 0.9rem;
-    background-color: #feffcd;
     padding-bottom: 1rem;
     width: 30%;
 }
@@ -188,7 +186,6 @@ Hamburgarmenyn och checkboxen har ignorerats eftersom vår hamburgare har byggds
 
 /*länkar ändrar bakgrundsfärg när man hovrar*/
 nav.top-desktop-nav a button:hover {
-    background-color: #feffcd;
     padding: 0.5em;
     font-size: 100%;
     transition: background-color 0.3s ease;
@@ -293,14 +290,13 @@ nav.top-desktop-nav li a {
 
 /*Hur meny knapparna ser ut*/
 nav.top-desktop-nav a button {
-    background-color: #feffcd;
     color: white;
     letter-spacing: 0.5rem;
+    background-color: #ef977c;
 }
 
 /*länkar ändrar bakgrundsfärg när man hovrar*/
 nav.top-desktop-nav a button:hover {
-    background-color:#feffcd;
     padding: 0.5rem;
     font-size: 100%;
 
@@ -321,7 +317,7 @@ header {
     width: 100%;
     display: flex;
     padding: .8em 1.5em;
-    background-color: #feffcd;
+    background-color: #ef977c;
 }
 
 /*styling av den övre navigatiosmenyn */
@@ -347,7 +343,6 @@ nav.top-desktop-nav li a {
 
 /*styling av knappar på den övre navigationsmenyn*/
 nav.top-desktop-nav a button {
-    background-color: #feffcd;;
     color: #1f3643;
     letter-spacing: 0.05em;
     padding: 0.5em;
@@ -390,11 +385,11 @@ div.language li a {
 /* stil för knappar i "language" listelement*/
 div.language li a button {
     border-radius: 50%;
-    background-color: #f1e0ff;
     color: #1f3643;
     padding: 0.5em;
     border: 2px solid #1f3643;
     font-weight: bold;
+    background-color: #feffcd;
 }
 
 /* knapparna för språk blir större när man hovrar */
@@ -407,7 +402,7 @@ div.language li a button:hover {
 /* start footer - jessica */
 footer {
     margin-top: auto;
-    background-color: #feffcd;
+    background-color: #ef977c;;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -422,7 +417,7 @@ footer .footer-nav {
     /* display: grid;
     place-items: center; */
     width: 100%;
-    max-width: 1200px;
+    max-width: 70%;
     margin: 0 auto;
     text-align: center;
 }
@@ -435,10 +430,9 @@ footer .footer-nav h1 {
 
 footer .footer-nav p {
     font-size: 1em;
-    width: 60%;
+    width: 40%;
     text-align: center;
     line-height: 1.2em;
-
     margin: 1em auto;
     padding: 0 1em;
 
@@ -447,15 +441,14 @@ footer .footer-nav p {
 footer .footer-nav .social-media-links a {
     text-decoration: none;
     display: inline-block;
-    margin: 2.5em 1.5em;
+    margin: 1.5em 1.5em;
 }
 
 footer ul {
     list-style-type: none;
-    margin: 0 2em;
+    margin: 0 7em;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 4.5em; 
+    grid-template-columns: repeat(4, 1fr); 
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -464,8 +457,9 @@ footer ul {
 
 footer ul li {
     /* break-inside: avoid; */
-    flex: 1 1 200px;
+    flex: 1 1 7%;
     margin: 0 2em;
+    max-width: fit-content;
 }
 
 footer ul li a {
@@ -891,21 +885,21 @@ Sedan har jag använt space between för mellanrum
 .articlehead {
     text-align: center;
     margin-top: 3%; 
-    padding-bottom: 3%;
+    padding-bottom: 4%;
     padding-top: 3%;
-    font-size: 2em;
+    font-size: 1.6em;
     font-weight: bold;
-    color: #fffdfc;
-    background-color: rgba(31, 54, 67, 0.8);
+    color: rgba(255, 116, 72, 0.7);
     width: 100%;
 }
 
 .articlebody {
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 7%;
+    margin-right: 7%;
     font-weight: bold;
     color: #1f3643;
     line-height: 2;
+    font-size: 1.1em;
 }
 
 .boxbutton {
@@ -1010,6 +1004,14 @@ Sedan har jag använt space between för mellanrum
 
     .container {
         gap: 0px 0x;
+    }
+
+    footer p {
+        display: none;
+    }
+
+    footer h1 {
+        content: <i class="fa-solid fa-circle-chevron-down"></i>;
     }
 }
 
