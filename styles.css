@@ -295,6 +295,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     flex-direction: row;
     align-items:center;
     transition: 0.5s;
+     
 }
     
     /* Ta bort punktlistor från länkarna i menyn */
@@ -304,7 +305,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     
     /* Stilar för länkarna i menyn */
     .hamburgerMenu li a {
-        color: white;
+        color: #1f3643;
         text-decoration: none;
         display: block;
         padding: 2.5rem 1.5625rem; 
@@ -316,7 +317,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     /* Animeringseffekt när musen "hover"" över länkarna */
     /* Skugga och bakgrundseffekt */
     .hamburgerMenu li a:hover {
-        box-shadow: 0 -5px 0px white inset,
+        box-shadow: 0 -5px 0px  #1f3643 inset,
         500px 0 0 rgba(255, 255, 255, 0.03) inset;
         padding: 35px 25px 45px 25px;
     }
@@ -352,47 +353,65 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     
     /*Mobil*/
     /*Layouten fixas för hamburgermenyn för mindre skärmar, maximalt 768px, 48 rem*/
-     @media screen and (max-width: 48rem) {
-    .hamburgerIcon,
-    .toggleHamburgerCheckbox {
-        display: block;
+    @media screen and (max-width: 48rem) {
+        .hamburgerIcon,
+        .toggleHamburgerCheckbox {
+            display: block;
+        }
+    
+        /*Full width and height for hamburgerMenu */
+        .hamburgerMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #F1E0FF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem !important;
+            font-weight: 800;
+        }
+    
+        /*Luft i listan med alla komponeneter i meny listan*/
+        .hamburgerMenu li {
+            margin-top: 3rem; 
+        }
+    
     }
-    .hamburgerMenu {
-        justify-content: start;
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-        margin-top: 0;
-        background: grey;
-        width: 100%; 
-        height: auto;
-        padding-top: 4.0625rem;
-        padding: 3rem 1rem; 
-        font-size: 1rem!important; 
-    }
-}
 
        /*Dator*/
        /*Skärmar som är större än eller lika med 784px, 49 rem*/
-  @media screen and (min-width: 49rem) {
-    .hamburgerIcon,
-    .toggleHamburgerCheckbox {
-        display: block;
-    }
-    .hamburgerMenu {
-        justify-content: start;
-        flex-direction: column;
-        align-items: center;
-        display: flex;
-        margin-top: 0;
-        background: grey;
-        width: 100%; 
-        height: auto;
-        padding-top: 4.0625rem;
-        padding: 6rem 2rem; 
-        font-size: 1.5rem!important; 
+       @media screen and (min-width: 49rem) {
+        .hamburgerIcon,
+        .toggleHamburgerCheckbox {
+            display: block;
+        }
+    
+        .hamburgerMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #F1E0FF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem !important;
+            font-weight: 800;
+            z-index: 6000; 
+        }
+        
+          /*Luft i listan med alla komponeneter i meny listan*/
+        .hamburgerMenu li {
+            margin-top: 2rem; 
         
     }
+
 }
 
     /* Stil för länkarna i hamburgermenyn,bredd. */
@@ -423,7 +442,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         position: fixed;
         margin-top: 0;
         margin-left: 0;
-        z-index: 999;
+        z-index: 6000;
       }
 
       /* X ikonen, för att stänga hamburger menyn */
@@ -437,6 +456,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
 }
 
 /* hamburger SLUT: Madelene*/
+
 
 
 /* Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
@@ -740,15 +760,16 @@ Sedan har jag använt space between för mellanrum
     }
 }
 
+
 /*Here<!--SearchboxSTARTS-->    - William */
 
-#Search-Form {
+.Search-Form, #Search-WithLove{
 
     background-color: rgb(255, 255, 255);
 
-    max-width: 400em;
+    max-width: 10em;
 
-    max-height: 3em;
+    max-height: 2.4em;
 
     border-radius: 30px;
 
@@ -760,29 +781,74 @@ Sedan har jag använt space between för mellanrum
 
     border-color: rgb(11, 115, 206);
 
+    position: left;
+ 
 }
 
-#Search-Form i {
+.Search-Form i, #Search-WithLove i {
     color: rgb(158, 158, 156);
+
     padding: 0;
+
     background-color: rgba(149, 147, 150, 0.281);
+
     border-radius: 30px;
-    font-size: 25px;
+
+    font-size: 20px;
 }
 
-#Search-Bar {
-    border-radius: 30px;
+.Search-Bar, #Search-Bar{
     outline: none;
 
-}
+    max-width: 7em;
 
-#Search-Button {
-    width: 100%;
-    height: 100%;
-    outline: none;
-    border-radius: 30px;
-    background: none;
-    border: none;
-    font-size: 12px;}
+    max-height: 5em;
     
+    
+      
+}
+
+.Search-Button, #Search-Button {
+    
+    outline: none;
+
+    border-radius: 30px;
+
+    background: none;
+
+    border: none;
+
+    max-width: 8rem;
+}
+#Search-WithLove {
+    display: none;}
+
+@media(max-width: 400px){ /*Search box disapears on 400px*/
+
+.Search-Form{
+
+display:none;
+
+}
+#Search-WithLove{
+/*this here show the search box (with another class name ) in the hamburger menu*/
+    
+    display:flex;
+    margin-top: 6em; /*This so it does not show under the X button*/
+    
+}
+
+ }
+    
+ @media (min-width: 401px) {/*this will do cool stuff- :)
+                             shows the usual search bar and 
+                             hides the one in the hamburger menu*/
+    .Search-Form {
+    display: flex;
+}
+
+    #Search-WithLove {
+     display:none;
+}
+}
     /*Here <!--SearchboxENDS-->*/
