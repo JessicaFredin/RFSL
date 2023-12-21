@@ -45,7 +45,7 @@ header {
     justify-content: flex;
 }
 
-
+/*madelenes kod för att göra headern fast under scrollning*/
 .sticky-header{
     position: -webkit-sticky; 
     position: sticky;
@@ -117,7 +117,6 @@ nav.top-desktop-nav a button {
 nav.top-desktop-nav a button:hover {
     background-color:#15242d;
     padding: 0.5em;
-    font-size: 100%;
     transition: background-color 0.3s ease;
 
 }
@@ -125,7 +124,6 @@ nav.top-desktop-nav a button:hover {
 /*styling av language-elementen*/
 div.language {
     display: flex;
-    text-align: right;
     margin-left: auto;
 }
 
