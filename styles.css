@@ -45,7 +45,7 @@ header {
     justify-content: flex;
 }
 
-
+/*madelenes kod för att göra headern fast under scrollning*/
 .sticky-header{
     position: -webkit-sticky; 
     position: sticky;
