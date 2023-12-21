@@ -87,8 +87,6 @@ nav.top-desktop-nav {
 nav.top-desktop-nav ul {
     display: flex;
     list-style-type: none;
-    
-
 }
 
 /* styling för listelement*/
@@ -118,7 +116,6 @@ nav.top-desktop-nav a button:hover {
     background-color:#15242d;
     padding: 0.5em;
     transition: background-color 0.3s ease;
-
 }
 
 /*styling av language-elementen*/
@@ -163,7 +160,7 @@ div.language li a button:hover {
 /* start footer - jessica */
 footer {
     margin-top: auto;
-    background-color: #707070;
+    background-color: #1F3643;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -194,7 +191,6 @@ footer .footer-nav p {
     width: 60%;
     text-align: center;
     line-height: 1.2em;
-
     margin: 1em auto;
     padding: 0 1em;
 
@@ -226,14 +222,14 @@ footer ul li {
 
 footer ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #fffdfc;
     transition: color 0.3s ease-out;
 }
 
 footer ul li a:hover {
     text-decoration: underline;
     transition: color 0.3s ease-in;
-    color: red;
+    color: #feffcd;
 }
 
 i.fa-facebook,
