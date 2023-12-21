@@ -18,6 +18,10 @@ html {
     height: 100%;
 }
 
+a :hover {
+    cursor: pointer;
+}
+
 body {
     font-size: 16px;
     font-family: "Basic Sans", sans-serif;
@@ -190,6 +194,10 @@ nav.top-desktop-nav a button:hover {
     font-size: 100%;
     transition: background-color 0.3s ease;
 
+}
+
+.mobileheader {
+    display: none;
 }
 
 
@@ -430,12 +438,11 @@ footer .footer-nav h1 {
 
 footer .footer-nav p {
     font-size: 1em;
-    width: 40%;
     text-align: center;
     line-height: 1.2em;
     margin: 1em auto;
     padding: 0 1em;
-
+    max-width: 40%;
 }
 
 footer .footer-nav .social-media-links a {
@@ -446,8 +453,9 @@ footer .footer-nav .social-media-links a {
 
 footer ul {
     list-style-type: none;
-    margin: 0 7em;
+    margin: 0 auto;
     display: grid;
+    gap: 1em;
     grid-template-columns: repeat(4, 1fr); 
     justify-content: center;
     display: flex;
@@ -456,9 +464,9 @@ footer ul {
 }
 
 footer ul li {
-    /* break-inside: avoid; */
+    break-inside: avoid; 
     flex: 1 1 7%;
-    margin: 0 2em;
+    margin: 0 auto;
     max-width: fit-content;
 }
 
@@ -1006,12 +1014,8 @@ Sedan har jag använt space between för mellanrum
         gap: 0px 0x;
     }
 
-    footer p {
-        display: none;
-    }
-
-    footer h1 {
-        content: <i class="fa-solid fa-circle-chevron-down"></i>;
+    #myDIV {
+        max-width: 70%;
     }
 }
 
@@ -1048,6 +1052,20 @@ Sedan har jag använt space between för mellanrum
     footer ul {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .footer-nav {
+        max-width: 100%;
+        flex-direction: row;
+    }
+
+    .footer-nav {
+        max-width: 100%;
+    }
+
+    #myDIV {
+        max-width: 80%;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -1081,5 +1099,10 @@ Sedan har jag använt space between för mellanrum
     footer ul li {
         margin: 0.5em 0;
     }
+
+    #myDIV {
+        max-width: 100%;
+    }
+
 }
 
