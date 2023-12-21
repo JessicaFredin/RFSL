@@ -42,6 +42,7 @@ header {
     padding: .6em 1.5em;
     background-color: #1F3643;
     max-height: 8em;
+    justify-content: flex;
 }
 
 .sticky-header{
