@@ -633,12 +633,6 @@ Sedan har jag använt space between för mellanrum
         display: flex;
     }
 
-    .logo-wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .logo {
         width: 80%;
         min-width: 15em;
@@ -694,7 +688,6 @@ Sedan har jag använt space between för mellanrum
     .logo {
         width: 70%;
         max-width: 15em;
-        min-width: 10em;
         height: auto;
     }
 
@@ -722,6 +715,10 @@ Sedan har jag använt space between för mellanrum
     footer ul {
         grid-template-columns: repeat(2, 1fr);
     }
+
+         footer ul li {
+            margin: 0.2em 0;
+         }
 }
 
 @media (max-width: 400px) {
