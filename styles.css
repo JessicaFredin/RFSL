@@ -45,6 +45,7 @@ header {
     justify-content: flex;
 }
 
+
 .sticky-header{
     position: -webkit-sticky; 
     position: sticky;
@@ -638,6 +639,12 @@ Sedan har jag använt space between för mellanrum
         display: flex;
     }
 
+    .logo-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .logo {
         width: 80%;
         min-width: 15em;
@@ -686,6 +693,9 @@ Sedan har jag använt space between för mellanrum
         width: 100%;
         display: flex;
     }
+    .logo-wrapper{
+        display: flex;
+    }
 
     .logo {
         width: 70%;
@@ -720,7 +730,7 @@ Sedan har jag använt space between för mellanrum
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
 
     header {
         width: 100%;
@@ -823,7 +833,7 @@ Sedan har jag använt space between för mellanrum
 #Search-WithLove {
     display: none;}
 
-@media(max-width: 400px){ /*Search box disapears on 400px*/
+@media(max-width: 480px){ /*Search box disapears on 400px*/
 
 .Search-Form{
 
@@ -840,7 +850,7 @@ display:none;
 
  }
     
- @media (min-width: 401px) {/*this will do cool stuff- :)
+ @media (min-width: 481px) {/*this will do cool stuff- :)
                              shows the usual search bar and 
                              hides the one in the hamburger menu*/
     .Search-Form {
