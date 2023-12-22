@@ -23,7 +23,7 @@ a :hover {
 }
 
 body {
-    font-size: 16px;
+    /* font-size: 16px; */
     font-family: "Basic Sans", sans-serif;
     font-weight: 300;
     letter-spacing: .03em;
@@ -165,7 +165,7 @@ div.language ul {
 
 
 div.language li {
-    /* margin: 0 0.2em; */
+    margin: 0 0.2em; 
 }
 
 
@@ -887,18 +887,26 @@ Sedan har jag använt space between för mellanrum
 }
 
 .single {
+    display: flex;
     max-width: 48%;
     align-content: center;
     position: relative;
+    align-items: center;
 }
 
 .single img {
     width: 100%;
 }
 
-#stylingtext {
+
+.stripe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 10px;
+    justify-content: center;
     background-color: #ededed;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 100%;
+    /* padding-top: 0.25%; */
 }
 
 .double {
@@ -913,32 +921,32 @@ Sedan har jag använt space between för mellanrum
     width: 100%;
 }
 
+.article {
+    padding: 8%;
+}
+
 .articlehead {
     text-align: center;
-    margin-top: 3%; 
     padding-bottom: 4%;
-    padding-top: 3%;
-    font-size: 1.6em;
+    font-size: 1.3em;
     font-weight: bold;
     color: rgba(255, 116, 72, 0.7);
-    width: 100%;
 }
 
 .articlebody {
-    margin-left: 7%;
-    margin-right: 7%;
     font-weight: bold;
     color: #1f3643;
     line-height: 2;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .boxbutton {
     display: flex;
     flex-direction: row;
     justify-content: right;
-    padding: 5%;
+    padding-top: 3%;
     padding-left: 6%;
+    padding-right: 8%;
     gap: 6%;
 }
 
@@ -1011,6 +1019,13 @@ Sedan har jag använt space between för mellanrum
         font-size: 0.9em;
     }
 
+    .articlehead {
+        font-size: 1.3em;
+    }
+
+    .articlebody {
+        font-size: 1em;
+    }
     
 }
 
