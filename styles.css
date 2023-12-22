@@ -28,7 +28,7 @@ body {
     font-weight: 300;
     letter-spacing: .03em;
     min-height: 100%;
-    background-color: rgba(31, 54, 67, 0.2);
+    background-color: #d2d6d9;
 }
 
 header {
@@ -955,6 +955,7 @@ Sedan har jag använt space between för mellanrum
     padding-bottom: 4px;
     font-weight: bold;
     color: #1f3643;
+    background-color: #ededed;
 }
 
 .share {
@@ -962,6 +963,7 @@ Sedan har jag använt space between för mellanrum
     padding-bottom: 4px;
     font-weight: bold;
     color: #1f3643;
+    background-color: #ededed;
 }
 
 .cardheader {
@@ -1080,6 +1082,18 @@ Sedan har jag använt space between för mellanrum
 
     .rfsllogo {
         max-width: 8em;
+    }
+
+    .stripe {
+        background-color: #d2d6d9;
+    }
+
+    .readmore {
+        background-color: #d2d6d9;
+    }
+
+    .share {
+        background-color: #d2d6d9;       
     }
     
 }
