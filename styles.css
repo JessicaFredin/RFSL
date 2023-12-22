@@ -117,6 +117,28 @@ menyn när den sitter på toppen av "header"*/
      
 } */
 
+
+.Search-Small {
+    background-color: #1f3643;
+    border: 2px solid white;
+    color: white;
+    padding-top: 0.55%;
+    padding-bottom: 0.55%;
+    padding-right: 0.7%;
+    padding-left: 0.7%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 767px) {
+    .Search-Small {
+        display: none;
+    }
+}
+
 /*Centrerar allting tillsammans"*/
 .hamburger-wrapper,
 .logo-wrapper,
@@ -143,7 +165,7 @@ div.language ul {
 
 
 div.language li {
-    margin: 0 0.2em;
+    /* margin: 0 0.2em; */
 }
 
 
@@ -398,6 +420,7 @@ div.language li a button {
     border: 2px solid #1f3643;
     font-weight: bold;
     background-color: #feffcd;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.20) 0px 2px 16px 0px;
 }
 
 /* knapparna för språk blir större när man hovrar */
@@ -423,7 +446,7 @@ footer {
 
 footer .footer-nav {
     /* display: grid;
-    place-items: center; */
+    place-items: center;  */
     width: 100%;
     max-width: 70%;
     margin: 0 auto;
@@ -432,7 +455,7 @@ footer .footer-nav {
 
 
 footer .footer-nav h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     text-shadow: 0 1px 3px #000;
 }
 
@@ -974,15 +997,37 @@ Sedan har jag använt space between för mellanrum
 
 /* Slut - Diana*/
 
+@media (max-width: 1574px) {
+
+    #Search-Form {
+        display: none;
+    }
+
+    .Search-Small {
+        display: block;
+    }
+
+    .top-desktop-nav ul li a {
+        font-size: 0.9em;
+    }
+
+    
+}
+
+@media (max-width: 1198px) {
+
+
+    nav.top-desktop-nav {
+        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
+    }
+    
+}
+
 @media (max-width: 1025px) {
 
     header {
         width: 100%;
         display: flex;
-    }
-
-    nav.top-desktop-nav {
-        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
     }
 
     #svButton {
@@ -1017,6 +1062,11 @@ Sedan har jag använt space between för mellanrum
     #myDIV {
         max-width: 70%;
     }
+
+    .rfsllogo {
+        max-width: 8em;
+    }
+    
 }
 
 
@@ -1026,10 +1076,6 @@ Sedan har jag använt space between för mellanrum
     header {
         width: 100%;
         display: flex;
-    }
-
-    nav.top-desktop-nav {
-        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
     }
 
     #svButton {
@@ -1064,6 +1110,10 @@ Sedan har jag använt space between för mellanrum
 
     #myDIV {
         max-width: 80%;
+    }
+
+    .rfsllogo {
+        max-width: 7em;
     }
 
 }
@@ -1102,6 +1152,10 @@ Sedan har jag använt space between för mellanrum
 
     #myDIV {
         max-width: 100%;
+    }
+
+    .rfsllogo {
+        max-width: 7em;
     }
 
 }
