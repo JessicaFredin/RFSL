@@ -273,7 +273,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
 
 /*Ge hamburgaren luftig plats på "header"*/
 .hamburgerIconSpace {
-    padding-right: 5rem; 
+    margin-right: 5rem; 
 }
 
 /* Stilar för  hamburgermenyn. Förflyttningar osv...*/
@@ -281,7 +281,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     display: flex;
     justify-content: space-between;
     align-items:center;
-    }
+}
 
 /* Stilar för hamburgermenyn. Förflyttningar osv.. */    
 .hamburgerMenu {
@@ -290,7 +290,6 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     flex-direction: row;
     align-items:center;
     transition: 0.5s;
-     
 }
     
     /* Ta bort punktlistor från länkarna i menyn */
