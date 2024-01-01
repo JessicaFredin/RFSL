@@ -39,10 +39,11 @@ body {
 header {
     width: 100%;
     display: flex;
+    position: relative;
     padding: .6em 1.5em;
     background-color: #1F3643;
     max-height: 8em;
-    justify-content: flex;
+    justify-content: space-between;
 }
 
 /*madelenes kod för att göra headern fast under scrollning*/
@@ -55,20 +56,30 @@ header {
 
 /*placering av logotyp*/
 .logo-wrapper {
-    flex-grow: 1;
+    flex: 1;
     display: flex;
-    align-items: center;
+    position: relative;
     justify-content: center;
+    height: 120px; /* ändra detta för att göra logotypen större eller mindre, det beror på höjden*/
 }
 
-/*Utseende för logotyp*/
 .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; 
+    height: 100%;
+}
+
+.right-content{
+    margin-left: auto;
     display: flex;
     align-items: center;
+}
+
+.logo-link{
+    display: flex;
     justify-content: center;
-    width: 100%;
-    max-width: 25em;
-    height: auto;
 }
 
 /*styling av den övre navigationsmenyn */
@@ -120,7 +131,7 @@ nav.top-desktop-nav a button:hover {
 
 /*styling av language-elementen*/
 div.language {
-    display: flex;
+    /* display: flex; */
     margin-left: auto;
 }
 
@@ -633,9 +644,15 @@ Sedan har jag använt space between för mellanrum
     }
 
     .logo {
-        width: 80%;
-        min-width: 15em;
-        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto; 
+        height: 100%;position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto; 
+        height: 100%;
     }
 
     /*nav.top-desktop-nav {
@@ -682,12 +699,15 @@ Sedan har jag använt space between för mellanrum
     }
     .logo-wrapper{
         display: flex;
+        height: 70px;
     }
 
     .logo {
-        width: 70%;
-        max-width: 15em;
-        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto; 
+        height: 100%;
     }
 
     nav.top-desktop-nav {
