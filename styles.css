@@ -46,7 +46,7 @@ header {
     justify-content: space-between;
 }
 
-/*madelenes kod för att göra headern fast under scrollning*/
+/*sticky kod från W3Schools för att göra headern fast under scrollning*/
 .sticky-header{
     position: -webkit-sticky; 
     position: sticky;
@@ -271,7 +271,6 @@ footer .copyright {
 } 
 /*slut footer - jessica */
 
-
 /*hamburger START: Madelene*/
 
 /*En Youtube video användes som guide när hamburger funktionen skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till RFSL. 
@@ -284,7 +283,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
 
 /*Ge hamburgaren luftig plats på "header"*/
 .hamburgerIconSpace {
-    margin-right: 5rem; 
+    padding-right: 5rem; 
 }
 
 /* Stilar för  hamburgermenyn. Förflyttningar osv...*/
@@ -292,7 +291,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     display: flex;
     justify-content: space-between;
     align-items:center;
-}
+    }
 
 /* Stilar för hamburgermenyn. Förflyttningar osv.. */    
 .hamburgerMenu {
@@ -301,6 +300,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     flex-direction: row;
     align-items:center;
     transition: 0.5s;
+     
 }
     
     /* Ta bort punktlistor från länkarna i menyn */
@@ -353,7 +353,7 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         left: 0;
         box-shadow: -1.25rem 0 2.5rem rgba(0, 0, 0, 0.3); 
     }
-    
+
     /* Justerar layouten för hamburgermenyn för olika skämar */
     
     /*Mobil*/
@@ -363,6 +363,13 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         .toggleHamburgerCheckbox {
             display: block;
         }
+
+        .hamburgerIconImage  {
+            width: 12%;
+            min-width : 30px; 
+            padding-top: 0.5rem;
+        }
+
     
         /*Full width and height for hamburgerMenu */
         .hamburgerMenu {
@@ -382,9 +389,9 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     
         /*Luft i listan med alla komponeneter i meny listan*/
         .hamburgerMenu li {
-            margin-top: 3rem; 
+            margin-top: 1rem; 
         }
-    
+
     }
 
        /*Dator*/
@@ -394,29 +401,47 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         .toggleHamburgerCheckbox {
             display: block;
         }
-    
+
+        .hamburgerIconImage  {
+            width: 13%; 
+            max-width : 40rem; 
+        }
+        
+         .moveListBigScreen {
+        padding-top: 3rem;
+        }
+
         .hamburgerMenu {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
+            width: 20vw;
             height: 100vh;
             background: #F1E0FF;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem !important;
+            font-size: 1rem !important;
             font-weight: 800;
             z-index: 6000; 
         }
         
           /*Luft i listan med alla komponeneter i meny listan*/
         .hamburgerMenu li {
-            margin-top: 2rem; 
+            margin-top: 1rem; 
         
     }
 
+}
+
+/* Ipad*/
+/* Skärmar mellan 768px och 1024 */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .hamburgerIconImage {
+        width: 12%; 
+        min-width : 35px; 
+    }
 }
 
     /* Stil för länkarna i hamburgermenyn,bredd. */
@@ -446,7 +471,6 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     .hamburger-wrapper {
         position: fixed;
         margin-top: 0;
-        margin-left: 0;
         z-index: 6000;
       }
 
@@ -461,7 +485,6 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
 }
 
 /* hamburger SLUT: Madelene*/
-
 
 
 /* Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
