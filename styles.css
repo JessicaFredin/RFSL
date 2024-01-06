@@ -271,26 +271,24 @@ footer .copyright {
 } 
 /*slut footer - jessica */
 
-/*hamburger START: Madelene*/
 
-/*En Youtube video användes som guide när hamburger funktionen skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till RFSL. 
-Fick också ändra så att hamburgaren blir responsiv genom att konvertera från px till rem. Har också adderat %. Guidens hamburgare är inte alls responsiv. Har 
-också tagit bort position "absolute"och position "relative" som inte heller är responsiva, och ändrat till "flex". Istället för att skapa "hamburgar ikonen" och
-"X-ikonen" manuellt med kod som guiden använde jag istället färdiga bilder.
+/*hamburger START: Madelene.R*/
+
+/*En Youtube video användes som guide när hamburgaren/hamburger menyn skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till
+ RFSL.Fick också ändra så att hamburgaren blir responsiv genom att konvertera från px till rem. Har också adderat %. Guidens hamburgare är inte alls "responsiv".
+Har också tagit bort position "absolute"och position "relative" som inte heller är responsiva, och ändrat till "flex". Istället för att skapa "hamburgar ikonen" 
+och "X-ikonen" manuellt med kod som guiden, använde jag istället färdiga ikoner från "fontawesome". För att göra justeringar i koden använde jag mig av w3schools
+och Googlade för att få hamburgarmenyn/hamburgaren att funka med olika guider. 
 Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
-Px to rem calculator: https://nekocalc.com/px-to-rem-converter
+Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-converter
 */
 
-/*Ge hamburgaren luftig plats på "header"*/
-.hamburgerIconSpace {
-    padding-right: 5rem; 
-}
 
 /* Stilar för  hamburgermenyn. Förflyttningar osv...*/
 .hamburgerNavigation {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
+    width:100%;
+    margin-top: 50%;
+
     }
 
 /* Stilar för hamburgermenyn. Förflyttningar osv.. */    
@@ -302,7 +300,6 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     transition: 0.5s;
      
 }
-    
     /* Ta bort punktlistor från länkarna i menyn */
     .hamburgerMenu li {
     list-style-type: none;
@@ -319,23 +316,6 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
         align-items: center; 
     }
 
-    /* Animeringseffekt när musen "hover"" över länkarna */
-    /* Skugga och bakgrundseffekt */
-    .hamburgerMenu li a:hover {
-        box-shadow: 0 -5px 0px  #1f3643 inset,
-        500px 0 0 rgba(255, 255, 255, 0.03) inset;
-        padding: 35px 25px 45px 25px;
-    }
-    
-    /* Stil för hamburgerikonen */
-    .hamburgerIcon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    
     /* Stil för den gömda checkboxen som används för att visa och gömma menyn */
     .toggleHamburgerCheckbox {
         display: none; 
@@ -347,36 +327,31 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
     background: transparent;
     }
     
-    
     /* När checkboxen är markerad, visa menyn genom att ändra positionen till vänster */
     .hamburgerNavigation input:checked ~ .hamburgerMenu {
         left: 0;
         box-shadow: -1.25rem 0 2.5rem rgba(0, 0, 0, 0.3); 
     }
 
-    /* Justerar layouten för hamburgermenyn för olika skämar */
-    
-    /*Mobil*/
-    /*Layouten fixas för hamburgermenyn för mindre skärmar, maximalt 768px, 48 rem*/
-    @media screen and (max-width: 48rem) {
-        .hamburgerIcon,
+/*Justerar hur hamburger menyn ser ut för olika skämar */
+    @media (max-width: 1920px) {
+        
         .toggleHamburgerCheckbox {
             display: block;
         }
 
-        .hamburgerIconImage  {
-            width: 12%;
-            min-width : 30px; 
-            padding-top: 0.5rem;
-        }
+        .hamburgerNavigation {
+            width:100%;
+            margin-top: 0;
+        
+            }
 
-    
-        /*Full width and height for hamburgerMenu */
+        /* Justerar hur allt ser ut innuti hamburger menyn*/    
         .hamburgerMenu {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
+            /*width: 20vw; kommenterar bort, om jag behöver senare, om jag vill göra menyn att den tar hela skärmen*/
             height: 100vh;
             background: #F1E0FF;
             display: flex;
@@ -385,37 +360,56 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
             justify-content: center;
             font-size: 1rem !important;
             font-weight: 800;
-        }
-    
-        /*Luft i listan med alla komponeneter i meny listan*/
-        .hamburgerMenu li {
-            margin-top: 1rem; 
+            z-index: 6000;
+            min-width: 100px;
         }
 
+        /* Justerar var X ligger i hamburger menyn*/
+        .x-opposite-side-in-menu {
+            padding-left: 10.5rem;
+        }
+        /*Justerar meny komponenterna hur de ser ut*/
+        .hamburgerMenu li a {
+            padding: 1.9rem; 
+            font-size: 0.7rem;
+        }
+        /*Justerar hur hambuyrger meny ikonen ser ut, storlek */
+        #hamburgerImage {
+            font-size: 2em;
+        }      
+        
+        /* Justerar hur X ikonen ser ut, storlek */
+        #hamburgerImageClose{
+            font-size: 2em;
+        } 
+
+    /*Animeringseffekt när musen "hover"" över länkarna*/
+    /*Skugga och bakgrundseffekt*/
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px  #1f3643 inset,
+        500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 35px 25px 45px 25px;
+    }
+        
     }
 
-       /*Dator*/
-       /*Skärmar som är större än eller lika med 784px, 49 rem*/
-       @media screen and (min-width: 49rem) {
-        .hamburgerIcon,
+    @media (max-width: 1574px) {
+        
         .toggleHamburgerCheckbox {
             display: block;
         }
 
-        .hamburgerIconImage  {
-            width: 13%; 
-            max-width : 40rem; 
-        }
+        .hamburgerNavigation {
+            width:100%;
+            margin-top: 0;
         
-         .moveListBigScreen {
-        padding-top: 3rem;
-        }
+            }
 
         .hamburgerMenu {
             position: fixed;
             top: 0;
             left: 0;
-            width: 20vw;
+            /*width: 20vw; */
             height: 100vh;
             background: #F1E0FF;
             display: flex;
@@ -424,40 +418,175 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
             justify-content: center;
             font-size: 1rem !important;
             font-weight: 800;
-            z-index: 6000; 
+            z-index: 6000;
+            min-width: 100px;
         }
+
+        .x-opposite-side-in-menu {
+            padding-left: 10rem;
+        }
+      
+
+        .hamburgerMenu li a {
+            padding: 1.6rem; 
+            font-size: 0.7rem;
+        }
+    
         
-          /*Luft i listan med alla komponeneter i meny listan*/
-        .hamburgerMenu li {
-            margin-top: 1rem; 
+        #hamburgerImage {
+            font-size: 2em;
+        }   
+        
+        #hamburgerImageClose{
+            font-size: 2em;
+        }   
+
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px  #1f3643 inset,
+        500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 35px 25px 45px 25px;
+    }
         
     }
 
-}
 
-/* Ipad*/
-/* Skärmar mellan 768px och 1024 */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .hamburgerIconImage {
-        width: 12%; 
-        min-width : 35px; 
-    }
-}
+    @media (max-width: 768px) {
 
-    /* Stil för länkarna i hamburgermenyn,bredd. */
-    .hamburgerMenu li {
-        width: 100%; 
+        .toggleHamburgerCheckbox {
+            display: block;
+        }
+
+        .hamburgerNavigation {
+            width:100%;
+            margin-top: 0;
+        
+            }
+
+        .hamburgerMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            /*width: 100vw;*/
+            height: 100vh;
+            background: #F1E0FF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem !important;
+            font-weight: 800;
+            z-index: 6000;
+            min-width: 100px;
+            
+        }
+
+        .x-opposite-side-in-menu {
+            padding-left: 9rem;
+        }
+      
+ 
+        .hamburgerMenu li a {
+            padding: 1.3rem; 
+            font-size: 0.6rem;
+        }
+    
+    
+        #hamburgerImage {
+            font-size: 1.5em;
+           
+        }  
+
+        #hamburgerImageClose{
+            font-size: 1.5em;
+        }  
+        
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px  #1f3643 inset,
+        500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 30px 20px 40px 20px;
     }
     
-    /* Stilar för länkarna i hamburgermenyn, hur det ser ut. */
-    .hamburgerMenu li a {
-        padding: 1.25rem; 
-        box-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.1) inset; 
     }
 
+
+    @media (max-width: 320px) {
+
+        .toggleHamburgerCheckbox {
+            display: block;
+        }
+
+        .hamburgerNavigation {
+            width:100%;
+            margin-top: 0;
+        
+            }
+
+        .hamburgerMenu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            /*width: 100vw;*/
+            height: 100vh;
+            background: #F1E0FF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem !important;
+            font-weight: 800;
+            min-width: 100px;
+        }
+
+          /*Justerar var X ligger i hamburger menyn*/
+          .x-opposite-side-in-menu {
+            padding-left: 7.5rem;
+        }
+      
+ 
+        .hamburgerMenu li a {
+            padding: 1rem; 
+            font-size: 0.5rem;
+        }
+    
+
+        #hamburgerImage {
+            font-size: 1.3em;
+          
+        }
+
+        #hamburgerImageClose{
+            font-size: 1.3em;
+        }  
+        
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px  #1f3643 inset,
+        500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 20px 10px 30px 10px;
+    }
+    
+    }
+
+    
+    /*Hamburgar ikonen färg*/
+    .hamburger-style{
+        color: white;
+    }
+
+
+    /*X ikonen färg*/
+    .hamburger-close-style {
+        color: #1f3643;
+    }
+
+    /*Gör plats melan listan och X*/
+    .makeSpaceBetweenListAndX{
+        padding-top: 4rem;
+    }
+   
     /*Visar hamburgermenyn när man trycker på checkboxen som sitter på hamburger ikonen*/
     .toggleHamburgerCheckbox:checked ~ .hamburgerIcon ~ .hamburgerMenu {
         display: block;
+        padding-top: 2rem;
     
     }
 
@@ -467,24 +596,25 @@ Px to rem calculator: https://nekocalc.com/px-to-rem-converter
        
     }
 
-     /* Gör så att hamburgaren ignorerar headern. Annars triggas heasdern och blir större när hamburgar menyn öppnas */
+     /*Gör så att hamburgaren ignorerar headern. Annars triggas heasdern och blir större när hamburgar menyn öppnas*/
     .hamburger-wrapper {
         position: fixed;
         margin-top: 0;
         z-index: 6000;
       }
 
-      /* X ikonen, för att stänga hamburger menyn */
+      /*X ikonen, för att stänga hamburger menyn*/
 .hamburgerImage {
-    content: url("hamburgerIcon.png");
+    content: url("#hamburgerImage");
 }
 
-/* Byter bild från hamburgaren till ett X. X kommer fram när man öppnar hamburgar menyn. Hamburgaren kommer fram, när man stänger menyn*/
+/*Byter bild från hamburgaren till ett X. X kommer fram när man öppnar hamburgar menyn. Hamburgaren kommer fram, när man stänger menyn*/
 .hamburgerNavigation input:checked ~ .hamburgerIcon .hamburgerImage {
-    content: url("closeHamburgerIcon.png");
+    content: url("#hamburgerImageClose");
 }
 
-/* hamburger SLUT: Madelene*/
+/*hamburger SLUT: Madelene.R*/
+
 
 
 /* Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera

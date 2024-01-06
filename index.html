@@ -21,37 +21,33 @@
     <div class="sticky-header">
     <header>
 
-         <!--HAMBURGER "START": Madelene-->
-         <div class="hamburger-wrapper">
+          <!--HAMBURGER "START": Madelene.R-->
+          <div class="hamburger-wrapper">
             <aside class="hamburgerNavigation">
                 <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
                 <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
                     <div class="hamburgerIconSpace">
-                        <img class="hamburgerIconImage" src="hamburgerIcon.png" alt="hamburger" class="hamburgerImage">
+                        <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
                     </div>
                 </label>
-                
                 <ul class="hamburgerMenu">
-                    <li>
-                        <div class="hamburger-wrapper">
-                            <aside class="hamburgerNavigation">
-                                <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
-                                
-                                <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
-                                    <div class="hamburgerIconSpace">
-                                        <img src="closeHamburgerIcon.png" alt="hamburger" width="50" height="40">
-                                   </div>
-                                </label>
-                            </aside>
-                        </div>
-                    </li>
-                <!--Searchbox-STARTS-->
-                <form id="Search-WithLove">
-                <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......" />
-                <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </form>
-                <!--Searchbox-ENDS-->
-                <div class="moveListBigScreen">
+                    <div class="hamburger-wrapper">
+
+                   
+                      <li  class="x-opposite-side-in-menu">
+                        <aside class="hamburgerNavigation">
+                            <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+                            <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                                <div class="hamburgerIconSpace">
+                                    <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
+                               </div>
+                            </label>
+                        </aside>
+                    </li>                 
+                    </div>
+
+
+                <div class="makeSpaceBetweenListAndX">
                     <li><a href="index.html">Hem</a></li>
                     <li><a href="#">Medlem och community</a></li>
                     <li><a href="#">Ge en gåva</a></li>
@@ -61,11 +57,19 @@
                     <li><a href="#">Hbtqi-fakta & tips</a></li>
                     <li><a href="#">Om oss</a></li>
                     <li><a href="#">Press</a></li>
+                      <!--Searchbox-STARTS-->
+                    <li>
+                    <form id="Search-WithLove">
+                    <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......" />
+                    <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                    </li>
+                    <!--Searchbox-ENDS-->
                 </div>
                 </ul>
             </aside>
         </div>
-        <!--HAMBURGER "END": Madelene-->
+        <!--HAMBURGER "END": Madelene.R-->
 
         <div class="logo-wrapper">
 
