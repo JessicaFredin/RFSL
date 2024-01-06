@@ -366,12 +366,12 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
 
         /* Justerar var X ligger i hamburger menyn*/
         .x-opposite-side-in-menu {
-            padding-left: 10.5rem;
+            padding-left: 12rem;
         }
         /*Justerar meny komponenterna hur de ser ut*/
         .hamburgerMenu li a {
             padding: 1.9rem; 
-            font-size: 0.7rem;
+            font-size: 0.8rem;
         }
         /*Justerar hur hambuyrger meny ikonen ser ut, storlek */
         #hamburgerImage {
