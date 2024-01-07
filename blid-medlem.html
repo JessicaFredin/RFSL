@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -12,9 +12,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bli-medlem-styles.css">
     <link rel="icon" href="path/to/favicon.ico">
 
-    <title>RFSL</title>
+    <title>Bli Medlem | RFSL</title>
 </head>
 
 <body>
@@ -107,7 +108,47 @@
     </div>
 
 
-       
+    <div class="intro-text">
+        <h2>Nu kan du göra skillnad!</h2>
+        <p>När du blir medlem, månadsgivare eller ger en gåva gör du skillnad för hbtqi-personer i Sverige och världen! Med
+            medlemmarnas engagemang och stöd har RFSL sedan 1950 arbetat för hbtqi-personers mänskliga rättigheter i Sverige
+            och världen. RFSL (och RFSL Ungdom) finns i hela Sverige och är en av världens äldsta hbtqi-organisationer.</p>
+        <p>För dig som är under 25 är det gratis att vara medlem RFSL Ungdom och RFSL. Från och med året du fyller 26 år
+            kostar det 100kr att vara medlem i RFSL. Bli medlem nu och ditt medlemskap gäller till 2024-12-31.</p>
+    </div>
+
+
+    <form>
+        <label for="makeDifference">*Jag vill göra skillnad</label>
+        <select id="makeDifference" name="makeDifference" required>
+            <option value="">--Välj ett alternativ--</option>
+            <option value="bli-manadsgivare-och-medlem">Bli månadsgivare och medlem</option>
+            <option value="bli-medlem-och-ge-en-gava">Bli medlem och ge en gåva</option>
+            <option value="bli-medlem">Bli medlem</option>
+            <option value="bli-manadsgivare">Bli månadsgivare</option>
+            <option value="ge-en-gava">Ge en gåva</option>
+            <option value="bli-medlem-asylsokande">Bli medlem 10kr - asylsökande</option>
+            <option value="bli-medlem-begransad-ekonomi">Bli medlem 10kr - begränsad ekonomi</option>
+        </select>
+
+        <label for="firstName">*Förnamn</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">*Efternamn</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="phone">*Telefonnummer</label>
+        <input type="tel" id="phone" name="phone" placeholder="+46" required>
+
+        <label for="email">*E-post</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="birthDate">*Födelsedatum</label>
+        <input type="date" id="birthDate" name="birthDate" required>
+
+        <input type="submit" value="Bli medlem">
+    </form>
+
 
     <footer>
         <div class="footer-nav">

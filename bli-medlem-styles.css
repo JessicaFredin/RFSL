@@ -1,0 +1,80 @@
+/* Jessica Fredin */
+
+/* Formulär Container: Centrerar formuläret, sätter maxbredd, och tillämpar bakgrund, rundade hörn och skuggning för stil och djup. */
+form {
+    max-width: 500px;
+    margin: 3.125em auto;
+    padding: 1.25em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulärets Etiketter: Gör dem block-nivå för att säkerställa att de tar upp hela radens bredd och sätter avstånd och typografi. */
+form label {
+    display: block;
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Text, E-post, Telefon, Datum Inputs och Select Dropdowns: Standardiserar layout med full bredd, inre padding och enhetlig gränsstil. */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 0.6em;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Introduktionstext Container: Framhäver sektionen ovanför formuläret med en distinkt bakgrund, skuggning, och centrering av text. */
+.intro-text {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 3em;
+    margin-bottom: 2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Rubrik för Introduktionstext: Sätter stilen för huvudrubriken i introduktionstexten för att dra uppmärksamhet. */
+.intro-text h2 {
+    color: #1d1d1d;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Paragraf i Introduktionstext: Definierar stilen för paragraftexten, inklusive färg, linjeavstånd och marginaler för läsbarhet. */
+.intro-text p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1em;
+}
+
+/* Submit-Knapp: Ger knappen en distinkt och modern design med anpassad färg, storlek, och hover-effekter. */
+form input[type="submit"] {
+    background-color: #1F3643;
+    color: #fffdfc;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease-out;
+    border: none;
+    padding: 0.6em 1.25em;
+    margin-top: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Hover-effekt för Submit-Knapp: Skapar en visuell feedback när användaren hovrar över knappen. */
+form input[type="submit"]:hover {
+    background-color: #15242d;
+    transition: 0.3s ease-in;
+}
