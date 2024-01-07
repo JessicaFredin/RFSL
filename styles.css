@@ -708,6 +708,15 @@ Chat Gpt: https://chat.openai.com/  */
     height: auto;
     display: block;
 }
+
+.slideshow-container {
+    max-width: 100%; 
+    margin: auto;
+    position: relative;
+}
+.slides img {
+    height: 35.5rem;
+}
 /* Slut slideshow - Lorik */
 
 
