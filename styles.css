@@ -366,11 +366,11 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
 
         /* Justerar var X ligger i hamburger menyn*/
         .x-opposite-side-in-menu {
-            padding-left: 12rem;
+            padding-left: 11rem;
         }
         /*Justerar meny komponenterna hur de ser ut*/
         .hamburgerMenu li a {
-            padding: 1.9rem; 
+            padding: 1rem; 
             font-size: 0.8rem;
         }
         /*Justerar hur hambuyrger meny ikonen ser ut, storlek */
@@ -388,7 +388,7 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
     .hamburgerMenu li a:hover {
         box-shadow: 0 -5px 0px  #1f3643 inset,
         500px 0 0 rgba(255, 255, 255, 0.03) inset;
-        padding: 35px 25px 45px 25px;
+        padding: 30px 20px 40px 20px;
     }
         
     }
@@ -423,12 +423,12 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
         }
 
         .x-opposite-side-in-menu {
-            padding-left: 10rem;
+            padding-left: 9.5rem;
         }
       
 
         .hamburgerMenu li a {
-            padding: 1.6rem; 
+            padding: 1rem; 
             font-size: 0.7rem;
         }
     
@@ -444,7 +444,7 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
     .hamburgerMenu li a:hover {
         box-shadow: 0 -5px 0px  #1f3643 inset,
         500px 0 0 rgba(255, 255, 255, 0.03) inset;
-        padding: 35px 25px 45px 25px;
+        padding: 30px 20px 40px 20px;
     }
         
     }
@@ -473,7 +473,7 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 1rem !important;
+            font-size: 0.8rem !important;
             font-weight: 800;
             z-index: 6000;
             min-width: 100px;
@@ -481,12 +481,12 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
         }
 
         .x-opposite-side-in-menu {
-            padding-left: 9rem;
+            padding-left: 8rem;
         }
       
  
         .hamburgerMenu li a {
-            padding: 1.3rem; 
+            padding: 0.6rem; 
             font-size: 0.6rem;
         }
     
@@ -503,7 +503,7 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
     .hamburgerMenu li a:hover {
         box-shadow: 0 -5px 0px  #1f3643 inset,
         500px 0 0 rgba(255, 255, 255, 0.03) inset;
-        padding: 30px 20px 40px 20px;
+        padding: 20px 10px 30px 10px;
     }
     
     }
@@ -539,12 +539,12 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
 
           /*Justerar var X ligger i hamburger menyn*/
           .x-opposite-side-in-menu {
-            padding-left: 7.5rem;
+            padding-left: 7rem;
         }
       
  
         .hamburgerMenu li a {
-            padding: 1rem; 
+            padding: 0.6rem; 
             font-size: 0.5rem;
         }
     
@@ -561,7 +561,7 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
     .hamburgerMenu li a:hover {
         box-shadow: 0 -5px 0px  #1f3643 inset,
         500px 0 0 rgba(255, 255, 255, 0.03) inset;
-        padding: 20px 10px 30px 10px;
+        padding: 15px 5px 25px 5px;
     }
     
     }
@@ -614,7 +614,6 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
 }
 
 /*hamburger SLUT: Madelene.R*/
-
 
 
 /* Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
