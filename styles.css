@@ -578,7 +578,7 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
 
 /*Gör plats melan listan och X*/
 .makeSpaceBetweenListAndX {
-    padding-top: 4rem;
+    padding-top: 1rem;
 }
 
 /*Visar hamburgermenyn när man trycker på checkboxen som sitter på hamburger ikonen*/
