@@ -37,3 +37,28 @@ main {
 #Layer_1 {
     margin-top: -2.3em;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cloud {
+    display: flex;
+    margin-top: -3em;
+    text-decoration: underline;
+    align-items: end;
+    background-image: url("cloud.svg");
+    height: 10em;
+    width: 12.5em;
+    margin-left: auto;
+}
+
+.cloud a {
+    padding-bottom: 2.5em;
+    width: 12.5em;
+    text-align: center;
+}
+
+
+
