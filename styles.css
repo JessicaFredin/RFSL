@@ -809,11 +809,6 @@ Sedan har jag använt space between för mellanrum
         transform: translateX(-50%);
         width: auto;
         height: 100%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: auto;
-        height: 100%;
     }
 
     /*nav.top-desktop-nav {
