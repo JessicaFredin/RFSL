@@ -1030,7 +1030,7 @@ Sedan har jag använt space between för mellanrum
     display: none;
 }
 
-@media(max-width: 480px) {
+@media(max-width: 768px) {
     /*Search box disapears on 400px*/
 
     .Search-Form {
@@ -1050,7 +1050,7 @@ Sedan har jag använt space between för mellanrum
 
 }
 
-@media (min-width: 481px) {
+@media (min-width: 767px) {
 
     /*this will do cool stuff- :)
                              shows the usual search bar and 
