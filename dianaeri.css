@@ -1,0 +1,21 @@
+main {
+    display: flex;
+    padding: 5em 0em;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 90vh;
+}
+
+h2 {
+    text-align: center;
+    color: aliceblue;
+}
+
+.wave {
+    width: 60vw;
+}
