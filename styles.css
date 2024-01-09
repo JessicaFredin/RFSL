@@ -51,16 +51,12 @@ header {
 .logo-wrapper {
     flex: 1;
     display: flex;
-    position: relative;
     justify-content: center;
     height: 7.5em;
     /* ändra detta för att göra logotypen större eller mindre, det beror på höjden*/
 }
 
 .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-80%);
     width: auto;
     height: 100%;
 }
@@ -71,10 +67,7 @@ header {
     align-items: center;
 }
 
-.logo-link {
-    display: flex;
-    justify-content: center;
-}
+
 
 /*styling av den övre navigationsmenyn */
 nav.top-desktop-nav {
@@ -1065,3 +1058,15 @@ Sedan har jag använt space between för mellanrum
 }
 
 /*Here <!--SearchboxENDS-->*/
+
+
+
+
+
+
+
+
+
+
+
+
