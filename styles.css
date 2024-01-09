@@ -262,8 +262,10 @@ footer .copyright {
 /*slut footer - jessica */
 
 
-/*hamburger START: Madelene.R*/
 
+/*hamburger START: Madelene Rosengren*/
+/*Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+fixat alla errors som är kopplade till hamburgaren/hamburger menyn*/
 /*En Youtube video användes som guide när hamburgaren/hamburger menyn skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till
  RFSL.Fick också ändra så att hamburgaren blir responsiv genom att konvertera från px till rem. Har också adderat %. Guidens hamburgare är inte alls "responsiv".
 Har också tagit bort position "absolute"och position "relative" som inte heller är responsiva, och ändrat till "flex". Istället för att skapa "hamburgar ikonen" 
@@ -606,7 +608,9 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
     content: url("#hamburgerImageClose");
 }
 
-/*hamburger SLUT: Madelene.R*/
+/*hamburger SLUT: Madelene rosengren*/
+
+
 
 
 /* Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
