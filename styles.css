@@ -1,109 +1,84 @@
-:root {
-    --primary-color: rgb(218, 218, 218);
-    --secondary-color: #000;
-}
-
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     scroll-behavior: smooth;
 }
+
+/*RFSL colors: 
+orange: #ff7448
+ljuslila: #F1E0FF
+mörkblå: #1F3643
+mörkgrön: #29380B
+mörklila: #41284A
+ljusgul: #feffcd
+svart: #1d1d1d
+vit: #fffdfc   */
 
 html {
     height: 100%;
 }
 
-a :hover {
-    cursor: pointer;
-}
-
 body {
-    /* font-size: 16px; */
-    font-family: "Basic Sans", sans-serif;
+    font-size: 16px;
+    font-family: "Basic sans", "work sans", sans-serif;
     font-weight: 300;
     letter-spacing: .03em;
     min-height: 100%;
-    background-color: #d8dde1; 
-    /* background-color: #d2d6d9;  */
 }
 
 header {
     width: 100%;
     display: flex;
-    padding: .8em 1.5em;
+    position: relative;
+    padding: .6em 1.5em;
+    background-color: #1F3643;
+    max-height: 8em;
+    justify-content: space-between;
+}
+
+/*sticky kod från W3Schools för att göra headern fast under scrollning*/
+.sticky-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /*placering av logotyp*/
 .logo-wrapper {
-    flex-grow: 1;
+    flex: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-left: 3%;
-    text-align: left;
-    gap: 9px;
+    height: 7.5em;
+    /* ändra detta för att göra logotypen större eller mindre, det beror på höjden*/
 }
 
-/*Utseende för logotyp*/
 .logo {
+    width: auto;
+    height: 100%;
+}
+
+.right-content {
+    margin-left: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.rfsllogo {
-    max-width: 13em;
-    padding-right: 8%;
-}
 
-.light-theme {
-    background-color: white;
-    border: none;
-    padding: 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1px;
-    cursor: pointer;
-    border-radius: 50%;
-}
 
-.medium-theme {
-    background-color: grey;
-    border: none;
-    padding: 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.dark-theme {
-    background-color: black;
-    border: none;
-    padding: 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-/*styling av den övre navigatiosmenyn */
+/*styling av den övre navigationsmenyn */
 nav.top-desktop-nav {
-    display: inline-flex;
-    flex-direction: row-reverse;
-    flex: 1 1 0;
-    margin: 0;
-    max-width: fit-content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    font-size: 1em;
+    background-color: #1F3643;
 }
 
 /*stilar för listan i den övre navigationsmenyn*/
@@ -111,294 +86,6 @@ nav.top-desktop-nav ul {
     display: flex;
     list-style-type: none;
 }
-
-/* styling för länkarna inom listelement*/
-nav.top-desktop-nav li a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-/*styling av knappar på den övre navigationsmenyn*/
-nav.top-desktop-nav a button {
-    color: white;
-    letter-spacing: 0.05em;
-    
-}
-
-/*länkar ändrar bakgrundsfärg när man hovrar*/
-nav.top-desktop-nav a button:hover {
-    background-color:#ce654b;
-    font-size: 100%;
-    transition: background-color 0.3s ease;
-}
-
-/*HEADER START*/
-
-/*Stil för header*/
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start; 
-    align-items: center;
-    /* background-color:  rgba(255, 116, 72, 0.4);  */
-    padding: 1rem; 
-} 
-
-/*En transparent box så att inget ska vara ivägen för hamburger
-menyn när den sitter på toppen av "header"*/
-
-/* .transparentBox {
-    flex: 0 0 auto; 
-    width: 0rem; 
-    height: 2.5rem; 
-    background-color: #feffcd;
-     
-} */
-
-
-.Search-Small {
-    background-color: #1f3643;
-    border: 2px solid white;
-    color: white;
-    padding-top: 0.55%;
-    padding-bottom: 0.55%;
-    padding-right: 0.7%;
-    padding-left: 0.7%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 50%;
-}
-
-@media screen and (min-width: 767px) {
-    .Search-Small {
-        display: none;
-    }
-}
-
-/*Centrerar allting tillsammans"*/
-.hamburger-wrapper,
-.logo-wrapper,
-#Search-Form,
-.top-desktop-nav,
-.language {
-    flex: 1;
-    text-align: center; 
-}
-
-/*styling av language-elementen*/
-div.language {
-    display: flex;
-    justify-content: flex-end;
-    margin-left: auto;
-    max-width: fit-content;
-}
-
-
-div.language ul {
-    display: flex;
-    list-style-type: none;
-}
-
-
-div.language li {
-    margin: 0 0.2em; 
-}
-
-
-div.language li a {
-    text-decoration: none;
-    padding-right: 1em;
-}
-
-
-/* En bit av codepens kod användes som inspiration för att göra menyn till "Bli medlem", 
-"Ge en gåva" "Begreppsordlista". Koden anpassades och justerades för att passa webbplatsens
-mål med utseende. Webbplatsen  https://codepen.io/isaccobosio/details/PoPOVRB användes.
-Hamburgarmenyn och checkboxen har ignorerats eftersom vår hamburgare har byggds med en annan metod. */
-
-/*codePen meny inspiration Start. För menyn: "Bli medlem" "Ge en gåva" "Begreppsordlista"*/
-
-* {
-    padding: 0;
-    margin: 0;
-}
-
-
-
-/*Ändra utseende på navigationen */
-.navbar {
-    display: inline;
-    float: right;
-    font-size: 0.9rem;
-    padding-bottom: 1rem;
-    width: 30%;
-}
-
-/*Ta bort punklista */
-.main-nav {
-    list-style-type: none;
-    
-}
-
-/*Ändra utseende texten */
-.main-nav li {
-    text-align: center;
-    
-}
-
-/*länkar ändrar bakgrundsfärg när man hovrar*/
-nav.top-desktop-nav a button:hover {
-    padding: 0.5em;
-    font-size: 100%;
-    transition: background-color 0.3s ease;
-
-}
-
-.mobileheader {
-    display: none;
-}
-
-
-/*Here<!--SearchboxSTARTS-->    - William */
-
-#Search-Form {
-
-    background-color: #1f3643;
-
-    max-width: fit-content;
-
-    max-height: 3em;
-
-    border-radius: 30px;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 1em;
-
-    border-color: #fffdfc;
-
-    border: 2px solid #fffdfc;
-
-    margin-right: 0%;
-
-    margin-left: 2%;
-
-}
-
-#Search-Form i {
-    color: #fffdfc;
-    padding: 0;
-    background-color: #1f3643;
-    border-radius: 30px;
-    font-size: 25px;
-}
-
-#Search-Bar {
-    border-radius: 30px;
-    outline: none;
-    background-color: #1f3643;
-}
-
-#Search-Button {
-    width: 100%;
-    height: 100%;
-    outline: none;
-    border-radius: 30px;
-    background: none;
-    border: none;
-    font-size: 12px;
-    color: #fffdfc;
-}
-
-input[type=text],input[type=text]::placeholder{
-    color:white;
-}
-    
-/*Here <!--SearchboxENDS-->*/
-
-
-/* Hover för mobil vy i menyn */
-@media screen and (max-width: 767px) {
-    .nav-links:hover {
-        box-shadow: 0 -5px 0px  #1f3643 inset,
-        500px 0 0 rgba(255, 255, 255, 0.03) inset;
-        padding: 5px 5px 5px 5px; 
-    }
-}
-
-/*codePen meny inspiration Slut*/*/
-
-
-/*Utseende på navigations menyn*/
-nav.top-desktop-nav {
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    font-size: 0.8rem;
-}
-
-
-/*Utseende för logotyp*/
-nav.top-desktop-nav li {
-    margin: 0;
-    padding: 0;
-}
-
-/*Tar bort understrykning från länkarna i menyn*/
-nav.top-desktop-nav li a {
-    text-decoration: none;
-  
-}
-
-/*Hur meny knapparna ser ut*/
-nav.top-desktop-nav a button {
-    color: white;
-    letter-spacing: 0.5rem;
-    background-color: #ef977c;
-}
-
-/*länkar ändrar bakgrundsfärg när man hovrar*/
-nav.top-desktop-nav a button:hover {
-    padding: 0.5rem;
-    font-size: 100%;
-
-}
-
-/*Gör menyn sticky så att den följer med när man scrollar. W3Schools guide: https://www.w3schools.com/howto/howto_css_sticky_element.asp*/
-.navbar-sticky {
-    position: -webkit-sticky; 
-    position: sticky;
-    top: 0;
-    z-index: 6000; /
-}
-
-/*HEADER END*/
-
-
-header {
-    width: 100%;
-    display: flex;
-    padding: .8em 1.5em;
-    background-color: #ef977c;
-}
-
-/*styling av den övre navigatiosmenyn */
-nav.top-desktop-nav {
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    font-size: 0.8em;
-}
-
 
 /* styling för listelement*/
 nav.top-desktop-nav li {
@@ -408,30 +95,33 @@ nav.top-desktop-nav li {
 /* styling för länkarna inom listelement*/
 nav.top-desktop-nav li a {
     text-decoration: none;
+
 }
 
 /*styling av knappar på den övre navigationsmenyn*/
 nav.top-desktop-nav a button {
-    color: #1f3643;
-    letter-spacing: 0.05em;
+    background-color: #1F3643;
+    color: #fffdfc;
+    letter-spacing: 0.08em;
     padding: 0.5em;
-    
+
 }
 
 /*länkar ändrar bakgrundsfärg när man hovrar*/
 nav.top-desktop-nav a button:hover {
+    background-color: #15242d;
     padding: 0.5em;
-    font-size: 100%;
     transition: background-color 0.3s ease;
+}
 
+#bli-medlem button {
+    color: #ff7448;
 }
 
 /*styling av language-elementen*/
 div.language {
-    display: flex;
-    text-align: right;
-    margin-left: 0;
-    padding-left: 3%;
+    /* display: flex; */
+    margin-left: auto;
 }
 
 
@@ -454,17 +144,15 @@ div.language li a {
 /* stil för knappar i "language" listelement*/
 div.language li a button {
     border-radius: 50%;
-    color: #1f3643;
+    background-color: #F1E0FF;
+    color: #29380B;
     padding: 0.5em;
-    border: 2px solid #1f3643;
-    font-weight: bold;
-    background-color: #feffcd;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.20) 0px 2px 16px 0px;
 }
 
 /* knapparna för språk blir större när man hovrar */
 div.language li a button:hover {
-    padding: 0.8em;
+    padding: 0.5em;
+    background-color: #feffcd;
 }
 
 /* slut top-nav  - my, josephine, louise*/
@@ -472,53 +160,54 @@ div.language li a button:hover {
 /* start footer - jessica */
 footer {
     margin-top: auto;
-    background-color: #ef977c;
+    background-color: #1F3643;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     padding: 2em 1em;
     font-size: .9em;
-    color: #1f3643;
+    color: #fff;
     width: 100%;
 }
 
 footer .footer-nav {
     /* display: grid;
-    place-items: center;  */
+    place-items: center; */
     width: 100%;
-    max-width: 70%;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
 
 
 footer .footer-nav h1 {
-    font-size: 2.5em;
-    text-shadow: 0 1px 3px #000;
+    font-size: 3em;
+    text-shadow: 0 1px 10px #000;
 }
 
 footer .footer-nav p {
     font-size: 1em;
+    width: 60%;
     text-align: center;
     line-height: 1.2em;
     margin: 1em auto;
     padding: 0 1em;
-    max-width: 40%;
+
 }
 
 footer .footer-nav .social-media-links a {
     text-decoration: none;
     display: inline-block;
-    margin: 1.5em 1.5em;
+    margin: 2.5em 1.5em;
 }
 
 footer ul {
     list-style-type: none;
-    margin: 0 auto;
+    /* margin: 0 2em;
     display: grid;
-    gap: 1em;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.5em; */
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -526,29 +215,28 @@ footer ul {
 }
 
 footer ul li {
-    break-inside: avoid; 
-    flex: 1 1 7%;
-    margin: 0 auto;
-    max-width: fit-content;
+    /* break-inside: avoid; */
+    flex: 1 1 200px;
+    margin: 0 2em;
 }
 
 footer ul li a {
     text-decoration: none;
-    color: #1f3643;
+    color: #fffdfc;
     transition: color 0.3s ease-out;
 }
 
 footer ul li a:hover {
     text-decoration: underline;
     transition: color 0.3s ease-in;
-    color: red;
+    color: #feffcd;
 }
 
 i.fa-facebook,
 i.fa-instagram {
     font-size: 2em;
     margin: 0 .2em;
-    color: #1f3643;
+    color: #fff;
     transition: color 0.3s ease-out;
 }
 
@@ -568,347 +256,472 @@ footer .copyright {
     padding: 0.5em 0 0 0;
     width: 100%;
     margin: 3em 0 .5em 0;
-    color: #1f3643;
-} 
+    color: #fff;
+}
+
 /*slut footer - jessica */
 
 
-/*hamburger START: Madelene*/
 
-/*En Youtube video användes som guide när hamburger funktionen skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till RFSL. 
-Fick också ändra så att hamburgaren blir responsiv genom att konvertera från px till rem. Har också adderat %. Guidens hamburgare är inte alls responsiv. Har 
-också tagit bort position "absolute"och position "relative" som inte heller är responsiva, och ändrat till "flex". Istället för att skapa "hamburgar ikonen" och
-"X-ikonen" manuellt med kod som guiden använde jag istället färdiga bilder.
+/*hamburger START: Madelene Rosengren*/
+/*Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+fixat alla errors som är kopplade till hamburgaren/hamburger menyn*/
+/*En Youtube video användes som guide när hamburgaren/hamburger menyn skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till
+ RFSL.Fick också ändra så att hamburgaren blir responsiv genom att konvertera från px till rem. Har också adderat %. Guidens hamburgare är inte alls "responsiv".
+Har också tagit bort position "absolute"och position "relative" som inte heller är responsiva, och ändrat till "flex". Istället för att skapa "hamburgar ikonen" 
+och "X-ikonen" manuellt med kod som guiden, använde jag istället färdiga ikoner från "fontawesome". För att göra justeringar i koden använde jag mig av w3schools
+och Googlade för att få hamburgarmenyn/hamburgaren att funka med olika guider. 
 Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
-Px to rem calculator: https://nekocalc.com/px-to-rem-converter
+Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-converter
 */
 
-/*Ge hamburgaren luftig plats på "header"*/
-.hamburgerIconSpace {
-    padding-right: 5rem; 
-}
 
 /* Stilar för  hamburgermenyn. Förflyttningar osv...*/
 .hamburgerNavigation {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    }
+    width: 100%;
+    margin-top: 50%;
 
-/* Stilar för hamburgermenyn. Förflyttningar osv.. */    
+}
+
+/* Stilar för hamburgermenyn. Förflyttningar osv.. */
 .hamburgerMenu {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
     transition: 0.5s;
-     
+
 }
-    
-    /* Ta bort punktlistor från länkarna i menyn */
-    .hamburgerMenu li {
+
+/* Ta bort punktlistor från länkarna i menyn */
+.hamburgerMenu li {
     list-style-type: none;
-    }
-    
-    /* Stilar för länkarna i menyn */
-    .hamburgerMenu li a {
-        color: #1f3643;
-        text-decoration: none;
-        display: block;
-        padding: 2.5rem 1.5625rem; 
-        line-height: 1;
-        transition: 0.3s;
-        align-items: center; 
-    }
-
-    /* Animeringseffekt när musen "hover"" över länkarna */
-    /* Skugga och bakgrundseffekt */
-    .hamburgerMenu li a:hover {
-        box-shadow: 0 -5px 0px  #1f3643 inset,
-        500px 0 0 rgba(255, 255, 255, 0.03) inset;
-        padding: 35px 25px 45px 25px;
-    }
-    
-    /* Stil för hamburgerikonen */
-    .hamburgerIcon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    
-    /* Stil för den gömda checkboxen som används för att visa och gömma menyn */
-    .toggleHamburgerCheckbox {
-        display: none; 
-        opacity: 0;
-    }
-    
-    /* Ändrar bakgrundsfärgen på hamburgerikonen när checkboxen är markerad */
-    .hamburgerNavigation input:checked ~ .hamburgerIcon {
-    background: transparent;
-    }
-    
-    
-    /* När checkboxen är markerad, visa menyn genom att ändra positionen till vänster */
-    .hamburgerNavigation input:checked ~ .hamburgerMenu {
-        left: 0;
-        box-shadow: -1.25rem 0 2.5rem rgba(0, 0, 0, 0.3); 
-    }
-    
-    /* Justerar layouten för hamburgermenyn för olika skämar */
-    
-    /*Mobil*/
-    /*Layouten fixas för hamburgermenyn för mindre skärmar, maximalt 768px, 48 rem*/
-    @media screen and (max-width: 48rem) {
-        .hamburgerIcon,
-        .toggleHamburgerCheckbox {
-            display: block;
-        }
-    
-        /*Full width and height for hamburgerMenu */
-        .hamburgerMenu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: #DDDDDD;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem !important;
-            font-weight: 800;
-        }
-    
-        /*Luft i listan med alla komponeneter i meny listan*/
-        .hamburgerMenu li {
-            margin-top: 3rem; 
-        }
-    
-    }
-
-       /*Dator*/
-       /*Skärmar som är större än eller lika med 784px, 49 rem*/
-       @media screen and (min-width: 49rem) {
-        .hamburgerIcon,
-        .toggleHamburgerCheckbox {
-            display: block;
-        }
-    
-        .hamburgerMenu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: #DDDDDD;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem !important;
-            font-weight: 800;
-            z-index: 6000; 
-        }
-        
-          /*Luft i listan med alla komponeneter i meny listan*/
-        .hamburgerMenu li {
-            margin-top: 2rem; 
-        
-    }
-
 }
 
-    /* Stil för länkarna i hamburgermenyn,bredd. */
-    .hamburgerMenu li {
-        width: 100%; 
-    }
-    
-    /* Stilar för länkarna i hamburgermenyn, hur det ser ut. */
-    .hamburgerMenu li a {
-        padding: 1.25rem; 
-        box-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.1) inset; 
-    }
-
-    /*Visar hamburgermenyn när man trycker på checkboxen som sitter på hamburger ikonen*/
-    .toggleHamburgerCheckbox:checked ~ .hamburgerIcon ~ .hamburgerMenu {
-        display: block;
-    
-    }
-
-    /*Gömmer hamburgermenyn när checkboxen som sitter på hamburger ikonen inte är markerad*/
-    .toggleHamburgerCheckbox:not(:checked) ~ .hamburgerIcon ~ .hamburgerMenu {
-        display: none;
-       
-    }
-
-     /* Gör så att hamburgaren ignorerar headern. Annars triggas heasdern och blir större när hamburgar menyn öppnas */
-    .hamburger-wrapper {
-        position: fixed;
-        margin-top: 0;
-        margin-left: 0;
-        z-index: 6000;
-      }
-
-      /* X ikonen, för att stänga hamburger menyn */
-.hamburgerImage {
-    content: url("hamburgerIcon.png");
-}
-
-/* Byter bild från hamburgaren till ett X. X kommer fram när man öppnar hamburgar menyn. Hamburgaren kommer fram, när man stänger menyn*/
-.hamburgerNavigation input:checked ~ .hamburgerIcon .hamburgerImage {
-    content: url("closeHamburgerIcon.png");
-}
-
-
-/* hamburger SLUT: Madelene*/
-
-.slide-img {
-    max-width: 60%;
-  }
-  
-  .trigger {
-    display: none;
-  }
-  
-  .slider, .slider-wrapper {
-    position: relative;
-    height: 250px;
-  }
-  
-  .slide {
-    
-
-        --s: 100px; /* control the size */
-        --c1: #E1F5C4;
-        --c2: #b2b2b2;
-        
-        --_g:#0000, #0004 5%,
-           var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
-           var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,
-           var(--c2) 86% 94%,#0004 95%,#0000;
-        background:
-          radial-gradient(100% 50% at 100% 0   ,var(--_g)),
-          radial-gradient(100% 50% at 0    50% ,var(--_g)),
-          radial-gradient(100% 50% at 100% 100%,var(--_g));
-        background-size: var(--s) calc(2*var(--s));
-          
-    
-      
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity .5s ease-in-out;
-  }
-  
-.slide-img {
-    height: 100%;
-    object-fit: fill;
+/* Stilar för länkarna i menyn */
+.hamburgerMenu li a {
+    color: #1f3643;
+    text-decoration: none;
     display: block;
-    margin: 0;
-} 
-  
-  .slide-figure {
-    height: 100%;
-    position: relative;
-    margin: 0;
-  }
-  
-  .slide-caption {
-    background-color: rgba(31, 54, 67, 0.9); 
-    position: absolute;
-    top: 12%;
-    width: calc(100% - 1rem); 
-    left: 60%;
-  }
+    padding: 2.5rem 1.5625rem;
+    line-height: 1;
+    transition: 0.3s;
+    align-items: center;
+}
 
-  .slide-caption p {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    text-align: left;
-    margin-left: 1%;
-    max-width: 60%;
+/* Stil för den gömda checkboxen som används för att visa och gömma menyn */
+.toggleHamburgerCheckbox {
+    display: none;
+    opacity: 0;
+}
+
+/* Ändrar bakgrundsfärgen på hamburgerikonen när checkboxen är markerad */
+.hamburgerNavigation input:checked~.hamburgerIcon {
+    background: transparent;
+}
+
+/* När checkboxen är markerad, visa menyn genom att ändra positionen till vänster */
+.hamburgerNavigation input:checked~.hamburgerMenu {
+    left: 0;
+    box-shadow: -1.25rem 0 2.5rem rgba(0, 0, 0, 0.3);
+}
+
+/*Justerar hur hamburger menyn ser ut för olika skämar */
+@media (max-width: 1920px) {
+
+    .toggleHamburgerCheckbox {
+        display: block;
+    }
+
+    .hamburgerNavigation {
+        width: 100%;
+        margin-top: 0;
+
+    }
+
+    /* Justerar hur allt ser ut innuti hamburger menyn*/
+    .hamburgerMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*width: 20vw; kommenterar bort, om jag behöver senare, om jag vill göra menyn att den tar hela skärmen*/
+        height: 100vh;
+        background: #F1E0FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem !important;
+        font-weight: 800;
+        z-index: 6000;
+        min-width: 100px;
+    }
+
+    /* Justerar var X ligger i hamburger menyn*/
+    .x-opposite-side-in-menu {
+        padding-left: 11rem;
+    }
+
+    /*Justerar meny komponenterna hur de ser ut*/
+    .hamburgerMenu li a {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    /*Justerar hur hambuyrger meny ikonen ser ut, storlek */
+    #hamburgerImage {
+        font-size: 2em;
+    }
+
+    /* Justerar hur X ikonen ser ut, storlek */
+    #hamburgerImageClose {
+        font-size: 2em;
+    }
+
+    /*Animeringseffekt när musen "hover"" över länkarna*/
+    /*Skugga och bakgrundseffekt*/
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px #1f3643 inset,
+            500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 30px 20px 40px 20px;
+    }
+
+}
+
+@media (max-width: 1574px) {
+
+    .toggleHamburgerCheckbox {
+        display: block;
+    }
+
+    .hamburgerNavigation {
+        width: 100%;
+        margin-top: 0;
+
+    }
+
+    .hamburgerMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*width: 20vw; */
+        height: 100vh;
+        background: #F1E0FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem !important;
+        font-weight: 800;
+        z-index: 6000;
+        min-width: 100px;
+    }
+
+    .x-opposite-side-in-menu {
+        padding-left: 9.5rem;
+    }
+
+
+    .hamburgerMenu li a {
+        padding: 1rem;
+        font-size: 0.7rem;
+    }
+
+
+    #hamburgerImage {
+        font-size: 2em;
+    }
+
+    #hamburgerImageClose {
+        font-size: 2em;
+    }
+
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px #1f3643 inset,
+            500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 30px 20px 40px 20px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .toggleHamburgerCheckbox {
+        display: block;
+    }
+
+    .hamburgerNavigation {
+        width: 100%;
+        margin-top: 0;
+
+    }
+
+    .hamburgerMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*width: 100vw;*/
+        height: 100vh;
+        background: #F1E0FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem !important;
+        font-weight: 800;
+        z-index: 6000;
+        min-width: 100px;
+
+    }
+
+    .x-opposite-side-in-menu {
+        padding-left: 8rem;
+    }
+
+
+    .hamburgerMenu li a {
+        padding: 0.6rem;
+        font-size: 0.6rem;
+    }
+
+
+    #hamburgerImage {
+        font-size: 1.5em;
+
+    }
+
+    #hamburgerImageClose {
+        font-size: 1.5em;
+    }
+
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px #1f3643 inset,
+            500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 20px 10px 30px 10px;
+    }
+
+}
+
+
+@media (max-width: 320px) {
+
+    .toggleHamburgerCheckbox {
+        display: block;
+    }
+
+    .hamburgerNavigation {
+        width: 100%;
+        margin-top: 0;
+
+    }
+
+    .hamburgerMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*width: 100vw;*/
+        height: 100vh;
+        background: #F1E0FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem !important;
+        font-weight: 800;
+        min-width: 100px;
+    }
+
+    /*Justerar var X ligger i hamburger menyn*/
+    .x-opposite-side-in-menu {
+        padding-left: 7rem;
+    }
+
+
+    .hamburgerMenu li a {
+        padding: 0.6rem;
+        font-size: 0.5rem;
+    }
+
+
+    #hamburgerImage {
+        font-size: 1.3em;
+
+    }
+
+    #hamburgerImageClose {
+        font-size: 1.3em;
+    }
+
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px #1f3643 inset,
+            500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 15px 5px 25px 5px;
+    }
+
+}
+
+
+/*Hamburgar ikonen färg*/
+.hamburger-style {
+    color: white;
+}
+
+
+/*X ikonen färg*/
+.hamburger-close-style {
+    color: #1f3643;
+}
+
+/*Gör plats melan listan och X*/
+.makeSpaceBetweenListAndX {
+    padding-top: 1rem;
+}
+
+/*Visar hamburgermenyn när man trycker på checkboxen som sitter på hamburger ikonen*/
+.toggleHamburgerCheckbox:checked~.hamburgerIcon~.hamburgerMenu {
+    display: block;
+    padding-top: 2rem;
+
+}
+
+/*Gömmer hamburgermenyn när checkboxen som sitter på hamburger ikonen inte är markerad*/
+.toggleHamburgerCheckbox:not(:checked)~.hamburgerIcon~.hamburgerMenu {
+    display: none;
+
+}
+
+/*Gör så att hamburgaren ignorerar headern. Annars triggas heasdern och blir större när hamburgar menyn öppnas*/
+.hamburger-wrapper {
+    position: fixed;
+    margin-top: 0;
+    z-index: 6000;
+}
+
+/*X ikonen, för att stänga hamburger menyn*/
+.hamburgerImage {
+    content: url("#hamburgerImage");
+}
+
+/*Byter bild från hamburgaren till ett X. X kommer fram när man öppnar hamburgar menyn. Hamburgaren kommer fram, när man stänger menyn*/
+.hamburgerNavigation input:checked~.hamburgerIcon .hamburgerImage {
+    content: url("#hamburgerImageClose");
+}
+
+/*hamburger SLUT: Madelene rosengren*/
+
+
+
+
+/* Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
+W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
+Chat Gpt: https://chat.openai.com/  */
+
+.slideshow-container {
+    max-width: 70%;
+    /* 62.5em = 1000px (1em = 16px) */
+    margin: auto;
+    position: relative;
+}
+
+/* Nästa/Föregående knappar */
+.prev,
+.next {
+    cursor: pointer;
+    width: auto;
+    margin-top: -1.375rem;
+    padding: 1rem;
     color: white;
     font-weight: bold;
-    font-size: 90%;
-  }
+    font-size: 1.125rem;
+    transition: 0.6s ease;
+    border-radius: 0 0.1875rem 0.1875rem 0;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-  p span {
-    font-size: larger;
-  }
+.hamburgerIcon :hover {
+    cursor: pointer;
+}
 
-  
-  .trigger:checked + .slide {
-    z-index: 1000;
-    opacity: 1;
-  }
-  
-  .slider-nav {
+/* Position "Nästa knapp" till höger */
+.next {
+    right: 0;
+    border-radius: 0.1875rem 0 0 0.1875rem;
+}
+
+/* Svart bakgrund med lite genomskinlighet vid hover */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Bildtext */
+.text {
+    color: #f2f2f2;
+    font-size: 0.9375rem;
+    padding: 0.5rem 0.75rem;
     width: 100%;
     text-align: center;
-    margin: 1rem 0;
-  }
-  
-  .slider-nav__item {
-    display: inline-block;
-  }
-  
-  .slider-nav__label {
-    font-size: 13px;
-    background-color: #1f3643;
-    display: block;
-    height: 2em;
-    line-height: 2em;
-    width: 2em;
-    text-align: center;
-    border-radius: 50%;
-    color: white;
-    cursor: pointer;
-    transition: background-color .25s, color .25s ease-in-out;
-  }
-  
-  .slider-nav__label:hover,
-  .slider-nav__label:active,
-  .slider-nav__label:focus {
-    background-color: gray; 
-    color: black;
-  }
+}
 
-  @media only screen and (min-width: 1024px) {
-    .slider, .slider-wrapper {
-      height: 480px;
-    }
-  
-    .slide-caption {
-      width: 65%;
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media only screen and (max-width: 1023px) and (min-width: 768px) {
-    .slider, .slider-wrapper {
-      height: 360px;
-    }
-  
-    .slide-caption {
-      width: 75%;
-      font-size: 1.25rem;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .slide-img {
-      width: 100%;
-      height: auto;
-    }
-  }
+/* Nummer text (1/3 etc) */
+.number-text {
+    color: #f2f2f2;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    top: 0;
+}
+
+/* Punkter/cirklar */
+.dot {
+    cursor: pointer;
+    height: 0.9375rem;
+    width: 0.9375rem;
+    margin: 0 0.125rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.circle {
+    text-align: center;
+}
+
+/* Aktiv punkt/cirkel */
+.dot.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.dot {
+    background-color: #bbb;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.slides img {
+    height: 35.5rem;
+}
+
+/* Slut slideshow - Lorik */
 
 
 /*Här börjar Dianas CSS kod.
@@ -921,29 +734,17 @@ Sedan har jag använt space between för mellanrum
     flex-wrap: wrap;
     gap: 40px 10px;
     justify-content: center;
-    margin-top: 6%;
+    margin-top: 2%;
     margin-bottom: 3%;
 }
 
 .single {
-    display: flex;
     max-width: 48%;
     align-content: center;
     position: relative;
-    align-items: center;
 }
 
 .single img {
-    width: 100%;
-}
-
-
-.stripe {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px 10px;
-    justify-content: center;
-    background-color: #ededed;
     width: 100%;
 }
 
@@ -957,51 +758,6 @@ Sedan har jag använt space between för mellanrum
 .double img {
     vertical-align: middle;
     width: 100%;
-}
-
-.article {
-    padding: 8%;
-} 
-
-.articlehead {
-    text-align: center;
-    padding-bottom: 4%;
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #ef977c;
-}
-
-.articlebody {
-    font-weight: bold;
-    color: #1f3643;
-    line-height: 1.7;
-    font-size: 1em;
-}
-
-.boxbutton {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    padding-top: 3%;
-    padding-left: 6%;
-    padding-right: 8%;
-    gap: 6%;
-}
-
-.readmore {
-    border-bottom: 2px solid #1f3643;
-    padding-bottom: 4px;
-    font-weight: bold;
-    color: #1f3643;
-    background-color: #ededed;
-}
-
-.share {
-    border-bottom: 2px solid #1f3643;
-    padding-bottom: 4px;
-    font-weight: bold;
-    color: #1f3643;
-    background-color: #ededed;
 }
 
 .cardheader {
@@ -1045,39 +801,6 @@ Sedan har jag använt space between för mellanrum
 
 /* Slut - Diana*/
 
-@media (max-width: 1574px) {
-
-    #Search-Form {
-        display: none;
-    }
-
-    .Search-Small {
-        display: block;
-    }
-
-    .top-desktop-nav ul li a {
-        font-size: 0.9em;
-    }
-
-    .articlehead {
-        font-size: 1em;
-    }
-
-    .articlebody {
-        font-size: 1em;
-    }
-    
-}
-
-@media (max-width: 1198px) {
-
-
-    nav.top-desktop-nav {
-        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
-    }
-    
-}
-
 @media (max-width: 1025px) {
 
     header {
@@ -1085,8 +808,21 @@ Sedan har jag använt space between för mellanrum
         display: flex;
     }
 
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: 100%;
+    }
+
+    /*nav.top-desktop-nav {
+        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*
+    }*/
+
     #svButton {
-        display: none; /*gömmer svenska språkvalsknappen på mindre skärm*/
+        display: none;
+        /*gömmer svenska språkvalsknappen på mindre skärm*/
     }
 
     .flex-container {
@@ -1107,34 +843,12 @@ Sedan har jag använt space between för mellanrum
     }
 
     .single {
-        max-width: 95%;
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        max-width: 95%
     }
 
     .container {
         gap: 0px 0x;
     }
-
-    #myDIV {
-        max-width: 70%;
-    }
-
-    .rfsllogo {
-        max-width: 8em;
-    }
-
-    .stripe {
-        background-color: #d2d6d9;
-    }
-
-    .readmore {
-        background-color: #d2d6d9;
-    }
-
-    .share {
-        background-color: #d2d6d9;       
-    }
-    
 }
 
 
@@ -1146,8 +860,26 @@ Sedan har jag använt space between för mellanrum
         display: flex;
     }
 
+    .logo-wrapper {
+        display: flex;
+        height: 70px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: 100%;
+    }
+
+    nav.top-desktop-nav {
+        font-size: 0.65em;
+    }
+
     #svButton {
-        display: none; /*gömmer svenska språkvalsknappen på mindre skärm*/
+        display: none;
+        /*gömmer svenska språkvalsknappen på mindre skärm*/
     }
 
     footer .footer-nav h1 {
@@ -1167,38 +899,33 @@ Sedan har jag använt space between för mellanrum
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .footer-nav {
-        max-width: 100%;
-        flex-direction: row;
+    footer ul li {
+        margin: 0.2em 0;
     }
-
-    .footer-nav {
-        max-width: 100%;
-    }
-
-    #myDIV {
-        max-width: 80%;
-    }
-
-    .rfsllogo {
-        max-width: 7em;
-    }
-
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
 
     header {
         width: 100%;
-        display:flex;
+        display: flex;
     }
-    
+
+    .logo {
+        width: 50%;
+        max-width: 10em;
+        min-width: 8em;
+        height: auto;
+    }
+
     nav.top-desktop-nav {
-        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*/
+        font-size: 0.6em;
+        /*gömmer navigeringslänkar i headern på mindre skärm*/
     }
 
     #svButton {
-        display: none; /*gömmer svenska språkvalsknappen på mindre skärm*/
+        display: none;
+        /*gömmer svenska språkvalsknappen på mindre skärm*/
     }
 
     footer ul {
@@ -1217,14 +944,127 @@ Sedan har jag använt space between för mellanrum
     footer ul li {
         margin: 0.5em 0;
     }
+}
 
-    #myDIV {
-        max-width: 100%;
+.skip-link {
+    padding: 1em;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+    transform: translateY(-100%);
+    /* Det här gör så att elementet börjar utanför skärmen, alltså att den går uppåt på y-axeln eftersom det är -100%, om det hade varit positivt, 100%, så skulle den ha åkt ner. Det skulle man använda ifall den var positionerad på botten av skärmen. Man kan även göra så att den skjuts åt sidan, med translateX istället. */
+    transition: transform 0.7s ease-out;
+    color: #fff;
+}
+
+.skip-link:hover {
+    text-shadow: 2px 2px 5px #fff;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    /* När elementet är i focus, så kommer den att komma tillbaka till sin ursprungsposition. */
+    transition: transform 0.7s ease-out;
+    outline: 0;
+}
+
+/*Here<!--SearchboxSTARTS-->    - William */
+
+.Search-Form,
+#Search-WithLove {
+
+    background-color: rgb(255, 255, 255);
+
+    max-width: 10em;
+
+    max-height: 2.4em;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 1em;
+
+    border-color: rgb(11, 115, 206);
+
+    position: left;
+
+}
+
+.Search-Form i,
+#Search-WithLove i {
+    color: rgb(158, 158, 156);
+
+    padding: 0;
+
+    background-color:none;
+
+    border-radius: 30px;
+
+    font-size: 20px;
+}
+
+.Search-Bar,
+#Search-Bar {
+    outline: none;
+
+    max-width: 7em;
+
+    max-height: 5em;
+
+}
+
+.Search-Button,
+#Search-Button {
+
+    outline: none;
+
+    border-radius: 30px;
+
+    background: none;
+
+    border: none;
+
+    max-width: 8rem;
+}
+
+#Search-WithLove {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    /*Search box disapears on 400px*/
+
+    .Search-Form {
+
+        display: none;
+
     }
 
-    .rfsllogo {
-        max-width: 7em;
+    #Search-WithLove {
+        /*this here show the search box (with another class name ) in the hamburger menu*/
+
+        display: flex;
+        margin-top: 6em;
+        /*This so it does not show under the X button*/
+
     }
 
 }
 
+@media (min-width: 767px) {
+
+    /*this will do cool stuff- :)
+                             shows the usual search bar and 
+                             hides the one in the hamburger menu*/
+    .Search-Form {
+        display: flex;
+    }
+
+    #Search-WithLove {
+        display: none;
+    }
+}
+
+/*Here <!--SearchboxENDS-->*/
