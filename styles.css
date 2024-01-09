@@ -638,6 +638,10 @@ Chat Gpt: https://chat.openai.com/  */
     transform: translateY(-50%);
 }
 
+.hamburgerIcon :hover {
+    cursor: pointer;
+}
+
 /* Position "Nästa knapp" till höger */
 .next {
     right: 0;
