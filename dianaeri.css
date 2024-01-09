@@ -8,8 +8,16 @@ main {
     display: flex;
     flex-direction: column;
     width: 60vw;
-    height: 90vh;
     margin-top: -1em;
+}
+
+.img-box {
+    width: 60vw;
+    height: auto;
+}
+
+.img-box img {
+    width: 60vw;
 }
 
 .heading1 {
