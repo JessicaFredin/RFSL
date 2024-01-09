@@ -948,6 +948,26 @@ Sedan har jag använt space between för mellanrum
     }
 }
 
+.skip-link {
+    padding: 1em;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+    transform: translateY(-100%);
+    /* Det här gör så att elementet börjar utanför skärmen, alltså att den går uppåt på y-axeln eftersom det är -100%, om det hade varit positivt, 100%, så skulle den ha åkt ner. Det skulle man använda ifall den var positionerad på botten av skärmen. Man kan även göra så att den skjuts åt sidan, med translateX istället. */
+    transition: transform 0.7s ease-out;
+    color: #fff;
+}
+
+.skip-link:hover {
+    text-shadow: 2px 2px 5px #fff;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    /* När elementet är i focus, så kommer den att komma tillbaka till sin ursprungsposition. */
+    transition: transform 0.7s ease-out;
+    outline: 0;
+}
 
 /*Here<!--SearchboxSTARTS-->    - William */
 
