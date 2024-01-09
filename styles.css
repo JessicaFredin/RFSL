@@ -114,6 +114,10 @@ nav.top-desktop-nav a button:hover {
     transition: background-color 0.3s ease;
 }
 
+#bli-medlem button {
+    color: #ff7448;
+}
+
 /*styling av language-elementen*/
 div.language {
     /* display: flex; */
@@ -862,7 +866,7 @@ Sedan har jag använt space between för mellanrum
     }
 
     nav.top-desktop-nav {
-        font-size: 0.8em;
+        font-size: 0.65em;
     }
 
     #svButton {
