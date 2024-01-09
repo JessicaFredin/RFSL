@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RFSL - supportar mänskliga rättigheter.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bli-medlem-styles.css">
+    <link rel="icon" href="path/to/favicon.ico">
+
+    <title>BLI MEDLEM</title>
+</head>
+
+<body>
+    <div class="sticky-header">
+        <header>
+            <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
+            <!--HAMBURGER "START": Madelene.R-->
+            <div class="hamburger-wrapper">
+                <aside class="hamburgerNavigation">
+                    <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+                    <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                        <span class="hamburgerIconSpace">
+                            <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
+                        </span>
+                    </label>
+                    <ul class="hamburgerMenu">
+                        <li class="hamburger-wrapper">
+                        <li class="x-opposite-side-in-menu">
+                            <aside class="hamburgerNavigation">
+                                <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                                    <span class="hamburgerIconSpace">
+                                        <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
+                                    </span>
+                                </label>
+                            </aside>
+                        </li>
+                        <li class="makeSpaceBetweenListAndX">
+                        <li><a href="index.html">Hem</a></li>
+                        <li><a href="#">Medlem och community</a></li>
+                        <li><a href="#">Ge en gåva</a></li>
+                        <li><a href="#">Verksamhet</a></li>
+                        <li><a href="#">Aktuellt</a></li>
+                        <li><a href="#">Certifiering och utbildning</a></li>
+                        <li><a href="#">Hbtqi-fakta & tips</a></li>
+                        <li><a href="#">Om oss</a></li>
+                        <li><a href="#">Press</a></li>
+                        <!--Searchbox-STARTS-->
+                        <li>
+                            <form id="Search-WithLove">
+                                <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......" />
+                                <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </form>
+                        </li>
+                        <!--Searchbox-ENDS-->
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <!--HAMBURGER "END": Madelene Rosengren-->
+
+
+            <div class="logo-wrapper">
+
+                <a href="index.html" class="logo-link"><img src="RFSL_logotyp_neg.svg" alt="RFSL Logo" class="logo"></a>
+
+            </div>
+
+            <!--Searchbox-STARTS-->
+            <div class="right-content">
+                <form class="Search-Form">
+                    <input type="text" class="Search-Bar" name="SearchBar" placeholder="Sök......" />
+                    <button class="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+
+                <!--Searchbox-ENDS-->
+
+                <div class="language">
+                    <ul>
+                        <li><a href="#"><button type="button" id="enButton">EN</button></a></li>
+                        <li><a href="#"><button type="button" id="svButton">SV</button></a></li>
+                    </ul>
+                </div>
+            </div>
+        
+    </div>
+    
+
+
+
+
+
+    <nav class="top-desktop-nav">
+        <ul>
+            <li><a href="bli-medlem.html"><button type="button">BLI MEDLEM</button></a></li>
+            <li><a href="#"><button type="button">GE EN GÅVA</button></a></li>
+            <li><a href="#"><button type="button">BEGREPPSORDLISTA</button></a></li>
+        </ul>
+    </nav>
+    
+    </div>
+    </header>
+
+
+
+<div class="intro-text">
+    <h2>Nu kan du göra skillnad!</h2>
+    <p>När du blir medlem, månadsgivare eller ger en gåva gör du skillnad för hbtqi-personer i Sverige och världen! Med
+        medlemmarnas engagemang och stöd har RFSL sedan 1950 arbetat för hbtqi-personers mänskliga rättigheter i Sverige
+        och världen. RFSL (och RFSL Ungdom) finns i hela Sverige och är en av världens äldsta hbtqi-organisationer.</p>
+    <p>För dig som är under 25 är det gratis att vara medlem RFSL Ungdom och RFSL. Från och med året du fyller 26 år
+        kostar det 100kr att vara medlem i RFSL. Bli medlem nu och ditt medlemskap gäller till 2024-12-31.</p>
+</div>
+
+
+<form class="bli-medlem-form">
+    <label for="makeDifference">*Jag vill göra skillnad</label>
+    <select id="makeDifference" name="makeDifference" required>
+        <option value="">--Välj ett alternativ--</option>
+        <option value="bli-manadsgivare-och-medlem">Bli månadsgivare och medlem</option>
+        <option value="bli-medlem-och-ge-en-gava">Bli medlem och ge en gåva</option>
+        <option value="bli-medlem">Bli medlem</option>
+        <option value="bli-manadsgivare">Bli månadsgivare</option>
+        <option value="ge-en-gava">Ge en gåva</option>
+        <option value="bli-medlem-asylsokande">Bli medlem 10kr - asylsökande</option>
+        <option value="bli-medlem-begransad-ekonomi">Bli medlem 10kr - begränsad ekonomi</option>
+    </select>
+
+    <label for="firstName">*Förnamn</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">*Efternamn</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="phone">*Telefonnummer</label>
+    <input type="tel" id="phone" name="phone" placeholder="+46" required>
+
+    <label for="email">*E-post</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="birthDate">*Födelsedatum</label>
+    <input type="date" id="birthDate" name="birthDate" required>
+
+    <input type="submit" value="Bli medlem">
+</form>
+
+
+<footer>
+    <div class="footer-nav">
+        <h1>RFSL</h1>
+        <p>Sveriges könstillhörighetslag är föråldrad och den spär även på kötiderna inom den könsbekräftande
+            vården.
+            Lagens
+            utformning är från 1972, då Sverige var först i världen…</p>
+        <div class="social-media-links">
+            <a target="_blank" href="https://www.facebook.com/rfsl.forbundet/?fref=ts">
+                <i class="social-media-icon fa-brands fa-facebook"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com">
+                <i class="social-media-icon fab fa-instagram"></i>
+            </a>
+        </div>
+        <ul>
+            <li><a href="#">Hem</a></li>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">Kontakta</a></li>
+            <li><a href="#">Policy</a></li>
+        </ul>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2023 RFSL. Alla rättigheter förbehållna.</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
