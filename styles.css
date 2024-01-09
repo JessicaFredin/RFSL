@@ -53,14 +53,14 @@ header {
     display: flex;
     position: relative;
     justify-content: center;
-    height: 120px;
+    height: 7.5em;
     /* ändra detta för att göra logotypen större eller mindre, det beror på höjden*/
 }
 
 .logo {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-80%);
     width: auto;
     height: 100%;
 }
