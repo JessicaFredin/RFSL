@@ -1,7 +1,7 @@
 /* Jessica Fredin */
 
 /* Formulär Container: Centrerar formuläret, sätter maxbredd, och tillämpar bakgrund, rundade hörn och skuggning för stil och djup. */
-form {
+.bli-medlem-form {
     max-width: 500px;
     margin: 3.125em auto;
     padding: 1.25em;
@@ -11,7 +11,7 @@ form {
 }
 
 /* Formulärets Etiketter: Gör dem block-nivå för att säkerställa att de tar upp hela radens bredd och sätter avstånd och typografi. */
-form label {
+.bli-medlem-form label {
     display: block;
     margin-top: 20px;
     font-size: 1em;
@@ -19,11 +19,11 @@ form label {
 }
 
 /* Text, E-post, Telefon, Datum Inputs och Select Dropdowns: Standardiserar layout med full bredd, inre padding och enhetlig gränsstil. */
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form input[type="date"],
-form select {
+.bli-medlem-form input[type="text"],
+.bli-medlem-form input[type="email"],
+.bli-medlem-form input[type="tel"],
+.bli-medlem-form input[type="date"],
+.bli-medlem-form select {
     width: 100%;
     padding: 0.6em;
     margin-top: 5px;
@@ -58,7 +58,7 @@ form select {
 }
 
 /* Submit-Knapp: Ger knappen en distinkt och modern design med anpassad färg, storlek, och hover-effekter. */
-form input[type="submit"] {
+.bli-medlem-form input[type="submit"] {
     background-color: #1F3643;
     color: #fffdfc;
     font-weight: bold;
@@ -74,7 +74,7 @@ form input[type="submit"] {
 }
 
 /* Hover-effekt för Submit-Knapp: Skapar en visuell feedback när användaren hovrar över knappen. */
-form input[type="submit"]:hover {
+.bli-medlem-form input[type="submit"]:hover {
     background-color: #15242d;
     transition: 0.3s ease-in;
 }
