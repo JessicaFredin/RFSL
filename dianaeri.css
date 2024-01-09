@@ -9,10 +9,21 @@ main {
     flex-direction: column;
     width: 60vw;
     height: 90vh;
+    margin-top: -1em;
 }
 
-h2 {
+.heading1 {
     text-align: center;
+    margin-right: 40%;
+    font-size: 7em;
+    margin-top: -0.2em;
+}
+
+.heading2 {
+    text-align: center;
+    margin-top: -0.7em;
+    font-size: 6em;
+    margin-left: 15%;
 }
 
 #Layer_1 {
