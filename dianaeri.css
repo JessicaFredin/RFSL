@@ -9,6 +9,7 @@ main {
     flex-direction: column;
     width: 60vw;
     margin-top: -1em;
+    margin-bottom: 2em;
 }
 
 .img-box {
@@ -60,5 +61,18 @@ main {
     text-align: center;
 }
 
+.grid {
+    display: flex;
+    gap: 2em 2em;
+    flex-wrap: wrap;
+    padding: 2em;
+    margin-top: 1em;
+}
+
+.article {
+    background-color: black;
+    width: 20em;
+    height: 20em;
+}
 
 
