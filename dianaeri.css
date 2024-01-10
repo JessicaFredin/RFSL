@@ -80,6 +80,7 @@ main {
 }
 
 #coloredBox {
+    position: relative;
     background-color: #1F3643;
     color: #fffdfc;
 }
@@ -149,4 +150,21 @@ button {
     width: max-content;
 }
 
+.richeOverlay {
+    position: absolute;
+    bottom: -15%;
+    left: -15%;
+    transform: translate(-50%, -50%);
+    width: 8em;
+    transform: rotate(70deg); 
+}
+
+.starOverlay {
+    position: absolute;
+    top: -15%;
+    right: -15%;
+    transform: translate(-50%, -50%);
+    width: 8em;
+    transform: rotate(15deg); 
+}
 
