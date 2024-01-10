@@ -49,6 +49,7 @@ main {
     margin-top: -3em;
     text-decoration: underline;
     align-items: end;
+    height: 10em;
     width: 12.5em;
     margin-left: auto;
 }
@@ -138,8 +139,7 @@ button {
 .textOverlay {
     font-size: 1.5em;
     position: absolute;
-    /* top: 65%; */
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #1F3643;
