@@ -70,11 +70,32 @@ main {
 }
 
 .article {
+    display: flex;
+    flex-direction: column;
     width: 30%;
     height: 20em;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    border: 1;
-    border-radius: 1em;
+    justify-content: center;
+}
+
+#coloredBox {
+    background-color: #1F3643;
+    color: #fffdfc;
+}
+
+.headingBox {
+    font-size: 1.5em;
+    padding: 5%;
+    font-weight: bold;
+}
+
+.paragraphBox {
+    font-size: 1em;
+    padding: 5%;
+}
+
+#coloredHeading {
+    color: #ff7448;
 }
 
 
