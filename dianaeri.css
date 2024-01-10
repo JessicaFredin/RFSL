@@ -83,9 +83,10 @@ main {
 }
 
 .headingBox {
-    font-size: 1.5em;
+    font-size: 1.3em;
     padding: 5%;
     font-weight: bold;
+    text-align: center;
 }
 
 .paragraphBox {
@@ -104,7 +105,7 @@ main {
 }
 
 .interactions {
-    padding: 3% 7% 0% 0%;
+    padding: 3% 7% 0% 3%;
     font-weight: bold;
     color: #ff7448;
     width: fit-content;
@@ -116,7 +117,7 @@ button {
 }
 
 .coloredInteractions {
-    padding: 3% 7% 0% 0%;
+    padding: 3% 7% 0% 3%;
     font-weight: bold;
     color: #fffdfc;
     width: fit-content;
