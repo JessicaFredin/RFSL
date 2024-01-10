@@ -1,6 +1,5 @@
 main {
     display: flex;
-    padding: 0em 0em;
     justify-content: center;
 }
 
@@ -96,6 +95,29 @@ main {
 
 #coloredHeading {
     color: #ff7448;
+}
+
+.boxbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.readmore {
+    padding: 3% 5% 3% 0%;
+    margin-left: auto;
+    font-weight: bold;
+    color: #ff7448;
+    width: fit-content;
+    background-color: #fffdfc;
+}
+
+.share {
+    padding: 3% 5% 0% 0%;
+    font-weight: bold;
+    color: #ff7448;
+    width: fit-content;
+    background-color: #fffdfc;
 }
 
 
