@@ -58,6 +58,7 @@ main {
     padding-bottom: 3em;
     width: 12.5em;
     text-align: center;
+    font-weight: bold;
 }
 
 .grid {
@@ -92,6 +93,7 @@ main {
 .paragraphBox {
     font-size: 1em;
     padding: 5%;
+    line-height: 1.5em;
 }
 
 #coloredHeading {
