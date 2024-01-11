@@ -1,0 +1,387 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+/*Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten.*/
+
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    padding-bottom: 4%;
+}
+/*Satt riktning att innehåll ska flexa i en kolumn. Även bredd och lite bottom 
+padding för att boxarna inte ska gå kant i kant med footer.*/
+
+.img-box {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+/*Min box som innehåller en png, hade problem med att min svg låg över 
+min bild när jag ville ha den under, löste det med att sätta värde på z-index.*/
+
+.img-box img {
+    width: 100%;
+}
+/*Satt full bredd på bild.*/
+
+.heading1 {
+    text-align: center;
+    margin-right: 40%;
+    font-size: 7em;
+    margin-top: -2%;
+}
+/*Centrerat text i mitten, och positionerat den i ett visst läge. Samt satt
+en storlek.*/
+
+.heading2 {
+    text-align: center;
+    margin-top: -0.7em;
+    font-size: 6em;
+    margin-left: 15%;
+}
+/*Centrerat text i mitten, och positionerat den i ett visst läge. Samt satt
+en storlek.*/
+
+.wave {
+    width: 100%;
+    margin-top: -23%;
+}
+/*Full bredd på SVG samt positionerat den så den "klättrar" under min png*/
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+/*Här vi en skapat en box med inehåll som flexar i en rad.*/
+
+.cloud {
+    position: relative;
+    margin-top: -3em;
+    text-decoration: underline;
+    width: 20%;
+    margin-left: auto;
+}
+/*Här behövde jag en relativ position för jag har skapat en text som 
+ska ligga över en SVG i en så kallad "overlay". Understryker också min länk
+med ett streck samt sätter bredd och "knuffar" innehållet längst till höger
+med margin left auto.*/
+
+.cloud a {
+    width: 12.5em;
+    text-align: center;
+    font-weight: bold;
+}
+/*Satt storlek på text, centrerat text i mitten. Fet stil på text.*/
+
+.cloud img {
+    width: 100%;
+    height: auto;
+}
+/*Full bredd på bild och en automatisk höjd.*/
+
+.grid {
+    display: flex;
+    gap: 2em 2em;
+    flex-wrap: wrap;
+    margin-top: 3em;
+    justify-content: center;
+}
+/*Skapat en flexbox för mina boxar, skapat ett "gap" för att ha mellanrum
+mellan boxarna. Satt lite luft också i toppen med margin. Innehållet
+är också centrerat i mitten.*/
+
+.article {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 20em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    justify-content: center;
+}
+/*Mina boxar, har satt en bredd på 30% för att ha tre boxar på en rad, sedan i regeln @media
+ändrar jag hur många boxar som är på varje rad i oliks skärmstorlekar. Så det går från tre, till
+två och till sist till en box. Jag har satt en exakt höjd som följer med i alla storlekar.
+Boxarna har en shadow för att de ska synas lite bättre de som har samma bakgrundsfärg som body.
+Innehållet flexar i en kolumn och innehållet centreras i mitten.*/
+
+#coloredBox {
+    position: relative;
+    background-color: #1F3643;
+    color: #fffdfc;
+}
+/*Första och sista boxen har en overlay med en SVG så jag har satt här position relative. Även
+en unik bakgrundsfärg och färg på text.*/
+
+.headingBox {
+    font-size: 1.3em;
+    padding: 5%;
+    font-weight: bold;
+    text-align: center;
+}
+/*Satt storlek på text, lite padding för luft runt innehållet. Även fetstil och text centrerad
+i mitten.*/
+
+.paragraphBox {
+    font-size: 1em;
+    padding: 5%;
+    line-height: 1.5em;
+}
+/*Satt storlek på text, padding igen för luft runt innehåll och ändrat höjd på raderna,
+för jag tyckte raderna var för täta inpå varandra annars, så för bättre läsbarhet.*/
+
+#coloredHeading {
+    color: #ff7448;
+}
+/*Färg på text i rubrik.*/
+
+.boxButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+/*Flexbox med knappar där innehållet flexar i riktning av en rad, samt i änden på
+raden,*/
+
+.interactions {
+    padding: 3% 7% 0% 3%;
+    font-weight: bold;
+    color: #ff7448;
+    width: fit-content;
+    background-color: #fffdfc;
+}
+/*Styling för knappar med padding, fet stil, färg på text, en bredd som
+är för innehållet och en bakgrundsfärg.*/
+
+button {
+    cursor: pointer;
+}
+/*Muspekaren förvandlas till en hand över knapparna.*/
+
+.coloredInteractions {
+    padding: 3% 7% 0% 3%;
+    font-weight: bold;
+    color: #fffdfc;
+    width: fit-content;
+    background-color: #1F3643;
+}
+/*Styling för knappar med padding, fet stil, färg på text, en bredd som
+är för innehållet och en bakgrundsfärg.*/
+
+.boxOverlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Här är vår första overlay som har position absolute. Detta för att sätta
+SVG över box. Följde exempel på w3 school 
+https://www.w3schools.com/howto/howto_css_overlay.asp*/
+
+.textOverlay {
+    font-size: 1.5em;
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: #fffdfc;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    width: max-content;
+}
+/*Här är vår andra overlay som har position absolute. Detta för att sätta
+text över en box som har en SVG. Följde exempel på w3 school som jag ändrade lite
+för att positionera texten som jag ville (alltså inte exakt i mitten) 
+https://www.w3schools.com/howto/howto_css_overlay.asp. Jag har även satt fet stil,
+på text, understrykt texten, och satt en bredd.*/
+
+.richeOverlay {
+    position: absolute;
+    bottom: -15%;
+    left: -15%;
+    transform: translate(-50%, -50%);
+    width: 8em;
+    transform: rotate(70deg); 
+}
+/*Vår tredje overlay med en SVG där jag har igen ändrat positionering från w3 
+för att jag inte ville ha det i mitten. Jag har satt en vidd på min SVG och även
+roterat den.*/
+
+.starOverlay {
+    position: absolute;
+    top: -15%;
+    right: -15%;
+    transform: translate(-50%, -50%);
+    width: 8em;
+    transform: rotate(15deg); 
+}
+/*Vår sista overlay med en SVG där jag har igen ändrat positionering från w3 
+för att jag inte ville ha det i mitten. Jag har satt en vidd på min SVG och även
+roterat den.*/
+
+@media (max-width: 1800px) {
+
+    .box {
+        width: 70vw;
+    }
+
+
+}
+
+@media (max-width: 1700px) {
+
+    .heading1 {
+        font-size: 6em;
+        margin-right: 51%;
+    }
+    
+    .heading2 {
+        font-size: 5em;
+        margin-left: -5%;
+    }
+
+}
+
+@media (max-width: 1500px) {
+
+    .box {
+        width: 80vw;
+    }
+
+
+}
+
+@media (max-width: 1300px) {
+
+    .box {
+        width: 90vw;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .box {
+        width: 95vw;
+    }
+
+
+}
+
+@media (max-width: 1100px) {
+
+    .heading1 {
+        font-size: 5em;
+    }
+    
+    .heading2 {
+        font-size: 4em;
+    }
+
+    .textOverlay {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 1034px) {
+
+    .heading1 {
+        font-size: 4em;
+        margin-top: 0%;
+        margin-right: 51%;
+    }
+    
+    .heading2 {
+        font-size: 3em;
+        margin-left: -5%;
+    }
+
+}
+
+@media (max-width: 1025px) {
+
+    .article {
+        width: 45%;
+        padding: 0% 5%;
+    }
+
+    .box {
+        padding-bottom: 5%;
+    }
+
+    
+
+}
+
+@media (max-width: 970px) {
+
+    .article {
+        width: 45%;
+        padding: 0% 3%;
+    }
+
+    .textOverlay {
+        font-size: small;
+    }
+    
+
+}
+
+@media (max-width: 760px) {
+
+    .article {
+        width: 80%;
+        padding: 0% 5%;
+    }
+
+    .box {
+        padding-bottom: 8%;
+    }
+
+}
+
+@media (max-width: 678px) {
+
+    .heading1 {
+        font-size: 3em;
+    }
+    
+    .heading2 {
+        font-size: 2.5em;
+    }
+    
+    .cloud {
+        width: 25%;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .cloud {
+        margin-top: -2em;
+    }
+
+    .heading1 {
+        font-size: 2em;
+        margin-top: 5%;
+    }
+    
+    .heading2 {
+        font-size: 2em;
+    }
+    
+}
+
+/* EFtersom allt mitt innehåll är väldigt stort från början (bild storlek, 
+font-sterlekar, etc...) och jag jobbar med en dator display som är också 
+väldigt stor var det viktigt med många bryt punkter och prova fram olika 
+storlekar och positioner på allt innehåll tills jag var nöjd med hur allt 
+såg ut fram tills minsta storlek vilket jag valde att vara 480px. 
+Och då menar jag att även om jag inte gått ner till 480 i @media regeln, så 
+har jag gått ner till 480 på min webbläsare för att se hur allt skalade ner.*/
+
