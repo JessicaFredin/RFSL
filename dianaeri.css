@@ -145,7 +145,7 @@ för jag tyckte raderna var för täta inpå varandra annars, så för bättre l
     text-align: center;
     color: #ff7448;
 }
-/*Färg på text i rubrik.*/
+/*Färg på text i rubrik som har en egen färg.*/
 
 .boxButton {
     display: flex;
