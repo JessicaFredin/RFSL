@@ -14,6 +14,7 @@ main {
 .img-box {
     width: 60vw;
     height: auto;
+    z-index: 1;
 }
 
 .img-box img {
@@ -34,8 +35,9 @@ main {
     margin-left: 15%;
 }
 
-#Layer_1 {
-    margin-top: -2.3em;
+.wave {
+    margin-top: -16em;
+    width: 60vw;
 }
 
 .row {
@@ -46,7 +48,7 @@ main {
 .cloud {
     position: relative;
     display: flex;
-    margin-top: -3em;
+    margin-top: -8em;
     text-decoration: underline;
     align-items: end;
     height: 10em; 
@@ -64,7 +66,7 @@ main {
     display: flex;
     gap: 2em 2em;
     flex-wrap: wrap;
-    margin-top: 1em;
+    margin-top: 2em;
     justify-content: center;
 }
 
@@ -138,10 +140,10 @@ button {
 .textOverlay {
     font-size: 1.5em;
     position: absolute;
-    top: 65%;
-    left: 50%;
+    top: 70%;
+    left: 55%;
     transform: translate(-50%, -50%);
-    color: #1F3643;
+    color: #fffdfc;
     text-align: center;
     text-decoration: underline;
     font-weight: bold;
