@@ -7,7 +7,8 @@
     scroll-behavior: smooth;
 }
 
-/*RFSL colors: 
+/* Dessa färger ingår i RFSL:s nya grafiska profil
+RFSL colors: 
 orange: #ff7448
 ljuslila: #F1E0FF
 mörkblå: #1F3643
@@ -53,9 +54,10 @@ header {
     display: flex;
     justify-content: center;
     height: 7.5em;
-    /* ändra detta för att göra logotypen större eller mindre, det beror på höjden*/
+    
 }
 
+/*positionering inuti logo-wrap*/
 .logo {
     width: auto;
     height: 100%;
@@ -76,15 +78,19 @@ nav.top-desktop-nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
     font-size: 1em;
     background-color: #1F3643;
+    padding: 0.45em;
+    
 }
+
+
 
 /*stilar för listan i den övre navigationsmenyn*/
 nav.top-desktop-nav ul {
     display: flex;
     list-style-type: none;
+    
 }
 
 /* styling för listelement*/
@@ -95,26 +101,23 @@ nav.top-desktop-nav li {
 /* styling för länkarna inom listelement*/
 nav.top-desktop-nav li a {
     text-decoration: none;
-
-}
-
-/*styling av knappar på den övre navigationsmenyn*/
-nav.top-desktop-nav a button {
     background-color: #1F3643;
     color: #fffdfc;
     letter-spacing: 0.08em;
     padding: 0.5em;
-
+    
 }
 
+
 /*länkar ändrar bakgrundsfärg när man hovrar*/
-nav.top-desktop-nav a button:hover {
+nav.top-desktop-nav a:hover {
     background-color: #15242d;
     padding: 0.5em;
     transition: background-color 0.3s ease;
 }
 
-#bli-medlem button {
+/*viktig länk i navigering*/
+#bli-medlem {
     color: #ff7448;
 }
 
@@ -136,21 +139,17 @@ div.language li {
 }
 
 
-div.language li a {
-    text-decoration: none;
-
-}
-
 /* stil för knappar i "language" listelement*/
-div.language li a button {
+div.language li a {
     border-radius: 50%;
     background-color: #F1E0FF;
     color: #29380B;
     padding: 0.5em;
+    text-decoration: none;
 }
 
 /* knapparna för språk blir större när man hovrar */
-div.language li a button:hover {
+div.language li a:hover {
     padding: 0.5em;
     background-color: #feffcd;
 }
@@ -794,7 +793,7 @@ Sedan har jag använt space between för mellanrum
     height: 100%;
     background-color: rgba(31, 54, 67, 0.7);
     position: absolute;
-    top: 90%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -816,9 +815,9 @@ Sedan har jag använt space between för mellanrum
         height: 100%;
     }
 
-    /*nav.top-desktop-nav {
-        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*
-    }*/
+    nav.top-desktop-nav {
+        padding: 0.5em;
+    }
 
     #svButton {
         display: none;
@@ -875,6 +874,15 @@ Sedan har jag använt space between för mellanrum
 
     nav.top-desktop-nav {
         font-size: 0.65em;
+    
+    }
+
+    nav.top-desktop-nav li {
+        margin: 0 1em;
+    }
+
+    nav.top-desktop-nav a {
+        padding: 0;
     }
 
     #svButton {
@@ -920,7 +928,15 @@ Sedan har jag använt space between för mellanrum
 
     nav.top-desktop-nav {
         font-size: 0.6em;
-        /*gömmer navigeringslänkar i headern på mindre skärm*/
+    }
+
+    nav.top-desktop-nav li {
+        margin: 0 1em;
+    }
+
+    nav.top-desktop-nav a {
+        padding: 0;
+        
     }
 
     #svButton {
