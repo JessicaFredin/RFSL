@@ -54,9 +54,10 @@ header {
     display: flex;
     justify-content: center;
     height: 7.5em;
-    /* ändra detta för att göra logotypen större eller mindre, det beror på höjden*/
+    
 }
 
+/*positionering inuti logo-wrap*/
 .logo {
     width: auto;
     height: 100%;
@@ -115,6 +116,7 @@ nav.top-desktop-nav a:hover {
     transition: background-color 0.3s ease;
 }
 
+/*viktig länk i navigering*/
 #bli-medlem {
     color: #ff7448;
 }
