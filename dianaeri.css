@@ -298,6 +298,38 @@ button {
 
 }
 
+@media (max-width: 780px) {
+
+    .heading1 {
+        font-size: 4em;
+        margin-right: 51%;
+    }
+    
+    .heading2 {
+        font-size: 3em;
+        margin-left: -5%;
+    }
+    
+
+}
+
+@media (max-width: 760px) {
+
+    .article {
+        width: 80%;
+        padding: 0% 5%;
+    }
+    
+
+}
+
+@media (max-width: 760px) {
+
+    .cloud {
+
+    }
+
+}
 
 
 
