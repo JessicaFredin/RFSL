@@ -858,7 +858,7 @@ position som är precis i mitten.*/
     }
 
     .container {
-        gap: 0px 0px;
+        gap: 50px 0px;
     }
 }
 
