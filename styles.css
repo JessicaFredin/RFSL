@@ -723,11 +723,7 @@ Chat Gpt: https://chat.openai.com/  */
 /* Slut slideshow - Lorik */
 
 
-/*Här börjar Dianas CSS kod.
-Jag har satt margin för att få mellanrum mellan elementen.
-Jag har skapat en flexbox så att "containers" blir responsivt.
-Sedan har jag använt space between för mellanrum
-*/
+/*Här börjar Dianas CSS kod.*/
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -736,16 +732,22 @@ Sedan har jag använt space between för mellanrum
     margin-top: 2%;
     margin-bottom: 3%;
 }
+/*Skapat en flexbox som har gap för att skapa luft mellan
+innehåll. Centrerat innehåll i mitten, samt satt margin uppe
+och nere.*/
 
 .single {
     max-width: 48%;
     align-content: center;
     position: relative;
 }
+/*Container som heter single och innehåler bild och rubrik,
+satt vidd på 48% för att ha två boxar efter varandra i rad.*/
 
 .single img {
     width: 100%;
 }
+/*Bredd på bild.*/
 
 .double {
     display: flex;
@@ -753,15 +755,19 @@ Sedan har jag använt space between för mellanrum
     max-width: 23.7%;
     gap: 0.3rem 0rem;
 }
+/*skapat container för boxarna som innehåller fyra bilder,
+satt en vidd för att ha två boxar på varje rad.*/
 
 .double img {
     vertical-align: middle;
     width: 100%;
 }
+/*Centrerat innehåll och satt max vidd.*/
 
 .cardheader {
     position: relative;
 }
+/*Position relative för att kunna placera min overlay.*/
 
 .colored {
     background-color: rgba(31, 54, 67, 0.8);
@@ -776,6 +782,8 @@ Sedan har jag använt space between för mellanrum
     width: 100%;
     text-align: center;
 }
+/*Overlay med rubrik, transparant bakgrund och absolut
+position som är precis i mitten.*/
 
 .colored1 {
     font-size: 1.5rem;
@@ -787,6 +795,8 @@ Sedan har jag använt space between för mellanrum
     text-align: center;
     width: 90%;
 }
+/*Overlay med rubrik och absolut
+position som är precis i mitten.*/
 
 .overlay {
     width: 100%;
@@ -797,6 +807,8 @@ Sedan har jag använt space between för mellanrum
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/*Overlay med transparant bakgrund och absolut
+position som är precis i mitten.*/
 
 /* Slut - Diana*/
 
