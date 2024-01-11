@@ -1016,8 +1016,6 @@ position som är precis i mitten.*/
 
     border-color: rgb(11, 115, 206);
 
-    position: left;
-
 }
 
 .Search-Form i,
@@ -1025,8 +1023,6 @@ position som är precis i mitten.*/
     color: rgb(158, 158, 156);
 
     padding: 0;
-
-    background-color:none;
 
     border-radius: 30px;
 
