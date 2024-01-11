@@ -106,10 +106,17 @@ två och till sist till en box. Jag har satt en exakt höjd som följer med i al
 Boxarna har en shadow för att de ska synas lite bättre de som har samma bakgrundsfärg som body.
 Innehållet flexar i en kolumn och innehållet centreras i mitten.*/
 
-#coloredBox {
+.articleColored {
     position: relative;
     background-color: #1F3643;
     color: #fffdfc;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 20em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    justify-content: center;
+
 }
 /*Första och sista boxen har en overlay med en SVG så jag har satt här position relative. Även
 en unik bakgrundsfärg och färg på text.*/
@@ -131,7 +138,11 @@ i mitten.*/
 /*Satt storlek på text, padding igen för luft runt innehåll och ändrat höjd på raderna,
 för jag tyckte raderna var för täta inpå varandra annars, så för bättre läsbarhet.*/
 
-#coloredHeading {
+.headingBoxColored {
+    font-size: 1.3em;
+    padding: 5%;
+    font-weight: bold;
+    text-align: center;
     color: #ff7448;
 }
 /*Färg på text i rubrik.*/
