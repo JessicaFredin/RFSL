@@ -2,29 +2,29 @@ main {
     display: flex;
     justify-content: center;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten. */
+/*Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten.*/
 
 .box {
     display: flex;
     flex-direction: column;
     width: 60vw;
-    padding-bottom: 2%;
+    padding-bottom: 4%;
 }
-/* Satt riktning att innehåll ska flexa i en kolumn. Även bredd och lite bottom 
-padding för att boxarna inte ska gå kant i kant med footer. */
+/*Satt riktning att innehåll ska flexa i en kolumn. Även bredd och lite bottom 
+padding för att boxarna inte ska gå kant i kant med footer.*/
 
 .img-box {
     width: 100%;
     height: auto;
     z-index: 1;
 }
-/* Min box som innehåller en png och en svg, hade problem med att min svg låg över 
-min bild, löste det med att sätta värde på z-index. */
+/*Min box som innehåller en png, hade problem med att min svg låg över 
+min bild när jag ville ha den under, löste det med att sätta värde på z-index.*/
 
 .img-box img {
     width: 100%;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Satt full bredd på bild.*/
 
 .heading1 {
     text-align: center;
@@ -32,7 +32,8 @@ min bild, löste det med att sätta värde på z-index. */
     font-size: 7em;
     margin-top: -2%;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Centrerat text i mitten, och positionerat den i ett visst läge. Samt satt
+en storlek.*/
 
 .heading2 {
     text-align: center;
@@ -40,42 +41,45 @@ min bild, löste det med att sätta värde på z-index. */
     font-size: 6em;
     margin-left: 15%;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Centrerat text i mitten, och positionerat den i ett visst läge. Samt satt
+en storlek.*/
 
 .wave {
     width: 100%;
     margin-top: -23%;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Full bredd på SVG samt positionerat den så den "klättrar" under min png*/
 
 .row {
     display: flex;
     flex-direction: row;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Här vi en skapat en box med inehåll som flexar i en rad.*/
 
 .cloud {
     position: relative;
-    display: flex;
     margin-top: -3em;
     text-decoration: underline;
     width: 20%;
     margin-left: auto;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Här behövde jag en relativ position för jag har skapat en text som 
+ska ligga över en SVG i en så kallad "overlay". Understryker också min länk
+med ett streck samt sätter bredd och "knuffar" innehållet längst till höger
+med margin left auto.*/
 
 .cloud a {
     width: 12.5em;
     text-align: center;
     font-weight: bold;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Satt storlek på text, centrerat text i mitten. Fet stil på text.*/
 
 .cloud img {
     width: 100%;
     height: auto;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Full bredd på bild och en automatisk höjd.*/
 
 .grid {
     display: flex;
@@ -84,7 +88,9 @@ min bild, löste det med att sätta värde på z-index. */
     margin-top: 3em;
     justify-content: center;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Skapat en flexbox för mina boxar, skapat ett "gap" för att ha mellanrum
+mellan boxarna. Satt lite luft också i toppen med margin. Innehållet
+är också centrerat i mitten.*/
 
 .article {
     display: flex;
@@ -94,14 +100,19 @@ min bild, löste det med att sätta värde på z-index. */
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     justify-content: center;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Mina boxar, har satt en bredd på 30% för att ha tre boxar på en rad, sedan i regeln @media
+ändrar jag hur många boxar som är på varje rad i oliks skärmstorlekar. Så det går från tre, till
+två och till sist till en box. Jag har satt en exakt höjd som följer med i alla storlekar.
+Boxarna har en shadow för att de ska synas lite bättre de som har samma bakgrundsfärg som body.
+Innehållet flexar i en kolumn och innehållet centreras i mitten.*/
 
 #coloredBox {
     position: relative;
     background-color: #1F3643;
     color: #fffdfc;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Första och sista boxen har en overlay med en SVG så jag har satt här position relative. Även
+en unik bakgrundsfärg och färg på text.*/
 
 .headingBox {
     font-size: 1.3em;
@@ -109,25 +120,29 @@ min bild, löste det med att sätta värde på z-index. */
     font-weight: bold;
     text-align: center;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Satt storlek på text, lite padding för luft runt innehållet. Även fetstil och text centrerad
+i mitten.*/
 
 .paragraphBox {
     font-size: 1em;
     padding: 5%;
     line-height: 1.5em;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Satt storlek på text, padding igen för luft runt innehåll och ändrat höjd på raderna,
+för jag tyckte raderna var för täta inpå varandra annars, så för bättre läsbarhet.*/
 
 #coloredHeading {
     color: #ff7448;
 }
+/*Färg på text i rubrik.*/
 
 .boxButton {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Flexbox med knappar där innehållet flexar i riktning av en rad, samt i änden på
+raden,*/
 
 .interactions {
     padding: 3% 7% 0% 3%;
@@ -136,12 +151,13 @@ min bild, löste det med att sätta värde på z-index. */
     width: fit-content;
     background-color: #fffdfc;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Styling för knappar med padding, fet stil, färg på text, en bredd som
+är för innehållet och en bakgrundsfärg.*/
 
 button {
     cursor: pointer;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Muspekaren förvandlas till en hand över knapparna.*/
 
 .coloredInteractions {
     padding: 3% 7% 0% 3%;
@@ -150,7 +166,8 @@ button {
     width: fit-content;
     background-color: #1F3643;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Styling för knappar med padding, fet stil, färg på text, en bredd som
+är för innehållet och en bakgrundsfärg.*/
 
 .boxOverlay {
     width: 100%;
@@ -160,7 +177,9 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Här är vår första overlay som har position absolute. Detta för att sätta
+SVG över box. Följde exempel på w3 school 
+https://www.w3schools.com/howto/howto_css_overlay.asp*/
 
 .textOverlay {
     font-size: 1.5em;
@@ -174,7 +193,11 @@ button {
     font-weight: bold;
     width: max-content;
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Här är vår andra overlay som har position absolute. Detta för att sätta
+text över en box som har en SVG. Följde exempel på w3 school som jag ändrade lite
+för att positionera texten som jag ville (alltså inte exakt i mitten) 
+https://www.w3schools.com/howto/howto_css_overlay.asp. Jag har även satt fet stil,
+på text, understrykt texten, och satt en bredd.*/
 
 .richeOverlay {
     position: absolute;
@@ -184,7 +207,9 @@ button {
     width: 8em;
     transform: rotate(70deg); 
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Vår tredje overlay med en SVG där jag har igen ändrat positionering från w3 
+för att jag inte ville ha det i mitten. Jag har satt en vidd på min SVG och även
+roterat den.*/
 
 .starOverlay {
     position: absolute;
@@ -194,7 +219,9 @@ button {
     width: 8em;
     transform: rotate(15deg); 
 }
-/* Gjorde så att main är en flexcointainer så jag kan flexa min box i mitten */
+/*Vår sista overlay med en SVG där jag har igen ändrat positionering från w3 
+för att jag inte ville ha det i mitten. Jag har satt en vidd på min SVG och även
+roterat den.*/
 
 @media (max-width: 1800px) {
 
@@ -283,6 +310,10 @@ button {
         padding: 0% 5%;
     }
 
+    .box {
+        padding-bottom: 5%;
+    }
+
     
 
 }
@@ -306,6 +337,10 @@ button {
     .article {
         width: 80%;
         padding: 0% 5%;
+    }
+
+    .box {
+        padding-bottom: 8%;
     }
 
 }
