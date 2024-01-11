@@ -794,7 +794,7 @@ Sedan har jag använt space between för mellanrum
     height: 100%;
     background-color: rgba(31, 54, 67, 0.7);
     position: absolute;
-    top: 50%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
