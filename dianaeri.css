@@ -48,7 +48,7 @@ main {
 .cloud {
     position: relative;
     display: flex;
-    margin-top: -8em;
+    margin-top: -6em;
     text-decoration: underline;
     align-items: end;
     height: 10em; 
