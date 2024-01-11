@@ -833,8 +833,8 @@ Sedan har jag använt space between för mellanrum
         max-width: 80vw;
     }
 
-    h2 {
-        width: 80vw;
+    .colored {
+        width: 100%;
     }
 
     .double {

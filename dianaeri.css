@@ -12,16 +12,16 @@ main {
 }
 
 .img-box {
-    width: 60vw;
+    width: 100%;
     height: auto;
     z-index: 1;
 }
 
 .img-box img {
-    width: 60vw;
+    width: 100%;
 }
 
-.heading1 {
+#heading1 {
     text-align: center;
     margin-right: 40%;
     font-size: 7em;
@@ -37,7 +37,7 @@ main {
 
 .wave {
     margin-top: -16em;
-    width: 60vw;
+    width: 100%;
 }
 
 .row {
@@ -166,5 +166,123 @@ button {
     transform: translate(-50%, -50%);
     width: 8em;
     transform: rotate(15deg); 
+}
+
+@media (max-width: 1800px) {
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        margin-top: -1em;
+        margin-bottom: 2em;
+    }
+
+
+}
+
+@media (max-width: 1500px) {
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        margin-top: -1em;
+        margin-bottom: 2em;
+    }
+
+
+}
+
+@media (max-width: 1300px) {
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        margin-top: -1em;
+        margin-bottom: 2em;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 95vw;
+        margin-top: -1em;
+        margin-bottom: 2em;
+    }
+
+
+}
+
+@media (max-width: 1100px) {
+
+    #heading1 {
+        font-size: 5em;
+    }
+    
+    .heading2 {
+        font-size: 4em;
+    }
+
+    .cloud {
+        width: 11em;
+    }
+
+    .textOverlay {
+        font-size: 1.2em;
+        top: 77%;
+    }
+
+    .wave {
+        margin-top: -15em;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    #heading1 {
+        font-size: 5em;
+    }
+    
+    .heading2 {
+        font-size: 4em;
+    }
+
+    .cloud {
+        width: 11em;
+    }
+
+    .textOverlay {
+        font-size: 1.2em;
+        top: 77%;
+    }
+
+    .wave {
+        margin-top: -14em;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1034px) {
+
+    #heading1 {
+        font-size: 4em;
+    }
+    
+    .heading2 {
+        font-size: 3em;
+    }
+
+    .cloud {
+        width: 10em;
+    }
+
+
 }
 
