@@ -23,13 +23,18 @@
         <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
           
         <!--HAMBURGER "START": Madelene Rosengren-->
-        <!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
-            fixat alla errors som är kopplade till hamburgaren/hamburger menyn -->
         <!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
+        <!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+            fixat alla errors som är kopplade till hamburgaren/hamburger menyn. Även kontrollerat med "The web accessibility practices evaluator (WCAG 2.1)
+        https://accessmonitor.acessibilidade.gov.pt/. Det finns en "röd" felmeddelande kopplat till hamburgaren/hamburger menyn som är en "förvirrande" felmeddelande,
+        som jag inte hunnit lösa. I felmeddelandet säger de att "Labels should be positioned just before the fields. Labels for checkbox fields or radio button 
+        fields should be positioned just after the fields."Jag följer instruktionerna. "toggleHamburgerCheckbox" och "toggleHamburgerCheckboxClose" är checkboxar.
+        "Labels" är placerade precis efter "checkboxarna ", vilket är den rekommendationerna för tillgänglighet. Kan vara en annan fel som bråkar, och resulterar
+        till en otydlig resultat när felmeddelandet redovisas i validatorns scannings system-->
         <div class="hamburger-wrapper">
-            <aside class="hamburgerNavigation">
+            <span class="hamburgerNavigation">
                 <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
-                <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                <label for="toggleHamburgerCheckbox" class="hamburgerIcon"> 
                     <span class="hamburgerIconSpace">
                         <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
                     </span>
@@ -43,7 +48,7 @@
                                     <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
                                 </span>
                             </label>
-                        </aside>
+                        </span>
                     </li>                 
                 <li class="makeSpaceBetweenListAndX">
                     <li><a href="index.html">Hem</a></li>
