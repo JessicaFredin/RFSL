@@ -22,58 +22,57 @@
     <header>
         <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
           
-        <!--HAMBURGER "START": Madelene Rosengren-->
-        <!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
-        <!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
-            fixat alla errors som är kopplade till hamburgaren/hamburger menyn. Även kontrollerat med "The web accessibility practices evaluator (WCAG 2.1)
-        https://accessmonitor.acessibilidade.gov.pt/. Det finns en "röd" felmeddelande kopplat till hamburgaren/hamburger menyn som är en "förvirrande" felmeddelande,
-        som jag inte hunnit lösa. I felmeddelandet säger de att "Labels should be positioned just before the fields. Labels for checkbox fields or radio button 
-        fields should be positioned just after the fields."Jag följer instruktionerna. "toggleHamburgerCheckbox" och "toggleHamburgerCheckboxClose" är checkboxar.
-        "Labels" är placerade precis efter "checkboxarna ", vilket är den rekommendationerna för tillgänglighet. Kan vara en annan fel som bråkar, och resulterar
-        till en otydlig resultat när felmeddelandet redovisas i validatorns scannings system-->
-        <div class="hamburger-wrapper">
-            <span class="hamburgerNavigation">
-                <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
-                <label for="toggleHamburgerCheckbox" class="hamburgerIcon"> 
-                    <span class="hamburgerIconSpace">
-                        <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
-                    </span>
-                </label>
-                <ul class="hamburgerMenu">
-                    <li class="hamburger-wrapper">
-                      <li  class="x-opposite-side-in-menu">
-                        <aside class="hamburgerNavigation">
-                            <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
-                                <span class="hamburgerIconSpace">
-                                    <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
-                                </span>
-                            </label>
+   
+<!--HAMBURGER "START": Madelene Rosengren-->
+<!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
+<!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+fixat alla errors som är kopplade till hamburgaren/hamburger menyn. Även kontrollerat med "The web accessibility practices evaluator (WCAG 2.1)
+https://accessmonitor.acessibilidade.gov.pt/. Det finns en "röd" felmeddelande kopplat till hamburgaren/hamburger menyn som är en "förvirrande" felmeddelande,
+som jag inte hunnit lösa. I felmeddelandet säger de att "Labels should be positioned just before the fields. Labels for checkbox fields or radio button 
+fields should be positioned just after the fields." Jag följer instruktionerna. "toggleHamburgerCheckbox" och "toggleHamburgerCheckboxClose" är checkboxar.
+"Labels" är placerade precis efter "checkboxarna ", vilket är den rekommendationerna för tillgänglighet. Kan vara en annan fel som bråkar, och resulterar
+till en otydlig resultat när felmeddelandet redovisas i validatorns scannings system-->
+
+<div class="hamburger-wrapper">
+    <span class="hamburgerNavigation"></span>
+    <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+    <label for="toggleHamburgerCheckbox" class="hamburgerIcon"> 
+        <span class="hamburgerIconSpace">
+            <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
+        </span>
+    </label>
+    <ul class="hamburgerMenu">
+        <li class="hamburger-wrapper">
+            <ul>
+                <li class="x-opposite-side-in-menu">
+                    <aside class="hamburgerNavigation"></aside>
+                    <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                        <span class="hamburgerIconSpace">
+                            <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
                         </span>
-                    </li>                 
-                <li class="makeSpaceBetweenListAndX">
-                    <li><a href="index.html">Hem</a></li>
-                    <li><a href="dianaeri.html">Medlem och community</a></li>
-                    <li><a href="#">Ge en gåva</a></li>
-                    <li><a href="#">Verksamhet</a></li>
-                    <li><a href="#">Aktuellt</a></li>
-                    <li><a href="#">Certifiering och utbildning</a></li>
-                    <li><a href="#">Hbtqi-fakta & tips</a></li>
-                    <li><a href="#">Om oss</a></li>
-                    <li><a href="#">Press</a></li>
-                      <!--Searchbox-STARTS-->
-                    <li>
-                    <form id="Search-WithLove">
-                    <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......">
-                    <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                    </li>
-                    <!--Searchbox-ENDS-->
+                    </label>
                 </li>
-                </ul>
-            </aside>
-        </div>
-        <!--HAMBURGER "END": Madelene Rosengren-->
-        
+            </ul>
+        </li>                 
+        <li class="makeSpaceBetweenListAndX">
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="dianaeri.html">Medlem och community</a></li>
+                <li><a href="#">Ge en gåva</a></li>
+                <li><a href="#">Verksamhet</a></li>
+                <li><a href="#">Aktuellt</a></li>
+                <li><a href="#">Certifiering och utbildning</a></li>
+                <li><a href="#">Hbtqi-fakta & tips</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--HAMBURGER "END": Madelene Rosengren-->
+       
+
+
         <!-- kod för logotyp - Josephine, My, Louise -->
         <div class="logo-wrapper">
 
