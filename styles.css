@@ -727,7 +727,7 @@ Chat Gpt: https://chat.openai.com/  */
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px 10px;
+    gap: 2em 0.7em;
     justify-content: center;
     margin-top: 2%;
     margin-bottom: 3%;
@@ -850,7 +850,7 @@ position som är precis i mitten.*/
 
     .double {
         max-width: 95%;
-        gap: 50px 0px;
+        gap: 2.5em 0em;
     }
 
     .single {
@@ -858,7 +858,8 @@ position som är precis i mitten.*/
     }
 
     .container {
-        gap: 0px 0px;
+        gap: 2.5em 0em;
+        padding-bottom: 1.5em;
     }
 }
 
@@ -1016,8 +1017,6 @@ position som är precis i mitten.*/
 
     border-color: rgb(11, 115, 206);
 
-    position: left;
-
 }
 
 .Search-Form i,
@@ -1025,8 +1024,6 @@ position som är precis i mitten.*/
     color: rgb(158, 158, 156);
 
     padding: 0;
-
-    background-color:none;
 
     border-radius: 30px;
 

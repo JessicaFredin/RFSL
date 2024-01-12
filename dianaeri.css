@@ -320,6 +320,11 @@ roterat den.*/
         padding: 0% 5%;
     }
 
+    .articleColored {
+        width: 45%;
+        padding: 0% 5%;
+    }
+
     .box {
         padding-bottom: 5%;
     }
@@ -335,6 +340,11 @@ roterat den.*/
         padding: 0% 3%;
     }
 
+    .articleColored {
+        width: 45%;
+        padding: 0% 3%;
+    }
+
     .textOverlay {
         font-size: small;
     }
@@ -345,6 +355,11 @@ roterat den.*/
 @media (max-width: 760px) {
 
     .article {
+        width: 80%;
+        padding: 0% 5%;
+    }
+
+    .articleColored {
         width: 80%;
         padding: 0% 5%;
     }
