@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RFSL - supportar mänskliga rättigheter.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../css/Louise_Bodin_Klang/begreppsordlista_styles.css">
+    <link rel="icon" href="path/to/favicon.ico">
+
+    <title>RFSL</title>
+</head>
+
+<body>
+    <div class="sticky-header">
+    <header>
+        <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
+          
+        <!--HAMBURGER "START": Madelene Rosengren-->
+        <!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+            fixat alla errors som är kopplade till hamburgaren/hamburger menyn -->
+        <!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
+        <div class="hamburger-wrapper">
+            <span class="hamburgerNavigation"></span>
+            <!--koden här slår ut som röd på accessmonitor, vilken varken jag eller Madelene har lyckats lösa-->
+            <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+            <label for="toggleHamburgerCheckbox" class="hamburgerIcon"> 
+                <span class="hamburgerIconSpace">
+                    <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
+                </span>
+            </label>
+            <ul class="hamburgerMenu">
+                <li class="hamburger-wrapper">
+                    <ul>
+                        <li class="x-opposite-side-in-menu">
+                            <aside class="hamburgerNavigation"></aside>
+                            <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                                <span class="hamburgerIconSpace">
+                                    <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
+                                </span>
+                            </label>
+                        </li>
+                    </ul>
+                </li>                 
+                <li class="makeSpaceBetweenListAndX">
+                    <ul>
+                        <li><a href="../../index.html">Hem</a></li>
+                        <li><a href="../Diana_Eriksson/medlem_och_community.html">Medlem och community</a></li>
+                        <li><a href="../My_Rehnmark/ge_en_gava.html">Ge en gåva</a></li>
+                        <li><a href="#">Verksamhet</a></li>
+                        <li><a href="../Madelene_Rosengren/aktuellt.html">Aktuellt</a></li>
+                        <li><a href="#">Certifiering och utbildning</a></li>
+                        <li><a href="#">Hbtqi-fakta & tips</a></li>
+                        <li><a href="#">Om oss</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li> 
+                            <form id="Search-WithLove">
+                            <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......">
+                            <button  type="submit" aria-label="Search" id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--HAMBURGER "END": Madelene Rosengren-->
+        
+
+        <div class="logo-wrapper">
+
+            <a href="../../index.html" class="logo-link"><img src="../../logo/RFSL_logotyp_neg.svg" alt="RFSL Logo" class="logo"></a>
+        
+        </div>
+
+        <!--Searchbox-STARTS-->
+        <div class="right-content">
+            <form class="Search-Form">
+                <input type="text" class="Search-Bar" name="SearchBar" placeholder="Sök......">
+                <button  type="submit" aria-label="Search" class="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+            <!--Searchbox-ENDS-->
+    
+            <!-- språkknappar - Josephine, My, Louise -->
+            <div class="language">
+                <ul>
+                    <li><a href="#" id="enButton">EN</a></li>
+                    <li><a href="#" id="svButton">SV</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    </header>
+        
+    
+    <nav class="top-desktop-nav">
+        <ul>
+            <li><a href="../My_Rehnmark/ge_en_gava.html">GE EN GÅVA</a></li>
+            <li><a href="../Jessica_Fredin/bli-medlem.html" id="bli-medlem">BLI MEDLEM</a></li>
+            <li><a href="begreppsordlista.html" id="active-page">BEGREPPSORDLISTA</a></li>
+        </ul>
+    </nav>
+           
+            
+                <div class="bokstav-nav">
+                    <a href="#A"> A</a>
+                    <a href="#B"> B</a>
+                    <a href="#C"> C</a>
+                    <a href="#D"> D</a>
+                <!--<a href=</a>"#"> E</a>-->
+                    <a href="#F"> F</a>
+                    <a href="#G"> G</a>
+                    <a href="#H"> H</a>
+                    <a href="#I"> I</a>
+                <!--<a href="#"> J</a>-->
+                    <a href="#K"> K</a>
+                    <a href="#L"> L</a>
+                    <a href="#M"> M</a>
+                    <a href="#N"> N</a>
+                    <a href="#O"> O</a>
+                    <a href="#P"> P</a>
+                    <a href="#Q"> Q</a>
+                    <a href="#R"> R</a>
+                    <a href="#S"> S</a>
+                    <a href="#T"> T</a>
+                <!--<a href="#"> U</a>-->
+                    <a href="#V"> V</a>
+                <!--<a href="#"> W</a>
+                    <a href="#"> X</a>
+                    <a href="#"> Y</a>
+                    <a href="#"> Z</a>
+                    <a href="#"> Å</a>
+                    <a href="#"> Ä</a>
+                    <a href="#"> Ö</a>-->
+                </div>
+</div>
+
+
+
+<div class="flex-container">
+
+    <div id="main-content"> <!--desination för länk till huvudinnehåll-->
+        <img src="../../images/Fana_morklila.svg" alt="lila fana" id="fana">
+        <div class="top-content">
+            
+                <h1>BEGREPPSORDLISTA</h1>
+                    <p>Här hittar du beskrivningar av en rad olika begrepp krig hbtqi, identiteter och de normer som finns i vårt samhälle.
+                    Tänk på att även om personer passar in i definitionen av ett visst begrepp, är det inte säkert att hen är bekväm med att använda ordet om sig själv.
+                    </p>
+        </div>  
+            <!--unorded list av begreppsordlistan-->  
+            <ul class="begrepp">
+                
+                <li class="bokstav" id="A"> 
+                    <div class="bokstav-title"><h2>A</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Aromantisk</h3></div>
+                                    <p>Personer som är aromantiska känner lite eller ingen romantisk attraktion och är generellt inte intresserad av att ha kärleksrelationer. Aromantik är ett spektra, och det kan variera hur mycket romantisk attraktion aromantiska personer känner – vissa inte alls, andra ibland eller under vissa förutsättningar. Personer som är aromantiska kan också vara asexuella (se nedan), men behöver inte vara det.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Asexuell</h3></div>
+                                    <p>Asexualitet är att inte känna sig attraherad av andra, att inte känna sexlust eller inte känna sig intresserad av att ha sex. För en del personer är asexuell det ord man använder för att beskriva sin sexuella läggning. Ordet kan också användas som ett paraplybegrepp och då inkludera “demisexuell” – att känna sexuell attraktion till en annan person först efter att ett djupt emotionellt band har uppstått, eller “autosexuell” – att enbart vilja ha sex med sig själv.</p>
+                            </li>
+                        </ul>
+                </li>        
+                <li class="bokstav" id="B">
+                    <div class="bokstav-title"><h2>B</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>BDSM</h3></div>
+                                    <p>Förkortningen inkluderar flera olika praktiker: bondage & disciplin (B&D), dominans och underkastelse (D&S) samt sadism och masochism (S&M). BDSM är en sexuell praktik, identitet och/eller preferens med en ömsesidig överenskommelse om maktutbyte. Tillfogande av frivillig smärta kan ingå som en del av mötet. BDSM behöver inte vara sexuellt, men för många som utövar olika BDSM-praktiker är det sammanlänkat med just sexuell lust och njutning. </p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Bigender</h3></div>
+                                    <p>Den som är bigender har två könsidentiteter, antingen samtidigt eller växlande. Det kan t.ex. vara kille och tjej, tjej och ickebinär, eller kille och ickebinär.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Bisexuell</h3></div>
+                                    <p>En person som blir kär i och/eller attraherad av människor oavsett kön, eller av fler än ett kön.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Bög</h3></div>
+                                    <p>En person som oftast identifierar sig som kille eller man och som blir kär i och/eller attraherad av andra killar/män.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="C">
+                    <div class="bokstav-title"><h2>C</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Cisperson</h3></div>
+                                    <p>En person som identifierar sig med könet man blev tilldelad vid födseln. Cispersonsbegreppet kom till för att beskriva normen. Ordet ”cis” är latin och betyder ungefär ”på denna sida om”. Cis har ingenting med sexualitet att göra. </p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Cisnormativitet</h3></div>
+                                    <p>Den norm som förutsätter att alla är cispersoner, föreställningen om att det bara finns två kön och en förväntan på att män ska ha ett visst könsuttryck, kvinnor ett annat. Normen ger cispersoner privilegier eller fördelar som transpersoner kan sakna. </p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3 id="crossdresser">Crossdresser</h3></div>
+                                    <p>Har kommit att allt oftare ersätta begreppet transvestit. Att crossdressa är att, ibland eller ofta, ha ett annat könsuttryck än det som förväntas utifrån ens juridiska kön. Det kan handla om kläder, smink, hår, kroppsspråk, röstläge och andra attribut. </p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="D">
+                    <div class="bokstav-title"><h2>D</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Dragking / Dragqueen</h3></div>
+                                    <p>Drag eller att draga innebär att man leker med könsuttryck, ofta genom att överdriva typiskt maskulina uttryck (dragking) eller typiskt feminina uttryck  (dragqueen). Man kan också blanda olika könsuttryck när man dragar. Drag är inte samma sak som att vara transperson, utan handlar ofta om konst, aktivism eller underhållning.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Dyadisk</h3></div>
+                                    <p>En person som inte är intersex kan kallas dyadisk. Ordet beskriver normen.</p>
+                            </li>    
+                        </ul>
+                </li>
+                <li class="bokstav" id="F">
+                    <div class="bokstav-title"><h2>F</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Flata</h3></div>
+                                    <p>En person som oftast identifierar sig som tjej eller kvinna och som blir kär i och/eller attraherad av andra tjejer/kvinnor. Används ofta synonymt med lesbisk.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Flersamhet</h3></div>
+                                    <p>Att inte följa tvåsamhetsnormen, det vill säga att ha endast en partner som man har romantiska och sexuella relationer med. Flersamma relationer kan se ut på olika sätt, till exempel att man har flera sexuella relationer eller att man har både sex- och kärleksrelationer med flera.
+                                    Se även begreppen <a href="#poly" class="content-link">poly</a> och <a href="#relationsanarki" class="content-link">relationsanarki</a>.</p>
+                            </li>  
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Funktionsmaktsordningen</h3></div>
+                                    <p>En struktur i samhället som innebär att ha en viss funktionsfömåga medför fördelar socialt, ekonomiskt och politiskt, vilket påverkar vem som har och inte har makt. Ju högre funktionsförmåga, eller funktionalitet, en person har desto mer makt och möjligheter får personen, medan personer som har olika funktionsnedsättningar blir osynliggjorda, exkluderade eller diskriminerade.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Funktionsnedsättning</h3></div>
+                                    <p>En nedsatt funktionsförmåga i relation till vad som uppfattas som normen. Det kan handla om psykisk, kognitiv eller fysisk funktionsnedsättning.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="G">
+                    <div class="bokstav-title"><h2>G</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Gay</h3></div>
+                                    <p>En person som blir kär i och/eller attraherad av någon som har samma kön. En synonym till detta är homosexuell. Vissa använder ordet för att enbart beskriva homosexuella män.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Genderfluid</h3></div>
+                                    <p>En person vars könsidentitet varierar över tid.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Genderqueer (GQ)</h3></div>
+                                    <p>En person som identifierar sig som mellan eller bortom könskategorierna kvinna och man kan kalla sig genderqueer. Genderqueer används ibland synonymt med ickebinär.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="H">
+                    <div class="bokstav-title"><h2>H</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Hbtqi</h3></div>
+                                    <p>Ett samlingsnamn för homosexuella, bisexuella, transpersoner, queera och intersexpersoner. H:et och b:et handlar om sexuell läggning, alltså vem man blir kär i eller attraherad av. T:et handlar om hur man definierar och uttrycker sitt kön. Queer kan röra sexuell läggning, könsidentitet, relationer och/eller sexuell praktik men kan också vara ett uttryck för ett kritiskt förhållningssätt till rådande normer. I:et handlar om att kroppen bryter mot normer kring kön.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Hen/den</h3></div>
+                                    <p>Könsneutrala pronomen som används om personer som till exempel är genderqueer eller ickebinära. Hen och den går även att använda i situationer då någons könstillhörighet är okänd.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Heteronormativitet</h3></div>
+                                    <p>Heteronormen är en samverkan av olika normer kopplat till kön och sexualitet. Enligt heteronormen är människor antingen tjej/kvinna eller kille/man och ingenting annat. Kvinnor ska vara feminina och män ska vara maskulina. Alla förväntas vara heterosexuella. Att följa normen ger dessutom ekonomiska, politiska och sociala fördelar. Att bryta mot heteronormen kan resultera i bestraffning i form av allt från tystnad till våld. (Se även tvåkönsnormen och tvåsamhetsnormen).</p>
+                            </li>   
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Heterosexuell</h3></div>
+                                    <p>En person som blir kär i och/eller attraherad av någon av ett annat kön än det egna.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Homofobi</h3></div>
+                                    <p>En negativ syn på homosexuella eller bisexuella, eller att tycka att det är sämre att vara homo/bisexuell än heterosexuell. Homofobin överlappar ofta även med transfobin.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Homosexuell</h3></div>
+                                    <p>En person som blir kär i och/eller attraherad av någon av samma kön.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="I">
+                    <div class="bokstav-title"><h2>I</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Ickebinär</h3></div>
+                                    <p>En person vars könsidentitet inte är kvinna eller man. Däremot betyder ickebinär inte samma sak för alla som definierar sig som det: en del känner sig som både tjej och kille, andra att man befinner sig mellan de två kategorierna. Många ickebinära är inget kön. En del ickebinära har könsdysfori och behov att ändra kroppen med hormoner och/eller kirurgi. Vissa använder ickebinär som ett paraplybegrepp för olika könsidentiteter som inte följer tvåkönsnormen. </p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Intersektionalitet</h3></div>
+                                    <p>Intersektionalitet förklarar hur olika normer och maktordningar hänger samman, påverkar och förstärker varandra. Begreppet belyser också hur olika delar av ens identitet, till exempel hudfärg, sexualitet, kön, religion, funktionsförmåga och ålder påverkar människors möjligheter och handlingsutrymme.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Intersex / Intersexvariation</h3></div>
+                                    <p>Intersex är då ens medfödda kropp bryter mot normer kring kön. Ett antal olika tillstånd och diagnoser faller in under detta begrepp. Intersexvariationer är ett medfött tillstånd i vilket könskromosomerna, könskörtlarna (testiklar eller äggstockar) eller könsorganens utveckling inte följer det förväntade. Någon som har en intersexvariation kan kalla sig för intersexperson. Du som har en intersexvariation kan t.ex. vara man, kvinna eller ickebinär. Intersex säger inte någonting om en persons sexuella läggning.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="K">
+                    <div class="bokstav-title"><h2>K</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Kön</h3></div>
+                                    <p>Begreppet kön används ofta för att särskilja människor genom att dela in dem i grupperna kvinnor och män. Kön är dock mer komplext än så och går att bryta ner i fyra olika delar:
+                                    </p>    
+                                        <ol class="inner-list-items">
+                                            <li class="inner-list"><h4>Kropp</h4> 
+                                                <p>Inre och yttre könsorgan, könskromosomer, hormonnivåer samt sekundära könskaraktäristika (t.ex. skäggväxt eller brösttillväxt). Kroppsligt finns det inte bara två tydligt avgränsade könskategorier utan en mängd variationer.</p>
+                                            </li>
+                                            <li class="inner-list"><h4>Juridiskt kön</h4> 
+                                                <p>Det kön som står registrerat i folkbokföringen, i pass eller legitimation.</p>
+                                            </li> 
+                                            <li class="inner-list"><h4>Könsidentitet</h4>
+                                                <p>En persons självupplevda kön, det vill säga det kön man känner sig som och vet att man är (exempelvis kvinna, man, genderqueer eller ickebinär).</p>
+                                            </li> 
+                                            <li class="inner-list"><h4>Könsuttryck</h4>
+                                                <p>Hur en person uttrycker kön genom till exempel kläder, kroppsspråk, frisyr, röst med mera.</p>
+                                            </li>
+                                        </ol>
+                                    
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Könsbekräftande vård</h3></div>
+                                    <p>Samlingsbegrepp för olika sätt att förändra kroppen så att den stämmer överens med könsidentiteten och för att minska könsdysfori. Det kan vara hormonbehandling, olika typer av kirurgi, hårborttagning eller röstträning. Många personer ändrar även juridiskt kön i samband med denna behandling. Benämndes tidigare ofta som ”könsbyte” eller “könskorrigering”. Vården ges till transkvinnor, transmän och ickebinära. För att få rätt till könsbekräftande vård i Sverige behöver du ha en könsdysfori-diagnos.
+                                    Läs mer här: Mer information om könsbekräftande behandling och hur vården fungerar.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Könsdysfori</h3></div>
+                                    <p>Könsdysfori är en stark och ihållande känsla av att vara tilldelad fel kön, vilket orsakar psykiskt lidande och ofta en nedsatt förmåga att fungera i vardagen. Dysforin kan vara kroppslig och/eller social. Kroppslig könsdysfori kan innebära att vissa kroppsdelar eller en röst kan väcka starkt obehag eller ångest, eftersom de inte stämmer överens med ens könsidentitet. Social könsdysfori uppstår när andra inte behandlar en som det kön man är, t.ex. använder fel pronomen. Även om många transpersoner upplever könsdysfori så gör inte alla det. Könsbekräftande vård och behandling gör ofta att könsdysforin minskar. </p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Könseufori</h3></div>
+                                    <p>Positiva känslor som hänger ihop med att man som transperson blir bekräftad i sin könsidentitet. Könseufori ser olika ut för olika personer. Vad som ger könseufori är individuellt, t.ex. att kroppen speglar ens könsidentitet. Även att bli bekräftad av andra, till exempel med rätt namn eller pronomen, kan ge könseufori.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="L">
+                    <div class="bokstav-title"><h2>L</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Lesbisk</h3></div>
+                                    <p>En person som oftast identifierar sig som tjej eller kvinna och som blir kär i och/eller attraherad andra tjejer/kvinnor.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="M">
+                    <div class="bokstav-title"><h2>M</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Monogam</h3></div>
+                                    <p>En person som har romantiska och sexuella relationer med en person i taget kan kalla sig monogam. Ibland används även ordet monoamorös om personer som blir kära i en person åt gången.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="N">
+                    <div class="bokstav-title"><h2>N</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Normkritik</h3></div>
+                                    <p>En pedagogisk metod för att skapa mer jämlikhet i samhället. Det handlar om att flytta fokus från individer och det som vi tolkar som normbrytande till att titta på normerna i sig, vilka som får fördelar pga dem och vilka som får nackdelar. Normkritiken syftar till att skapa strategier för förändring av de normer som leder till osynliggörande, exkludering eller diskriminering.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="O">
+                    <div class="bokstav-title"><h2>O</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Omvändelseförsök / Omvändelseterapi</h3></div>
+                                    <p>Omvändelseförsök eller omvändelseterapi är när någon genom tvång eller påtryckningar uppmanas ändra sin sexuella läggning, könsidentitet eller könsuttryck. Det kan leda till såväl fysiska som psykiska skador, och FN har likställt det med tortyr. Du kan läsa mer om omvändelseförsök här.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="P">
+                    <div class="bokstav-title"><h2>P</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Pansexuell</h3></div>
+                                    <p>En person som blir kär i och/eller attraherad av människor av alla kön, eller som blir kär i och/eller attraherad av människor oavsett kön.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3 id="poly">Poly / Polyamorös</h3></div>
+                                    <p>Att ha sexuella och/eller emotionella relationer med fler än en person i taget. Ofta används bara ordet poly för att visa på någon form av flersamhet, vare sig det är sexuellt och/eller emotionellt.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Polygami</h3></div>
+                                    <p>Polygami betyder månggifte, det vill säga att vara gift med flera personer samtidigt. I media kan det ibland användas som synonym till polyamorös, men termen åsyftar alltså specifikt månggifte.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Pronomen</h3></div>
+                                    <p>Till exempel hon, han, hen eller den. Hen och den används ibland också i situationer då en persons könstillhörighet är okänd. Det går inte att se på en person vilket pronomen den har. Rätt pronomen är ett sätt att bekräfta en persons kön/könsidentitet.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="Q">
+                    <div class="bokstav-title"><h2>Q</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Queer</h3></div>
+                                    <p>Queer kan innebära olika saker. I förkortningen "hbtqi" brukar queer stå för queer som identitet, att vara queer. Det innebär att på något sätt bryta mot normer kring kön, sexualitet och/eller relationer, exempelvis genom att vara transperson, ha en icke-monogam relation eller att skaffa barn med en vän istället för en kärlekspartner. Det kan även innebära att inte vilja eller kunna definiera sitt kön eller sin sexuella läggning. Begreppet queer kan även syfta på queerteori eller queeraktivism, vilka båda grundar sig i idéer om ifrågasätta normer kring kön och sexualitet och granska hur det hänger samman med makt och inflytande.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="R">
+                    <div class="bokstav-title"><h2>R</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Rasifiering</h3></div>
+                                    <p>En social process där människor kategoriseras utifrån hudfärg, etnicitet och/eller religion. Det vill säga att människor utifrån utseende tillskrivs vissa gruppegenskaper som grundar sig i samhällets historiska och nutida idéer om “ras”. Därmed skapas maktrelationer mellan grupper. Rasifiering hänger ihop med vithetsnormen.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Regnbågsfamilj</h3></div>
+                                    <p>I hbtqi-världen betyder familj så mycket mer än den familj man växt upp med eller lever i. Regnbågsfamilj är en familj där en eller flera av personerna är hbtqi-personer. Begreppet inkluderar bland annat barnfamiljer, bonusfamiljer och valda familjer. Alla hbtqi-personer med barn använder inte detta begrepp om den egna familjen, men begreppet förekommer allt oftare i olika sammanhang, och används av RFSL som ett samlingsnamn.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3 id="relationsanarki">Relationsanarki</h3></div>
+                                    <p>Relationsanarki kan praktiseras på många sätt, men handlar i grunden om att utmana de normer och förväntningar som finns kring relationer. Till exempel förväntan om att människor ska prioritera romantiska relationer över vänskapsrelationer, eller att man bara ska ha romantiska och sexuella relationer med en partner.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="S">
+                    <div class="bokstav-title"><h2>S</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Sexuell läggning</h3></div>
+                                    <p>Sexuell läggning handlar om vem en person blir attraherad av eller blir kär i. Enligt svensk diskrimineringslag finns det tre olika sexuella läggningar: Heterosexuell, bisexuell och homosexuell. I praktiken använder dock personer fler ord än just homo, hetero och bi för att beskriva sin sexuella läggning.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="T">
+                    <div class="bokstav-title"><h2>T</h2></div>
+                        <ul>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Transfobi</h3></div>
+                                    <p>En negativ syn på transpersoner eller personer vars könsuttryck bryter mot normen, eller att tycka att det är sämre att vara transperson än cisperson. Transfobi överlappar ofta homofobi.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Transition</h3></div>
+                                    <p>Den period då man exempelvis ändrar namn och pronomen och genomgår kroppsliga förändringar i form av könsbekräftande vård.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Transperson</h3></div>
+                                    <p>Att bryta mot normer kring könsidentitet/könsuttryck och samtidigt identifiera sig med begreppet trans. Gemensamt för transpersoner är att ens könsidentitet och/eller könsuttryck inte stämmer överens med det juridiska kön man blev tilldelad när man föddes. Ordet trans kommer från latin och betyder ungefär ”på andra sidan av”, ”bortom” eller ”gå över/överskrida”. Trans har ingenting med ens sexualitet att göra.
+                                    Transformering – för mer information om transrelaterade begrepp.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Transexuell</h3></div>
+                                    <p>En del transpersoner identifierar eller omnämner sig som transsexuella. Transsexuell, eller transsexualism, är även en av de medicinska diagnoser som ställs för att man ska få tillgång till könsbekräftande vård och behandling. Det finns olika könsdysfori-diagnoser, som alla ger tillgång till vård, men just diagnosen transsexualism krävs idag för att kunna ändra juridiskt kön och genomgå underlivskirurgi. Diagnosen ställs av specialiserade könsdysfori-team. Att det är en diagnos innebär inte att man är sjuk, utan att det finns ett behov av vård. Diagnosen är även på väg att döpas om.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Transvestit</h3></div>
+                                    <p>Se <a href="#crossdresser" class="content-link">crossdresser</a></p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Tvåkönsnormen / Könsbinaritet</h3></div>
+                                    <p>Förväntan på och föreställning om att alla människor är antingen kvinnor eller män, baserat på könsorganens utseende. Till detta hör även föreställningen om att dessa två kön är fundamentalt olika. Tvåkönsnormen genomsyrar såväl personers tankesätt som sociala institutioner och funktioner i samhället. Denna norm leder bland annat till att ickebinära blir osynliggjorda och att en del personer med intersexvariationer behöver genomgå ofrivilliga medicinska ingrepp.</p>
+                            </li>
+                            <li>
+                                <div class="bokstav-rubrik"><h3>Tvåsamhetsnormen</h3></div>
+                                    <p>En norm som medför att det ses som positivt, eftersträvansvärt och normalt att ha eller vilja ha enbart en kärlekspartner och att denna relation prioriteras över andra relationer, t.ex. vänskapsrelationer, och förtjänar en särskild status både i privatlivet men även i samhället.</p>
+                            </li>
+                        </ul>
+                </li>
+                <li class="bokstav" id="V">
+                    <div class="bokstav-title"><h2>V</h2></div>
+                        <ul>
+                            <li>
+                                <!--accessmonitor slår ut som röd pga h-taggen. försökt lösa det, 
+                                    men förstår inte varför just den här slår ut när inte de andra rubrikerna gör det som är kodade likadant.-->
+                                <div class="bokstav-rubrik"><h3>Vithet / Vithetsnormen</h3></div>
+                                    <p>Vithetsnormen är en struktur i samhället som innebär att det att vara vit medför fördelar socialt, ekonomiskt och politiskt, vilket påverkar vem som har och inte har makt. Den här normen går hand i hand med rasism och rasifiering. Vithetsnormen existerar globalt och härstammar från kolonialismen, vilket innebär att vithet eller att vara ljushyad är en statusmarkör, även i länder där vita som etnisk grupp är en liten minoritet.</p>
+                            </li>
+                        </ul>
+                </li>    
+            </ul>
+    
+    </div>
+
+
+</div>
+
+    <footer>
+        <div class="footer-nav">
+            <h1>RFSL</h1>
+            <p>Sveriges könstillhörighetslag är föråldrad och den spär även på kötiderna inom den könsbekräftande
+                vården.
+                Lagens
+                utformning är från 1972, då Sverige var först i världen…</p>
+            <div class="social-media-links">
+                <a target="_blank" href="https://www.facebook.com/rfsl.forbundet/?fref=ts">
+                    <i class="social-media-icon fa-brands fa-facebook"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com">
+                    <i class="social-media-icon fab fa-instagram"></i>
+                </a>
+            </div>
+            <ul>
+                <li><a href="../../index.html">Hem</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Kontakta</a></li>
+                <li><a href="#">Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 RFSL. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
