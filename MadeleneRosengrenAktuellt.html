@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RFSL - supportar mänskliga rättigheter.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="MadeleneRosengrenAktuellt.css">
+    <link rel="icon" href="path/to/favicon.ico">
+
+    <title>RFSL</title>
+</head>
+
+<body>
+    <div class="sticky-header">
+    <header>
+        <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
+          
+   
+<!--HAMBURGER "START": Madelene Rosengren-->
+<!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
+<!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+fixat alla errors som är kopplade till hamburgaren/hamburger menyn. Även kontrollerat med "The web accessibility practices evaluator (WCAG 2.1)
+https://accessmonitor.acessibilidade.gov.pt/. Det finns en varning för sidan aktuellt "Consider using the h1 element as a top-level heading only",
+jag gör redan detta som felmeddelandet skriver, jag använder den viktigaste rubriken längst upp på undersidan "Aktuellt". 
+
+
+Det finns en "röd" felmeddelande kopplat till hamburgaren/hamburger menyn som är en "förvirrande" felmeddelande,
+som jag inte hunnit lösa. I felmeddelandet säger de att "Labels should be positioned just before the fields. Labels for checkbox fields or radio button 
+fields should be positioned just after the fields." Jag följer instruktionerna. "toggleHamburgerCheckbox" och "toggleHamburgerCheckboxClose" är checkboxar.
+"Labels" är placerade precis efter "checkboxarna ", vilket är den rekommendationerna för tillgänglighet. Kan vara en annan fel som bråkar, och resulterar
+till en otydlig resultat när felmeddelandet redovisas i validatorns scannings system-->
+
+<div class="hamburger-wrapper">
+    <span class="hamburgerNavigation"></span>
+    <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+    <label for="toggleHamburgerCheckbox" class="hamburgerIcon"> 
+        <span class="hamburgerIconSpace">
+            <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
+        </span>
+    </label>
+    <ul class="hamburgerMenu">
+        <li class="hamburger-wrapper">
+            <ul>
+                <li class="x-opposite-side-in-menu">
+                    <aside class="hamburgerNavigation"></aside>
+                    <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                        <span class="hamburgerIconSpace">
+                            <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        </li>                 
+        <li class="makeSpaceBetweenListAndX">
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="dianaeri.html">Medlem och community</a></li>
+                <li><a href="#">Ge en gåva</a></li>
+                <li><a href="#">Verksamhet</a></li>
+                <li><a href="#">Aktuellt</a></li>
+                <li><a href="#">Certifiering och utbildning</a></li>
+                <li><a href="#">Hbtqi-fakta & tips</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Press</a></li>
+                <li>
+                  <form id="Search-WithLove">
+                  <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......">
+                  <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  </form>
+                  </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--HAMBURGER "END": Madelene Rosengren-->
+       
+
+
+        <!-- kod för logotyp - Josephine, My, Louise -->
+        <div class="logo-wrapper">
+
+            <a href="index.html" class="logo-link"><img src="RFSL_logotyp_neg.svg" alt="RFSL Logo" class="logo"></a>
+        
+        </div>
+
+        <!--Searchbox-STARTS-->
+        <div class="right-content">
+        <form class="Search-Form">
+            <input type="text" class="Search-Bar" name="SearchBar" placeholder="Sök......">
+            <button class="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+      </div>
+        <!--Searchbox-ENDS-->
+
+        <!-- språkknappar - Josephine, My, Louise -->
+        <div class="language">
+            <ul>
+                <li><a href="#" id="enButton">EN</a></li>
+                <li><a href="#" id="svButton">SV</a></li>
+            </ul>
+        </div>
+    
+    </header>
+        
+    <!--navigering för viktiga länkar - Josephine, My, Louise-->
+    <nav class="top-desktop-nav">
+        <ul>
+            <li><a href="#">GE EN GÅVA</a></li>
+            <li><a href="bli-medlem_jessica_fredin.html" id="bli-medlem">BLI MEDLEM</a></li>
+            <li><a href="../RFSL/begreppsordlista_klang/begreppsordlista1_klang.html">BEGREPPSORDLISTA</a></li>
+        </ul>
+    </nav>
+</div>
+
+        <main>
+           
+
+<!--Madelene Rosengren Aktuellt START-->
+
+
+
+<!--START Aktuellt boxar, stor box, längst upp på webbplatsen, viktigaste nyheten som man vill presentera och presenterar undersidan att denna undersida 
+handlar om vad som händer "aktuellt"-->
+
+<section class="big-card" id="main-content">
+	<div class="wrapper">
+      <div class="space-between-colored-and-text">
+	    <div class="colored">
+        <h1 class="beta-uppercase">
+		   Aktuellt 
+		  </h1>
+       <p class="delta">Är du vår insamlingskonsult?</p>
+       <p class="delta2">Vill du bidra till en jämlik värld där alla
+         hbtqi-personers mänskliga rättigheter respekteras och ingen lämnas utanför? 
+         Är du erfaren inom insamlingsarbete? Då kan det vara dig vi söker!</p>
+         <a href="https://www.rfsl.se/aktuellt/ar-du-var-insamlingskonsult/">
+          <i class="fa-solid fa-circle-chevron-right button-looks2"></i> 
+        </a>
+    </div>
+    </div>
+  </div>
+ </section>
+
+ <!--SLUT Aktuellt boxar, stor box, längst upp på webbplatsen-->
+
+
+ <!--START Aktuellt meny för social media . Facebook, Instagram, Twitter, Tiktok, Youtube-->
+ <nav class="menu-nav-news">
+  <ul>
+    <li>
+      <i class="fa-brands fa-facebook icon-size-aktuellt"></i>
+    </li>
+<li>
+  <i class="fa-brands fa-instagram icon-size-aktuellt"></i>
+</li>
+<li>
+  <i class="fa-brands fa-twitter icon-size-aktuellt"></i>
+</li>
+<li>
+  <i class="fa-brands fa-tiktok icon-size-aktuellt"></i>
+</li>
+<li>
+  <i class="fa-brands fa-youtube icon-size-aktuellt"></i> 
+</li>
+  </ul>
+</nav>
+ <!--SLUT Aktuellt meny for social media-->
+
+<div class="aktuellt-just-nu">Aktuellt just nu<i class="fa-solid fa-circle-chevron-down aktuellt-just-nu-botton"></i></div>
+
+<!--START Aktuellt boxar, många boxar layout, alla aktuella nyheter-->
+<div class="band">
+  <div class="item-1">
+    <a href="https://www.rfsl.se/aktuellt/fortsatt-hoga-nivaer-av-hbtqi-relaterade-hatbrott/" class="card">
+      <div class="thumb" style="background-image: url(https://www.rfsl.se/wp-content/uploads/imagecache/ea/ea58813458d1e8cb66dd685c5d6ee32b.png);"><p class="news-card-date-text">2023-12-12</p></div>
+      <article class="article-looks">
+        <div class="card-button">Aktuellt</div>
+        <div class="space-between-text-and-objects-card-rem"></div>
+        <h2 class="space-between-text-and-objects-card-rem title-card">Fortsatt höga nivåer av hbtqi-relaterade hatbrott</h2>
+        <p class="space-between-text-and-objects-card-rem">Trots en generell minskning av antalet anmälda hatbrott kvarstår höga nivåer av hbtqi-relaterade hatbrott. Samtidigt ökar transfobiska hatbrott till 3 procent av de polisanmälda hatbrotten…</p>
+        <i class="fa-solid fa-circle-chevron-right button-looks"></i>
+      </article>
+    </a>
+  </div>
+  <div class="item-2">
+    <a href="https://www.rfsl.se/aktuellt/dokumentaren-stockholm-1982-nu-tillganglig-for-alla/" class="card">
+      <div class="thumb" style="background-image: url(https://www.rfsl.se/wp-content/uploads/imagecache/81/81baba6ff551a3c11dc2bc74c308a07e.png);"><p class="news-card-date-text">2023-12-01</p></div>
+      <article class="article-looks">
+        <div class="card-button">Aktuellt</div>
+        <div class="space-between-text-and-objects-card-rem"></div>
+        <h2 class="space-between-text-and-objects-card-rem title-card">Dokumentären ”Stockholm, 1982” nu tillgänglig för alla</h2>
+        <p class="space-between-text-and-objects-card-rem">Det har nu gått ett år sedan RFSL och RFSL Ungdom släppte dokumentären Stockholm, 1982, som skilldrar hur det var att komma ut som bög…</p>
+        <i class="fa-solid fa-circle-chevron-right button-looks"></i>
+      </article>
+    </a>
+  </div>
+  <div class="item-3">
+    <a href="https://www.rfsl.se/aktuellt/ny-ordforande-och-vice-ordforande/" class="card">
+      <div class="thumb" style="background-image: url(https://www.rfsl.se/wp-content/uploads/imagecache/6e/6e9fc8722284e63299b65b12cc80a184.png);"><p class="news-card-date-text">2023-11-16</p></div>
+      <article class="article-looks">
+        <div class="card-button">Aktuellt</div>
+        <div class="space-between-text-and-objects-card-rem"></div>
+        <h2 class="space-between-text-and-objects-card-rem title-card">Ny ordförande och vice ordförande</h2>
+        <p class="space-between-text-and-objects-card-rem">RFSL höll under helgen 27-29 oktober sin kongress. 60 ombud från en stor del av RFSL:s avdelningar var då samlade i Stockholm, på ABF-Huset, för…</p>
+        <i class="fa-solid fa-circle-chevron-right button-looks"></i>
+      </article>
+    </a>
+  </div>
+  <div class="item-4">
+    <a href="https://www.rfsl.se/aktuellt/peter-sidlund-ponkala-ny-forbundsordforande-for-rfsl/" class="card">
+      <div class="thumb" style="background-image: url(https://www.rfsl.se/wp-content/uploads/imagecache/88/884e7982653b788c18132c6f04475f15.png);"><p class="news-card-date-text">2023-10-29</p></div>
+      <article class="article-looks">
+        <div class="card-button">Aktuellt</div>
+        <div class="space-between-text-and-objects-card-rem"></div>
+        <h2 class="space-between-text-and-objects-card-rem title-card">RFSL får ny förbundsstyrelse – Peter Sidlund Ponkala ny ordförande</h2>
+        <p class="space-between-text-and-objects-card-rem">RFSL har under pågående kongress i Stockholm valt ny förbundsstyrelse. Peter Sidlund Ponkala, som valts till ny förbundsordförande, ska leda arbetet i den nya styrelsen…</p>
+        <i class="fa-solid fa-circle-chevron-right button-looks"></i>
+      </article>
+    </a>
+  </div>
+  <div class="item-5">
+    <a href="https://www.rfsl.se/aktuellt/ar-du-var-insamlingskonsult/" class="card">
+      <div class="thumb" style="background-image: url(https://www.rfsl.se/wp-content/uploads/imagecache/a5/a5218f5a7852f7461b3a55ec79d7e1ac.png);"><p class="news-card-date-text">2023-10-24</p></div>
+      <article class="article-looks">
+        <div class="card-button">Aktuellt</div>
+        <div class="space-between-text-and-objects-card-rem"></div>
+        <h2 class="space-between-text-and-objects-card-rem title-card">Är du vår insamlingskonsult?</h2>
+        <p class="space-between-text-and-objects-card-rem">Vill du bidra till en jämlik värld där alla hbtqi-personers mänskliga rättigheter respekteras och ingen lämnas utanför? Är du erfaren inom insamlingsarbete? Då kan det…</p>
+        <i class="fa-solid fa-circle-chevron-right button-looks"></i>
+      </article>
+    </a>
+  </div>
+  <div class="item-6">
+    <a href="https://www.rfsl.se/aktuellt/rfsls-valberedning-foreslar-peter-till-ny-forbundsordforande/" class="card">
+      <div class="thumb" style="background-image: url(https://www.rfsl.se/wp-content/uploads/imagecache/88/884e7982653b788c18132c6f04475f15.png);"><p class="news-card-date-text">2023-09-29</p></div>
+      <article class="article-looks">
+        <div class="card-button">Aktuellt</div>
+        <div class="space-between-text-and-objects-card-rem"></div>
+        <h2 class="space-between-text-and-objects-card-rem title-card">RFSL:s valberedning föreslår Peter till ny ordförande</h2>
+        <p class="space-between-text-and-objects-card-rem">RFSL:s valberedning föreslår att Peter Sidlund Ponkala väljs till ny förbundsordförande. Till ny vice förbundsordförande föreslås Petra Douhane. Förbundsordförande, vice förbundsordförande och övrig styrelse kommer…</p>
+        <i class="fa-solid fa-circle-chevron-right button-looks"></i>
+      </article>
+    </a>
+  </div>
+  <div class="item-7">
+    <a href="https://www.rfsl.se/aktuellt/hat-och-hot-i-fokus-pa-nordisk-hbtqi-konferens/" class="card">
+      <div class="thumb" style="background-image: url(https://www.rfsl.se/wp-content/uploads/imagecache/09/09f845cc8026dc34d3e0a53c1edb410a.jpg);"><p class="news-card-date-text">2023-09-29</p></div>
+      <article class="article-looks">
+        <div class="card-button">Aktuellt</div>
+        <div class="space-between-text-and-objects-card-rem"></div>
+        <h2 class="space-between-text-and-objects-card-rem title-card">Hat och hot i fokus på nordisk hbtqi-konferens</h2>
+        <p class="space-between-text-and-objects-card-rem">Under veckan har över hundra personer från den nordiska hbtqi-rörelsen varit samlade för en nordisk hbtqi-konferens i Islands huvudstad Reykjavik. Detta för att bl.a. prata…</p>
+        <i class="fa-solid fa-circle-chevron-right button-looks"></i>
+      </article>
+    </a>
+  </div>
+</div>
+
+<!--SLUT Aktuellt boxar, många boxar layout-->
+
+
+<!--START Välja sidor-->
+<!--Bläddra sidor-->
+  <div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">&raquo;</a>
+  </div>
+
+
+  <!--SLUT Välja sidor-->
+
+
+<!--Madelene Rosengren Aktuellt SLUT-->
+
+
+
+        </main>
+
+    <footer>
+        <div class="footer-nav">
+            <h1>RFSL</h1>
+            <p>Sveriges könstillhörighetslag är föråldrad och den spär även på kötiderna inom den könsbekräftande
+                vården.
+                Lagens
+                utformning är från 1972, då Sverige var först i världen…</p>
+            <div class="social-media-links">
+                <a target="_blank" href="https://www.facebook.com/rfsl.forbundet/?fref=ts">
+                    <i class="social-media-icon fa-brands fa-facebook"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com">
+                    <i class="social-media-icon fab fa-instagram"></i>
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">Hem</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Kontakta</a></li>
+                <li><a href="#">Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 RFSL. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

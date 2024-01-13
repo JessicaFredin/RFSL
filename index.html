@@ -22,17 +22,20 @@
     <header>
         <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
           
-   
+
+
 <!--HAMBURGER "START": Madelene Rosengren-->
 <!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
 <!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
 fixat alla errors som är kopplade till hamburgaren/hamburger menyn. Även kontrollerat med "The web accessibility practices evaluator (WCAG 2.1)
-https://accessmonitor.acessibilidade.gov.pt/. Det finns en "röd" felmeddelande kopplat till hamburgaren/hamburger menyn som är en "förvirrande" felmeddelande,
+https://accessmonitor.acessibilidade.gov.pt/. Det finns en varning för sidan aktuellt "Consider using the h1 element as a top-level heading only",
+jag gör redan detta som felmeddelandet skriver, jag använder den viktigaste rubriken längst upp på undersidan "Aktuellt". 
+
+Det finns en "röd" felmeddelande kopplat till hamburgaren/hamburger menyn som är en "förvirrande" felmeddelande,
 som jag inte hunnit lösa. I felmeddelandet säger de att "Labels should be positioned just before the fields. Labels for checkbox fields or radio button 
 fields should be positioned just after the fields." Jag följer instruktionerna. "toggleHamburgerCheckbox" och "toggleHamburgerCheckboxClose" är checkboxar.
 "Labels" är placerade precis efter "checkboxarna ", vilket är den rekommendationerna för tillgänglighet. Kan vara en annan fel som bråkar, och resulterar
-till en otydlig resultat när felmeddelandet redovisas i validatorns scannings system-->
-
+till en otydlig resultat när felmeddelandet redovisas i validatorns scannings system-->      
 <div class="hamburger-wrapper">
     <span class="hamburgerNavigation"></span>
     <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
