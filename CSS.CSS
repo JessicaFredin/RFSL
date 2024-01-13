@@ -13,6 +13,7 @@ ljusgul: #feffcd
 svart: #1d1d1d
 vit: #fffdfc   */
 body {
+    background-color: rgba(223, 228, 226, 0.37);
     overflow-x: hidden;
  /* horizontal scrolling disabled (https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)*/
   }
@@ -21,8 +22,9 @@ body {
   display: flex;
   justify-content: center;
   background-color: #1f3643;
-  position: relative;
-  
+  position: sticky;
+  top:8em; /*margin to keep the navigation in the same place*/
+   z-index: 5000; /*what ever element has the higher z-index shows above other elements*/
 }
 .nav-second ul {
   list-style: none;
@@ -200,7 +202,8 @@ justify-items: center;
 
 
 }
-.aboutrfsl h1 ,  .workrfsl h1{/*Work page starts.  I use styling for about us page and work page*/
+.aboutrfsl h1 
+ ,.workrfsl h1 ,.access h1{/*Work page starts.  I use styling for about us page and work page and the third page */
    
    margin-top: 0rem;
    margin-bottom:3rem;
@@ -234,7 +237,7 @@ justify-items: center;
     margin-inline-end: 0px;
 }
 
-.aboutrfsl .first-p::first-letter , .access::first-letter { /* bigger first letter*/
+.aboutrfsl .first-p::first-letter , .accessP::first-letter { /* bigger first letter*/
     font-size: 3.3em;
     
     font-weight: 700;
@@ -257,7 +260,7 @@ justify-items: center;
     padding-top: 0%;
     
 }
-.aboutrfsl h2, .workrfsl h2 , .access h1,.access h2 { /*here i use styling for 3 page and multiple tags */
+.aboutrfsl h2, .workrfsl h2 ,.access h2 { /*here i use styling for 3 page and multiple tags */
 /*border: solid 1px black;*/
 padding-top: 5%;
 padding-bottom: 2%;
