@@ -1,20 +1,14 @@
-:root {
-    --primary-color: rgb(218, 218, 218);
-    --secondary-color: #000;
-}
-
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     scroll-behavior: smooth;
 }
 
-/*RFSL colors: 
+/* Dessa färger ingår i RFSL:s nya grafiska profil
+RFSL colors: 
 orange: #ff7448
 ljuslila: #F1E0FF
 mörkblå: #1F3643
@@ -46,41 +40,36 @@ header {
     justify-content: space-between;
 }
 
-/*madelenes kod för att göra headern fast under scrollning*/
-.sticky-header{
-    position: -webkit-sticky; 
+/*sticky kod från W3Schools för att göra headern fast under scrollning*/
+.sticky-header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 /*placering av logotyp*/
 .logo-wrapper {
     flex: 1;
     display: flex;
-    position: relative;
     justify-content: center;
-    height: 120px; /* ändra detta för att göra logotypen större eller mindre, det beror på höjden*/
+    height: 7.5em;
+    
 }
 
+/*positionering inuti logo-wrap*/
 .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto; 
+    width: auto;
     height: 100%;
 }
 
-.right-content{
+.right-content {
     margin-left: auto;
     display: flex;
     align-items: center;
 }
 
-.logo-link{
-    display: flex;
-    justify-content: center;
-}
+
 
 /*styling av den övre navigationsmenyn */
 nav.top-desktop-nav {
@@ -89,32 +78,29 @@ nav.top-desktop-nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
     font-size: 1em;
     background-color: #1F3643;
+    padding: 0.45em;
+    
 }
+
+
 
 /*stilar för listan i den övre navigationsmenyn*/
 nav.top-desktop-nav ul {
     display: flex;
     list-style-type: none;
+    
 }
 
 /* styling för listelement*/
 nav.top-desktop-nav li {
     margin: 0 2em;
-    
-    
 }
 
 /* styling för länkarna inom listelement*/
 nav.top-desktop-nav li a {
     text-decoration: none;
-    
-}
-
-/*styling av knappar på den övre navigationsmenyn*/
-nav.top-desktop-nav a button {
     background-color: #1F3643;
     color: #fffdfc;
     letter-spacing: 0.08em;
@@ -122,11 +108,17 @@ nav.top-desktop-nav a button {
     
 }
 
+
 /*länkar ändrar bakgrundsfärg när man hovrar*/
-nav.top-desktop-nav a button:hover {
-    background-color:#15242d;
+nav.top-desktop-nav a:hover {
+    background-color: #15242d;
     padding: 0.5em;
     transition: background-color 0.3s ease;
+}
+
+/*viktig länk i navigering*/
+#bli-medlem {
+    color: #ff7448;
 }
 
 /*styling av language-elementen*/
@@ -147,21 +139,17 @@ div.language li {
 }
 
 
-div.language li a {
-    text-decoration: none;
-
-}
-
 /* stil för knappar i "language" listelement*/
-div.language li a button {
+div.language li a {
     border-radius: 50%;
     background-color: #F1E0FF;
     color: #29380B;
     padding: 0.5em;
+    text-decoration: none;
 }
 
 /* knapparna för språk blir större när man hovrar */
-div.language li a button:hover {
+div.language li a:hover {
     padding: 0.5em;
     background-color: #feffcd;
 }
@@ -268,200 +256,359 @@ footer .copyright {
     width: 100%;
     margin: 3em 0 .5em 0;
     color: #fff;
-} 
+}
+
 /*slut footer - jessica */
 
 
-/*hamburger START: Madelene*/
 
-/*En Youtube video användes som guide när hamburger funktionen skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till RFSL. 
-Fick också ändra så att hamburgaren blir responsiv genom att konvertera från px till rem. Har också adderat %. Guidens hamburgare är inte alls responsiv. Har 
-också tagit bort position "absolute"och position "relative" som inte heller är responsiva, och ändrat till "flex". Istället för att skapa "hamburgar ikonen" och
-"X-ikonen" manuellt med kod som guiden använde jag istället färdiga bilder.
+/*hamburger START: Madelene Rosengren*/
+/*Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+fixat alla errors som är kopplade till hamburgaren/hamburger menyn*/
+/*En Youtube video användes som guide när hamburgaren/hamburger menyn skapades, men det gjordes egna justeringar för att anpassa webbplatsen som ska skapas till
+ RFSL.Fick också ändra så att hamburgaren blir responsiv genom att konvertera från px till rem. Har också adderat %. Guidens hamburgare är inte alls "responsiv".
+Har också tagit bort position "absolute"och position "relative" som inte heller är responsiva, och ändrat till "flex". Istället för att skapa "hamburgar ikonen" 
+och "X-ikonen" manuellt med kod som guiden, använde jag istället färdiga ikoner från "fontawesome". För att göra justeringar i koden använde jag mig av w3schools
+och Googlade för att få hamburgarmenyn/hamburgaren att funka med olika guider. 
 Youtube: https://www.youtube.com/watch?v=XM7sEpl0f7c&ab_channel=PureCode
-Px to rem calculator: https://nekocalc.com/px-to-rem-converter
+Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-converter
 */
 
-/*Ge hamburgaren luftig plats på "header"*/
-.hamburgerIconSpace {
-    padding-right: 5rem; 
-}
 
 /* Stilar för  hamburgermenyn. Förflyttningar osv...*/
 .hamburgerNavigation {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    }
+    width: 100%;
+    margin-top: 50%;
 
-/* Stilar för hamburgermenyn. Förflyttningar osv.. */    
+}
+
+/* Stilar för hamburgermenyn. Förflyttningar osv.. */
 .hamburgerMenu {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
     transition: 0.5s;
-     
+
 }
-    
-    /* Ta bort punktlistor från länkarna i menyn */
-    .hamburgerMenu li {
+
+/* Ta bort punktlistor från länkarna i menyn */
+.hamburgerMenu li {
     list-style-type: none;
-    }
-    
-    /* Stilar för länkarna i menyn */
-    .hamburgerMenu li a {
-        color: #1f3643;
-        text-decoration: none;
-        display: block;
-        padding: 2.5rem 1.5625rem; 
-        line-height: 1;
-        transition: 0.3s;
-        align-items: center; 
-    }
+}
 
-    /* Animeringseffekt när musen "hover"" över länkarna */
-    /* Skugga och bakgrundseffekt */
-    .hamburgerMenu li a:hover {
-        box-shadow: 0 -5px 0px  #1f3643 inset,
-        500px 0 0 rgba(255, 255, 255, 0.03) inset;
-        padding: 35px 25px 45px 25px;
-    }
-    
-    /* Stil för hamburgerikonen */
-    .hamburgerIcon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-    
-    /* Stil för den gömda checkboxen som används för att visa och gömma menyn */
-    .toggleHamburgerCheckbox {
-        display: none; 
-        opacity: 0;
-    }
-    
-    /* Ändrar bakgrundsfärgen på hamburgerikonen när checkboxen är markerad */
-    .hamburgerNavigation input:checked ~ .hamburgerIcon {
+/* Stilar för länkarna i menyn */
+.hamburgerMenu li a {
+    color: #1f3643;
+    text-decoration: none;
+    display: block;
+    padding: 2.5rem 1.5625rem;
+    line-height: 1;
+    transition: 0.3s;
+    align-items: center;
+}
+
+/* Stil för den gömda checkboxen som används för att visa och gömma menyn */
+.toggleHamburgerCheckbox {
+    display: none;
+    opacity: 0;
+}
+
+/* Ändrar bakgrundsfärgen på hamburgerikonen när checkboxen är markerad */
+.hamburgerNavigation input:checked~.hamburgerIcon {
     background: transparent;
-    }
-    
-    
-    /* När checkboxen är markerad, visa menyn genom att ändra positionen till vänster */
-    .hamburgerNavigation input:checked ~ .hamburgerMenu {
-        left: 0;
-        box-shadow: -1.25rem 0 2.5rem rgba(0, 0, 0, 0.3); 
-    }
-    
-    /* Justerar layouten för hamburgermenyn för olika skämar */
-    
-    /*Mobil*/
-    /*Layouten fixas för hamburgermenyn för mindre skärmar, maximalt 768px, 48 rem*/
-    @media screen and (max-width: 48rem) {
-        .hamburgerIcon,
-        .toggleHamburgerCheckbox {
-            display: block;
-        }
-    
-        /*Full width and height for hamburgerMenu */
-        .hamburgerMenu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: #F1E0FF;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem !important;
-            font-weight: 800;
-        }
-    
-        /*Luft i listan med alla komponeneter i meny listan*/
-        .hamburgerMenu li {
-            margin-top: 3rem; 
-        }
-    
-    }
-
-       /*Dator*/
-       /*Skärmar som är större än eller lika med 784px, 49 rem*/
-       @media screen and (min-width: 49rem) {
-        .hamburgerIcon,
-        .toggleHamburgerCheckbox {
-            display: block;
-        }
-    
-        .hamburgerMenu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: #F1E0FF;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem !important;
-            font-weight: 800;
-            z-index: 6000; 
-        }
-        
-          /*Luft i listan med alla komponeneter i meny listan*/
-        .hamburgerMenu li {
-            margin-top: 2rem; 
-        
-    }
-
 }
 
-    /* Stil för länkarna i hamburgermenyn,bredd. */
-    .hamburgerMenu li {
-        width: 100%; 
-    }
-    
-    /* Stilar för länkarna i hamburgermenyn, hur det ser ut. */
-    .hamburgerMenu li a {
-        padding: 1.25rem; 
-        box-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.1) inset; 
-    }
+/* När checkboxen är markerad, visa menyn genom att ändra positionen till vänster */
+.hamburgerNavigation input:checked~.hamburgerMenu {
+    left: 0;
+    box-shadow: -1.25rem 0 2.5rem rgba(0, 0, 0, 0.3);
+}
 
-    /*Visar hamburgermenyn när man trycker på checkboxen som sitter på hamburger ikonen*/
-    .toggleHamburgerCheckbox:checked ~ .hamburgerIcon ~ .hamburgerMenu {
+/*Justerar hur hamburger menyn ser ut för olika skämar */
+@media (max-width: 1920px) {
+
+    .toggleHamburgerCheckbox {
         display: block;
-    
     }
 
-    /*Gömmer hamburgermenyn när checkboxen som sitter på hamburger ikonen inte är markerad*/
-    .toggleHamburgerCheckbox:not(:checked) ~ .hamburgerIcon ~ .hamburgerMenu {
-        display: none;
-       
-    }
-
-     /* Gör så att hamburgaren ignorerar headern. Annars triggas heasdern och blir större när hamburgar menyn öppnas */
-    .hamburger-wrapper {
-        position: fixed;
+    .hamburgerNavigation {
+        width: 100%;
         margin-top: 0;
-        margin-left: 0;
+
+    }
+
+    /* Justerar hur allt ser ut innuti hamburger menyn*/
+    .hamburgerMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*width: 20vw; kommenterar bort, om jag behöver senare, om jag vill göra menyn att den tar hela skärmen*/
+        height: 100vh;
+        background: #F1E0FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem !important;
+        font-weight: 800;
         z-index: 6000;
-      }
+        min-width: 100px;
+    }
 
-      /* X ikonen, för att stänga hamburger menyn */
+    /* Justerar var X ligger i hamburger menyn*/
+    .x-opposite-side-in-menu {
+        padding-left: 11rem;
+    }
+
+    /*Justerar meny komponenterna hur de ser ut*/
+    .hamburgerMenu li a {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    /*Justerar hur hambuyrger meny ikonen ser ut, storlek */
+    #hamburgerImage {
+        font-size: 2em;
+    }
+
+    /* Justerar hur X ikonen ser ut, storlek */
+    #hamburgerImageClose {
+        font-size: 2em;
+    }
+
+    /*Animeringseffekt när musen "hover"" över länkarna*/
+    /*Skugga och bakgrundseffekt*/
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px #1f3643 inset,
+            500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 30px 20px 40px 20px;
+    }
+
+}
+
+@media (max-width: 1574px) {
+
+    .toggleHamburgerCheckbox {
+        display: block;
+    }
+
+    .hamburgerNavigation {
+        width: 100%;
+        margin-top: 0;
+
+    }
+
+    .hamburgerMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*width: 20vw; */
+        height: 100vh;
+        background: #F1E0FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem !important;
+        font-weight: 800;
+        z-index: 6000;
+        min-width: 100px;
+    }
+
+    .x-opposite-side-in-menu {
+        padding-left: 9.5rem;
+    }
+
+
+    .hamburgerMenu li a {
+        padding: 1rem;
+        font-size: 0.7rem;
+    }
+
+
+    #hamburgerImage {
+        font-size: 2em;
+    }
+
+    #hamburgerImageClose {
+        font-size: 2em;
+    }
+
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px #1f3643 inset,
+            500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 30px 20px 40px 20px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .toggleHamburgerCheckbox {
+        display: block;
+    }
+
+    .hamburgerNavigation {
+        width: 100%;
+        margin-top: 0;
+
+    }
+
+    .hamburgerMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*width: 100vw;*/
+        height: 100vh;
+        background: #F1E0FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem !important;
+        font-weight: 800;
+        z-index: 6000;
+        min-width: 100px;
+
+    }
+
+    .x-opposite-side-in-menu {
+        padding-left: 8rem;
+    }
+
+
+    .hamburgerMenu li a {
+        padding: 0.6rem;
+        font-size: 0.6rem;
+    }
+
+
+    #hamburgerImage {
+        font-size: 1.5em;
+
+    }
+
+    #hamburgerImageClose {
+        font-size: 1.5em;
+    }
+
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px #1f3643 inset,
+            500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 20px 10px 30px 10px;
+    }
+
+}
+
+
+@media (max-width: 320px) {
+
+    .toggleHamburgerCheckbox {
+        display: block;
+    }
+
+    .hamburgerNavigation {
+        width: 100%;
+        margin-top: 0;
+
+    }
+
+    .hamburgerMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*width: 100vw;*/
+        height: 100vh;
+        background: #F1E0FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem !important;
+        font-weight: 800;
+        min-width: 100px;
+    }
+
+    /*Justerar var X ligger i hamburger menyn*/
+    .x-opposite-side-in-menu {
+        padding-left: 7rem;
+    }
+
+
+    .hamburgerMenu li a {
+        padding: 0.6rem;
+        font-size: 0.5rem;
+    }
+
+
+    #hamburgerImage {
+        font-size: 1.3em;
+
+    }
+
+    #hamburgerImageClose {
+        font-size: 1.3em;
+    }
+
+    .hamburgerMenu li a:hover {
+        box-shadow: 0 -5px 0px #1f3643 inset,
+            500px 0 0 rgba(255, 255, 255, 0.03) inset;
+        padding: 15px 5px 25px 5px;
+    }
+
+}
+
+
+/*Hamburgar ikonen färg*/
+.hamburger-style {
+    color: white;
+}
+
+
+/*X ikonen färg*/
+.hamburger-close-style {
+    color: #1f3643;
+}
+
+/*Gör plats melan listan och X*/
+.makeSpaceBetweenListAndX {
+    padding-top: 1rem;
+}
+
+/*Visar hamburgermenyn när man trycker på checkboxen som sitter på hamburger ikonen*/
+.toggleHamburgerCheckbox:checked~.hamburgerIcon~.hamburgerMenu {
+    display: block;
+    padding-top: 2rem;
+
+}
+
+/*Gömmer hamburgermenyn när checkboxen som sitter på hamburger ikonen inte är markerad*/
+.toggleHamburgerCheckbox:not(:checked)~.hamburgerIcon~.hamburgerMenu {
+    display: none;
+
+}
+
+/*Gör så att hamburgaren ignorerar headern. Annars triggas heasdern och blir större när hamburgar menyn öppnas*/
+.hamburger-wrapper {
+    position: fixed;
+    margin-top: 0;
+    z-index: 6000;
+}
+
+/*X ikonen, för att stänga hamburger menyn*/
 .hamburgerImage {
-    content: url("hamburgerIcon.png");
+    content: url("#hamburgerImage");
 }
 
-/* Byter bild från hamburgaren till ett X. X kommer fram när man öppnar hamburgar menyn. Hamburgaren kommer fram, när man stänger menyn*/
-.hamburgerNavigation input:checked ~ .hamburgerIcon .hamburgerImage {
-    content: url("closeHamburgerIcon.png");
+/*Byter bild från hamburgaren till ett X. X kommer fram när man öppnar hamburgar menyn. Hamburgaren kommer fram, när man stänger menyn*/
+.hamburgerNavigation input:checked~.hamburgerIcon .hamburgerImage {
+    content: url("#hamburgerImageClose");
 }
 
-/* hamburger SLUT: Madelene*/
+/*hamburger SLUT: Madelene rosengren*/
+
 
 
 
@@ -470,9 +617,10 @@ W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
 Chat Gpt: https://chat.openai.com/  */
 
 .slideshow-container {
-    max-width: 70%; /* 62.5em = 1000px (1em = 16px) */
+    max-width: 70%;
+    /* 62.5em = 1000px (1em = 16px) */
     margin: auto;
-    position: relative; 
+    position: relative;
 }
 
 /* Nästa/Föregående knappar */
@@ -480,11 +628,11 @@ Chat Gpt: https://chat.openai.com/  */
 .next {
     cursor: pointer;
     width: auto;
-    margin-top: -1.375rem; 
+    margin-top: -1.375rem;
     padding: 1rem;
     color: white;
     font-weight: bold;
-    font-size: 1.125rem; 
+    font-size: 1.125rem;
     transition: 0.6s ease;
     border-radius: 0 0.1875rem 0.1875rem 0;
     user-select: none;
@@ -493,10 +641,14 @@ Chat Gpt: https://chat.openai.com/  */
     transform: translateY(-50%);
 }
 
+.hamburgerIcon :hover {
+    cursor: pointer;
+}
+
 /* Position "Nästa knapp" till höger */
 .next {
     right: 0;
-    border-radius: 0.1875rem 0 0 0.1875rem; 
+    border-radius: 0.1875rem 0 0 0.1875rem;
 }
 
 /* Svart bakgrund med lite genomskinlighet vid hover */
@@ -508,8 +660,8 @@ Chat Gpt: https://chat.openai.com/  */
 /* Bildtext */
 .text {
     color: #f2f2f2;
-    font-size: 0.9375rem; 
-    padding: 0.5rem 0.75rem; 
+    font-size: 0.9375rem;
+    padding: 0.5rem 0.75rem;
     width: 100%;
     text-align: center;
 }
@@ -518,7 +670,7 @@ Chat Gpt: https://chat.openai.com/  */
 .number-text {
     color: #f2f2f2;
     font-size: 0.75rem;
-    padding: 0.5rem 0.75rem; 
+    padding: 0.5rem 0.75rem;
     top: 0;
 }
 
@@ -527,7 +679,7 @@ Chat Gpt: https://chat.openai.com/  */
     cursor: pointer;
     height: 0.9375rem;
     width: 0.9375rem;
-    margin: 0 0.125rem; 
+    margin: 0 0.125rem;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -557,14 +709,21 @@ Chat Gpt: https://chat.openai.com/  */
     height: auto;
     display: block;
 }
+
+.slideshow-container {
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.slides img {
+    height: 35.5rem;
+}
+
 /* Slut slideshow - Lorik */
 
 
-/*Här börjar Dianas CSS kod.
-Jag har satt margin för att få mellanrum mellan elementen.
-Jag har skapat en flexbox så att "containers" blir responsivt.
-Sedan har jag använt space between för mellanrum
-*/
+/*Här börjar Dianas CSS kod.*/
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -573,16 +732,22 @@ Sedan har jag använt space between för mellanrum
     margin-top: 2%;
     margin-bottom: 3%;
 }
+/*Skapat en flexbox som har gap för att skapa luft mellan
+innehåll. Centrerat innehåll i mitten, samt satt margin uppe
+och nere.*/
 
 .single {
     max-width: 48%;
     align-content: center;
     position: relative;
 }
+/*Container som heter single och innehåler bild och rubrik,
+satt vidd på 48% för att ha två boxar efter varandra i rad.*/
 
 .single img {
     width: 100%;
 }
+/*Bredd på bild.*/
 
 .double {
     display: flex;
@@ -590,15 +755,19 @@ Sedan har jag använt space between för mellanrum
     max-width: 23.7%;
     gap: 0.3rem 0rem;
 }
+/*skapat container för boxarna som innehåller fyra bilder,
+satt en vidd för att ha två boxar på varje rad.*/
 
 .double img {
     vertical-align: middle;
     width: 100%;
 }
+/*Centrerat innehåll och satt max vidd.*/
 
 .cardheader {
     position: relative;
 }
+/*Position relative för att kunna placera min overlay.*/
 
 .colored {
     background-color: rgba(31, 54, 67, 0.8);
@@ -613,6 +782,8 @@ Sedan har jag använt space between för mellanrum
     width: 100%;
     text-align: center;
 }
+/*Overlay med rubrik, transparant bakgrund och absolut
+position som är precis i mitten.*/
 
 .colored1 {
     font-size: 1.5rem;
@@ -624,6 +795,8 @@ Sedan har jag använt space between för mellanrum
     text-align: center;
     width: 90%;
 }
+/*Overlay med rubrik och absolut
+position som är precis i mitten.*/
 
 .overlay {
     width: 100%;
@@ -634,6 +807,8 @@ Sedan har jag använt space between för mellanrum
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/*Overlay med transparant bakgrund och absolut
+position som är precis i mitten.*/
 
 /* Slut - Diana*/
 
@@ -648,20 +823,17 @@ Sedan har jag använt space between för mellanrum
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        width: auto; 
-        height: 100%;position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: auto; 
+        width: auto;
         height: 100%;
     }
 
-    /*nav.top-desktop-nav {
-        display: none; /*gömmer navigeringslänkar i headern på mindre skärm*
-    }*/
+    nav.top-desktop-nav {
+        padding: 0.5em;
+    }
 
     #svButton {
-        display: none; /*gömmer svenska språkvalsknappen på mindre skärm*/
+        display: none;
+        /*gömmer svenska språkvalsknappen på mindre skärm*/
     }
 
     .flex-container {
@@ -672,8 +844,8 @@ Sedan har jag använt space between för mellanrum
         max-width: 80vw;
     }
 
-    h2 {
-        width: 80vw;
+    .colored {
+        width: 100%;
     }
 
     .double {
@@ -698,7 +870,8 @@ Sedan har jag använt space between för mellanrum
         width: 100%;
         display: flex;
     }
-    .logo-wrapper{
+
+    .logo-wrapper {
         display: flex;
         height: 70px;
     }
@@ -707,16 +880,26 @@ Sedan har jag använt space between för mellanrum
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        width: auto; 
+        width: auto;
         height: 100%;
     }
 
     nav.top-desktop-nav {
-        font-size: 0.8em;
+        font-size: 0.65em;
+    
+    }
+
+    nav.top-desktop-nav li {
+        margin: 0 1em;
+    }
+
+    nav.top-desktop-nav a {
+        padding: 0;
     }
 
     #svButton {
-        display: none; /*gömmer svenska språkvalsknappen på mindre skärm*/
+        display: none;
+        /*gömmer svenska språkvalsknappen på mindre skärm*/
     }
 
     footer .footer-nav h1 {
@@ -736,18 +919,18 @@ Sedan har jag använt space between för mellanrum
         grid-template-columns: repeat(2, 1fr);
     }
 
-         footer ul li {
-            margin: 0.2em 0;
-         }
+    footer ul li {
+        margin: 0.2em 0;
+    }
 }
 
 @media (max-width: 400px) {
 
     header {
         width: 100%;
-        display:flex;
+        display: flex;
     }
-    
+
     .logo {
         width: 50%;
         max-width: 10em;
@@ -756,11 +939,21 @@ Sedan har jag använt space between för mellanrum
     }
 
     nav.top-desktop-nav {
-        font-size: 0.6em; /*gömmer navigeringslänkar i headern på mindre skärm*/
+        font-size: 0.6em;
+    }
+
+    nav.top-desktop-nav li {
+        margin: 0 1em;
+    }
+
+    nav.top-desktop-nav a {
+        padding: 0;
+        
     }
 
     #svButton {
-        display: none; /*gömmer svenska språkvalsknappen på mindre skärm*/
+        display: none;
+        /*gömmer svenska språkvalsknappen på mindre skärm*/
     }
 
     footer ul {
@@ -781,10 +974,31 @@ Sedan har jag använt space between för mellanrum
     }
 }
 
+.skip-link {
+    padding: 1em;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+    transform: translateY(-100%);
+    /* Det här gör så att elementet börjar utanför skärmen, alltså att den går uppåt på y-axeln eftersom det är -100%, om det hade varit positivt, 100%, så skulle den ha åkt ner. Det skulle man använda ifall den var positionerad på botten av skärmen. Man kan även göra så att den skjuts åt sidan, med translateX istället. */
+    transition: transform 0.7s ease-out;
+    color: #fff;
+}
+
+.skip-link:hover {
+    text-shadow: 2px 2px 5px #fff;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    /* När elementet är i focus, så kommer den att komma tillbaka till sin ursprungsposition. */
+    transition: transform 0.7s ease-out;
+    outline: 0;
+}
 
 /*Here<!--SearchboxSTARTS-->    - William */
 
-.Search-Form, #Search-WithLove{
+.Search-Form,
+#Search-WithLove {
 
     background-color: rgb(255, 255, 255);
 
@@ -803,34 +1017,35 @@ Sedan har jag använt space between för mellanrum
     border-color: rgb(11, 115, 206);
 
     position: left;
- 
+
 }
 
-.Search-Form i, #Search-WithLove i {
+.Search-Form i,
+#Search-WithLove i {
     color: rgb(158, 158, 156);
 
     padding: 0;
 
-    background-color: rgba(149, 147, 150, 0.281);
+    background-color:none;
 
     border-radius: 30px;
 
-    font-size: 20px;
+    font-size: 1.7em;
 }
 
-.Search-Bar, #Search-Bar{
+.Search-Bar,
+#Search-Bar {
     outline: none;
 
     max-width: 7em;
 
     max-height: 5em;
-    
-    
-      
+
 }
 
-.Search-Button, #Search-Button {
-    
+.Search-Button,
+#Search-Button {
+
     outline: none;
 
     border-radius: 30px;
@@ -841,35 +1056,55 @@ Sedan har jag använt space between för mellanrum
 
     max-width: 8rem;
 }
+
 #Search-WithLove {
-    display: none;}
-
-@media(max-width: 480px){ /*Search box disapears on 400px*/
-
-.Search-Form{
-
-display:none;
-
-}
-#Search-WithLove{
-/*this here show the search box (with another class name ) in the hamburger menu*/
-    
-    display:flex;
-    margin-top: 6em; /*This so it does not show under the X button*/
-    
+    display: none;
 }
 
- }
-    
- @media (min-width: 481px) {/*this will do cool stuff- :)
+@media(max-width: 768px) {
+    /*Search box disapears on 768px*/
+
+    .Search-Form {
+
+        display: none;
+
+    }
+
+    #Search-WithLove {
+        /*this here show the search box (with another class name ) in the hamburger menu*/
+
+        display: flex;
+        margin-top: 6em;
+        /*This so it does not show under the X button*/
+
+    }
+
+}
+
+@media (min-width: 767px) {
+
+    /*this will do cool stuff- :)
                              shows the usual search bar and 
                              hides the one in the hamburger menu*/
     .Search-Form {
-    display: flex;
-}
+        display: flex;
+    }
 
     #Search-WithLove {
-     display:none;
+        display: none;
+    }
 }
-}
-    /*Here <!--SearchboxENDS-->*/
+
+/*Here <!--SearchboxENDS-->*/
+
+
+
+
+
+
+
+
+
+
+
+
