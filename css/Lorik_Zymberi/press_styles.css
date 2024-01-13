@@ -873,7 +873,7 @@ main {
     text-align: center;
     cursor: pointer;
     background-color: #fff;
-    border: 0.1rem solid #ddd;
+    border: 1rem solid #1F3643;
     border-radius: 0.8rem;
     transition: transform 0.3s;
 }
