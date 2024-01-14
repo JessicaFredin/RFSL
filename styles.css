@@ -613,9 +613,9 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
 /*hamburger SLUT: Madelene rosengren*/
 
 
-/*  Bild "Slidern" START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
+/*  Bild "Slidern" START, Jag har använt mig av W3 Schools.
 W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp, https://www.w3schools.com/howto/howto_css_overlay.asp
-Chat Gpt: https://chat.openai.com/ Det var från början en slider men vi har justerat den så att det enbart är en bild eftersom vi inte fick använda oss 
+ Det var från början en slider men vi har justerat den så att det enbart är en bild eftersom vi inte fick använda oss 
 av javascipt.    */ 
 
 .slideshow-container {
@@ -645,7 +645,7 @@ av javascipt.    */
 
 .image-overlay h2 {
     margin: 0;
-    font-size: 2rem; /* Justera textstorleken här */
+    font-size: 2rem; /* textstorleken  */
     background-color: rgba(0, 0, 0, 0.5); /* Justera genomskinligheten här (0 till 1) */
     color: #fff; /* Textfärg */
     padding: 10px; /* Justera padding för bakgrundsbakgrunden */
@@ -655,12 +655,12 @@ av javascipt.    */
 /* Responsivitet för mindre skärmar */
 @media (max-width: 768px) {
     .image-overlay {
-        padding: 10px; /* Justera padding för mindre skärmar */
+        padding: 10px; 
     }
 
     .image-overlay h2 {
-        font-size: 1.5rem; /* Justera textstorleken för mindre skärmar */
-        padding: 5px; /* Justera padding för bakgrundsbakgrunden på mindre skärmar */
+        font-size: 1.5rem; 
+        padding: 5px; /
     }
 }
 
