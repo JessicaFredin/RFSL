@@ -98,7 +98,6 @@ mellan boxarna. Satt lite luft också i toppen med margin. Innehållet
     width: 30%;
     height: 20em;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    justify-content: center;
 }
 /*Mina boxar, har satt en bredd på 30% för att ha tre boxar på en rad, sedan i regeln @media
 ändrar jag hur många boxar som är på varje rad i oliks skärmstorlekar. Så det går från tre, till
@@ -115,7 +114,6 @@ Innehållet flexar i en kolumn och innehållet centreras i mitten.*/
     width: 30%;
     height: 20em;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    justify-content: center;
 
 }
 /*Första och sista boxen har en overlay med en SVG så jag har satt här position relative. Även
@@ -123,7 +121,8 @@ en unik bakgrundsfärg och färg på text.*/
 
 .headingBox {
     font-size: 1.3em;
-    padding: 5%;
+    margin-top: 2em;
+    padding: 0% 5%;
     font-weight: bold;
     text-align: center;
 }
@@ -132,7 +131,8 @@ i mitten.*/
 
 .paragraphBox {
     font-size: 1em;
-    padding: 5%;
+    margin-top: 2em;
+    padding: 0% 5%;
     line-height: 1.5em;
 }
 /*Satt storlek på text, padding igen för luft runt innehåll och ändrat höjd på raderna,
@@ -140,7 +140,8 @@ för jag tyckte raderna var för täta inpå varandra annars, så för bättre l
 
 .headingBoxColored {
     font-size: 1.3em;
-    padding: 5%;
+    margin-top: 2em;
+    padding: 0% 5%;
     font-weight: bold;
     text-align: center;
     color: #ff7448;
@@ -148,15 +149,16 @@ för jag tyckte raderna var för täta inpå varandra annars, så för bättre l
 /*Färg på text i rubrik som har en egen färg.*/
 
 .boxButton {
+    margin-bottom: auto;
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
+    margin-bottom: 0%;
 }
 /*Flexbox med knappar där innehållet flexar i riktning av en rad, samt i änden på
 raden,*/
 
 .interactions {
-    padding: 3% 7% 0% 3%;
+    padding: 0% 7% 0% 3%;
     font-weight: bold;
     color: #ff7448;
     width: fit-content;
@@ -171,7 +173,7 @@ button {
 /*Muspekaren förvandlas till en hand över knapparna.*/
 
 .coloredInteractions {
-    padding: 3% 7% 0% 3%;
+    padding: 0% 7% 0% 3%;
     font-weight: bold;
     color: #fffdfc;
     width: fit-content;
