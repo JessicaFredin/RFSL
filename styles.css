@@ -994,6 +994,7 @@ position som är precis i mitten.*/
     border: none;
 
     max-width: 8rem;
+    cursor: pointer;
 }
 
 #Search-WithLove, #Search-WithLove-Header {
