@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="hbtqi-fakta" content="RFSL - fakta om HBTQI.">
+    <link rel="stylesheet" href="../../css/Josephine_Lindblad/fakta-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="icon" href="path/to/favicon.ico">
+    <link rel="stylesheet" href="../../styles.css" />
+    <title>HBTQI Fakta</title>
+</head>
+
+<body>
+    <div class="sticky-header">
+        <header>
+            <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
+              
+    
+    <!--HAMBURGER "START": Madelene Rosengren-->
+    <!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
+    <!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+    fixat alla errors som är kopplade till hamburgaren/hamburger menyn. Även kontrollerat med "The web accessibility practices evaluator (WCAG 2.1)
+    https://accessmonitor.acessibilidade.gov.pt/. Det finns en varning för sidan aktuellt "Consider using the h1 element as a top-level heading only",
+    jag gör redan detta som felmeddelandet skriver, jag använder den viktigaste rubriken längst upp på undersidan "Aktuellt". 
+    
+    Det finns en "röd" felmeddelande kopplat till hamburgaren/hamburger menyn som är en "förvirrande" felmeddelande,
+    som jag inte hunnit lösa. I felmeddelandet säger de att "Labels should be positioned just before the fields. Labels for checkbox fields or radio button 
+    fields should be positioned just after the fields." Jag följer instruktionerna. "toggleHamburgerCheckbox" och "toggleHamburgerCheckboxClose" är checkboxar.
+    "Labels" är placerade precis efter "checkboxarna ", vilket är den rekommendationerna för tillgänglighet. Kan vara en annan fel som bråkar, och resulterar
+    till en otydlig resultat när felmeddelandet redovisas i validatorns scannings system-->      
+    <div class="hamburger-wrapper">
+        <span class="hamburgerNavigation"></span>
+        <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+        <label for="toggleHamburgerCheckbox" class="hamburgerIcon"> 
+            <span class="hamburgerIconSpace">
+                <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
+            </span>
+        </label>
+        <ul class="hamburgerMenu">
+            <li class="hamburger-wrapper">
+                <ul>
+                    <li class="x-opposite-side-in-menu">
+                        <aside class="hamburgerNavigation"></aside>
+                        <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                            <span class="hamburgerIconSpace">
+                                <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </li>                 
+            <li class="makeSpaceBetweenListAndX">
+                <ul>
+                    <li><a href="../../index.html">Hem</a></li>
+                    <li><a href="../Diana_Eriksson/medlem_och_community.html">Medlem och community</a></li>
+                    <li><a href="../My_Rehnmark/ge_en_gava.html">Ge en gåva</a></li>
+                    <li><a href="#">Verksamhet</a></li>
+                    <li><a href="../Madelene_Rosengren/aktuellt.html">Aktuellt</a></li>
+                    <li><a href="#">Certifiering och utbildning</a></li>
+                    <li><a href="../Josephine_Lindblad/hbtqi-fakta.html">Hbtqi-fakta & tips</a></li>
+                    <li><a href="../William_Lundqvist/about.html">Om oss</a></li>
+                    <li><a href="../Lorik_Zymberi/press.html">Press</a></li>
+                    <li> 
+                        <form id="Search-WithLove">
+                        <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......">
+                        <button  type="submit" aria-label="Search" id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--HAMBURGER "END": Madelene Rosengren-->
+           
+    
+    
+            <!-- kod för logotyp - Josephine, My, Louise -->
+            <div class="logo-wrapper">
+    
+                <a href="../../index.html" class="logo-link"><img src="../../logo/RFSL_logotyp_neg.svg" alt="RFSL Logo" class="logo"></a>
+            
+            </div>
+    
+            <!--Searchbox-STARTS-->
+            <div class="right-content">
+            <form class="Search-Form">
+                <input type="text" class="Search-Bar" name="SearchBar" placeholder="Sök......">
+                <button  type="submit" aria-label="Search" class="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+            <!--Searchbox-ENDS-->
+    
+            <!-- språkknappar - Josephine, My, Louise -->
+            <div class="language">
+                <ul>
+                    <li><a href="#" id="enButton">EN</a></li>
+                    <li><a href="#" id="svButton">SV</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        </header>
+            
+        <!--navigering för viktiga länkar - Josephine, My, Louise-->
+        <nav class="top-desktop-nav">
+            <ul>
+                <li><a href="../My_Rehnmark/ge_en_gava.html">GE EN GÅVA</a></li>
+                <li><a href="../Jessica_Fredin/bli-medlem.html" id="bli-medlem">BLI MEDLEM</a></li>
+                <li><a href="../Louise_Bodin_Klang/begreppsordlista.html">BEGREPPSORDLISTA</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!---- Main content ----->
+    <div class="main-container">
+        <div class="img-container">
+            <!-- Bild hämtad från https://elements.envato.com/group-of-happy-multiethnic-people-dancing-together-N3HFAAV under licens-->
+            <img class="image" src="../../images/happyPeople.jpg" alt="Group of multiethnic happy people dancing together.">
+            <div class="card-overlay"></div>
+        </div>
+        <div class="content-over-wave">
+            <h2 class="page-title" id="main-content">Hbtqi-fakta & tips</h2>
+            <p>I avsnittet "HBTQI Fakta" kommer vi att utforska och dela viktig information kring HBTQI - ett akronym som står för homosexuella, bisexuella, transpersoner, queer, intersexuella och andra sexuella orienteringar och könsidentiteter. Detta avsnitt är avsett att vara en resurs för alla som önskar att lära sig mer om HBTQI-communityn och dess historia.</p>
+            <div class="divider"></div>
+        </div>
+        <div class="wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffff" fill-opacity="1"
+                    d="M0,128L48,121.3C96,115,192,101,288,96C384,91,480,101,576,117.3C672,133,768,149,864,160C960,171,1056,165,1152,144.7C1248,123,1344,101,1392,90.7L1440,80L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </div>
+    <div class="additional-content">
+        <div class="card-row">
+            <div class="card">
+                <div class="image-in-card">
+                    <div class="read-time">5 min</div>
+                    <!-- Samtliga bilder i korten är från RFSLs egna hemsida  -->
+                    <img src="https://www.rfsl.se/wp-content/uploads/imagecache/0e/0e33220f24f3b60481a0b414d67d3567.jpg"
+                        alt="Card Image">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-text-container">
+                    <h3 class="card-title">HBTQI</h3>
+                    <p class="card-description">Hbtqi, ett paraplybegrepp för homosexuella, bisexuella, transpersoner,
+                        personer
+                        med queera uttryck och identiteter och intersexpersoner.</p>
+                    <div class="card-buttons">
+                        <button class="read-more-btn">Läs mer</button>
+                        <button class="share-btn">Dela</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-in-card">
+                    <div class="read-time">3 min</div>
+                    <img src="https://www.rfsl.se/wp-content/uploads/imagecache/f2/f260048abd7c12eaa4516c95283e649d.jpg"
+                        alt="Card Image">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-text-container">
+                    <h3 class="card-title">ATT FRÅGA OM KÖN OCH TRANS I ENKÄTER</h3>
+                    <p class="card-description">Många hör av sig till oss på RFSL och ber om råd om hur de kan fråga om
+                        kön och
+                        trans på ett bra sätt i enkätundersökningar. Här hittar du våra rekommendationer.</p>
+                    <div class="card-buttons">
+                        <button class="read-more-btn">Läs mer</button>
+                        <button class="share-btn">Dela</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-in-card">
+                    <div class="read-time">4 min</div>
+                    <img src="https://www.rfsl.se/wp-content/uploads/imagecache/a9/a9c291a9d01eecbf2b493df028aba00f.jpg"
+                        alt="Card Image">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-text-container">
+                    <h2 class="card-title">ATT SKRIVA NORMKRITISKT</h2>
+                    <p class="card-description">Att skriva inkluderande och normkritiskt är inte svårt. Här får du tips
+                        om hur
+                        du kan skriva inkluderande.</p>
+                    <div class="card-buttons">
+                        <button class="read-more-btn">Läs mer</button>
+                        <button class="share-btn">Dela</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-row">
+            <div class="card">
+                <h3 class="card-title">LISTA ÖVER BEGREPP</h3>
+                <p class="card-description">Få koll på begrepp och ord.</p>
+                <div class="card-buttons">
+                    <button class="read-more-btn">Läs mer</button>
+                    <button class="share-btn">Dela</button>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">FAQ: KÖNSDYSFORI SOM DIAGNOS</h3>
+                <p class="card-description">RFSL får många frågor kring diagnoser och diagnoskoder kopplat till
+                    könsdysfori och könsbekräftande vård. Här reds ut vad som gäller idag och vad som diskuteras inför
+                    framtiden.</p>
+                <div class="card-buttons">
+                    <button class="read-more-btn">Läs mer</button>
+                    <button class="share-btn">Dela</button>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">KÖNSNEUTRALA OMKLÄDNINGSRUM OCH TOALETTER</h3>
+                <p class="card-description">Många har frågor om omklädningsrum och toaletter, framförallt hur man kan
+                    göra dessa rum tillgängliga för transpersoner eller skapa könsneutrala utrymmen. Här har vi samlat
+                    information och olika lösningar att inspireras av.</p>
+                <div class="card-buttons">
+                    <button class="read-more-btn">Läs mer</button>
+                    <button class="share-btn">Dela</button>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">NORMKRITIK</h3>
+                <p class="card-description">Normkritik är en pedagogisk metod för att skapa mer jämlikhet i samhället.
+                </p>
+                <div class="card-buttons">
+                    <button class="read-more-btn">Läs mer</button>
+                    <button class="share-btn">Dela</button>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="card-title">ÄKTENSKAP</h3>
+                <p class="card-description">Äktenskapet i Sverige blev könsneutralt från den 1 maj 2009. Sedan dess kan
+                    samkönade par ingå äktenskap på samma villkor som olikkönade par.</p>
+                <div class="card-buttons">
+                    <button class="read-more-btn">Läs mer</button>
+                    <button class="share-btn">Dela</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---- Footer ----->
+    <footer>
+        <div class="footer-nav">
+            <h1>RFSL</h1>
+            <p>Sveriges könstillhörighetslag är föråldrad och den spär även på kötiderna inom den könsbekräftande
+                vården.
+                Lagens
+                utformning är från 1972, då Sverige var först i världen…</p>
+            <div class="social-media-links">
+                <a target="_blank" href="https://www.facebook.com/rfsl.forbundet/?fref=ts">
+                    <i class="social-media-icon fa-brands fa-facebook"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com">
+                    <i class="social-media-icon fab fa-instagram"></i>
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">Hem</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Kontakta</a></li>
+                <li><a href="#">Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 RFSL. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
