@@ -614,7 +614,7 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
 
 
 /*  Bild "Slidern" START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
-W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
+W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp, https://www.w3schools.com/howto/howto_css_overlay.asp
 Chat Gpt: https://chat.openai.com/ Det var från början en slider men vi har justerat den så att det enbart är en bild eftersom vi inte fick använda oss 
 av javascipt.    */ 
 
@@ -624,10 +624,44 @@ av javascipt.    */
     position: relative;
 }
 
+.slides {
+    position: relative;
+}
+
 .slides img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-overlay h2 {
+    margin: 0;
+    font-size: 2rem; /* Justera textstorleken här */
+    background-color: rgba(0, 0, 0, 0.5); /* Justera genomskinligheten här (0 till 1) */
+    color: #fff; /* Textfärg */
+    padding: 10px; /* Justera padding för bakgrundsbakgrunden */
+    box-sizing: border-box;
+}
+
+/* Responsivitet för mindre skärmar */
+@media (max-width: 768px) {
+    .image-overlay {
+        padding: 10px; /* Justera padding för mindre skärmar */
+    }
+
+    .image-overlay h2 {
+        font-size: 1.5rem; /* Justera textstorleken för mindre skärmar */
+        padding: 5px; /* Justera padding för bakgrundsbakgrunden på mindre skärmar */
+    }
 }
 
 /* Slut slideshow - Lorik */
