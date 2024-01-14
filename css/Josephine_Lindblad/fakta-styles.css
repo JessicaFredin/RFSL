@@ -1,0 +1,395 @@
+body {
+    font-size: 16px;
+    font-family: "Basic sans", "work sans", sans-serif;
+    letter-spacing: .03em;
+    min-height: 100%;
+}
+
+.main-container {
+    position: relative; 
+    background: #ffffff; 
+}
+/* bild container*/
+.img-container {
+    display: flex;
+    height: 60vh;
+    z-index: 0;
+    margin-bottom: -5px;
+}
+/* styling av innehållet ovanför vågmönstret*/
+.content-over-wave {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    bottom: 60px; 
+    color: #1f3643;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+/* styling av vågmönstret*/
+.wave {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1; 
+}
+/* styling av bilder*/
+.image {
+    width: 100%;
+    bottom: 0;
+    object-fit: cover;
+    z-index: 0; 
+    margin-bottom: 5px; 
+}
+/* styling av bilder inuti korten*/
+.image-in-card img {
+    flex: 1 1 auto; 
+    margin: 10px; 
+    display: block; 
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-out;
+}
+/* styling av sid-titeln*/
+.page-title {
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+/* styling av ytterliagre innehåll */
+
+.additional-content {
+    background: #ffffff; 
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+    margin-bottom: 200px;
+}
+/* styling av divider för att separera innehåll */
+
+.divider{
+    margin-top: 20px;
+    display: flex;
+    height: 1px;
+    background-color: rgb(208, 208, 208);
+    border-radius: 10px;
+}
+/* styling för en rad kort -->  för att gruppera kort på sidan */
+
+.card-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+/* styling av kort*/
+
+.card {
+    flex: 1 1 auto;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    height: auto;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    position: relative; 
+    overflow: hidden;
+    
+}
+
+
+.image-in-card {
+    height: auto; /* Set a fixed height for the image container */
+    position: relative; 
+    overflow: hidden;
+    transition: transform 0.3s ease-out;
+}
+/* styling av bildern inuti kort*/
+.image-in-card img {
+    height: 100%; 
+    object-fit: cover; /* Ensures the image covers the card area */
+    transition: transform 0.3s ease-out;
+    top: 0;
+    left: 0;
+}
+
+/* kort overlay */
+.card-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay color */
+    opacity: 0; 
+    transition: opacity 0.3s ease-out;
+}
+/* container för texten på kort */
+.card-text-container {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: background-color 0.3s ease-out;
+    background: rgba(0, 0, 0, 0.5); 
+}
+/* stylig av lästid på kort */
+.read-time {
+    display: none; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.8em;
+    z-index: 10; 
+}
+/* hover effekt på kort */
+.card:hover .read-time {
+    display: block; /* Visa lästiden */
+}
+.Search-Button{
+    margin-left: -22px !important;
+}
+
+.card-text-container {
+    background: #1f3643; 
+}
+/* bilden visas på kort vid hovring över*/
+
+.card:hover .image-in-card img {
+    transform: scale(1.1); 
+}
+/* opacitet på overlay ändras vid hovring */
+.card:hover .card-overlay {
+    opacity: 1; 
+}
+/* Bakgrundsfärg för textcontainer blir genomskinlig vid hovring */
+.card:hover .card-text-container {
+    background: transparent; 
+}
+
+/* styling för första radens kort */
+.card-row:first-child .card {
+    flex: 0 0 calc(33.333% - 20px);  /* tre kort per rad */
+}
+
+/* styling för andra radens kort */
+.card-row:last-child .card {
+    flex: 0 0 calc(20% - 20px);  /* fem kort per rad */
+    background-color: #40284a;
+}
+
+.card-row:last-child .card-title{
+    color:#fcfccc;
+}
+/* styling för titel på kort */
+.card-title {
+    margin-top: 20px;
+    font-family: 'Basic Sans', sans-serif;
+    font-size: 1.5em; 
+    font-weight: 500;
+    padding: 0px 0px 20px 20px; 
+    color: #fc744c;
+    width: 80%;
+}
+/* styling av kortbeskrivning */
+.card-description {
+    font-family: 'Basic Sans', sans-serif;
+    font-size: 1em; 
+    padding: 0px 10px 20px 20px;
+    color: white; 
+}
+/* styling av knappar på kort */
+.card-buttons {
+    display: flex;
+    margin-top: auto;
+    gap: 10px;
+    padding: 0px 0px 20px 20px; 
+    background: none; 
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+}
+/* Effekt vid hovring över kort */
+.card:hover{
+    transform: scale(1.05);
+}
+/* styling av knappar */
+button{
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #fcfccc;
+    color: #1f3643;
+    border: none;
+}
+/* styling av knappar vid hovring */
+button:hover{
+    background: none;
+    color: #fcfccc;
+    border: none;
+}
+
+/* Responsiva stilar för skärmstorlekar mellan 481px och 1092px */
+@media (min-width: 1093px)  {
+    .additional-content{
+        margin-top: 10px;
+    }
+    .content-over-wave p{
+        font-size: 16px;
+    }
+    .content-over-wave {
+        bottom: 26px;
+    }
+    .page-title {
+        font-size: 42px; 
+    }
+}
+
+
+/* Responsiva stilar för skärmstorlekar mellan 481px och 1092px */
+@media (min-width:766px) and (max-width: 1092px)  {
+    .img-container{
+        height: 40vh;
+    }
+    .additional-content{
+        margin-top: 90px;
+    }
+    .content-over-wave p{
+        font-size: 16px;
+    }
+    .content-over-wave {
+        bottom: -80px;
+    }
+    .page-title {
+        font-size: 28px; 
+    }
+    .card {
+        max-width: 100%; 
+    }
+    .card-row:first-child .card {
+        flex: 0 0 calc(100% - 20px);
+    }
+    .card-row:first-child .card-title {
+        font-size: 26px;
+    }
+    .card-row:first-child p {
+        font-size: 16px;
+    }
+    .card-row:last-child .card {
+        flex: 0 0 calc(100% - 20px);
+    }
+    .card-row:last-child .card-title {
+        font-size: 26px;
+    }
+    .card-row:last-child p{
+        font-size: 16px;
+    }
+    .additional-content{
+        margin-bottom: 80px;
+    }
+}
+/* Responsiva stilar för skärmstorlekar under 480px */
+@media (max-width: 480px) {
+    .img-container{
+        height: 50%;
+    }
+    .additional-content{
+        margin-top: 130px;
+    }
+    .content-over-wave p{
+        font-size: 14px;
+    }
+    .content-over-wave {
+        bottom: -130px;
+    }
+    .page-title {
+        font-size: 20px; 
+    }
+    .card {
+        max-width: 100%; 
+    }
+    .card-row:first-child .card {
+        flex: 0 0 calc(100% - 20px);
+    }
+    .card-row:first-child .card-title {
+        font-size: 20px;
+    }
+    .card-row:first-child p {
+        margin-top: -10px;
+        font-size: 14px;
+    }
+    .card-row:last-child .card {
+        flex: 0 0 calc(100% - 20px);
+    }
+    .card-row:last-child .card-title {
+        font-size: 20px;
+    }
+    .card-row:last-child p{
+        font-size: 14px;
+    }
+    .additional-content{
+        margin-bottom: 80px;
+    }
+}
+
+
+
+
+/* Responsiva stilar för skärmstorlekar mellan 481px och 1092px */
+@media (min-width:481px) and (max-width: 765px)  {
+    .img-container{
+        height: 40vh;
+    }
+    .additional-content{
+        margin-top: 140px;
+    }
+    .content-over-wave p{
+        font-size: 16px;
+    }
+    .content-over-wave {
+        bottom: -130px;
+    }
+    .page-title {
+        font-size: 28px; 
+    }
+    .card {
+        max-width: 100%; 
+    }
+    .card-row:first-child .card {
+        flex: 0 0 calc(100% - 20px);
+    }
+    .card-row:first-child .card-title {
+        font-size: 26px;
+    }
+    .card-row:first-child p {
+        font-size: 16px;
+    }
+    .card-row:last-child .card {
+        flex: 0 0 calc(100% - 20px);
+    }
+    .card-row:last-child .card-title {
+        font-size: 26px;
+    }
+    .card-row:last-child p{
+        font-size: 16px;
+    }
+    .additional-content{
+        margin-bottom: 80px;
+    }
+}
