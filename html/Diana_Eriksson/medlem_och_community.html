@@ -20,15 +20,24 @@
 
 <body>
     <div class="sticky-header">
-    <header>
-        <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
-          
-        <!--HAMBURGER "START": Madelene Rosengren-->
-        <!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
-            fixat alla errors som är kopplade till hamburgaren/hamburger menyn -->
-        <!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
-        <div class="hamburger-wrapper">
-            <aside class="hamburgerNavigation">
+        <header>
+            <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
+
+
+<!--HAMBURGER "START": Madelene Rosengren-->
+<!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
+<!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+fixat alla errors som är kopplade till hamburgaren/hamburger menyn. Även kontrollerat med "The web accessibility practices evaluator (WCAG 2.1)
+https://accessmonitor.acessibilidade.gov.pt/. Det finns en varning för sidan aktuellt "Consider using the h1 element as a top-level heading only",
+jag gör redan detta som felmeddelandet skriver, jag använder den viktigaste rubriken längst upp på undersidan "Aktuellt". 
+
+Det finns en "röd" felmeddelande kopplat till hamburgaren/hamburger menyn som är en "förvirrande" felmeddelande,
+som jag inte hunnit lösa. I felmeddelandet säger de att "Labels should be positioned just before the fields. Labels for checkbox fields or radio button 
+fields should be positioned just after the fields." Jag följer instruktionerna. "toggleHamburgerCheckbox" och "toggleHamburgerCheckboxClose" är checkboxar.
+"Labels" är placerade precis efter "checkboxarna ", vilket är den rekommendationerna för tillgänglighet. Kan vara en annan fel som bråkar, och resulterar
+till en otydlig resultat när felmeddelandet redovisas i validatorns scannings system-->
+            <div class="hamburger-wrapper">
+                <span class="hamburgerNavigation"></span>
                 <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
                 <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
                     <span class="hamburgerIconSpace">
@@ -36,16 +45,20 @@
                     </span>
                 </label>
                 <ul class="hamburgerMenu">
-                    <li class="hamburger-wrapper"></li> 
-                    <li  class="x-opposite-side-in-menu">
-                        <aside class="hamburgerNavigation">
-                            <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
-                                <span class="hamburgerIconSpace">
-                                    <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
-                                </span>
-                            </label>
-                        </aside>
-                    </li>                
+                    <li class="hamburger-wrapper">
+                        <ul>
+                            <li class="x-opposite-side-in-menu">
+                                <aside class="hamburgerNavigation"></aside>
+                                <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                                    <span class="hamburgerIconSpace">
+                                        <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="makeSpaceBetweenListAndX">
+                <ul>               
                 <li class="makeSpaceBetweenListAndX">
                     <li><a href="../../index.html">Hem</a></li>
                     <li><a href="medlem_och_community.html">Medlem och community</a></li>
@@ -56,18 +69,18 @@
                     <li><a href="#">Hbtqi-fakta & tips</a></li>
                     <li><a href="../William_Lundqvist/about.html">Om oss</a></li>
                     <li><a href="../Lorik_Zymberi/press.html">Press</a></li>
-                      <!--Searchbox-STARTS-->
                     <li>
                         <form id="Search-WithLove">
-                        <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......">
-                        <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......">
+                            <button type="submit" aria-label="Search" id="Search-Button"><i class="fa fa-search"
+                                    aria-hidden="true"></i></button>
                         </form>
                     </li>
-                    <!--Searchbox-ENDS-->
                 </ul>
-            </aside>
-        </div>
-        <!--HAMBURGER "END": Madelene Rosengren-->
+            </li>
+        </ul>
+    </div>
+    <!--HAMBURGER "END": Madelene Rosengren-->
         
 
         <div class="logo-wrapper">
