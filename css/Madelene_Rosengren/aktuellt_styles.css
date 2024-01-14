@@ -34,7 +34,7 @@ https://codepen.io/jmegs/pen/opbyXg
 */
 
 
-/*Texten som presenterar de aktuella nyheterna på undersidan*/
+/*Texten som presenterar de aktuella nyheterna på undersidan, stylar*/
 .aktuellt-just-nu{
   padding-top: 4rem;
   padding-left: 1rem;
@@ -62,7 +62,7 @@ https://codepen.io/jmegs/pen/opbyXg
 /*Justerar för olika skämar*/
 @media (max-width: 479px) {
 
-/*Texten som presenterar de aktuella nyheterna på undersidan*/
+/*Texten som presenterar de aktuella nyheterna på undersidan, stylar*/
   .aktuellt-just-nu{
     padding-top: 4rem;
     padding-left: 1rem;
@@ -84,7 +84,7 @@ https://codepen.io/jmegs/pen/opbyXg
 @media (max-width: 360px) {
 
   
-/*Texten som presenterar de aktuella nyheterna på undersidan*/
+/*Texten som presenterar de aktuella nyheterna på undersidan, stylar*/
   .aktuellt-just-nu{
     padding-top: 4rem;
     padding-left: 1rem;
@@ -107,7 +107,7 @@ https://codepen.io/jmegs/pen/opbyXg
 @media (max-width: 300px) {
 
   
-/*Texten som presenterar de aktuella nyheterna på undersidan*/
+/*Texten som presenterar de aktuella nyheterna på undersidan, stylar*/
   .aktuellt-just-nu{
     padding-top: 4rem;
     padding-left: 1rem;
@@ -174,7 +174,7 @@ Justerar för olika skämar
 */
 
 
-/*Justerar för olika skämar, hur nyhetsboxarna lägger sig på små stora skärmar i kolummer*/
+/*Justerar för olika skämar, hur nyhetsboxarna lägger sig på stora skärmar i kolummer*/
 @media (min-width: 60em) {
   .band {
     padding-bottom: 2rem;
@@ -326,7 +326,7 @@ W3Schools: https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_pagination
   */
 }
 
-/*Den stora knappen i stora nyhets boxarna längst upp på undersidan, stora boxen*/
+/*Stylar den stora knappen i stora nyhets boxarna längst upp på undersidan, stora boxen*/
 .button-looks2 {
   color: white;
   font-size: 3rem;
@@ -502,7 +502,7 @@ section:before{
    section{height:700px}
  }
 
- /*Den genomskilniga blåa färgboxen i stora bild boxen längst upp som gör att texten syns bättre*/
+ /*Den genomskilniga blåa färgboxen i stora bild boxen längst upp som gör att texten syns bättre. stylar*/
  .colored {
   background-color:  rgba(31, 54, 67, 0.5);
   padding-top: 2rem;
@@ -522,7 +522,7 @@ section:before{
 }
 
 
- /*Den lilla boxen som visar genren för nyhetsboxarna, mini boxarna där det står "aktuellt" */
+ /*Den lilla boxen som visar genren för nyhetsboxarna, mini boxarna där det står "aktuellt", stylar */
 .card-button {
   background-color: #feffcd;
   color:  #1f3643;
