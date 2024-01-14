@@ -607,7 +607,7 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
 
 /*Byter bild från hamburgaren till ett X. X kommer fram när man öppnar hamburgar menyn. Hamburgaren kommer fram, när man stänger menyn*/
 .hamburgerNavigation input:checked~.hamburgerIcon .hamburgerImage {
-    content: url("#hamburgerImageClose");
+    content: url("#hamburgerImageClose");http://127.0.0.1:5500/images/rfsl.jpg
 }
 
 /*hamburger SLUT: Madelene rosengren*/
@@ -620,10 +620,15 @@ W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
 Chat Gpt: https://chat.openai.com/  */
 
 .slideshow-container {
-    max-width: 70%;
-    /* 62.5em = 1000px (1em = 16px) */
+    max-width: 100%;
     margin: auto;
     position: relative;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Nästa/Föregående knappar */
@@ -705,22 +710,6 @@ Chat Gpt: https://chat.openai.com/  */
 
 .dot:hover {
     background-color: #717171;
-}
-
-.slides img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.slideshow-container {
-    max-width: 100%;
-    margin: auto;
-    position: relative;
-}
-
-.slides img {
-    height: 35.5rem;
 }
 
 /* Slut slideshow - Lorik */
