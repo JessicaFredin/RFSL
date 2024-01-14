@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -16,198 +16,185 @@
 
     <title>RFSL</title>
 </head>
-
 <body>
     <div class="sticky-header">
     <header>
+        <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
+          
 
-         <!--HAMBURGER "START": Madelene-->
-         <div class="hamburger-wrapper">
-            <aside class="hamburgerNavigation">
-                <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
-                <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
-                    <div class="hamburgerIconSpace">
-                        <img class="hamburgerIconImage" src="hamburgerIcon.png" alt="hamburger" class="hamburgerImage">
-                    </div>
-                </label>
-                
-                <ul class="hamburgerMenu">
-                    <li>
-                        <div class="hamburger-wrapper">
-                            <aside class="hamburgerNavigation">
-                                <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
-                                
-                                <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
-                                    <div class="hamburgerIconSpace">
-                                        <img src="closeHamburgerIcon.png" alt="hamburger" width="50" height="40">
-                                   </div>
-                                </label>
-                            </aside>
-                        </div>
-                    </li>
-                <!--Searchbox-STARTS-->
-                <form id="Search-WithLove">
-                <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......" />
-                <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </form>
-                <!--Searchbox-ENDS-->
-                <div class="moveListBigScreen">
-                    <li><a href="index.html">Hem</a></li>
-                    <li><a href="#">Medlem och community</a></li>
-                    <li><a href="#">Ge en gåva</a></li>
-                    <li><a href="#">Verksamhet</a></li>
-                    <li><a href="#">Aktuellt</a></li>
-                    <li><a href="#">Certifiering och utbildning</a></li>
-                    <li><a href="hbtqi-fakta.html">Hbtqi-fakta & tips</a></li>
-                    <li><a href="#">Om oss</a></li>
-                    <li><a href="#">Press</a></li>
-                </div>
-                </ul>
-            </aside>
-        </div>
-        <!--HAMBURGER "END": Madelene-->
+<!--HAMBURGER "START": Madelene Rosengren-->
+<!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
+<!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+fixat alla errors som är kopplade till hamburgaren/hamburger menyn. Även kontrollerat med "The web accessibility practices evaluator (WCAG 2.1)
+https://accessmonitor.acessibilidade.gov.pt/. Det finns en varning för sidan aktuellt "Consider using the h1 element as a top-level heading only",
+jag gör redan detta som felmeddelandet skriver, jag använder den viktigaste rubriken längst upp på undersidan "Aktuellt". 
 
+Det finns en "röd" felmeddelande kopplat till hamburgaren/hamburger menyn som är en "förvirrande" felmeddelande,
+som jag inte hunnit lösa. I felmeddelandet säger de att "Labels should be positioned just before the fields. Labels for checkbox fields or radio button 
+fields should be positioned just after the fields." Jag följer instruktionerna. "toggleHamburgerCheckbox" och "toggleHamburgerCheckboxClose" är checkboxar.
+"Labels" är placerade precis efter "checkboxarna ", vilket är den rekommendationerna för tillgänglighet. Kan vara en annan fel som bråkar, och resulterar
+till en otydlig resultat när felmeddelandet redovisas i validatorns scannings system-->      
+<div class="hamburger-wrapper">
+    <span class="hamburgerNavigation"></span>
+    <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+    <label for="toggleHamburgerCheckbox" class="hamburgerIcon"> 
+        <span class="hamburgerIconSpace">
+            <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
+        </span>
+    </label>
+    <ul class="hamburgerMenu">
+        <li class="hamburger-wrapper">
+            <ul>
+                <li class="x-opposite-side-in-menu">
+                    <aside class="hamburgerNavigation"></aside>
+                    <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                        <span class="hamburgerIconSpace">
+                            <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
+                        </span>
+                    </label>
+                </li>
+            </ul>
+        </li>                 
+        <li class="makeSpaceBetweenListAndX">
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="html/Diana_Eriksson/medlem_och_community.html">Medlem och community</a></li>
+                <li><a href="html/My_Rehnmark/ge_en_gava.html">Ge en gåva</a></li>
+                <li><a href="#">Verksamhet</a></li>
+                <li><a href="html/Madelene_Rosengren/aktuellt.html">Aktuellt</a></li>
+                <li><a href="#">Certifiering och utbildning</a></li>
+                <li><a href="#">Hbtqi-fakta & tips</a></li>
+                <li><a href="html/William_Lundqvist/about.html">Om oss</a></li>
+                <li><a href="html/Lorik_Zymberi/press.html">Press</a></li>
+                <li> 
+                    <form id="Search-WithLove">
+                    <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......">
+                    <button  type="submit" aria-label="Search" id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--HAMBURGER "END": Madelene Rosengren-->
+       
+
+
+        <!-- kod för logotyp - Josephine, My, Louise -->
         <div class="logo-wrapper">
 
-            <a href="index.html" class="logo-link"><img src="RFSL_logotyp_neg.svg" alt="RFSL Logo" class="logo"></a>
+            <a href="index.html" class="logo-link"><img src="logo/RFSL_logotyp_neg.svg" alt="RFSL Logo" class="logo"></a>
         
+        </div>
 
         <!--Searchbox-STARTS-->
         <div class="right-content">
         <form class="Search-Form">
-            <input type="text" class="Search-Bar" name="SearchBar" placeholder="Sök......" />
-            <button class="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <input type="text" class="Search-Bar" name="SearchBar" placeholder="Sök......">
+            <button  type="submit" aria-label="Search" class="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
-    
         <!--Searchbox-ENDS-->
 
+        <!-- språkknappar - Josephine, My, Louise -->
         <div class="language">
             <ul>
-                <li><a href="#"><button type="button" id="enButton">EN</button></a></li>
-                <li><a href="#"><button type="button" id="svButton">SV</button></a></li>
+                <li><a href="#" id="enButton">EN</a></li>
+                <li><a href="#" id="svButton">SV</a></li>
             </ul>
         </div>
     </div>
-    </div>
-        
+
     </header>
-
- 
-
+        
+    <!--navigering för viktiga länkar - Josephine, My, Louise-->
     <nav class="top-desktop-nav">
         <ul>
-            <li><a href="#"><button type="button">BLI MEDLEM</button></a></li>
-            <li><a href="#"><button type="button">GE EN GÅVA</button></a></li>
-            <li><a href="#"><button type="button">BEGREPPSORDLISTA</button></a></li>
+            <li><a href="html/My_Rehnmark/ge_en_gava.html">GE EN GÅVA</a></li>
+            <li><a href="html/Jessica_Fredin/bli-medlem.html" id="bli-medlem">BLI MEDLEM</a></li>
+            <li><a href="html/Louise_Bodin_Klang/begreppsordlista.html">BEGREPPSORDLISTA</a></li>
         </ul>
     </nav>
 </div>
 
         <main>
-            <!-- Slidern START, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
+            <!-- Bild "Slidern" START Lorik, Jag har använt mig av W3 Schools och Chat Gpt för att finjustera
 W3 Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp
 Chat Gpt: https://chat.openai.com/  */  -->
 
-            <!-- Slider container -->
-            <div class="slideshow-container">
+        <!--Bild - Slider container -->
+        <div class="slideshow-container">
 
                 <!-- Bilder med nummer och bildtext -->
                 <div class="slides fade">
-                    <div class="number-text">1 / 3</div>
-                    <img
-                        src="https://www.rfsl.se/wp-content/uploads/imagecache/42/4251e9a7f644887b897d0f1323565256.png">
+                    <img src="images/rfsl.jpg" alt="Bildtext här">
                 </div>
 
-                <div class="slides fade">
-                    <div class="number-text">2 / 3</div>
-                    <img
-                        src="https://www.rfsl.se/wp-content/uploads/imagecache/f3/f34b25746d0224555798ad2ee98ff593.jpg">
-                </div>
-
-                <div class="slides fade">
-                    <div class="number-text">3 / 3</div>
-                    <img
-                        src="https://www.rfsl.se/wp-content/uploads/imagecache/8d/8dfde7ed7205fc1c91a3a5f4270cff10.jpg">
-                </div>
-
-
-                <!-- Nästa/Föregående knappar -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-            </div>
-
-
-            <!-- Punkter/cirklar -->
-            <div class="circle">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
             <!-- Slidern SLUT -->
+            
+<!-- Start Dianas HTML -->
+<div class="kort" id="main-content">
 
-            <div class="kort">
-
-                <div class="container">
-                    <div class="single">
-                        <img src="https://www.rfsl.se/wp-content/uploads/imagecache/e9/e9790909a8872d0472b5714681f570f8.jpeg">
-                        <h2 class="colored">AKTUELLT JUST NU <i class="fa-solid fa-circle-chevron-right"></i></h2>
-                    </div>
-                    <div class="double">
-                        <div class="cardheader">
-                        <div class="overlay"></div>
-                        <img src="https://www.rfsl.se/wp-content/uploads/imagecache/60/60a7cae241943fa34d554f84e227ab26.jpg">
-                        <h2 class="colored1">Att bli och vara förälder <i class="fa-solid fa-circle-chevron-right"></i></h2>
-                        </div>
-                        <div class="cardheader">
-                        <div class="overlay"></div>
-                        <img src="https://www.rfsl.se/wp-content/uploads/imagecache/f3/f34b25746d0224555798ad2ee98ff593.jpg">
-                        <h2 class="colored1">Så arbetar RFSL internationellt <i class="fa-solid fa-circle-chevron-right"></i></h2>
-                        </div>
-                    </div>
-                    <div class="double">
-                        <div class="cardheader">
-                        <div class="overlay"></div>            
-                        <img src="https://www.rfsl.se/wp-content/uploads/imagecache/eb/eb5068e10c49747defe1ebaf00746b45.jpg">
-                        <h2 class="colored1">Omvändelseterapi inom frikyrkan <i class="fa-solid fa-circle-chevron-right"></i></h2>
-                        </div>  
-                        <div class="cardheader">
-                        <div class="overlay"></div>
-                        <img src="https://www.rfsl.se/wp-content/uploads/imagecache/aa/aa6ad14df5cfa56c500eb4f66f5afc85.png">
-                        <h2 class="colored1">Testning <i class="fa-solid fa-circle-chevron-right"></i></h2>
-                        </div>
-                    </div>
-                    <div class="double">
-                        <div class="cardheader">
-                            <div class="overlay"></div>            
-                            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/24/24ff6c5ed8d695eaeac04fd06239bf1b.jpg">
-                            <h2 class="colored1">Idrott skapar engagemang <i class="fa-solid fa-circle-chevron-right"></i></h2>
-                            </div>  
-                            <div class="cardheader">
-                            <div class="overlay"></div>
-                            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/0d/0d8cdac20fdd75ff9b6f87aa3c8a6662.jpg">
-                            <h2 class="colored1">Vinnare HBTQI-kompetent barnmorska <i class="fa-solid fa-circle-chevron-right"></i></h2>
-                            </div>
-                    </div>
-                    <div class="double">              
-                        <div class="cardheader">
-                            <div class="overlay"></div>            
-                            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/68/68e0bd97ae523f6e969447b88a31faf0.jpg">
-                            <h2 class="colored1">Rainbow Academy <i class="fa-solid fa-circle-chevron-right"></i></h2>
-                            </div>  
-                            <div class="cardheader">
-                            <div class="overlay"></div>
-                            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/78/784d7c5cfa6b5e1d6195f1223e3f5128.png">
-                            <h2 class="colored1">Om trans <i class="fa-solid fa-circle-chevron-right"></i></h2>
-                            </div>
-                    </div>
-                    <div class="single">
-                        <img src="https://www.rfsl.se/wp-content/uploads/imagecache/f7/f7bcda4c6b6a7476805fb97a1adc9f2f.png">
-                        <h2 class="colored">BLI MEDLEM <i class="fa-solid fa-circle-chevron-right"></i></h2>
-                    </div>
-                </div>
-        
+    <div class="container">
+        <div class="single">
+            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/e9/e9790909a8872d0472b5714681f570f8.jpeg" alt="Samling av folk">
+            <h2 class="colored">AKTUELLT JUST NU <i class="fa-solid fa-circle-chevron-right"></i></h2>
+        </div>
+        <div class="double">
+            <div class="cardheader">
+            <div class="overlay"></div>
+            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/60/60a7cae241943fa34d554f84e227ab26.jpg" alt="Bebisar">
+            <h2 class="colored1">Att bli och vara förälder <i class="fa-solid fa-circle-chevron-right"></i></h2>
             </div>
+            <div class="cardheader">
+            <div class="overlay"></div>
+            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/f3/f34b25746d0224555798ad2ee98ff593.jpg" alt="Selfie med stor skara">
+            <h2 class="colored1">Så arbetar RFSL internationellt <i class="fa-solid fa-circle-chevron-right"></i></h2>
+            </div>
+        </div>
+        <div class="double">
+            <div class="cardheader">
+            <div class="overlay"></div>            
+            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/eb/eb5068e10c49747defe1ebaf00746b45.jpg" alt="Ung man">
+            <h2 class="colored1">Omvändelseterapi inom frikyrkan <i class="fa-solid fa-circle-chevron-right"></i></h2>
+            </div>  
+            <div class="cardheader">
+            <div class="overlay"></div>
+            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/aa/aa6ad14df5cfa56c500eb4f66f5afc85.png" alt="Omfamning">
+            <h2 class="colored1">Testning <i class="fa-solid fa-circle-chevron-right"></i></h2>
+            </div>
+        </div>
+        <div class="double">
+            <div class="cardheader">
+                <div class="overlay"></div>            
+                <img src="https://www.rfsl.se/wp-content/uploads/imagecache/24/24ff6c5ed8d695eaeac04fd06239bf1b.jpg" alt="Män med boll">
+                <h2 class="colored1">Idrott skapar engagemang <i class="fa-solid fa-circle-chevron-right"></i></h2>
+                </div>  
+                <div class="cardheader">
+                <div class="overlay"></div>
+                <img src="https://www.rfsl.se/wp-content/uploads/imagecache/0d/0d8cdac20fdd75ff9b6f87aa3c8a6662.jpg" alt="Två kvinnor med barn">
+                <h2 class="colored1">Vinnare HBTQI-kompetent barnmorska <i class="fa-solid fa-circle-chevron-right"></i></h2>
+                </div>
+        </div>
+        <div class="double">              
+            <div class="cardheader">
+                <div class="overlay"></div>            
+                <img src="https://www.rfsl.se/wp-content/uploads/imagecache/68/68e0bd97ae523f6e969447b88a31faf0.jpg" alt="Kvinnor med flagga">
+                <h2 class="colored1">Rainbow Academy <i class="fa-solid fa-circle-chevron-right"></i></h2>
+                </div>  
+                <div class="cardheader">
+                <div class="overlay"></div>
+                <img src="https://www.rfsl.se/wp-content/uploads/imagecache/78/784d7c5cfa6b5e1d6195f1223e3f5128.png" alt="Kram">
+                <h2 class="colored1">Om trans <i class="fa-solid fa-circle-chevron-right"></i></h2>
+                </div>
+        </div>
+        <div class="single">
+            <img src="https://www.rfsl.se/wp-content/uploads/imagecache/f7/f7bcda4c6b6a7476805fb97a1adc9f2f.png" alt="Kvinna med laptop">
+            <h2 class="colored">BLI MEDLEM <i class="fa-solid fa-circle-chevron-right"></i></h2>
+        </div>
+    </div>
+
+</div>
+<!-- Slut Dianas HTML -->
         </main>
 
     <footer>
@@ -226,9 +213,9 @@ Chat Gpt: https://chat.openai.com/  */  -->
                 </a>
             </div>
             <ul>
-                <li><a href="#">Hem</a></li>
-                <li><a href="#">Om oss</a></li>
-                <li><a href="#">Kontakta</a></li>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="html/William_Lundqvist/about.html">Om oss</a></li>
+                <li><a href="html/William_Lundqvist/contact.html">Kontakta</a></li>
                 <li><a href="#">Policy</a></li>
             </ul>
         </div>
@@ -237,7 +224,6 @@ Chat Gpt: https://chat.openai.com/  */  -->
             <p>&copy; 2023 RFSL. Alla rättigheter förbehållna.</p>
         </div>
     </footer>
-    <script src="script.js"></script>
 </body>
 
 </html>
