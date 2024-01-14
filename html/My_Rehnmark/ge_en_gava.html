@@ -21,51 +21,62 @@
     <div class="sticky-header">
         <header>
             <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
-              
-            <!--HAMBURGER "START": Madelene Rosengren-->
-            <!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
-                fixat alla errors som är kopplade till hamburgaren/hamburger menyn -->
-            <!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
+
+
+<!--HAMBURGER "START": Madelene Rosengren-->
+<!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
+<!--Hamburgare/hamburger menyn kontrollerad med "validator", "CSS" och "HTML" validator.  https://validator.w3.org/, https://jigsaw.w3.org/css-validator/,
+fixat alla errors som är kopplade till hamburgaren/hamburger menyn. Även kontrollerat med "The web accessibility practices evaluator (WCAG 2.1)
+https://accessmonitor.acessibilidade.gov.pt/. Det finns en varning för sidan aktuellt "Consider using the h1 element as a top-level heading only",
+jag gör redan detta som felmeddelandet skriver, jag använder den viktigaste rubriken längst upp på undersidan "Aktuellt". 
+
+Det finns en "röd" felmeddelande kopplat till hamburgaren/hamburger menyn som är en "förvirrande" felmeddelande,
+som jag inte hunnit lösa. I felmeddelandet säger de att "Labels should be positioned just before the fields. Labels for checkbox fields or radio button 
+fields should be positioned just after the fields." Jag följer instruktionerna. "toggleHamburgerCheckbox" och "toggleHamburgerCheckboxClose" är checkboxar.
+"Labels" är placerade precis efter "checkboxarna ", vilket är den rekommendationerna för tillgänglighet. Kan vara en annan fel som bråkar, och resulterar
+till en otydlig resultat när felmeddelandet redovisas i validatorns scannings system-->
             <div class="hamburger-wrapper">
-                <aside class="hamburgerNavigation">
-                    <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
-                    <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
-                        <span class="hamburgerIconSpace">
-                            <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
-                        </span>
-                    </label>
-                    <ul class="hamburgerMenu">
-                        <li class="hamburger-wrapper">
-                          <li  class="x-opposite-side-in-menu">
-                            <aside class="hamburgerNavigation">
+                <span class="hamburgerNavigation"></span>
+                <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
+                <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
+                    <span class="hamburgerIconSpace">
+                        <i class="fa-solid fa-bars hamburger-style" id="hamburgerImage"></i>
+                    </span>
+                </label>
+                <ul class="hamburgerMenu">
+                    <li class="hamburger-wrapper">
+                        <ul>
+                            <li class="x-opposite-side-in-menu">
+                                <aside class="hamburgerNavigation"></aside>
                                 <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
                                     <span class="hamburgerIconSpace">
                                         <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
                                     </span>
                                 </label>
-                            </aside>
-                        </li>                 
-                    <li class="makeSpaceBetweenListAndX">
-                        <li><a href="../../index.html">Hem</a></li>
-                        <li><a href="../Diana_Eriksson/medlem_och_community.html">Medlem och community</a></li>
-                        <li><a href="ge_en_gava.html">Ge en gåva</a></li>
-                        <li><a href="#">Verksamhet</a></li>
-                        <li><a href="../Madelene_Rosengren/aktuellt.html">Aktuellt</a></li>
-                        <li><a href="#">Certifiering och utbildning</a></li>
-                        <li><a href="#">Hbtqi-fakta & tips</a></li>
-                        <li><a href="#">Om oss</a></li>
-                        <li><a href="#">Press</a></li>
-                          <!--Searchbox-STARTS-->
-                        <li>
-                        <form id="Search-WithLove">
-                        <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......">
-                        <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
-                        </li>
-                        <!--Searchbox-ENDS-->
+                            </li>
+                        </ul>
                     </li>
-                    </ul>
-                </aside>
+                    <li class="makeSpaceBetweenListAndX">
+                        <ul>
+                            <li><a href="index.html">Hem</a></li>
+                            <li><a href="html/Diana_Eriksson/medlem_och_community.html">Medlem och community</a></li>
+                            <li><a href="html/My_Rehnmark/ge_en_gava.html">Ge en gåva</a></li>
+                            <li><a href="#">Verksamhet</a></li>
+                            <li><a href="html/Madelene_Rosengren/aktuellt.html">Aktuellt</a></li>
+                            <li><a href="#">Certifiering och utbildning</a></li>
+                            <li><a href="html/Josephine_Lindblad/hbtqi-fakta.html">Hbtqi-fakta & tips</a></li>
+                            <li><a href="html/William_Lundqvist/about.html">Om oss</a></li>
+                            <li><a href="html/Lorik_Zymberi/press.html">Press</a></li>
+                            <li>
+                                <form id="Search-WithLove">
+                                    <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......">
+                                    <button type="submit" aria-label="Search" id="Search-Button"><i class="fa fa-search"
+                                            aria-hidden="true"></i></button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             <!--HAMBURGER "END": Madelene Rosengren-->
             
@@ -78,35 +89,37 @@
     
             <!--Searchbox-STARTS-->
             <div class="right-content">
-            <form class="Search-Form">
-                <input type="text" class="Search-Bar" name="SearchBar" placeholder="Sök......">
-                <button class="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
-            </form>
-        
-            <!--Searchbox-ENDS-->
-    
-            <!-- språkknappar - Josephine, My, Louise -->
-            <div class="language">
-                <ul>
-                    <li><a href="#" id="enButton">EN</a></li>
-                    <li><a href="#" id="svButton">SV</a></li>
-                </ul>
+                <form class="Search-Form">
+                    <input type="text" class="Search-Bar" name="SearchBar" placeholder="Sök......">
+                    <button type="submit" aria-label="Search" class="Search-Button"><i class="fa fa-search"
+                            aria-hidden="true"></i></button>
+                </form>
+                <!--Searchbox-ENDS-->
+
+                <!-- språkknappar - Josephine, My, Louise -->
+                <div class="language">
+                    <ul>
+                        <li><a href="#" id="enButton">EN</a></li>
+                        <li><a href="#" id="svButton">SV</a></li>
+                    </ul>
+                </div>
             </div>
-        
+
         </header>
-            
+
         <!--navigering för viktiga länkar - Josephine, My, Louise-->
         <nav class="top-desktop-nav">
             <ul>
-                <li><a href="ge_en_gava.html">GE EN GÅVA</a></li>
-                <li><a href="../Jessica_Fredin/bli-medlem.html" id="bli-medlem">BLI MEDLEM</a></li>
-                <li><a href="../Louise_Bodin_Klang/begreppsordlista.html">BEGREPPSORDLISTA</a></li>
+                <li><a href="html/My_Rehnmark/ge_en_gava.html">GE EN GÅVA</a></li>
+                <li><a href="html/Jessica_Fredin/bli-medlem.html" id="bli-medlem">BLI MEDLEM</a></li>
+                <li><a href="html/Louise_Bodin_Klang/begreppsordlista.html">BEGREPPSORDLISTA</a></li>
             </ul>
         </nav>
     </div>
 
+  
 <!--Här börjar Mys del-->
-    <div class="container"> <!-- En container som innehåller en bild-->
+    <div class="container" id="main-content"> <!-- En container som innehåller en bild-->
       <img src="../../images/pride_heart.jpg" alt="hjarta" class="img1">
 
         <div class="centered">    <!--egen klass som innehåller rubrik och brödtext-->
