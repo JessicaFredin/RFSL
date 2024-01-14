@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: #1f3643;
-  position: sticky;
+  
   top:8em; /*margin to keep the navigation in the same place*/
    z-index: 5000; /*what ever element has the higher z-index shows above other elements*/
 }
