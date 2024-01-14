@@ -445,6 +445,7 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
 }
 
 /*Justerar hur hamburger menyn ser ut för olika skämar */
+
 @media (max-width: 768px) {
 
     .toggleHamburgerCheckbox {
@@ -504,6 +505,7 @@ Px to rem calculator, konverterade px till rem: https://nekocalc.com/px-to-rem-c
 }
 
 /*Justerar hur hamburger menyn ser ut för olika skämar */
+
 @media (max-width: 320px) {
 
     .toggleHamburgerCheckbox {
@@ -1028,7 +1030,7 @@ position som är precis i mitten.*/
 
     border-radius: 30px;
 
-    font-size: 20px;
+    font-size: 1.7em;
 }
 
 .Search-Bar,
@@ -1060,7 +1062,8 @@ position som är precis i mitten.*/
 }
 
 @media(max-width: 768px) {
-    /*Search box disapears on 400px*/
+    /*Search box disapears on 768px*/
+
 
     .Search-Form {
 

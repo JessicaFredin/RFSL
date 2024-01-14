@@ -1,0 +1,327 @@
+/*Don't use/change/touch this file this is only for about.html and it 3 sub pages  */
+/*this file has nothing to do with the rest of the website - William*/
+
+
+/* Dessa färger ingår i RFSL:s nya grafiska profil
+RFSL colors: 
+orange: #ff7448
+ljuslila: #F1E0FF
+mörkblå: #1F3643
+mörkgrön: #29380B
+mörklila: #41284A
+ljusgul: #feffcd
+svart: #1d1d1d
+vit: #fffdfc   */
+body {
+    background-color: rgba(223, 228, 226, 0.37);
+    overflow-x: hidden;
+ /* horizontal scrolling disabled (https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)*/
+  }
+  /*here starts the navigation styling - ul-li- hover and visited */
+.nav-second {
+  display: flex;
+  justify-content: center;
+  background-color: #1f3643;
+  position: sticky;
+  top:8em; /*margin to keep the navigation in the same place*/
+   z-index: 5000; /*what ever element has the higher z-index shows above other elements*/
+}
+.nav-second ul {
+  list-style: none;
+
+}
+
+.nav-second li {
+  display:inline-block;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  margin: 0 5em 4em 0;
+  list-style: none;
+  border-radius: 1rem 0 1rem 0rem;
+  background-color: #1f3643;
+  border: solid 0.2em#ffffff;
+  max-width: 20em;
+  font-size: 1.2em;
+}
+.nav-second a {
+padding: 0.6em;
+
+}
+
+.nav-second li:hover {
+  background-color: #ff7448;
+}
+.nav-second li:visited {
+  background-color: #ffffff;
+}
+
+.nav-second a {
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+@media (max-width: 700px) {
+  .nav-second li {
+    list-style: none;
+    
+
+ }
+
+}
+/*contact form style*/
+.contact-us {
+  background-color: #ff7448;
+  text-align: center;
+  align-items: center;
+  font-size: 1em;
+}
+.all-container {
+  display: grid;
+  max-width: 100%;
+  margin: 0;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: larger;
+  color: #1F3643;
+  min-height: 9vh;
+  font-size: larger;
+  font-weight: 500;
+}
+.contact {
+  color: rgb(255, 255, 255);
+  font-size: larger;
+  font-weight: 900;
+}
+
+.all-container {
+  border-radius: 0rem;
+  background-color: #F1E0FF;
+  padding: 0.9rem;
+}
+#contact-button { /*button styling*/
+  border-radius: 0.5rem;
+  cursor: pointer;
+width:60%;
+background-color: #1F3643;
+color: #ffffff;
+}
+.google-map {  /*google-map styling*/
+  padding-bottom: 50%; 
+  position: relative;
+  margin-left:2rem ;
+    width: 65%;
+
+}
+
+.google-map iframe {/*Iframe styling */
+  height: 70%;
+  width: 90%;
+  flex: 1;
+}
+.google-map p{ /*styling for the text under the map*/
+line-height: 1;
+font-style: oblique;
+text-align: left;
+font-size: 0.7em;;
+
+}
+#subject{   /*these here util contact- img are styles for the contact page 
+    it includes the spaces/fields to the contact form. and the direct mails to rfsl */
+
+    margin-left: 0;
+    border: solid 1px  #1F3643;
+    width: 60%;
+}
+#type {
+  margin-left: 0%;
+  border: solid 1px  #1F3643;
+  width: 60%;
+}
+#fname {
+  width: 60%;
+  border: solid 1px  #1F3643;
+
+}
+#lname {
+  width: 60%;
+  border: solid 1px  #1F3643;
+  
+}
+#nnumber{
+    width: 60%;
+    border: solid 1px  #1F3643;
+
+}
+.form{
+display:grid;
+margin: 0rem 0rem 5rem 0rem;
+width: 100%;
+align-items: center;
+justify-items: center;
+
+
+}
+.Contact1 { /*this is the gray section at the end of the page*/
+  width: 100%;
+  font-size: 1em;
+  background-color: rgba(184, 180, 180, 0.514);
+  line-height: 1.3;
+  border-radius: 0rem 0 0 0 ;
+  margin: 0rem;
+  padding: 10%;
+  font-size: 1em;
+  padding: 5rem;
+
+}
+.contact-2{ /*Kontakt Via E-mail  which is the gray rectangular with a picture in it  */
+   float: right;
+   width: 60%;
+   max-width: 20rem;
+   height: auto;
+  margin-left: 0.9em;
+  margin-right: 0em;
+  margin-top: 0em;
+  font-size: 0.8em;
+  background-color: lightgray;
+  line-height: 2;
+  border-radius: 1rem;
+  padding: 0.9rem;
+  font-weight: 200;
+  border: solid 1px #1F3643;
+
+}
+.contact-2 a{ /*links inside the rectangular*/
+    font-size: 0.8em;
+   
+
+}
+.contact-2 img{ /*img - rectangular*/
+    max-width:100%;
+    margin-top:3em;
+   border-radius: 1rem  1em  1em 1em ;
+
+
+}
+.aboutrfsl h1 
+ ,.workrfsl h1 ,.access h1{/*Work page starts.  I use styling for about us page and work page and the third page */
+   
+   margin-top: 0rem;
+   margin-bottom:3rem;
+    justify-items: center;
+    text-align: center;
+    font-size: 100%;
+    box-shadow: 0 4px 8px 0 rgba(160, 164, 167, 0.2), 0 6px 20px 0 rgba(5, 47, 75, 0.822);
+    max-width: 60rem;
+    background-color: #1F3643;
+   margin-left: 30%;
+   margin-right: 30%;
+   font-weight:900;
+   color:white;
+   border-radius: 0.8em;
+}
+.aboutrfsl , .workrfsl , .access {   /*used the same styling for 3 pages (work about and accessibility)*/
+    font-size: 1.6em;
+    font-family:sans-serif;
+    line-height: 1.5;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding:1em;
+   /* box-shadow: 5px 5px 5px 5px rgba(113, 114, 114, 0.87) ;*/
+    background-color: rgba(223, 228, 226, 0.37);
+    font-weight: 400;
+    display: block;
+    margin-block-start: 0.3em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.aboutrfsl .first-p::first-letter , .accessP::first-letter { /* bigger first letter*/
+    font-size: 3.3em;
+    
+    font-weight: 700;
+    line-height: 1;
+    vertical-align: middle;
+    float:left;
+    padding-top: 0.0em;
+    padding-right: 0.1em;
+}
+.aboutrfsl .first-p span { 
+/*I must have missed something in my code, and wrote this to fix it (span with a hiding letter ) */
+    line-height: 5;
+    float:left;
+    color: rgba(255, 255, 255, 0);
+}
+.aboutrfsl p, .workrfsl p, .access p{ /*styling for all 3 pages p tag*/
+
+    margin-left:20%;
+    margin-right: 20%;
+    padding-top: 0%;
+    
+}
+.aboutrfsl h2, .workrfsl h2 ,.access h2 { /*here i use styling for 3 page and multiple tags */
+/*border: solid 1px black;*/
+padding-top: 5%;
+padding-bottom: 2%;
+font-size: 1em;
+font-weight: 900;
+font-family: Georgia,Times,Times New Roman,serif;
+text-align: center;
+
+}
+.last-p{padding-bottom: 5%;}
+
+.work-positions ul li { /*styling the list in work page */
+list-style: circle;
+text-align: center;
+align-items: center;
+display:block;
+}
+.work-positions p{
+
+    text-align: center;
+}
+.workrfsl p{
+
+    padding:1.5em;
+
+}
+/*.span-to {color: #ff7448;
+}*/
+@media screen and (max-width: 700px) { /*adjust the styling to fit smaller screens*/
+  
+  .all-container {
+    grid-template-columns: 1fr; /* Change to a single column */
+    align-items: center;
+   justify-items: center;
+
+}
+.aboutrfsl , .workrfsl , .access{
+    font-size:1em;
+    padding: 0.3em;
+}
+.aboutrfsl p, .workrfsl p, .access p{
+    padding:0.2em;
+    margin: 0.2em;
+}
+
+.nav-second li{
+    font-size: 0.9em;
+    padding:0.1em;
+    margin:0.3em 0.6em 0.8em;
+}
+.contact-us p{
+    font-size:1em;
+    
+}
+}
+@media (max-width: 345px){ /*Third media query to fit the navigation into smaller screens*/
+    .nav-second li{
+        font-size: 0.7em;
+        padding:0em;
+        margin:0.3em 0.4em 0.8em;
+
+    }
+}
+    
