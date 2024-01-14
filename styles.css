@@ -943,7 +943,7 @@ position som är precis i mitten.*/
 /*Here<!--SearchboxSTARTS-->    - William */
 
 .Search-Form,
-#Search-WithLove {
+#Search-WithLove, #Search-WithLove-Header {
 
     background-color: rgb(255, 255, 255);
 
@@ -964,7 +964,7 @@ position som är precis i mitten.*/
 }
 
 .Search-Form i,
-#Search-WithLove i {
+#Search-WithLove i, #Search-WithLove-Header i {
     color: rgb(158, 158, 156);
 
     padding: 0;
@@ -975,7 +975,7 @@ position som är precis i mitten.*/
 }
 
 .Search-Bar,
-#Search-Bar {
+#Search-Bar, #Search-Bar-Header {
     outline: none;
 
     max-width: 7em;
@@ -985,7 +985,7 @@ position som är precis i mitten.*/
 }
 
 .Search-Button,
-#Search-Button {
+#Search-Button, #Search-Button-Header {
 
     outline: none;
 
@@ -998,7 +998,7 @@ position som är precis i mitten.*/
     max-width: 8rem;
 }
 
-#Search-WithLove {
+#Search-WithLove, #Search-WithLove-Header {
     display: none;
 }
 
@@ -1012,13 +1012,11 @@ position som är precis i mitten.*/
 
     }
 
-    #Search-WithLove {
+    #Search-WithLove, #Search-WithLove-Header {
         /*this here show the search box (with another class name ) in the hamburger menu*/
-
         display: flex;
         margin-top: 6em;
         /*This so it does not show under the X button*/
-
     }
 
 }
@@ -1032,7 +1030,7 @@ position som är precis i mitten.*/
         display: flex;
     }
 
-    #Search-WithLove {
+    #Search-WithLove, #Search-WithLove-Header {
         display: none;
     }
 }

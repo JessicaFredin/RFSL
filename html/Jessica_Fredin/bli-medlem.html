@@ -28,7 +28,7 @@
                 fixat alla errors som är kopplade till hamburgaren/hamburger menyn -->
             <!--Madelene Rosengren "Ansvar" för "Hamburgaren/Hamburgare menyn" och undersidan "Aktuellt"-->
             <div class="hamburger-wrapper">
-                <aside class="hamburgerNavigation">
+                <div class="hamburgerNavigation">
                     <input type="checkbox" id="toggleHamburgerCheckbox" class="toggleHamburgerCheckbox">
                     <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
                         <span class="hamburgerIconSpace">
@@ -38,13 +38,13 @@
                     <ul class="hamburgerMenu">
                         <li class="hamburger-wrapper">
                         <li class="x-opposite-side-in-menu">
-                            <aside class="hamburgerNavigation">
+                            <div class="hamburgerNavigation">
                                 <label for="toggleHamburgerCheckbox" class="hamburgerIcon">
                                     <span class="hamburgerIconSpace">
                                         <i class="fa-solid fa-xmark hamburger-close-style" id="hamburgerImageClose"></i>
                                     </span>
                                 </label>
-                            </aside>
+                            </div>
                         </li>
                         <li class="makeSpaceBetweenListAndX">
                         <li><a href="../../index.html">Hem</a></li>
@@ -58,29 +58,33 @@
                         <li><a href="../Lorik_Zymberi/press.html">Press</a></li>
                         <!--Searchbox-STARTS-->
                         <li>
-                            <form id="Search-WithLove">
-                                <input type="text" id="Search-Bar" name="SearchBar" placeholder="Sök......">
-                                <button id="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            <form id="Search-WithLove-Header">
+                                <input type="text" id="Search-Bar-Header" name="SearchBar" placeholder="Sök......">
+                                <input type="submit" id="Search-Button-Header"><i class="fa fa-search"
+                                        aria-hidden="true"></i></input>
                             </form>
                         </li>
                         <!--Searchbox-ENDS-->
                     </ul>
-                </aside>
+                </div>
             </div>
             <!--HAMBURGER "END": Madelene Rosengren-->
 
             <!-- kod för logotyp - Josephine, My, Louise -->
             <div class="logo-wrapper">
 
-                <a href="../../index.html" class="logo-link"><img src="../../logo/RFSL_logotyp_neg.svg" alt="RFSL Logo" class="logo"></a>
+                <a href="../../index.html" class="logo-link"><img src="../../logo/RFSL_logotyp_neg.svg" alt="RFSL Logo"
+                        class="logo"></a>
 
             </div>
 
             <!--Searchbox-STARTS-->
             <div class="right-content">
-                <form class="Search-Form">
-                    <input type="text" class="Search-Bar" name="SearchBar" placeholder="Sök......">
-                    <button class="Search-Button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <form class="Search-Form" id="Search-Form-Content">
+                    <input type="text" class="Search-Bar" id="Search-Bar-Content" name="SearchBar"
+                        placeholder="Sök......">
+                    <input type="submit" class="Search-Button" id="Search-Button-Content"><i class="fa fa-search"
+                            aria-hidden="true"></i></input>
                 </form>
 
                 <!--Searchbox-ENDS-->
